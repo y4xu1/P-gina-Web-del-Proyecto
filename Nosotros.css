@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.Barra_Navegacion {
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+.Inicio {
+    background-color: #e5e8e8da;
+}
+.Logo_Trascendental {
+    width: 200px;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    border: 0,5px solid rgba(128, 128, 128, 0.719);
+}
+h1 {
+    color: rgba(0, 0, 0, 0.952);
+    font-size: 40px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 30px;
+}
+nav {
+    float: right; /* Desplazamos el nav hacia la izquierda */
+}
+nav ul {
+    list-style: none;
+    overflow: hidden; /* Limpiamos errores de float */
+}
+nav ul li {
+    float: right;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+nav ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li:hover {
+    color: black;
+    background: #F7DC6F;
+}
+.contenido {
+    padding-top: 200px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+}
+footer {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.897);
+}
+footer ul {
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+footer ul li {
+    padding-left: 10px;
+}

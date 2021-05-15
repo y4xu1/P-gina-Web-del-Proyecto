@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.Barra_Navegacion {
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+.Inicio {
+    background-color: #e5e8e8da;
+}
+.Logo_Trascendental {
+    width: 200px;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    border: 0,5px solid rgba(128, 128, 128, 0.719);
+}
+h1 {
+    color: rgba(0, 0, 0, 0.952);
+    font-size: 40px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 30px;
+}
+nav {
+    float: right; /* Desplazamos el nav hacia la izquierda */
+}
+nav ul {
+    list-style: none;
+    overflow: hidden; /* Limpiamos errores de float */
+}
+nav ul li {
+    float: right;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+nav ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li:hover {
+    color: black;
+    background: #F7DC6F;
+}
+.contenido {
+    padding-top: 220px;
+    padding-bottom: 20px;
+    background-color: #e5e8e8;
+    padding-bottom: 410px;
+}
+.Comentarios {
+    background-color: white;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 4px;
+    background-color: #F5D72F;
+    box-shadow: 37px 13px 37px #616A6B;
+    padding: 20px;
+    float: left;
+}
+#Contenido_Comentarios {
+    list-style: lower-greek;
+    overflow: hidden;
+}
+h2 {
+    font-size: 12px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 4px;
+}
+p {
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+.controls {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 2,5px;
+    margin-bottom: 12px;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+.controls:hover {
+    background-color: #EAEDED;
+}
+.Comentarios a {
+    color: black;
+    text-decoration: none;
+}
+.botons {
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 9px;
+    padding: 4px;
+    margin-left: 47px;
+    padding: 5px 50px 5px 50px;
+}
+.botons:hover {
+    background-color: #D1F2EB;
+}
+.Comentarios a:hover {
+    text-decoration: underline;
+}
+input:focus {
+    border: 3px groove #34495E;
+}
+#correo:invalid {
+    border: 3px groove #E74C3C;
+}
+#correo:valid {
+    border: 3px groove #2ECC71;
+}
+#nombres:required, #correo:required, #Calendario:required, #contraseña:required {
+    border: 3px groove #E74C3C;
+}
+footer {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.897);
+}
+footer ul {
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+footer ul li {
+    padding-left: 10px;
+}
