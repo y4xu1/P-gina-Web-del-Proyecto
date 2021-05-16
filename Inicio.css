@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 .Barra_Navegacion {
     background: rgba(0, 0, 0, 0.9);
@@ -11,12 +12,12 @@
 .Inicio {
     background-color: #e5e8e8da;
 }
-.Logo_Trascendental {
-    width: 200px;
+.Logo_Menú {
+    width: 5%;
     overflow: hidden;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 80px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     border: 0,5px solid rgba(128, 128, 128, 0.719);
 }
 h1 {
@@ -24,7 +25,7 @@ h1 {
     font-size: 40px;
     overflow: hidden;
     display: inline-block;
-    margin: 30px;
+    margin: 5px;
 }
 nav {
     float: right; /* Desplazamos el nav hacia la izquierda */
@@ -40,7 +41,7 @@ nav ul li {
 }
 nav ul li a {
     display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-    padding: 20px;
+    padding: 15px;
     color: #fff;
     text-decoration: none;
 }
@@ -49,9 +50,10 @@ nav ul li:hover {
     background: #F7DC6F;
 }
 .contenido {
-    padding-top: 200px;
+    padding-top: 140px;
     padding-bottom: 20px;
-    padding-left: 25px;
+    background-color: #e5e8e8;
+    padding-bottom: 20px;
 }
 footer {
     color: white;

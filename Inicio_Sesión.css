@@ -12,12 +12,12 @@
 .Inicio {
     background-color: #e5e8e8da;
 }
-.Logo_Trascendental {
-    width: 200px;
+.Logo_Menú {
+    width: 5%;
     overflow: hidden;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 80px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     border: 0,5px solid rgba(128, 128, 128, 0.719);
 }
 h1 {
@@ -25,7 +25,7 @@ h1 {
     font-size: 40px;
     overflow: hidden;
     display: inline-block;
-    margin: 30px;
+    margin: 5px;
 }
 nav {
     float: right; /* Desplazamos el nav hacia la izquierda */
@@ -41,7 +41,7 @@ nav ul li {
 }
 nav ul li a {
     display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-    padding: 20px;
+    padding: 15px;
     color: #fff;
     text-decoration: none;
 }
@@ -50,18 +50,30 @@ nav ul li:hover {
     background: #F7DC6F;
 }
 .contenido {
-    padding-top: 285px;
-    padding-bottom: 20px;
-    background-color: #e5e8e8;
-    padding-bottom: 285px;
+    padding-top: 50px;
+    padding-bottom: -10px;
+    background-color: #2837477a;
+    padding-bottom: 515px;
+}
+.contenido img {
+    float: left;
+    overflow: none;
+    display: block;
+    margin-top: 61px;
+    margin-bottom: -345px;
+    width: 1366px;
+    height: 454px;
+}
+.fondo_Luminicentes {
+    position: absolute;
 }
 .Inicio_Sesión {
     background-color: white;
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 575px;
+    margin-right: 575px;
     border-radius: 4px;
     background-color: #F5D72F;
-    box-shadow: 37px 13px 37px #616A6B;
+    box-shadow: 3px 4px 5px whitesmoke;
     padding: 20px;
     float: left;
 }

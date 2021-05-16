@@ -12,12 +12,12 @@
 .Inicio {
     background-color: #e5e8e8da;
 }
-.Logo_Trascendental {
-    width: 200px;
+.Logo_Menú {
+    width: 5%;
     overflow: hidden;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 80px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     border: 0,5px solid rgba(128, 128, 128, 0.719);
 }
 h1 {
@@ -25,7 +25,7 @@ h1 {
     font-size: 40px;
     overflow: hidden;
     display: inline-block;
-    margin: 30px;
+    margin: 5px;
 }
 nav {
     float: right; /* Desplazamos el nav hacia la izquierda */
@@ -41,7 +41,7 @@ nav ul li {
 }
 nav ul li a {
     display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-    padding: 20px;
+    padding: 15px;
     color: #fff;
     text-decoration: none;
 }
@@ -50,12 +50,12 @@ nav ul li:hover {
     background: #F7DC6F;
 }
 .contenido {
-    padding-top: 220px;
+    padding-top: 140px;
     padding-bottom: 20px;
     background-color: #e5e8e8;
-    padding-bottom: 415px;
+    padding-bottom: 480px;
 }
-.Comentarios {
+.Contacto {
     background-color: white;
     margin-left: 500px;
     margin-right: 500px;
@@ -65,7 +65,7 @@ nav ul li:hover {
     padding: 20px;
     float: left;
 }
-#Contenido_Comentarios {
+#Contenido_Contacto {
     list-style: lower-greek;
     overflow: hidden;
 }
@@ -94,7 +94,7 @@ p {
 .controls:hover {
     background-color: #EAEDED;
 }
-.Comentarios a {
+.Contacto a {
     color: black;
     text-decoration: none;
 }
@@ -109,7 +109,7 @@ p {
 .botons:hover {
     background-color: #D1F2EB;
 }
-.Comentarios a:hover {
+.Contacto a:hover {
     text-decoration: underline;
 }
 input:focus {
