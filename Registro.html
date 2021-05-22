@@ -14,20 +14,20 @@
         <header>
             <section class="Barra_Navegacion">
                 <section class="Inicio">
-                    <img src="Imagenes de la Página/Logo_Principal.png" class="Logo_Menú">
-                    <h1>Trascendental</h1>
                 </section>
                 <nav id="menu">
                     <ul>
+                        <img src="Imagenes de la Página/Logo_Principal.png" class="Logo_Menú">
+                            <h1 class="titulo">Trascendental</h1>
+                        <li><a href="index.html" class="menu">Inicio</a></li>
                         <li><a href="Contactanos.html" class="menu">Contactanos</a></li>
                         <li><a href="Nosotros.html">Quienes Somos</a></li>
-                        <li><a href="Registro.html" class="menu">Registrarme</a></li>
-                        <li><a href="Perfil.html">Mi Perfil</a></li>
                         <li><a href="Inicio_Sesión.html" class="menu">Inicia Sesión</a></li>
-                        <li><a href="Inicio.html" class="menu">Inicio</a></li>
                     </ul>
                 </nav>
             </section>
+        </header>
+        <section class="contenido">
         </header>
         <section class="contenido">
             <section class="Registro">
@@ -35,22 +35,31 @@
                     <h2> Registrate </h2>
                     <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre"><br>
                     <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido"><br>
-                    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña"><br>
                     <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo"><br>
-                    <input class="controls" type="date" name="Calendario" id="Calendario">
+                    <select class="controls" name="cargos" id="cargos">
+                        <option selected="selected">Selecione su Cargo</option>
+                        <option>Director</option>
+                        <option>Bienestar - Técnico de Comunicación Interna</option>
+                        <option>Auxiliar</option>
+                        <option>Técnico de selección de personas</option>
+                        <option>Calidad - Técnico de TIC</option>
+                    <select>
+                    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña"><br>
                     <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
                     <input class="botons" type="submit" value="Registrarme">
                 </section>
             </section>
         </section>
-        <footer>
+        <footer class="info_empres">
             <ul>
-                <p>Desarrolladores</p>
-                <li><small>Lady Daniela Díaz Sanchéz</small></li>
-                <li><small>Laura Tatiana Gómez Castillo</small></li>
-                <li><small>Brayan Gómez Lopez</small></li>
-                <li><small>Yaxul Santiago Cárdenas Hincapié</small></li>
+                <p>Disser Ingieniería S.A.S. Bogotá</p>
+                <li class="ubicación">Dirección: Calle 169 # 20-06</li>
+                <li class="actividad">Actividad: Contratación en Obras Cíviles</li>
+                <li class="contacto">Tel: (1)7042440</li>
             </ul>
+            <section class="copyright">
+                <p>© Copyright. Todos los derechos reservados - 2021</p>
+            </section>
         </footer>
     </body>
-</html>
+</html>      

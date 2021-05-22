@@ -59,8 +59,8 @@ nav ul li:hover {
     float: left;
     overflow: none;
     display: block;
-    margin-top: 61px;
-    margin-bottom: -345px;
+    margin-top: 71px;
+    margin-bottom: -355px;
     width: 1366px;
     height: 454px;
 }
@@ -103,6 +103,22 @@ h2 {
 .Inicio_Sesión a {
     color: black;
     text-decoration: none;
+}
+#Contenido_Inicio_Sesión p a {
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 10px;
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+}
+#Contenido_Inicio_Sesión p a:hover {
+    font-size: 12px;
+    color: navy;
+    text-decoration: underline;
 }
 .botons {
     background-color: white;

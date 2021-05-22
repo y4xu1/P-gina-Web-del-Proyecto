@@ -9,7 +9,6 @@
     z-index: 3;
 }
 .Logo_Menú {
- 
     width: 4%;
     overflow: hidden;
     margin-top: 5px;
@@ -53,7 +52,6 @@ nav ul li:hover {
     padding-top: 48px;
     padding-bottom: 20px;
     padding-bottom: 20px;
-
 }
 .nuestros_servicios img{
     position: relative;
@@ -80,6 +78,9 @@ nav ul li:hover {
     margin-left: 470px;
     margin-right: 470px;
 }
+.menu{
+    z-index: 3;
+}
 .contenido_servicios h2, .contenido_servicios p {
     color: white;
     font-family: sans-serif;
@@ -93,17 +94,14 @@ nav ul li:hover {
 .contenido_servicios p {
     font-size: 18px;
 }
-.personas_asociadas {
+.imagen_instructivo {
     position: relative;
-    overflow: none;
-}
-.empresas_asociadas {
-    width: 20%;
-}
-.contenido_personas_asociadas {
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: 234px;
+    width: 50%;
+    height: 40%;
+    border: 3px solid #3B83BD;
+    box-shadow: 2px 10px 30px rgb(62, 186, 243);
 }
 .contenido_personas_asociadas h3 {
     display: inline-block;
@@ -117,26 +115,21 @@ nav ul li:hover {
     color: black;
 }
 .manual_instructivo {
-    position: absolute;
-    display: inline-block;
-    float: left;
-    overflow: none;
-    background-color: rgb(255, 254, 251);
-    
-    
-}
-.imagen_instructivo {
+    border: solid;
     position: relative;
-    margin-top: -500px;
-    width: 50%;
-    border: 3px solid red;
+    overflow: none;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 100px;
+    border-top: 1px solid black;
+    background-color: rgb(255, 254, 251);   
 }
 .contenido_manual_instrutivo {
     position: relative;
     height: 782px;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 900px;
+    margin-left: 100px;
     margin-right: 80px;
     background-color: #3B83BD;
     box-shadow: 10px, 15px, 20px #17202A;
@@ -146,7 +139,7 @@ nav ul li:hover {
 }
 .contenido_manual_instrutivo h3 {
     text-align: center;
-    font-size: 40px;
+    font-size: 45px;
     border: 30px;
     color: white;
     margin-bottom: 20px;
@@ -157,33 +150,87 @@ nav ul li:hover {
     color: white;
 }
 .contenido_manual_instrutivo ul li {
-    font-size: 25px;
+    font-size: 35px;
 }
 .contenido_manual_instrutivo ul a {
     color: white;
-    font-size: 25px;
+    font-size: 35px;
 }
 .lista_manual {
     padding: 3px;
     margin: 3px;
 }
-.calles{
+.contenido_acerca_disser {
+    padding: 80px 200px;
+    font-family: sans-serif;
+    font-size: 30px;
+    background-color: #f8ed4f;
+}
+#disser_ingenieria{
+    font-family: sans-serif;
+    font-size: 50px;
+    text-align: center;
+    padding: 15px;
+}
+.personas_asociadas {
+    position: relative;
+    overflow: none;
+}
+.empresas_asociadas {
+    width: 13%;
+    padding: 8px;
     display: inline-block;
-    top: 0;
-    position:sticky;
-    margin-top: 180px;
-    z-index: -5;
-    width: 94.6em;
-    height: 771px;
+}
+#empresas_1{ 
+    padding: 30px ;
+    margin: 5px 456px;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: border;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 13px 14px 5px rgba(119, 102, 102, 0.836);
+}
+.contenido_personas_asociadas {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+.personas_asociadas section div form {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: 50%;
+}
+.personas_asociadas section div form input {
+    width: 95%;
+}
+#Logo_Amarilo {
+    margin-left: 150px;
+}
+#Logo_Colsubsidio {
+    margin-left: 483px;
+}
+#Logo_avianca {
+    margin-left: 483px;
+}
+.calles{
+    position: relative;
+    width: 10em;
+    left: 40.6em;em ;
+
 }
 .contenido_acerca_desarrolladores {/* ----AQUI VA EL COLOR DE LA CAJA ----*/
     display: inline-block;
-    margin-top: -50px;
-    border: solid;
+    margin-top: 20px;
+    
     position:relative;
-    padding: 70px 8px;
+    padding:  8px;
     width: 1498px;
-    background-color:  rgba(185, 182, 182, 0.541);
+    background-color:  rgb(255, 255, 255);
 }
 #diseño{
     border: solid rgb(0, 0, 0);
