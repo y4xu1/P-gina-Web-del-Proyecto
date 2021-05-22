@@ -47,7 +47,7 @@ nav ul li a {
 }
 nav ul li:hover {
     color: black;
-    background: #F7DC6F;
+    background: #f7dc6f;
 }
 .contenido {
     padding-top: 50px;
@@ -135,10 +135,16 @@ footer {
     background-color: rgba(0, 0, 0, 0.897);
 }
 footer ul {
+    text-align: center;
     padding-top: 10px;
-    padding-left: 25px;
     padding-bottom: 15px;
 }
 footer ul li {
     padding-left: 10px;
+}
+.copyright {
+    color: black;
+    padding: 4px;
+    background-color: #e7f521;
+    text-align: center;
 }

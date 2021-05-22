@@ -4,25 +4,23 @@
     box-sizing: border-box;
 }
 .Barra_Navegacion {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgb(0, 0, 0, 0.9);
     width: 100%;
     position: fixed;
-    z-index: 10;
-}
-.Inicio {
-    background-color: #e5e8e8da;
+    z-index: 3;
 }
 .Logo_Menú {
-    width: 5%;
+ 
+    width: 4%;
     overflow: hidden;
-    margin-top: 10px;
-    margin-left: 80px;
-    margin-bottom: 8px;
+    margin-top: 5px;
+    margin-left: 40px;
+    margin-bottom: 5px;
     border: 0,5px solid rgba(128, 128, 128, 0.719);
 }
 h1 {
-    color: rgba(0, 0, 0, 0.952);
-    font-size: 40px;
+    color: white;
+    font-size: 29px;
     overflow: hidden;
     display: inline-block;
     margin: 5px;
@@ -32,7 +30,7 @@ nav {
 }
 nav ul {
     list-style: none;
-    overflow: hidden; /* Limpiamos errores de float */
+    overflow: hidden; /*Limpiamos errores de float*/
 }
 nav ul li {
     float: right;
@@ -45,18 +43,61 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
-nav ul li:hover {
+nav ul li a:hover {
     color: black;
-    background: #F7DC6F;
+}
+nav ul li:hover {
+    color: rgb(239, 255, 19);
+    background: #E9BD15;
 }
 .contenido {
-    padding-top: 140px;
+    padding-top: 48px;
     padding-bottom: 20px;
-    background-color: #e5e8e8;
-    padding-bottom: 480px;
+    padding-bottom: 20px;
+
 }
 .Contacto {
     background-color: white;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 4px;
+    background-color: #F5D72F;
+    box-shadow: 37px 13px 37px #616A6B;
+    padding: 20px;
+    float: left;
+}
+#Contenido_Contacto {
+    list-style: lower-greek;
+    overflow: hidden;
+}
+h2 {
+    font-size: 12px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    margin-bottom: 4px;
+}
+p {
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+.controls {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 2,5px;
+    margin-bottom: 12px;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+.controls:hover {
+    background-color: #EAEDED;
+}
+.Contacto {
+    background-color: white;
+    margin-top: 60px;
     margin-left: 500px;
     margin-right: 500px;
     border-radius: 4px;
@@ -125,14 +166,21 @@ input:focus {
     border: 3px groove #E74C3C;
 }
 footer {
+    margin-top: 528px;
     color: white;
     background-color: rgba(0, 0, 0, 0.897);
 }
 footer ul {
+    text-align: center;
     padding-top: 10px;
-    padding-left: 25px;
     padding-bottom: 15px;
 }
 footer ul li {
     padding-left: 10px;
+}
+.copyright {
+    color: black;
+    padding: 4px;
+    background-color: #e7f521;
+    text-align: center;
 }

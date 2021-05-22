@@ -1,28 +1,25 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
 }
 .Barra_Navegacion {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgb(0, 0, 0, 0.9);
     width: 100%;
     position: fixed;
-    z-index: 10;
-}
-.Inicio {
-    background-color: #e5e8e8da;
+    z-index: 3;
 }
 .Logo_Menú {
-    width: 5%;
+ 
+    width: 4%;
     overflow: hidden;
-    margin-top: 10px;
-    margin-left: 80px;
-    margin-bottom: 8px;
+    margin-top: 5px;
+    margin-left: 40px;
+    margin-bottom: 5px;
     border: 0,5px solid rgba(128, 128, 128, 0.719);
 }
 h1 {
-    color: rgba(0, 0, 0, 0.952);
-    font-size: 40px;
+    color: white;
+    font-size: 29px;
     overflow: hidden;
     display: inline-block;
     margin: 5px;
@@ -32,7 +29,7 @@ nav {
 }
 nav ul {
     list-style: none;
-    overflow: hidden; /* Limpiamos errores de float */
+    overflow: hidden; /*Limpiamos errores de float*/
 }
 nav ul li {
     float: right;
@@ -45,25 +42,177 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
-nav ul li:hover {
+nav ul li a:hover {
     color: black;
-    background: #F7DC6F;
+}
+nav ul li:hover {
+    color: rgb(239, 255, 19);
+    background: #E9BD15;
 }
 .contenido {
-    padding-top: 140px;
+    padding-top: 48px;
     padding-bottom: 20px;
-    background-color: #e5e8e8;
     padding-bottom: 20px;
+
+}
+.nuestros_servicios img{
+    position: relative;
+    float: left;
+    overflow: none;
+    width: 100%;
+    height: auto;
+}
+.contenido_servicios {
+    position: absolute;
+    padding-top: 220px;
+    padding-bottom: 93px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 81px;
+    margin-left: 193.5px;
+    margin-right: 190.5px;
+    border:  1px solid;
+}
+#letrero {
+    width: 20%;
+    position: absolute;
+    margin-top: -170px;
+    margin-left: 470px;
+    margin-right: 470px;
+}
+.contenido_servicios h2, .contenido_servicios p {
+    color: white;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+.contenido_servicios h2 {
+    margin-top: -30px;
+    font-size: 40px;
+}
+.contenido_servicios p {
+    font-size: 18px;
+}
+.personas_asociadas {
+    position: relative;
+    overflow: none;
+}
+.empresas_asociadas {
+    width: 20%;
+}
+.contenido_personas_asociadas {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contenido_personas_asociadas h3 {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 680px;
+    text-align: center;
+    padding-left: 700;
+    padding-right: 700;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: black;
+}
+.manual_instructivo {
+    position: absolute;
+    display: inline-block;
+    float: left;
+    overflow: none;
+    background-color: rgb(255, 254, 251);
+    
+    
+}
+.imagen_instructivo {
+    position: relative;
+    margin-top: -500px;
+    width: 50%;
+    border: 3px solid red;
+}
+.contenido_manual_instrutivo {
+    position: relative;
+    height: 782px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 900px;
+    margin-right: 80px;
+    background-color: #3B83BD;
+    box-shadow: 10px, 15px, 20px #17202A;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: sans-serif;
+}
+.contenido_manual_instrutivo h3 {
+    text-align: center;
+    font-size: 40px;
+    border: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+.contenido_manual_instrutivo ul {
+    margin-top: 2px;
+    padding-left: 25px;
+    color: white;
+}
+.contenido_manual_instrutivo ul li {
+    font-size: 25px;
+}
+.contenido_manual_instrutivo ul a {
+    color: white;
+    font-size: 25px;
+}
+.lista_manual {
+    padding: 3px;
+    margin: 3px;
+}
+.calles{
+    display: inline-block;
+    top: 0;
+    position:sticky;
+    margin-top: 180px;
+    z-index: -5;
+    width: 94.6em;
+    height: 771px;
+}
+.contenido_acerca_desarrolladores {/* ----AQUI VA EL COLOR DE LA CAJA ----*/
+    display: inline-block;
+    margin-top: -50px;
+    border: solid;
+    position:relative;
+    padding: 70px 8px;
+    width: 1498px;
+    background-color:  rgba(185, 182, 182, 0.541);
+}
+#diseño{
+    border: solid rgb(0, 0, 0);
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 18em;
+    margin-right: 18em;
+    text-align: center;
+    font-size: 30px;
+}
+#diseño_2{
+    font-size: 40px;
+    text-align: center; 
 }
 footer {
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.897);
 }
 footer ul {
+    text-align: center;
     padding-top: 10px;
-    padding-left: 25px;
     padding-bottom: 15px;
 }
 footer ul li {
     padding-left: 10px;
+}
+.copyright {
+    color: black;
+    padding: 4px;
+    background-color: #e7f521;
+    text-align: center;
 }
