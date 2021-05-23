@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Barra_Navegacion {
+    background: rgb(0, 0, 0, 0.9);
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+.Logo_Menú {
+    width: 4%;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+    border: 0,5px solid rgba(128, 128, 128, 0.719);
+}
+h1 {
+    color: white;
+    font-size: 29px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 5px;
+}
+nav {
+    float: right; /* Desplazamos el nav hacia la izquierda */
+}
+nav ul {
+    list-style: none;
+    overflow: hidden; /*Limpiamos errores de float*/
+}
+nav ul li {
+    float: right;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+nav ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: black;
+}
+nav ul li:hover {
+    color: rgb(239, 255, 19);
+    background: #E9BD15;
+}
+.contenido {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.Introducción {
+    margin: 20px 300px;
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+.Introducción h2 {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+.Formulario_covid-19 {
+    margin: 20px 340px;
+    padding: 20px;
+    border-radius: 6px;
+    border: 2px solid grey;
+    font-family: sans-serif;
+}
+h3 {
+    font-size: 22.5px;
+}
+h2 {
+    font-size: 20px;
+}
+.Información_Personal {
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+.Información_Personal h3 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+form {
+    padding-top: 10px;
+}
+#Tipo_de_Documento {
+    margin: 5px 8px;
+    padding: 5px 10px;
+    display: inline-block;
+    width: 48%;
+    border-radius: 4px;
+}
+#Tipo_de_Documento:hover {
+    box-shadow: 0px 0px 8px gray;
+}
+.controls {
+    margin: 5px 5.6px;
+    padding: 5px 10px;
+    display: inline-block;
+    width: 45%;
+    border-radius: 4px;
+}
+.controls:hover {
+    box-shadow: 0px 0px 8px gray;
+}
+.Síntomas {
+    padding: 15px 5px;
+    border-bottom: 1px solid gray;
+}
+.Título_Formulario_covid-19 {
+    padding-bottom: 10px;
+}
+form p {
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
+form p input {
+    margin-right: 5px;
+}
+.Izquierda {
+    display: inline-block;
+}
+#Derecha {
+    float: right;
+    margin-top: 1.5px;
+}
+.Formulario_covid-19 h4 {
+    font-size: 16.5px;
+    font-weight: lighter;
+    color: #212F3D;
+}
+.Formulario_covid-19 p {
+    font-size: 14px;
+    color: #2C3E50;
+}
+.Antecedentes_Enfermedades {
+    Padding: 15px 5px;
+    border-bottom: 1px solid gray;
+}
+.Contacto_10_Días {
+    Padding: 15px 5px;
+    border-bottom: 1px solid gray;
+}
+.Contacto_10_Días #Derecha {
+    margin-right: 680px;
+}
+.Advertencia {
+    Padding: 15px 5px;
+    border-bottom: 1px solid gray;
+}
+.Familiares {
+    Padding: 15px 5px;
+    border-bottom: 1px solid gray;
+}
+.Ubicación_Muestra {
+    Padding: 15px 5px;
+    border-bottom: 1px solid gray;
+}
+.Ubicación_Muestra #Derecha {
+    margin-right: 420px;
+}
+.botons {
+    margin: 15px 380px;
+    padding: 5px 10px;
+}
+footer {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.897);
+}
+footer ul {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+footer ul li {
+    padding-left: 10px;
+}
+.copyright {
+    color: black;
+    padding: 4px;
+    background-color: #e7f521;
+    text-align: center;
+}
+.Ubicacion_Muestra{
+    border: solid black;
+}

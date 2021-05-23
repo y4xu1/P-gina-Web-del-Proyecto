@@ -6,7 +6,113 @@
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>¿Quiénes Somos?</title>
-        <link rel="stylesheet" href=".css">
+        <title>Mi Perfil</title>
+        <link rel="stylesheet" href="Mi_Perfil.css">
         <link rel="icon" href="Imagenes de la Página/Logo_Principal.png">
     </head>
+    <body>
+        <header>
+            <section class="Barra_Navegacion">
+                <section class="Inicio">
+                </section>
+                <nav id="menu">
+                    <ul>
+                        <img src="Imagenes de la Página/Logo_Principal.png" class="Logo_Menú">
+                            <h1 class="titulo">Trascendental</h1>
+                        <li><a href="Perfil.html" class="menu">Aspirantes</a></li>
+                        <li><a href="Agenda_citas.html" class="menu">Agenda de Citas</a></li>
+                        <li><a href="formularios.html" class="menu">Formularios</a></li>
+                        <li><a href="contratos.html" class="menu">Contratos</a></li>
+                        <li><a href="Obras.html" class="menu">Obras</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <section class="Contenido">
+            <section class="Datos_Básicos">
+                <h4>Datos Básicos</h4>
+                <section class="Imagen_Perfil"><p>Foto de Perfil</p><input type="image" src="Imagenes de la Página/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil"></section>
+                <p>Tipo de Identificación</p>
+                    <select class="controls" name="Tipo de Documento" id="Tipo_de_Identificación">
+                        <option selected="selected">Selecione el Tipo de Identificación</option>
+                        <option>Cédula Ciudadanía (CC)</option>
+                        <option>Tarjeta de Identidad (TI)</option>
+                        <option>Cédula Extrangería</option>
+                    </select>
+                <p>Documento de Identidad</p><input class="controls" type="text" name="Documento de Identidad" id="Documento_de_Identidad"><br>
+                <p>Fecha Expedición Documento</p><input class="controls" type="date" name="Fecha Expedición Documento" id="Fecha_Expedición_Documento"><br>
+                <p>País de expedición</p><input class="controls" type="text" name="País de expedición" id="País_de_expedición"><br>
+                <p>Departamento de expedición</p><input class="controls" type="text" name="Departamento de expedición" id="Departamento_de_expedición"><br>
+                <p>Municipio de expedición</p><input class="controls" type="text" name="Municipio de expedición" id="Municipio_de_expedición"><br>
+                <p>Nombres</p><input class="controls" type="text" name="Nombres" id="Nombres"><br>
+                <p>Primer Apellido</p> <input class="controls" type="text" name="Primer Apellido" id="Primer_Apellido"><br>
+                <p>Segundo Apellido</p><input class="controls" type="text" name="Segundo Apellido" id="Segundo_Apellido"><br>
+                <p>Fecha de Nacimiento</p><input class="controls" type="date" name="Fecha de Nacimiento" id="Fecha_de_Nacimiento"><br>
+                <p>Correo Electrónico</p><input class="controls" type="text" name="Correo Electrónico" id="Correo_Electrónico"><br>
+                <p>Cargo</p><input class="controls" type="text" name="Cargo" id="Cargo"><br>
+                <p>País de Nacimiento</p><input class="controls" type="text" name="País de Nacimiento" id="País_de_Nacimiento"><br>
+                <p>Departamento de Nacimiento</p><input class="controls" type="text" name="Departamento de Nacimiento" id="Departamento_de_Nacimiento"><br>
+                <p>Municipio de Nacimiento</p><input class="controls" type="text" name="Municipio de Nacimiento" id="Municipio_de_Nacimiento"><br>
+                <p>Estado Civil</p>
+                    <select class="controls" name="Estado Cívil" id="Estado_Civil">
+                        <option selected="selected">Selecione su estado cívil</option>
+                        <option>Indiferente</option>
+                        <option>Soltero / Soltera</option>
+                        <option>Casado / Casada</option>
+                        <option>Unión Libre</option>
+                        <option>Separado</option>
+                        <option>Viudo</option>
+                        <option>Complicado</option>
+                    </select>
+                <p>Estrato</p>
+                    <select class="controls" name="Estrato" id="Estrado">
+                        <option selected="selected">Selecione su Estrato</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                <p>Tipo de Sangre</p>
+                    <select class="controls" name="Estrato" id="Estrado">
+                        <option selected="selected">Selecione su Estrato</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                    </select>
+                <p>Género</p>
+                    <select class="controls" name="Género" id="Género">
+                        <option selected="selected">Selecione su Género</option>
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                    </select>
+                <p>Libreta militar</p><input class="controls" type="text" name="Libreta militar" id="Libreta_militar"><br>
+                <p>Tiene EPS</p>
+                    <select class="controls" name="Tiene EPS" id="EPS">
+                        <option selected="selected">Selecciones una Opción</option>
+                        <option>Sí</option>
+                        <option>No</option>
+                    </select>
+                <p>EPS</p><input class="controls" type="text" name="EPS" id=""><br>
+                <input class="botons" type="submit" value="Actualizar">
+            </section>
+        </section>
+        <footer class="info_empres">
+            <ul>
+                <p>Disser Ingieniería S.A.S. Bogotá</p>
+                <li class="ubicación">Dirección: Calle 169 # 20-06</li>
+                <li class="actividad">Actividad: Contratación en Obras Cíviles</li>
+                <li class="contacto">Tel: (1)7042440</li>
+            </ul>
+            <section class="copyright">
+                <p>© Copyright. Todos los derechos reservados - 2021</p>
+            </section>
+        </footer>
+    </body>
+</html>

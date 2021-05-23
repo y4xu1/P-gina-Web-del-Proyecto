@@ -6,7 +6,161 @@
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>¿Quiénes Somos?</title>
-        <link rel="stylesheet" href="Perfil.css">
+        <title>Formularios</title>
+        <link rel="stylesheet" href="Formulario.css">
         <link rel="icon" href="Imagenes de la Página/Logo_Principal.png">
     </head>
+    <body>
+        <header>
+            <section class="Barra_Navegacion">
+                <section class="Inicio">
+                </section>
+                <nav id="menu">
+                    <ul>
+                        <img src="Imagenes de la Página/Logo_Principal.png" class="Logo_Menú">
+                            <h1 class="titulo">Trascendental</h1>
+                        <li><a href="Mi_Perfil.html" class="menu">Mi Perfil</a></li>
+                        <li><a href="Agenda_citas.html" class="menu">Agenda de Citas</a></li>
+                        <li><a href="Formularios.html" class="menu">Formularios</a></li>
+                        <li><a href="Contratos.html" class="menu">Contratos</a></li>
+                        <li><a href="Obras.html" class="menu">Obras</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <section class="contenido">
+            <section class="Introducción">
+                <h2>Formulario Covid-19</h2>
+                <p>Es requisito de la empresa conocer su estado actual sobre el virus actual Covid-19, para así informar su condición de salud y este en la capacidad de laborar como es debido. Por favor lea atentamente y diligencie cada campo.</p>
+            </section>
+            <section class="Formulario_covid-19">
+                <section class="Información_Personal">
+                    <h3>Campos información personal del solicitante</h3>
+                    <form action="">
+                        <select name="controls" id="Tipo_de_Documento">
+                            <option selected="Selected">Seleccione el Tipo de Documento</option>
+                            <option>Tarjeta de Identidad (TI)</option>
+                            <option>Cédula de Cuidadanía (CC)</option>
+                            <option>Cédula de Extrangería</option>
+                            <option>Cédula de Residencia</option>
+                            <option>Permiso Especial de Permanecia (PE)</option>
+                        </select>
+                        <input class="controls" type="text" name="Nombres" id="Nombres" placeholder="Nombres">
+                        <input class="controls" type="text" name="Apellidos" id="Apellidos" placeholder="Apellidos">
+                        <input class="controls" type="text" name="Ciudad" id="Ciudad" placeholder="Ciudad">
+                        <input class="controls" type="text" name="Departamento" id="Departamento" placeholder="Departamento">
+                        <input class="controls" type="text" name="Edad" id="Edad" placeholder="Edad">
+                        <input class="controls" type="date" name="Fecha de Nacimiento" id="Fecha_de_Nacimiento" placeholder="Fecha de Nacimiento">
+                        <input class="controls" type="text" name="Correo electrónico " id="Correo_electrónico" placeholder="Correo electrónico">
+                        <input class="controls" type="text" name="Teléfono" id="Teléfono" placeholder="Teléfono">
+                        <input class="controls" type="text" name="Teléfono" id="Teléfono" placeholder="Dirección de residencia">
+                    </form>
+                </section>
+                <section class="Segunda_Parte_Formulario">
+                    <section class="Síntomas">
+                        <section class="Título_Formulario_covid-19">
+                            <h3>Apreciado Usuario</h2>
+                        </section>
+                        <h4>¿Marque si ha presentado alguno de los sintomas que se detallan a continuación?</h4>
+                        <form action="">
+                            <div id="Derecha">
+                                <p><input type="checkbox" value="Tos">Tos</p>
+                                <p><input type="checkbox" value="Dolor de garganta">Dolor de garganta</p>
+                                <p><input type="checkbox" value="Alteración o disminución del gusto">Alteración o disminución del gusto</p>
+                                <p><input type="checkbox" value="Otro">Otro</p>
+                                <p><input type="checkbox" value="Ningún síntoma">Ningún síntoma</p>
+                            </div>
+                            <div class="Izquierda">
+                                <p><input type="checkbox" value="Fiebre cuantificada mayor o igual a 38°C">Fiebre cuantificada mayor o igual a 38°C</p>
+                                <p><input type="checkbox" value="Dificultad para respirar">Dificultad para respirar</p>
+                                <p><input type="checkbox" value="Alteración o disminución del olfato">Alteración o disminución del olfato</p>
+                                <p><input type="checkbox" value="Cansancio o decaimiento">Cansancio o decaimiento</p>
+                                <p><input type="checkbox" value="Dolor muscular">Dolor muscular</p>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="Antecedentes_Enfermedades">
+                        <h4>¿Le han diagnosticado alguna de las siguientes enfermedades?</h4>
+                        <form action="">
+                            <div id="Derecha">
+                                <p><input type="checkbox" value="Asma">Asma</p>
+                                <p><input type="checkbox" value="Enfermedad Pulmonar Obstructiva Crónica - EPOC">Enfermedad Pulmonar Obstructiva Crónica - EPOC</p>
+                                <p><input type="checkbox" value="Diabetes">Diabetes</p>
+                                <p><input type="checkbox" value="Bronquitis">Bronquitis</p>
+                                <p><input type="checkbox" value="Hipertensión Arterial">Hipertensión Arterial</p>
+                                <p><input type="checkbox" value="Embarazo">Embarazo</p>
+                                <p><input type="checkbox" value="Enfermedad coronaria o antecedente de infarto cardiaco">Enfermedad coronaria o antecedente de infarto cardiaco</p>
+                                <p><input type="checkbox" value="Accidente cerebrovascular">Accidente cerebrovascular</p>
+                            </div>
+                            <div class="Izquierda">
+                                <p><input type="checkbox" value="Enfermedad Renal Crónica">Enfermedad Renal Crónica</p>
+                                <p><input type="checkbox" value="Alguna inmunodeficiencia">Alguna inmunodeficiencia</p>
+                                <p><input type="checkbox" value="Tabaquismo">Tabaquismo</p>
+                                <p><input type="checkbox" value="Desnutrición">Desnutrición</p>
+                                <p><input type="checkbox" value="Cáncer">Cáncer</p>
+                                <p><input type="checkbox" value="Enfermedad autoinmune">Enfermedad autoinmune</p>
+                                <p><input type="checkbox" value="Obesidad">Obesidad</p>
+                                <p><input type="checkbox" value="Otro">Otro</p>
+                                <p><input type="checkbox" value="Ninguno">Ninguno</p>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="Contacto_10_Días">
+                        <h4>¿Ha tenido contacto estrecho* en los últimos 10 días con un caso confirmado o probable de COVID-19? </h4>
+                        <form action="">
+                            <p id="Derecha"><input type="checkbox" value="Sí">Sí</p>
+                            <p class="Izquierda"><input type="checkbox" value="No">No</p>
+                        </form>
+                    </section>
+                    <section class="Advertencia">
+                        <h4>Tenga en cuenta</h4>
+                        <p><b>*Contacto estrecho:</b> Es el contacto entre personas en un espacio de 2 metros o menos de distancia, 
+                            en una habitación o en el área de atención de un caso de COVID-2019 confirmado o probable, durante 
+                            un tiempo mayor a 15 minutos, o contacto directo con secreciones de un caso probable o confirmado.</p>
+                    </section>
+                    <section class="Familiares">
+                        <h4>Con el fin de cuidar la salud de usted y su familia</h4>
+                        <p>Por favor diligenciar los datos de su grupo familiar, con el fin de realizar pruebas diagnosticas 
+                            si llegan a requerirse.</p>
+                        <input class="controls" type="text" name="Nombre y Apellidos del Familiar" id="Nombre_y_Apellidos_del_Familiar" placeholder="Nombre y Apellidos del Familiar"><br>
+                        <select name="controls" id="Tipo_de_Documento">
+                            <option selected="Selected">Seleccione el Tipo de Documento</option>
+                            <option>Tarjeta de Identidad (TI)</option>
+                            <option>Cédula de Cuidadanía (CC)</option>
+                            <option>Cédula de Extrangería</option>
+                            <option>Cédula de Residencia</option>
+                            <option>Permiso Especial de Permanecia (PE)</option>
+                        </select>
+                        <input class="controls" type="text" name="Teléfono del familiar" id="Teléfono_del_familiar" placeholder="Teléfono del familiar">
+                        <input class="controls" type="text" name="EPS del familiar" id="EPS_del_familiar" placeholder="EPS del familiar">
+                        <input class="controls" type="text" name="Dirección del familiar" id="Dirección_del_familiar" placeholder="Dirección del familiar">
+                        <input class="controls" type="text" name="N° Identificación del familiar" id="N°_Identificación_del_familiar" placeholder="N° Identificación del familiar">
+                        <input class="controls" type="text" name="Correo electrónico del familiar" id="Correo_electrónicodel familiar" placeholder="Correo electrónico del familiar">
+                        <input class="controls" type="text" name="Parentesco" id="Parentesco" placeholder="Parentesco"><br>
+                    </section>
+                    <section class="Ubicación_Muestra">
+                        <h4>¿Donde desea que se realice la toma de la muestra?</h4>
+                        <form action="">
+                            <div id="Derecha"><p><input type="checkbox" value="Domicilio">Domicilio <small><b>(Casa)</b></small></p></div>
+                            <p class="Izquierda"><input type="checkbox" value="Sede">Sede <small><b>(Institución de salud)</b></small></p>
+                        </form>
+                    </section>
+                    <section>
+                        <input class="botons" type="submit" value="Enviar" id="Enviar"></br>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <footer class="info_empres">
+            <ul>
+                <p>Disser Ingieniería S.A.S. Bogotá</p>
+                <li class="ubicación">Dirección: Calle 169 # 20-06</li>
+                <li class="actividad">Actividad: Contratación en Obras Cíviles</li>
+                <li class="contacto">Tel: (1)7042440</li>
+            </ul>
+            <section class="copyright">
+                <p>© Copyright. Todos los derechos reservados - 2021</p>
+            </section>
+        </footer>
+    </body>
+</html>

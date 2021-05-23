@@ -48,95 +48,139 @@ h1 {
     color: rgb(239, 255, 19);
     background: #E9BD15;
 }
-.Barra_Herramientas {
+#Barra_Herramientas {
+    margin-top: 48px;
     float: right;
-    margin-top: 49px;
-    border-top: 1px solid rgba(160, 43, 0, 0.9);
-    background-color: rgba(0, 0, 0, 0.9);
+    border-top: 2px solid rgba(160, 43, 0, 0.9);;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-family:Arial, Helvetica, sans-serif;
 }
-.Barra_Herramientas ul, ol {
-    list-style: none;
+ul, ol {
+    list-style:none;
 }
-.nav ul {
-    font-family: sans-serif;
-    font-size: 10px;
-}
-.nav ul li a {
-    /*.nav ul li input*/
-    color: white;
-    display: block;
-}
-.nav ul li a:hover {
-    /*nav.nav ul li input*/
-    color: black;
-    background-color: #E9BD15;
-}
-.nav > li {
+.Herramientas > li {
     float: right;
 }
-.nav li ul:hover {
-    display: block;
+.Herramientas li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 15px;
+    display:block;
 }
-.nav li ul {
+.Herramientas li input {
+    padding: 10px 4px;
+    margin-top: 4px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    border: 2px groove #17202A;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+.Herramientas li input:hover {
+    background-color: #E5E8E8;
+    border: 2px groove #E9BD15;
+}
+.Herramientas li a:hover {
+    background-color: #E9BD15;
+    color: black;
+}
+.Herramientas li ul {
     display: none;
     position: absolute;
     min-width: 100px;
 }
-.nav li:hover > ul{
+.Herramientas li:hover > ul {
     display: block;
 }
-.nav li ul li {
+.Herramientas li ul li {
     position: relative;
+    background-color: rgba(0, 0, 0, 0.9);
 }
-/*#header {
-    margin:auto;
-    width:500px;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-ul, ol {
-    list-style:none;
-}
-
-.nav > li {
-    float:left;
-}
-
-.nav li a {
-    background-color:#000;
-    color:#fff;
-    text-decoration:none;
-    padding:10px 12px;
-    display:block;
-}
-
-.nav li a:hover {
-    background-color:#434343;
-}
-
-.nav li ul {
-    display:none;
-    position:absolute;
-    min-width:140px;
-}
-
-.nav li:hover > ul {
-    display:block;
-}
-
-.nav li ul li {
-    position:relative;
-}
-
-.nav li ul li ul {
-    right:-140px;
-    top:0px;
-}*/
 .contenido {
-    padding-top: 48px;
+    padding-top: 110px;
     padding-bottom: 20px;
     padding-bottom: 20px;
+    background-color: #E5E8E8;
+}
+.Perfil_Aspirante {
+    border-radius: 4px;
+    width: 93%;
+    border: 2px solid white;
+    background-color: white;
+    margin: 0px 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.Logo_Usuario {
+    border-radius: 4px;
+    border: 1px solid #BFC9CA;
+    background-color: #BFC9CA;
+    width: 15%;
+}
+.Documentos_Aspirante {
+    float: left;
+    overflow: none;
+    display: block;
+    margin-left: 230px;
+    margin-top: -268px;
+    padding: 15px;
+}
+.Documentos {
+    padding-bottom: 10px;
+}
+.Documentos input {
+    text-align: left;
+    padding: 5px 15px;
+    width: 500%;
+    z-index: auto;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 3px groove #2ECC71;
+    background-color: #D1F2EB;
+}
+.Documentos input:hover {
+    background-color: #D4EFDF;
+}
+.Documentos input:required {
+    border: 3px groove #E74C3C;
+    background-color: #FDEDEC;
+}
+.Documentos input:required:hover {
+    background-color: #FADBD8;
+}
+.Comentarios {
+    float: right;
+    overflow: none;
+    display: block;
+    margin-top: -263px;
+    margin-right: -20px;
+    padding: 15px;
+}
+.Comentarios input {
+    text-align: left;
+    padding: 5px 15px;
+    z-index: auto;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 6px;
+}
+.controls {
+    width: 500px;
+    height: 200px;
+    margin-bottom: 8px;
+}
+.Boton_Envío {
+    float: right;
+    overflow: none;
+    display: block;
+}
+.Boton_Envío:hover {
+    box-shadow: 0pc, 0px, 10px black;
 }
 footer {
     color: rgb(255, 255, 255);
