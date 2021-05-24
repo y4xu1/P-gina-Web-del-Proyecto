@@ -1,0 +1,163 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.Barra_Navegacion {
+    background: rgb(0, 0, 0, 0.9);
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+.Logo_Menú {
+    width: 4%;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+    border: 0,5px solid rgba(128, 128, 128, 0.719);
+}
+h1 {
+    color: white;
+    font-size: 29px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 5px;
+}
+#menu {
+    float: right; /* Desplazamos el nav hacia la izquierda */
+}
+#menu ul {
+    list-style: none;
+    overflow: hidden; /*Limpiamos errores de float*/
+}
+#menu ul li {
+    float: right;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+#menu ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+#menu ul li a:hover {
+    color: black;
+}
+#menu ul li:hover {
+    color: rgb(239, 255, 19);
+    background: #E9BD15;
+}
+main{
+    margin: 30px 30px;
+    padding: 100px;
+}
+
+h3{
+    font-size: 30px;
+    font-family: 'Gill Sans';
+    text-align: center;
+    padding:50px;
+}
+.empresas_asociadas{
+    width: 12%;
+    display:inline-block;
+    padding: 25px 25px; ;
+}
+
+#colpatria{
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 80px
+}
+
+.obras2{
+    background-color: yellowgreen;
+    Padding: 30px;
+    
+}
+.obras3{
+    background-color:yellow;
+    Padding: 30px;
+    
+}
+.obras4{
+    background-color: red;
+    Padding: 30px;
+    
+}
+.obras5{
+    background-color: aqua;
+    Padding: 30px;
+    
+}
+.obras6{
+    background-color: blue;
+    Padding: 30px;
+    
+}
+.obras7{
+    background-color: pink;
+    Padding: 30px;
+    
+}
+#ig{
+   padding: 15px;
+   width: 20%;
+}
+.in-ba{
+    display:flex;
+    justify-content: space-around;
+}
+
+.info_basica{
+    text-align: center;
+    padding: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid black;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+   
+}
+.Creacion{
+    margin: 20px 340px;
+    padding:20px;
+    border-radius: 6px;
+    border: 2px solid grey;
+    font-family: sans-serif;
+}
+.controls{
+    margin: 5px 5.6px;
+    padding: 5px 10px;
+    display: inline-block;
+    width: 90%;
+    border-radius: 4px;
+}
+footer {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.897);
+}
+footer ul {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+footer ul li {
+    padding-left: 10px;
+}
+.copyright {
+    color: black;
+    padding: 4px;
+    background-color: #e7f521;
+    text-align: center;
+}
