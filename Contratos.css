@@ -51,11 +51,10 @@ h1 {
 }
 /*-------------------------------------------------*/
 #Tipo_Contrato {
-    margin-top: 0%;
+    margin-top: -0.2%;
     float: right;
-    border-top: 2px solid rgba(160, 43, 0, 0.9);;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color:rgba(0, 0, 0, 0.9);
     font-family: sans-serif;
 }
 ul, ol {
@@ -75,6 +74,10 @@ ul, ol {
     position: absolute;
     min-width: 100px;
 }
+.Contratos li a:hover {
+    background-color: #E9BD15;
+    color: black;
+}
 .Contratos li:hover > ul {
     display: block;
 }
@@ -84,12 +87,14 @@ ul, ol {
 }
 /*-------------------------------------------------*/
 .contenido {
-    padding-top: 50px;
+    padding-top: 5%;
+    background-color: white;
 }
 .Contrato {
-    margin: 1%;
+    margin: 2%;
     padding: 3%;
     position: auto;
+    float: right;
 }
 .Inicio_Contratos {
     width: 100%;
@@ -97,11 +102,26 @@ ul, ol {
     margin: 0%;
 }
 .contrato1 { 
-    width: ;
+    width: 60%;
+}
+.controls {
+    width: 30%;
+}
+.Contrato p, .Contrato .controls {
+    font-size: 12px;
+    margin: 0.3%;
+    padding: 0.5%;
+}
+.Dirección .controls, .Dirección .controls p{
+    display: inline;
+    width: 20%;
+}
+#Cuidad_Residencia, #Calle {
+    width: 5%;
 }
 /*-------------------------------------------------*/
 footer {
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.897);
 }
 footer ul {
