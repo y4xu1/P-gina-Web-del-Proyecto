@@ -90,9 +90,7 @@ ul, ol {
     padding-top: 5%;
 }
 .Contrato {
-    margin-top: 10%;
-    margin-left: -15%;
-    margin-right: 2%;
+    margin: 10% 2%;
     padding: 1%;
     position: auto;
     float: right;
@@ -115,7 +113,7 @@ ul, ol {
     margin: 0.3%;
     padding: 0.5%;
 }
-.Dirección .controls, .Dirección .controls p{
+.Dirección .controls, .Dirección .controls p {
     display: inline;
     width: 60%;
     border: 1px solid blue;
