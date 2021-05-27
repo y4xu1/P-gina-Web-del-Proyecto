@@ -1,8 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    width: auto;
-    height: auto;
+    margin: 0%;
+    padding: 0%;
 }
 .Barra_Navegacion {
     background: rgb(0, 0, 0, 0.9);
@@ -13,14 +11,14 @@
 .Logo_Menú {
     width: 4%;
     overflow: hidden;
-    margin-top: 5px;
-    margin-left: 40px;
-    margin-bottom: 5px;
+    margin: 1% 2%;
+    /*margin-left: 40px;
+    margin-bottom: 5px;*/
     border: 0,5px solid rgba(128, 128, 128, 0.719);
 }
 h1 {
     color: white;
-    font-size: 29px;
+    font-size: 247%;
     overflow: hidden;
     display: inline-block;
     margin: 5px;
@@ -35,7 +33,8 @@ nav ul {
 nav ul li {
     float: right;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 120%;
+    width: auto;
 }
 nav ul li a {
     display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
@@ -50,10 +49,9 @@ nav ul li:hover {
     color: rgb(239, 255, 19);
     background: #E9BD15;
 }
+/*------------------------------------*/
 .contenido {
-    padding-top: 48px;
-    padding-bottom: 20px;
-    padding-bottom: 20px;
+    padding-top: 3.58%;
 }
 .nuestros_servicios img{
     position: relative;
@@ -63,50 +61,88 @@ nav ul li:hover {
     height: auto;
 }
 .contenido_servicios {
+    width: auto;
+    height: auto;
     position: absolute;
-    padding-top: 220px;
-    padding-bottom: 93px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 81px;
-    margin-left: 193.5px;
-    margin-right: 190.5px;
-    border:  1px solid;
+    padding: 4.1%;
+    margin-top: 5.3%;
+    margin-left: 12.7%;
+    margin-right: 12.5%;
 }
 #letrero {
     width: 20%;
-    position: absolute;
-    margin-top: -170px;
-    margin-left: 470px;
-    margin-right: 470px;
-}
-.menu{
-    z-index: 3;
+    height: auto;
+    margin: 1% 45%;
+    /*margin-left: 470px;
+    margin-right: 470px;*/
 }
 .contenido_servicios h2, .contenido_servicios p {
+    width: 100%;
+    height: auto;
     color: white;
     font-family: sans-serif;
     font-weight: bolder;
     text-align: center;
 }
 .contenido_servicios h2 {
-    margin-top: -30px;
-    font-size: 40px;
+    font-size: 330%;
 }
 .contenido_servicios p {
-    font-size: 18px;
+    font-size: 150%;
+}
+/*-----------------------------------------*/
+.manual_instructivo {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    justify-content:space-evenly;
+    padding-top: 5%;
+    background-color: rgb(255, 254, 251);   
+    border: 1px solid;
 }
 .imagen_instructivo {
-    position: relative;
-    margin-left: 100px;
-    margin-top: 234px;
-    width: 50%;
-    height: 40%;
-    border: 3px solid #3B83BD;
+    display: inline-block;
+    position: absolute;
+    margin: 15% 8%;
+    width: 25%;
+    height: auto;
+    border-radius: 8%;
+    border: 1.5px solid #3B83BD;
     box-shadow: 2px 10px 30px rgb(62, 186, 243);
 }
+.contenido_manual_instrutivo {
+    width: 45.5%;
+    margin: 0% 0% 5% 42%;
+    background-color: #3B83BD;
+    box-shadow: 10px, 15px, 20px #17202A;
+    border-radius: 10px;
+    padding: 4%;
+    font-family: sans-serif;
+}
+.contenido_manual_instrutivo h3 {
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    padding-bottom: 3%;
+    margin-bottom: 3%;
+    border-bottom: 1px solid white;
+}
+.contenido_manual_instrutivo ul {
+    padding-left: 3.5%;
+    color: white;
+}
+.contenido_manual_instrutivo ul li {
+    font-size: 250%;
+}
+.contenido_manual_instrutivo ul a {
+    color: white;
+    font-size: 100%;
+}
+.lista_manual {
+    margin: 1%;
+}
+/*----------------------------------*/
 .contenido_personas_asociadas h3 {
-    display: inline-block;
     margin-top: 20px;
     margin-left: 680px;
     text-align: center;
@@ -116,136 +152,96 @@ nav ul li:hover {
     font-size: 30px;
     color: black;
 }
-.manual_instructivo {
-    border: solid;
-    position: relative;
-    overflow: none;
-    display: flex;
-    justify-content:space-evenly;
-    margin-top: 100px;
-    border-top: 1px solid black;
-    background-color: rgb(255, 254, 251);   
-}
-.contenido_manual_instrutivo {
-    position: relative;
-    height: 782px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 100px;
-    margin-right: 80px;
-    background-color: #3B83BD;
-    box-shadow: 10px, 15px, 20px #17202A;
-    border-radius: 10px;
-    padding: 15px;
-    font-family: sans-serif;
-}
-.contenido_manual_instrutivo h3 {
-    text-align: center;
-    font-size: 45px;
-    border: 30px;
-    color: white;
-    margin-bottom: 20px;
-}
-.contenido_manual_instrutivo ul {
-    margin-top: 2px;
-    padding-left: 25px;
-    color: white;
-}
-.contenido_manual_instrutivo ul li {
-    font-size: 35px;
-}
-.contenido_manual_instrutivo ul a {
-    color: white;
-    font-size: 35px;
-}
-.lista_manual {
-    padding: 3px;
-    margin: 3px;
-}
+/*-----------------------*/
 .contenido_acerca_disser {
-    padding: 80px 200px;
+    padding: 5% 15%;
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 200%;
     background-color: #f8ed4f;
 }
 #disser_ingenieria{
     font-family: sans-serif;
-    font-size: 50px;
+    font-size: 250%;
     text-align: center;
-    padding: 15px;
+    padding: 1.5%;
 }
+/*-----------------------*/
 .personas_asociadas {
-    position: relative;
-    overflow: none;
-}
-.empresas_asociadas {
-    width: 13%;
-    padding: 8px;
-    display: inline-block;
+    border-bottom: 1px solid black ;
+    padding: 5% 0%;
 }
 #empresas_1{ 
-    padding: 30px ;
-    margin: 5px 456px;
-    font-size: 50px;
+    margin: 1% 31.4%;
+    font-size: 400%;
     font-family: sans-serif;
     font-weight: border;
     text-align: center;
     color: rgb(0, 0, 0);
     text-shadow: 13px 14px 5px rgba(119, 102, 102, 0.836);
 }
-.contenido_personas_asociadas {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 20px;
-    border-bottom: 1px solid black;
+.imagenes_empresas {
+    margin: 0% 5% 3% 5%;
 }
-.personas_asociadas section div form {
+.imagenes_empresas2 {
+    margin: 0% 23%;
+}
+.empresas_asociadas {
+    width: 13%;
+}
+.imagenes_empresas form {
     position: relative;
     display: inline-block;
-    width: 20%;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    text-align: 50%;
+    width: 22.5%;
+    margin: 1%;
+}
+.imagenes_empresas2 form {
+    position: relative;
+    display: inline-block;
+    width: 47%;
+    margin: 1%;
 }
 .personas_asociadas section div form input {
-    width: 95%;
+    width: 100%;
+    height: auto;
 }
-#Logo_Amarilo {
-    margin-left: 150px;
-}
-#Logo_Colsubsidio {
-    margin-left: 483px;
-}
-#Logo_avianca {
-    margin-left: 483px;
-}
-.calles{
-    position: relative;
-    width: 10em;
-    left: 40.6em;
-}
+/*---------------------------*/
 .contenido_acerca_desarrolladores {/* ----AQUI VA EL COLOR DE LA CAJA ----*/
-    display: inline-block;
-    margin-top: 20px;
-    
-    position:relative;
-    padding:  8px;
-    width: 1498px;
+    /*display: inline-block;*/
+    margin: 5% 0%;
+    /*position: relative;
+    padding: 8px;*/
+    width: 100%;
     background-color:  rgb(255, 255, 255);
 }
+.Logo_Sena {
+    /*position: relative;*/
+    /*left: 40.6em;*/
+    width: 10%;
+    height: auto;
+    margin: 1%;
+}
+#Derechos {
+    width: 50%;
+    margin: 0% 0% 1.5% 25%;
+}
 #diseño{
-    border: solid rgb(0, 0, 0);
-    margin-top: 16px;
+    display: inline-block;
+    /*margin-top: 16px;
     margin-bottom: 16px;
     margin-left: 18em;
-    margin-right: 18em;
+    margin-right: 18em;*/
     text-align: center;
-    font-size: 30px;
+    font-size: 300%;
 }
 #diseño_2{
+    border-top: 1px solid black;
+    width: 60%;
+    margin: 0% 20%;
+    padding-top: 1.5%;
     font-size: 40px;
     text-align: center; 
 }
+/*----------------------*/
 footer {
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.897);
