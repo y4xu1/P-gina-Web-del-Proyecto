@@ -3,13 +3,16 @@
     padding: 0px;
 }
 .Barra_Navegacion {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.952);
     width: 100%;
     position: fixed;
     z-index: 10;
 }
 .Inicio {
     background-color: #e5e8e8da;
+}
+.titulo{
+    color:rgb(247, 247, 247);
 }
 .Logo_Menú {
     width: 5%;
@@ -58,27 +61,31 @@ nav ul li:hover {
     float: left;
     overflow: none;
     display: block;
-    margin-top: 71px;
+    /*margin-top: 71px;
     margin-bottom: -355px;
     width: 1366px;
-    height: 454px;
+    height: 454px;*/
 }
-.fondo_Luminicentes {
-    position: absolute;
+.imagen_fondo{
+    border:solid black;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    z-index: -1;
 }
 .Inicio_Sesión {
-    background-color: white;
-    margin-left: 575px;
-    margin-right: 575px;
+    width: 20%;
+    margin: 21.5% 38%;
     border-radius: 4px;
     background-color: #F5D72F;
     box-shadow: 3px 4px 5px whitesmoke;
-    padding: 20px;
-    float: left;
+    padding: 2%;
+    position: absolute;
 }
 #Contenido_Inicio_Sesión {
-    list-style: lower-greek;
-    overflow: hidden;
+    margin: 1% -5%;
+    padding: 1%;
 }
 h2 {
     font-size: 12px;
@@ -88,7 +95,7 @@ h2 {
     margin-bottom: 4px;
 }
 .controls {
-    width: 100%;
+    width: 90%;
     background-color: white;
     padding: 10px;
     border-radius: 2,5px;
@@ -120,12 +127,14 @@ h2 {
     text-decoration: underline;
 }
 .botons {
-    background-color: white;
     font-family: sans-serif;
     font-size: 9px;
-    padding: 4px;
+    padding: 2%;
     margin-left: 16px;
-    padding: 5px 50px 5px 50px;
+    margin: 3%;
+}
+#Contenido_Inicio_Sesión div {
+    margin: 0% 14%;
 }
 .botons:hover {
     background-color: #D1F2EB;
@@ -148,6 +157,7 @@ input:focus {
 footer {
     color: white;
     background-color: rgba(0, 0, 0, 0.897);
+    margin-top: 33%;
 }
 footer ul {
     text-align: center;

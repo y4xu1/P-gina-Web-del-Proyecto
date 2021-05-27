@@ -1,0 +1,102 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.Barra_Navegacion {
+    background: rgba(0, 0, 0, 0.952);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+.Inicio {
+    background-color: #e5e8e8da;
+}
+.titulo{
+    color:rgb(247, 247, 247);
+}
+.Logo_Menú {
+    width: 5%;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-bottom: 8px;
+    border: 0,5px solid rgba(128, 128, 128, 0.719);
+}
+h1 {
+    color: rgba(0, 0, 0, 0.952);
+    font-size: 40px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 5px;
+}
+nav {
+    float: right; /* Desplazamos el nav hacia la izquierda */
+}
+nav ul {
+    list-style: none;
+    overflow: hidden; /* Limpiamos errores de float */
+}
+nav ul li {
+    float: right;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+nav ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li:hover {
+    color: black;
+    background: #f7dc6f;
+}
+/*-------------------------------------*/
+.contenido {
+    padding-top: 5%;
+    margin: 0% 2%;
+}
+table{
+    padding-top: 15%;
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 0.5% 1%;
+}
+#Datos {
+    width: 100.02%;
+}
+#Responsables {
+    width: 100.02%;
+}
+#Datos2 {
+    width: 100.02%;
+}
+.control{
+    width: 100%;
+    border: none;
+}
+/*-----------------------------------*/
+footer {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.897);
+    margin-top: 1%;
+}
+footer ul {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+footer ul li {
+    padding-left: 10px;
+}
+.copyright {
+    color: black;
+    padding: 4px;
+    background-color: #e7f521;
+    text-align: center;
+}

@@ -48,6 +48,45 @@ nav ul li:hover {
     color: rgb(239, 255, 19);
     background: #E9BD15;
 }
+.sub_menu{
+    padding:4%;
+    
+}
+#Tipo_Formularios {
+    margin-top: -0.2%;
+    float: right;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.9);
+    font-family: sans-serif;
+}
+ul, ol {
+    list-style:none;
+}
+.form1 > li {
+    float: right;
+}
+.form1 li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 15px;
+    display: block;
+}
+.form1 li ul {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+}
+.form1 li a:hover {
+    background-color: #E9BD15;
+    color: black;
+}
+.form1 li:hover > ul {
+    display: block;
+}
+.form1 li ul li {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.9);
+}
 .contenido {
     padding-top: 40px;
     padding-bottom: 20px;
@@ -166,6 +205,17 @@ form p input {
 .botons {
     margin: 15px 380px;
     padding: 5px 10px;
+    border-radius: 4px;
+    border: 2px groove gray;
+    font-size: 16px;
+}
+.botons:hover {
+    box-shadow: 0px 1px 10px;
+}
+/*---------------------*/
+
+.tablas-dotacion{
+    margin:50px ;
 }
 footer {
     color: rgb(255, 255, 255);
