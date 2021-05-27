@@ -1,7 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
 }
 .Barra_Navegacion {
     background: rgb(0, 0, 0, 0.9);
@@ -10,17 +9,16 @@
     z-index: 3;
 }
 .Logo_Menú {
- 
     width: 4%;
     overflow: hidden;
-    margin-top: 5px;
-    margin-left: 40px;
-    margin-bottom: 5px;
+    margin: 1% 2%;
+    /*margin-left: 40px;
+    margin-bottom: 5px;*/
     border: 0,5px solid rgba(128, 128, 128, 0.719);
 }
 h1 {
     color: white;
-    font-size: 29px;
+    font-size: 247%;
     overflow: hidden;
     display: inline-block;
     margin: 5px;
@@ -35,7 +33,8 @@ nav ul {
 nav ul li {
     float: right;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 120%;
+    width: auto;
 }
 nav ul li a {
     display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
@@ -50,90 +49,44 @@ nav ul li:hover {
     color: rgb(239, 255, 19);
     background: #E9BD15;
 }
+/*----------------------------------------------*/
 .contenido {
-    padding-top: 48px;
-    padding-bottom: 20px;
-    padding-bottom: 20px;
-
+    padding-top: 3.5%;
 }
 .Contacto {
     background-color: white;
-    margin-left: 500px;
-    margin-right: 500px;
+    width: 30%;
+    margin: 5% auto;
     border-radius: 4px;
     background-color: #F5D72F;
     box-shadow: 37px 13px 37px #616A6B;
-    padding: 20px;
-    float: left;
+    padding: 2%;
 }
-#Contenido_Contacto {
-    list-style: lower-greek;
-    overflow: hidden;
-}
-h2 {
-    font-size: 12px;
+.contenido h2 {
+    font-size: 150%;
     font-family: sans-serif;
     text-align: center;
-    padding-bottom: 5px;
+    padding-bottom: 1.5%;
     border-bottom: 1px solid black;
-    margin-bottom: 4px;
 }
-p {
-    font-size: 12px;
+.contenido p {
+    font-size: 130%;
     font-family: sans-serif;
-    margin-bottom: 5px;
+    padding: 1.5% 0%;
 }
 .controls {
-    width: 100%;
+    width: 93.5%;
+    height: auto;
+    margin: 1% 0%;
+    padding: 2.5%;
     background-color: white;
-    padding: 10px;
-    border-radius: 2,5px;
-    margin-bottom: 12px;
+    border-radius: 5px;
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 115%;
 }
 .controls:hover {
     background-color: #EAEDED;
-}
-.Contacto {
-    background-color: white;
-    margin-top: 60px;
-    margin-left: 500px;
-    margin-right: 500px;
-    border-radius: 4px;
-    background-color: #F5D72F;
-    box-shadow: 37px 13px 37px #616A6B;
-    padding: 20px;
-    float: left;
-}
-#Contenido_Contacto {
-    list-style: lower-greek;
-    overflow: hidden;
-}
-h2 {
-    font-size: 12px;
-    font-family: sans-serif;
-    text-align: center;
-    padding-bottom: 5px;
-    border-bottom: 1px solid black;
-    margin-bottom: 4px;
-}
-p {
-    font-size: 12px;
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-.controls {
-    width: 100%;
-    background-color: white;
-    padding: 10px;
-    border-radius: 2,5px;
-    margin-bottom: 12px;
-    font-family: sans-serif;
-    font-size: 13px;
-}
-.controls:hover {
-    background-color: #EAEDED;
+    box-shadow: 0px 0px 3px gray;
 }
 .Contacto a {
     color: black;
@@ -142,19 +95,19 @@ p {
 .botons {
     background-color: white;
     font-family: sans-serif;
-    font-size: 9px;
-    padding: 4px;
-    margin-left: 80px;
-    padding: 5px 50px 5px 50px;
+    font-size: 100%;
+    padding: 1% 5%;
+    margin: 2% 40%
 }
 .botons:hover {
-    background-color: #D1F2EB;
+    background-color: #EAEDED;
+    box-shadow: 0px 0px 3px gray;
 }
 .Contacto a:hover {
     text-decoration: underline;
 }
 input:focus {
-    border: 3px groove #34495E;
+    border: 2px groove #34495E;
 }
 #correo:invalid {
     border: 3px groove #E74C3C;
@@ -165,8 +118,8 @@ input:focus {
 #nombres:required, #correo:required, #Calendario:required {
     border: 3px groove #E74C3C;
 }
+/*-------------------------------------------*/
 footer {
-    margin-top: 528px;
     color: white;
     background-color: rgba(0, 0, 0, 0.897);
 }
