@@ -110,13 +110,13 @@ input:focus {
     border: 2px groove #34495E;
 }
 #correo:invalid {
-    border: 3px groove #E74C3C;
+    border: 2px groove #E74C3C;
 }
 #correo:valid {
-    border: 3px groove #2ECC71;
+    border: 2px groove #2ECC71;
 }
 #nombres:required, #correo:required, #Calendario:required {
-    border: 3px groove #E74C3C;
+    border: 2px groove #E74C3C;
 }
 /*-------------------------------------------*/
 footer {
