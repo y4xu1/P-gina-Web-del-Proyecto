@@ -86,32 +86,32 @@ ul, ol {
     background-color: rgba(0, 0, 0, 0.9);
 }
 /*-------------------------------------------------*/
+.Inicio_Contratos {
+    width: 100%;
+    height: auto;
+}
 .Contrato {
-    margin: 10% 5%;
+    margin: 10% 1%;
     padding: 1%;
     position: auto;
     float: right;
     width: 40%;
     border: 2px solid rgb(217, 0, 255);
 }
-.Inicio_Contratos {
-    width: 100%;
-    height: auto;
-    margin: 0%;
-}
-.contrato1 { 
-    width: 50%;
-}
 input {
     width: 47%;
     display: inline-block;
 }
 .controls {
-    width: 80%;
+    width: 100%;
+    border-radius: 5px;
 }
 .Dirección .controls, .Dirección input {
     width: 10%;
     display: inline-block;
+}
+p {
+    border: 1px solid red;
 }
 #Calle {
     width: 200%;
@@ -126,8 +126,15 @@ input {
     width: 60%;
     border: 1px solid blue;
 }
+#Número_Calle {
+    display: inline-block;
+}
 #Cuidad_Residencia, #Calle {
-    width: 5%;
+    width: 16%;
+}
+.contrato1 { 
+    width: 50%;
+    border: 1px solid black;
 }
 /*-------------------------------------------------*/
 footer {
