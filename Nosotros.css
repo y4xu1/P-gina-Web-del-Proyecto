@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0%;
+    padding: 0%;
 }
 .Barra_Navegacion {
     background: rgb(0, 0, 0, 0.9);
@@ -11,14 +11,14 @@
 .Logo_Menú {
     width: 4%;
     overflow: hidden;
-    margin-top: 5px;
-    margin-left: 40px;
-    margin-bottom: 5px;
+    margin: 1% 2%;
+    /*margin-left: 40px;
+    margin-bottom: 5px;*/
     border: 0,5px solid rgba(128, 128, 128, 0.719);
 }
 h1 {
     color: white;
-    font-size: 29px;
+    font-size: 247%;
     overflow: hidden;
     display: inline-block;
     margin: 5px;
@@ -33,7 +33,8 @@ nav ul {
 nav ul li {
     float: right;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 120%;
+    width: auto;
 }
 nav ul li a {
     display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
@@ -48,55 +49,49 @@ nav ul li:hover {
     color: rgb(239, 255, 19);
     background: #E9BD15;
 }
+/*-----------------------------------------*/
 .contenido {
-    padding-top: 48px;
-    padding-bottom: 20px;
-    padding-bottom: 20px;
+    padding-top:3.5%;
 }
+.Encabezado img{
+    position: relative;
+    float: left;
+    overflow: none;
+    width: 100%;
+    height: 35vmax;
+    box-shadow: 0px 3px 90px;
+}
+.Contenido_Encabezado {
+    position: absolute;
+    margin: 8% 33%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 600%;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 13px 14px 5px #17202A;
+}
+/*--------------------------------------------*/
 .Quienes_Somos {
-    padding: 50px;
+    padding: 5%;
     font-family: sans-serif;
     width: 60%;
     margin: auto;
     overflow: hidden;
 }
-.nuestros_servicios img{
-    position: relative;
-    float: left;
-    overflow: none;
-    width: 100%;
-    height: 500px;
-    box-shadow: 3px 1px 90px ;
-}
-.contenido_servicios {
-    position: absolute;
-    margin-top: 180px;
-    margin-left: 330px;
-    margin-right: 290px;
-}
-.contenido_servicios h2 {
-    margin: 10px;
-    text-shadow: 13px 14px 5px #17202A;
-    font-size: 100px;
-    color: rgba(255, 255, 255, 0.945);
-    font-family: sans-serif;
-    font-weight: bolder;
-    text-align: center;
-}
 .ima {
     width: 300px;
     height: 300px;
-    border-radius:50%;
-    margin: 5px 50PX;
+    border-radius: 50%;
+    margin: auto;
     box-shadow: 1px 8px 40px #7D6608;
 }
 h3 {
     text-align: center;
     font-size: 45px;
 }
-p {
-    margin-left: 40px;
-    margin-right: 40px;
+.Quienes_Somos p {
+    margin: 40px;
 }
 .Mision{
    font-size: 30px;
@@ -124,6 +119,7 @@ p {
     padding: 20px;
     margin-bottom: 80px;
 }
+/*-----------------------------------------*/
 footer {
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.897);
