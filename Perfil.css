@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0%;
+    padding: 0%;
 }
 .Barra_Navegacion {
     background: rgb(0, 0, 0, 0.9);
@@ -11,14 +11,14 @@
 .Logo_Menú {
     width: 4%;
     overflow: hidden;
-    margin-top: 5px;
-    margin-left: 40px;
-    margin-bottom: 5px;
+    margin: 1% 2%;
+    /*margin-left: 40px;
+    margin-bottom: 5px;*/
     border: 0,5px solid rgba(128, 128, 128, 0.719);
 }
 h1 {
     color: white;
-    font-size: 29px;
+    font-size: 247%;
     overflow: hidden;
     display: inline-block;
     margin: 5px;
@@ -33,7 +33,8 @@ h1 {
 #menu ul li {
     float: right;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 120%;
+    width: auto;
 }
 #menu ul li a {
     display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
@@ -48,13 +49,14 @@ h1 {
     color: rgb(239, 255, 19);
     background: #E9BD15;
 }
+/*-------------------------------------------------*/
 #Barra_Herramientas {
-    margin-top: 48px;
+    margin-top: 3.8%;
     float: right;
-    border-top: 2px solid rgba(160, 43, 0, 0.9);;
+    border-top: 2px solid rgba(160, 43, 0, 0.9);
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 ul, ol {
     list-style:none;
@@ -66,14 +68,13 @@ ul, ol {
     color: white;
     text-decoration: none;
     padding: 14px 15px;
-    display:block;
+    display: block;
 }
 .Herramientas li input {
-    padding: 10px 4px;
-    margin-top: 4px;
-    margin-right: 10px;
-    margin-bottom: 2px;
-    border-radius: 4px;
+    width: 75%;
+    padding: 3% 6%;
+    margin: 6% 3%;
+    border-radius: 3%;
     border: 2px groove #17202A;
     font-family: sans-serif;
     font-size: 12px;
@@ -98,55 +99,66 @@ ul, ol {
     position: relative;
     background-color: rgba(0, 0, 0, 0.9);
 }
+/*------------------------------------------------*/
 .contenido {
-    padding-top: 110px;
-    padding-bottom: 20px;
-    padding-bottom: 20px;
+    padding-top: 8%;
+    padding-bottom: 3%;
     background-color: #E5E8E8;
 }
 .Perfil_Aspirante {
-    border-radius: 4px;
-    width: 93%;
-    border: 2px solid white;
+    border-radius: 5px;
+    width: 90%;
     background-color: white;
-    margin: 0px 30px;
-    padding: 20px;
-    margin-bottom: 20px;
+    margin: 1% 3%;
+    padding: 1%;
+    box-shadow: 0px 0px 10px rgb(49, 48, 48);
 }
 .Logo_Usuario {
     border-radius: 4px;
-    border: 1px solid #BFC9CA;
     background-color: #BFC9CA;
     width: 15%;
 }
+.Documentos_Aspirante p a {
+    font-family: sans-serif;
+    font-size: 100%;
+    color: black;
+    text-decoration: none;
+}
+.Documentos_Aspirante p a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: 0px 0px 1px gray;
+}
 .Documentos_Aspirante {
     float: left;
-    overflow: none;
-    display: block;
-    margin-left: 230px;
-    margin-top: -268px;
-    padding: 15px;
+    width: 30%;
+    height: auto;
+    /*margin-left: 230px;
+    margin-top: -268px;*/
+    margin: -16% 16%;
+    padding: 1%;
 }
 .Documentos {
-    padding-bottom: 10px;
+    width: 100%;
+    height: auto;
+    margin: 1.5% 0%;
 }
 .Documentos input {
     text-align: left;
-    padding: 5px 15px;
-    width: 500%;
-    z-index: auto;
+    padding: 1% 3%;
+    width: 100%;
     font-family: sans-serif;
-    font-size: 15px;
-    font-weight: bolder;
+    font-size: 120%;
     border-radius: 10px;
-    border: 3px groove #2ECC71;
-    background-color: #D1F2EB;
+    border: 2px groove #2ecc70e0;
+    background-color: #D1F2EBe0;
 }
 .Documentos input:hover {
     background-color: #D4EFDF;
+    font-weight: bold;
 }
 .Documentos input:required {
-    border: 3px groove #E74C3C;
+    border: 2px groove #E74C3C;
     background-color: #FDEDEC;
 }
 .Documentos input:required:hover {
@@ -154,11 +166,11 @@ ul, ol {
 }
 .Comentarios {
     float: right;
-    overflow: none;
-    display: block;
-    margin-top: -263px;
-    margin-right: -20px;
-    padding: 15px;
+    width: 40%;
+    /*margin-top: -263px;
+    margin-right: -20px;*/
+    margin: -17% 0%;
+    padding: 1%;
 }
 .Comentarios input {
     text-align: left;
@@ -170,18 +182,33 @@ ul, ol {
     border-radius: 6px;
 }
 .controls {
-    width: 500px;
-    height: 200px;
-    margin-bottom: 8px;
+    width: 95.5%;
+    height: auto;
+    padding: 2%;
+    font-family: sans-serif;
+    font-size: 110%;
+    border-radius: 5px;
 }
-.Boton_Envío {
+.controls:hover {
+    background-color: #EAEDED;
+    box-shadow: 0px 0px 3px gray;
+}
+.controls:focus {
+    border: 2px groove navy;
+}
+.Botón_Envío {
     float: right;
-    overflow: none;
-    display: block;
+    margin-top: 1.5%;
 }
-.Boton_Envío:hover {
-    box-shadow: 0pc, 0px, 10px black;
+input {
+    font-family: 'Times New Roman';
+    font-size: 80%;
 }
+input:hover {
+    background-color: #EAEDED;
+    box-shadow: 0px 0px 3px gray;
+}
+/*--------------------------------------------------*/
 footer {
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.897);
