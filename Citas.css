@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Barra_Navegacion {
+    background: rgb(0, 0, 0, 0.9);
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+.Logo_Menú {
+    width: 4%;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+    border: 0,5px solid rgba(128, 128, 128, 0.719);
+}
+h1 {
+    color: white;
+    font-size: 29px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 5px;
+}
+nav {
+    float: right; /* Desplazamos el nav hacia la izquierda */
+}
+nav ul {
+    list-style: none;
+    overflow: hidden; /*Limpiamos errores de float*/
+}
+nav ul li {
+    float: right;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+nav ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: black;
+}
+nav ul li:hover {
+    color: rgb(239, 255, 19);
+    background: #E9BD15;
+}
+/*----------------------------------------*/
+body {
+    background-color: rgb(212, 212, 211);
+}
+.contenido {
+    font-family: sans-serif;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+form {
+    width: 70%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px gray;
+    padding: 3% 2%;
+    margin: 5% 12.5%;
+}
+form h2 {
+    font-size: 250%;
+    margin-bottom: 1%;
+}
+form p {
+    font-size: 120%;
+}
+form input {
+    font-size: 120%;
+}
+.agendar {
+    position:relative;
+    width: 35%;
+    padding: 10px;
+    color: black;
+}
+.controls { 
+    margin: 1.5% 0%;
+    padding: 1%;
+    width: 47.1%;
+    border-radius: 4px;
+    display: inline-block;
+    /*float: left;*/
+    text-shadow: rgb(122, 62, 62);  
+}
+#Seleccion {
+    width: 49.5%;
+}
+.controls:hover, .botons:hover {
+    box-shadow: 0px 0px 5px gray;
+}
+div .controls {
+    width: 30.5%;
+}
+.botons {
+    padding: 0.5% 2%;
+    float: inline-end;
+    border-radius: 4px;
+}
+#Comentarios {
+    display: initial;
+    width: 97%;
+}
+/*----------------------------------------*/
+footer {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.897);
+}
+footer ul {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+footer ul li {
+    padding-left: 10px;
+}
+.copyright {
+    color: black;
+    padding: 4px;
+    background-color: #e7f521;
+    text-align: center;
+}
