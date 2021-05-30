@@ -28,20 +28,20 @@
                     </ul>
                 </nav>
             </section>
-        </header>
-        <section class="sub_menu">
-         <div id="Tipo_Formularios">
-            <ul class="form1">
-                <li><a href="">Formularios</a>
-                    <ul>
-                        <li><a href="formularios.html">Formulario COVID-19</a></li>
-                        <li><a href="induccion.html">Formulario Inducción</a></li>
-                        <li><a href="dotacion.html">Formulario Dotación</a></li>
+            <section class="sub_menu">
+                <div id="Tipo_Formularios">
+                    <ul class="form1">
+                        <li><a href="">Formularios</a>
+                            <ul>
+                                <li><a href="formularios.html">Formulario COVID-19</a></li>
+                                <li><a href="induccion.html">Formulario Inducción</a></li>
+                                <li><a href="dotacion.html">Formulario Dotación</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-         </div>
-        </section>
+                </div>
+            </section>
+        </header>
         <section class="contenido">
             <section class="Introducción">
                 <h2>Formulario Covid-19</h2>
@@ -51,7 +51,7 @@
                 <section class="Información_Personal">
                     <h3>Campos información personal del solicitante</h3>
                     <form action="">
-                        <select name="controls" id="Tipo_de_Documento">
+                        <select class="controls" name="Tipo de Documento" id="Tipo_de_Documento">
                             <option selected="Selected">Seleccione el Tipo de Documento</option>
                             <option>Tarjeta de Identidad (TI)</option>
                             <option>Cédula de Cuidadanía (CC)</option>
@@ -72,19 +72,17 @@
                 </section>
                 <section class="Segunda_Parte_Formulario">
                     <section class="Síntomas">
-                        <section class="Título_Formulario_covid-19">
-                            <h3>Apreciado Usuario</h2>
-                        </section>
+                        <h3>Apreciado Usuario</h2>
                         <h4>¿Marque si ha presentado alguno de los sintomas que se detallan a continuación?</h4>
                         <form action="">
-                            <div id="Derecha">
+                            <div id="Izquierda">
                                 <p><input type="checkbox" value="Tos">Tos</p>
                                 <p><input type="checkbox" value="Dolor de garganta">Dolor de garganta</p>
                                 <p><input type="checkbox" value="Alteración o disminución del gusto">Alteración o disminución del gusto</p>
                                 <p><input type="checkbox" value="Otro">Otro</p>
                                 <p><input type="checkbox" value="Ningún síntoma">Ningún síntoma</p>
                             </div>
-                            <div class="Izquierda">
+                            <div class="Derecha">
                                 <p><input type="checkbox" value="Fiebre cuantificada mayor o igual a 38°C">Fiebre cuantificada mayor o igual a 38°C</p>
                                 <p><input type="checkbox" value="Dificultad para respirar">Dificultad para respirar</p>
                                 <p><input type="checkbox" value="Alteración o disminución del olfato">Alteración o disminución del olfato</p>
@@ -96,7 +94,7 @@
                     <section class="Antecedentes_Enfermedades">
                         <h4>¿Le han diagnosticado alguna de las siguientes enfermedades?</h4>
                         <form action="">
-                            <div id="Derecha">
+                            <div id="Izquierda">
                                 <p><input type="checkbox" value="Asma">Asma</p>
                                 <p><input type="checkbox" value="Enfermedad Pulmonar Obstructiva Crónica - EPOC">Enfermedad Pulmonar Obstructiva Crónica - EPOC</p>
                                 <p><input type="checkbox" value="Diabetes">Diabetes</p>
@@ -105,9 +103,9 @@
                                 <p><input type="checkbox" value="Embarazo">Embarazo</p>
                                 <p><input type="checkbox" value="Enfermedad coronaria o antecedente de infarto cardiaco">Enfermedad coronaria o antecedente de infarto cardiaco</p>
                                 <p><input type="checkbox" value="Accidente cerebrovascular">Accidente cerebrovascular</p>
-                            </div>
-                            <div class="Izquierda">
                                 <p><input type="checkbox" value="Enfermedad Renal Crónica">Enfermedad Renal Crónica</p>
+                            </div>
+                            <div class="Derecha">
                                 <p><input type="checkbox" value="Alguna inmunodeficiencia">Alguna inmunodeficiencia</p>
                                 <p><input type="checkbox" value="Tabaquismo">Tabaquismo</p>
                                 <p><input type="checkbox" value="Desnutrición">Desnutrición</p>
@@ -122,8 +120,8 @@
                     <section class="Contacto_10_Días">
                         <h4>¿Ha tenido contacto estrecho* en los últimos 10 días con un caso confirmado o probable de COVID-19? </h4>
                         <form action="">
-                            <p id="Derecha"><input type="checkbox" value="Sí">Sí</p>
-                            <p class="Izquierda"><input type="checkbox" value="No">No</p>
+                            <p id="Izquierda"><input type="checkbox" value="Sí">Sí</p>
+                            <p class="Derecha"><input type="checkbox" value="No">No</p>
                         </form>
                     </section>
                     <section class="Advertencia">
@@ -136,8 +134,8 @@
                         <h4>Con el fin de cuidar la salud de usted y su familia</h4>
                         <p>Por favor diligenciar los datos de su grupo familiar, con el fin de realizar pruebas diagnosticas 
                             si llegan a requerirse.</p>
-                        <input class="controls" type="text" name="Nombre y Apellidos del Familiar" id="Nombre_y_Apellidos_del_Familiar" placeholder="Nombre y Apellidos del Familiar"><br>
-                        <select name="controls" id="Tipo_de_Documento">
+                        <input class="controls" type="text" name="Nombre y Apellidos del Familiar" id="Nombre_y_Apellidos_del_Familiar" placeholder="Nombre y Apellidos del Familiar">
+                        <select class="controls" name="Tipo de Documento" id="Tipo_de_Documento">
                             <option selected="Selected">Seleccione el Tipo de Documento</option>
                             <option>Tarjeta de Identidad (TI)</option>
                             <option>Cédula de Cuidadanía (CC)</option>
@@ -155,14 +153,15 @@
                     <section class="Ubicación_Muestra">
                         <h4>¿Donde desea que se realice la toma de la muestra?</h4>
                         <form action="">
-                            <div id="Derecha"><p><input type="checkbox" value="Domicilio">Domicilio <small><b>(Casa)</b></small></p></div>
-                            <p class="Izquierda"><input type="checkbox" value="Sede">Sede <small><b>(Institución de salud)</b></small></p>
+                            <div id="Izquierda"><p><input type="checkbox" value="Domicilio">Domicilio <small><b>(Casa)</b></small></p></div>
+                            <p class="Derecha"><input type="checkbox" value="Sede">Sede <small><b>(Institución de salud)</b></small></p>
                         </form>
                     </section>
                     <section>
                         <input class="botons" type="submit" value="Enviar" id="Enviar"></br>
                     </section>
                 </section>
+            </section>
         </section>
         <footer class="info_empres">
             <ul>

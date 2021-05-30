@@ -91,67 +91,86 @@ ul, ol {
     height: auto;
 }
 .Contrato {
-    margin: 10% 1%;
-    padding: 1%;
-    position: auto;
+    margin: 6.5% 2.4%;
+    padding: 2.5%;
     float: right;
-    width: 40%;
-    border: 2px solid rgb(217, 0, 255);
-}
-input {
-    width: 47%;
-    display: inline-block;
+    width: 39%;
+    border-radius: 6px;
+    box-shadow: 0px 0px 15px goldenrod;
 }
 .controls {
-    width: 100%;
+    margin: 1% 0%;
+    padding: 1% 2%;
+    width: 94.5%;
     border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 120%;
 }
-.Dirección .controls, .Dirección input {
-    width: 10%;
+.controls:hover {
+    box-shadow: 0px 0px 5px grey;
+}
+.controls:focus {
+    border: 2px solid gold;
+}
+.DirecciónC {
+    margin-top: 1%;
+    padding-top: 1%;
+    border-top: 2px solid gray;
+}
+.DirecciónC .controls {
+    width: 29.5%;
+}
+#CiudadR {
+    width: 120%;
+}
+.DirecciónCll {
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    border-bottom: 2px solid gray;
+}
+.DirecciónCll .controls {
+    width: 20.4%;
+}
+.contenido p {
+    font-family: sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+}
+#Numeral {
     display: inline-block;
 }
-p {
-    border: 1px solid red;
+#Tipo_de_Identificación {
+    width: 99.5%;
 }
-#Calle {
-    width: 200%;
+.botons {
+    margin-top: 2%;
+    margin-right: 3%;
+    padding: 1% 2%;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 100%;
 }
-.Contrato p, .Contrato .controls {
-    font-size: 16px;
-    margin: 0.3%;
-    padding: 0.5%;
-}
-.Dirección input, .Dirección .controls p {
-    display: inline;
-    width: 60%;
-    border: 1px solid blue;
-}
-#Número_Calle {
-    display: inline-block;
-}
-#Cuidad_Residencia, #Calle {
-    width: 16%;
+.botons:hover {
+    box-shadow: 0px 0px 5px grey;
 }
 .contrato1 { 
     width: 50%;
-    border: 1px solid black;
+    margin: 5% 0%;
 }
 /*-------------------------------------------------*/
 footer {
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.897);
+    margin-top: 3.6%;
 }
 footer ul {
+    margin: 1% 40%;
+    padding-top: 1%;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
-}
-footer ul li {
-    padding-left: 10px;
 }
 .copyright {
     color: black;
-    padding: 4px;
+    padding: 0.5%;
     background-color: #e7f521;
     text-align: center;
 }

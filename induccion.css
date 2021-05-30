@@ -1,7 +1,6 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
 }
 .Barra_Navegacion {
     background: rgba(0, 0, 0, 0.952);
@@ -53,32 +52,85 @@ nav ul li:hover {
     background: #f7dc6f;
 }
 /*-------------------------------------*/
-.contenido {
-    padding-top: 5%;
-    margin: 0% 2%;
+.sub_menu{
+    padding-top: 4.5%;
+    width: 100%;
 }
-table{
-    padding-top: 15%;
+#Tipo_Formularios {
+    float: right;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.9);
+    font-family: sans-serif;
+}
+ul, ol {
+    list-style: none;
+}
+.form1 > li {
+    float: right;
+}
+.form1 li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 15px;
+    display: block;
+}
+.form1 li ul {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+}
+.form1 li a:hover {
+    background-color: #E9BD15;
+    color: black;
+}
+.form1 li:hover > ul {
+    display: block;
+}
+.form1 li ul li {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+/*-------------------------------------*/
+.contenido {
+    margin: 7.2% 2% 5% 2%;
+    box-shadow: 0px 0px 30px grey;
+    font-family: sans-serif;
+}
+table {
     width: 100%;
     border-collapse: collapse;
 }
-th,td{
-    border: 1px solid black;
-    font-size: 20px;
+.tabla1 tr th {
+    font-size: 120%;
+}
+th {
     padding: 0.5% 1%;
 }
-#Datos {
-    width: 100.02%;
+th, td {
+    border: 1px solid black;
+    font-size: 160%;
 }
-#Responsables {
-    width: 100.02%;
-}
-#Datos2 {
-    width: 100.02%;
-}
-.control{
-    width: 100%;
+.control {
+    width: 95%;
+    margin: 1%;
+    padding: 2% 1%;
     border: none;
+    font-size: 80%;
+}
+form option {
+    width: 100.02%;
+    border: 2ps solid red;
+}
+.contenido a button {
+    margin: 1% 1%;
+    padding: 0.5% 2%;
+    border-radius: 4px;
+    font-size: 150%;
+    float: inline-end;
+}
+.contenido a button:hover {
+    font-weight: bolder;
+    box-shadow: 0px 0px 5px black;
 }
 /*-----------------------------------*/
 footer {
