@@ -153,15 +153,19 @@ ul, ol {
 .botons:hover {
     box-shadow: 0px 0px 5px grey;
 }
+h2 {
+    text-align: center;
+    margin: 5% 0% 0% 0%;
+    font-size: 300%;
+}
 .contrato1 { 
     width: 50%;
-    margin: 5% 0%;
 }
 /*-------------------------------------------------*/
 footer {
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.897);
-    margin-top: 3.6%;
+    margin-top: 5%;
 }
 footer ul {
     margin: 1% 40%;
