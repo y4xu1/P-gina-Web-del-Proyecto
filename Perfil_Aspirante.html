@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"amp;gt;>
         <title>Perfil Aspirantes</title>
         <link rel="stylesheet" href="Formato_Base.css">
+        <link rel="stylesheet" href="Mi_Perfil.css">
         <!--lOS ESTILOS ESTAN ABAJO-->
         <link rel="icon" href="Imagenes de la Página/Logo_Principal.png">
     </head>
@@ -24,60 +25,49 @@
                 </nav>
             </section>
         </header>
-        <main>
+        <section class="contenido">
             <section>
                 <img src="Imagenes de la Página/LADRILLOS.jpg" alt="ladrillos" class="ladrillos">
-                <div class="img_caja">
-                    <div class="margen_caja">
+                <div class="notificaciones">
+                    <div class="caja_notificaciones">
                         <img src="Imagenes de la Página/casa.png" class="casa" id="casa_2">
-                        <img src="Imagenes de la Página/casa.png" class="casa" id="casa_2">
-                        <h3 class="casa">Recursos Humanos</h3>
-                        <h5 class="casa">Se te notifica que continuas con el proceso de contrato</h5>
+                        <h2>Recursos Humanos</h2>
+                        <p>Se te notifica que continuas con el proceso de contrato</p>
                     </div>
-                    <div class="margen_caja">
+                    <div class="caja_notificaciones">
                         <img src="Imagenes de la Página/casa.png" class="casa" id="casa_2">
-                        <img src="Imagenes de la Página/casa.png" class="casa" id="casa_2">
-                        <h3 class="casa">Recursos Humanos</h3>
-                        <h5 class="casa">Sus documentos fueron aceptados, espere confirmación</h5>
+                        <h2>Recursos Humanos</h2>
+                        <p>Sus documentos fueron aceptados, espere confirmación</p>
                     </div>
-                    <div class="margen_caja">
-                        <img src="Imagenes de la Página/casa.png" class="casa" id="casa_2">
-                        <img src="Imagenes de la Página/casa.png" class="casa" id="casa_2">
-                        <h3 class="casa">Trascendental</h3>
-                        <h5 class="casa">Sus documentos fueron entregados correctamente</h5>
+                    <div class="caja_notificaciones">
+                        <img src="Imagenes de la Página/Logo_Principal.png" class="casa" id="casa_2">
+                        <h2>Trascendental</h2>
+                        <p>Sus documentos fueron entregados correctamente</p>
                     </div>
-                    
-                </div> 
-            </section>
-            <section class="segunda_section">
-                <div>
-                    <h2>Luis Armando Casas Puertas </h2>
-                 <img src="Imagenes de la Página/Logo_Usuario.png" class="logo">
                 </div>
-                <div class="Formato_1">
-                    
-                    <p>Tipo de Identificación</p>
-                    <select class="controls" name="Tipo de Documento" id="Tipo_de_Identificación">
+            </section>
+                <section class="Perfil">
+                    <center>
+                        <h2>Nombre de Usuario</h2>
+                        <p>Foto de Perfil</p>
+                        <input type="image" src="Imagenes de la Página/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil">
+                    </center>
+                    <select class="Seleccion name="Tipo de Documento" id="Tipo_de_Identificación">
                         <option selected="selected">Selecione el Tipo de Identificación</option>
                         <option>Cédula Ciudadanía (CC)</option>
                         <option>Tarjeta de Identidad (TI)</option>
                         <option>Cédula Extrangería</option>
                     </select>
-                    <p>Documento de Identidad</p><input class="controls" type="text" name="Documento de Identidad" id="Documento_de_Identidad"><br>
-                    <p>Fecha Expedición Documento</p><input class="controls" type="date" name="Fecha Expedición Documento" id="Fecha_Expedición_Documento"><br>
-                    <p>País de expedición</p><input class="controls" type="text" name="Ciudad de expedición" id="Ciudad_de_expedición"><br>
-                    <p>Fecha de Nacimiento</p><input class="controls" type="date" name="Fecha de Nacimiento" id="Fecha_de_Nacimiento"><br>
-                    <p>País de Nacimiento</p><input class="controls" type="text" name="País de Nacimiento" id="País_de_Nacimiento"><br>
-                    <p>Dirección de Residencia</p><input class="controls" type="text" name="Direccion" id="Direccion"><br>
-                    <p>Telefono de Contacto</p><input class="controls" type="text" name="Telefono" id="Telefono"><br>
-                    <p>Correo Electrónico</p><input class="controls" type="text" name="Correo Electrónico" id="Correo_Electrónico"><br>
-        
-                </div>
-                <div class="Formato_1">
-                  
-                 <p>Cargo</p><input class="controls" type="text" name="Cargo" id="Cargo"><br>
-                 <p>Estado Civil</p>
-                    <select class="controls" name="Estado Cívil" id="Estado_Civil">
+                    <input class="controls" type="text" name="Documento de Identidad" id="Documento_de_Identidad" placeholder="Documento de Identidad">
+                    <p>Fecha Expedición Documento<input class="controls" type="date" name="Fecha Expedición Documento" id="Fecha_Expedición_Documento"></p>
+                    <input class="controls" type="text" name="Ciudad de expedición" id="Ciudad_de_expedición" placeholder="País de expedición">
+                    <p>Fecha de Nacimiento<input class="controls" type="date" name="Fecha de Nacimiento" id="Fecha_Nacimiento"></p>
+                    <input class="controls" type="text" name="País de Nacimiento" id="País_de_Nacimiento" placeholder="País de Nacimiento">
+                    <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Dirección de Residencia">
+                    <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Telefono de Contacto">
+                    <input class="controls" type="text" name="Correo Electrónico" id="Correo_Electrónico" placeholder="Correo Electrónico">
+                    <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Cargo">
+                    <select class="Seleccion" name="Estado Cívil" id="Estado_Civil">
                         <option selected="selected">Selecione su estado cívil</option>
                         <option>Indiferente</option>
                         <option>Soltero / Soltera</option>
@@ -87,8 +77,7 @@
                         <option>Viudo</option>
                         <option>Complicado</option>
                     </select>
-                    <p>Estrato</p>
-                    <select class="controls" name="Estrato" id="Estrado">
+                    <select class="Seleccion" name="Estrato" id="Estrado">
                         <option selected="selected">Selecione su Estrato</option>
                         <option>1</option>
                         <option>2</option>
@@ -97,8 +86,7 @@
                         <option>5</option>
                         <option>6</option>
                     </select>
-                 <p>Tipo de Sangre</p>
-                    <select class="controls" name="Estrato" id="Estrado">
+                    <select class="Seleccion" name="Estrato" id="Estrado">
                         <option selected="selected">Selecione su Estrato</option>
                         <option>AB+</option>
                         <option>AB-</option>
@@ -109,64 +97,38 @@
                         <option>O+</option>
                         <option>O-</option>
                     </select>
-                 <p>Género</p>
-                    <select class="controls" name="Género" id="Género">
+                    <select class="Seleccion" name="Género" id="Género">
                         <option selected="selected">Selecione su Género</option>
                         <option>Femenino</option>
                         <option>Masculino</option>
                     </select>
-                 <p>Libreta militar</p><input class="controls" type="text" name="Libreta militar" id="Libreta_militar"><br>
-                 <p>Tiene EPS</p>
-                    <select class="controls" name="Tiene EPS" id="EPS">
-                        <option selected="selected">Selecciones una Opción</option>
+                    <input class="controls" type="text" name="Libreta militar" id="Libreta_militar" placeholder="Libreta militar">
+                    <select class="Seleccion" name="Tiene EPS" id="EPS">
+                        <option selected="selected">Tiene EPS</option>
                         <option>Sí</option>
                         <option>No</option>
                     </select>
-                 <p>EPS</p><input class="controls" type="text" name="EPS" id=""><br>
-                 <input class="botons" type="submit" value="Actualizar">
-        
-                </div>
-            </section>
-            <section class="Documentos_Aspirante">
-                 <div>
-                     <div class="Documentos" id="Documento1">
-                         <form action="">
-                          <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Documento 1">
-                          </form>
-                     </div>
-                     <div class="Documentos" id="Documento2">
-                          <form action="">
-                             <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Documento 2">
-                         </form>
-                      </div>
-                        <div class="Documentos" id="Documento3">
-                            <form action="">
-                                <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Documento 3">
-                            </form>
-                        </div>
-                        <div class="Documentos" id="Documento4">
-                            <form action="">
-                                <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Documento 4">
-                            </form>
-                        </div>
-                        <div class="Documentos" id="Documento5">
-                            <form action="">
-                        <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Documento 5">
-                            </form>
-                        </div>
-                        <div class="Documentos" id="Documenton">
-                            <form action="">
-                        <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Documento n">
-                            </form>
-                        </div>
-                  </div>
-                  <div class="comentarios">
-                     <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Deja Tu Comentario"></textarea></br>
-                     <input type="submit" name="Botón_Envío" value="Enviar" class="Botón_Envío"></br>
-                  </div>
-            </section>
-        </main>
-
+                    <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS">
+                    <input class="botons" type="submit" value="Actualizar">
+                </section>
+                <section class="Documentos_Aspirante">
+                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 1" id="Documento1">
+                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 2" id="Documento2">
+                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 3" id="Documento3">
+                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 4" id="Documento4">
+                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 5" id="Documento5">
+                    <input class="controls" type="submit" name="Boton_Documento" value="Documento n" id="Documenton">
+                    <center>
+                        <input class="botons" type="submit" value="Agregar Documento">
+                        <input class="botons" type="submit" value="Borrar Documento">
+                        <input class="botons" type="submit" value="Actualizar Documento">
+                    </center>
+                    <div class="comentarios">
+                        <textarea class="controls" name="comentario" id="comentario" cols="30" rows="10" placeholder="Deja Tu Comentario"></textarea>
+                        <input class="botons" type="submit" name="Botón_Envío" value="Enviar" class="Botón_Envío"></br>
+                    </div>
+                </section>
+        </section>
         <footer class="info_empres">
             <ul>
                 <p>Disser Ingieniería S.A.S. Bogotá</p>
@@ -180,131 +142,3 @@
         </footer>
     </body>
 </html> 
-<!---->
-<style>
-.ladrillos{
-    width: 100%;
-    height: 500px;
-    position: relative;
-    float: left;
-    overflow: none;
-    box-shadow: 2px 1px 30px ;
-}
-
-.img_caja{
-    border: solid black;
-    position: absolute;
-    width: 80%;
-    margin-top: 170px;
-    margin-left: 9em;
-    z-index: index 2;
-}
-.margen_caja{
-    background-color: rgba(255, 253, 253, 0.829);
-    margin: 10px;
-    padding: 10px;
-}
-.casa{
-    
-    width: 28%;
-    display: inline-block;
-    border-right: solid rgba(134, 134, 134, 0.856) ;
-    margin: 0px 5px;
-}
-#casa_2{
-    width: 40px;
-}
-h3{
-   font-size: 30px;
-   margin:0px 2em;
-}
-h5{
-    font-size: 20px ;
-    
-}
-.segunda_section{
-    
-    justify-content: space-evenly; 
-    margin:30px;
-    padding:30px;
-    display: flex;
-
-}
-.logo{
-   
-    position: abolute;    
-    width:400px;
-    margin-right: 50px;
-    height:400px;
-}
-.Formato_1{
-    background-color: rgba(2, 200, 250, 0.842);
-    width: 30%; 
-}
-.controls{
-    font-size: 15px;
-    width: 95%;
-    margin-left: 5px ;
-    
-}
-p{
-    font-size: 20px;
-    margin: 10px;
-}
-.botons{
-  padding: 0px 20px;
-  margin: 2em 12em;
-}
-h2{
-    font-size: 40px;
-}
-
-.Documentos {
-    padding-bottom: 10px;
-    position: relative;
-}
-.Documentos input {
-    text-align: left;
-    padding: 5px 15px;
-    margin: 0px 5em; 
-    width: 500px;
-    z-index: auto;
-    font-family: sans-serif;
-    font-size: 15px;
-    font-weight: bolder;
-    border-radius: 10px;
-    border: 3px groove #2ECC71;
-    background-color: #D1F2EB;
-}
-.Documentos input:hover {
-    background-color: #D4EFDF;
-}
-.Documentos input:required {
-    border: 3px groove #E74C3C;
-    background-color: #FDEDEC;
-}
-.Documentos input:required:hover {
-    background-color: #FADBD8;
-}
-.Documentos_Aspirante{
-    display:flex;
-    justify-content:space-evenly;
-}
-.Comentarios {
-    display: block;
-    margin-top: -263px;
-    margin-right: -20px;
-    padding: 15px;
-    ;
-}
-.Comentarios input {
-    text-align: left;
-    padding: 5px 15px;
-    z-index: auto;
-    font-family: sans-serif;
-    font-size: 15px;
-    font-weight: bolder;
-    border-radius: 6px;
-    width: 400px;
-}
-</style>
