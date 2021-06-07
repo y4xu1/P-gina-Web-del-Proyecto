@@ -1,55 +1,3 @@
-* {
-    margin: 0%;
-    padding: 0%;
-}
-.Barra_Navegacion {
-    background: rgb(0, 0, 0, 0.9);
-    width: 100%;
-    position: fixed;
-    z-index: 3;
-}
-.Logo_Menú {
-    width: 4%;
-    overflow: hidden;
-    margin: 1% 2%;
-    /*margin-left: 40px;
-    margin-bottom: 5px;*/
-    border: 0,5px solid rgba(128, 128, 128, 0.719);
-}
-h1 {
-    color: white;
-    font-size: 247%;
-    overflow: hidden;
-    display: inline-block;
-    margin: 5px;
-}
-#menu {
-    float: right; /* Desplazamos el nav hacia la izquierda */
-}
-#menu ul {
-    list-style: none;
-    overflow: hidden; /*Limpiamos errores de float*/
-}
-#menu ul li {
-    float: right;
-    font-family: Arial, sans-serif;
-    font-size: 120%;
-    width: auto;
-}
-#menu ul li a {
-    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-    padding: 15px;
-    color: #fff;
-    text-decoration: none;
-}
-#menu ul li a:hover {
-    color: black;
-}
-#menu ul li:hover {
-    color: rgb(239, 255, 19);
-    background: #E9BD15;
-}
-/*-------------------------------------------------*/
 #Barra_Herramientas {
     margin-top: 3.6%;
     float: right;
@@ -114,7 +62,7 @@ ul, ol {
     box-shadow: 0px 0px 10px rgb(49, 48, 48);
 }
 .Logo_Usuario {
-    border-radius: 4px;
+    border-radius: 200px;
     background-color: #BFC9CA;
     width: 15%;
 }
@@ -207,23 +155,4 @@ input {
 input:hover {
     background-color: #EAEDED;
     box-shadow: 0px 0px 3px gray;
-}
-/*--------------------------------------------------*/
-footer {
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.897);
-}
-footer ul {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
-}
-footer ul li {
-    padding-left: 10px;
-}
-.copyright {
-    color: black;
-    padding: 4px;
-    background-color: #e7f521;
-    text-align: center;
 }
