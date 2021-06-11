@@ -144,9 +144,10 @@ ul, ol {
 .controls:focus {
     border: 2px groove navy;
 }
-.Botón_Envío {
+.Botón_Envío, .Botón_Bloqueo {
     float: right;
     margin-top: 1.5%;
+    margin-left: 1%;
 }
 input {
     font-family: 'Times New Roman';
