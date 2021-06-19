@@ -35,6 +35,18 @@ h1 {
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
+#Perfil {
+    width: 8%;
+}
+#Logo_Notificacion {
+    width: 15%;
+    height: auto;
+    margin-top: -41%;
+    margin-right: 14%;
+    /*display: inline-block;*/
+    float: right;
+    z-index: 10;
+}
 #menu ul li a {
     display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
     padding: 15px;
