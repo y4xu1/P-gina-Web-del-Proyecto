@@ -13,24 +13,24 @@
     filter: blur(7px);
 }
 .Inicio_Sesión {
-    margin: 17.9% 35.5%;
+    margin: 17.6% 35.5%;
 }
 .Registro {
-    margin: 15.75% 35.5%;
+    margin: 13.8% 35.5%;
 }
 .Olvide_Contraseña {
-    margin: 17.1% 35.5%;
+    margin: 16.8% 35.5%;
 }
 .Contacto {
-    margin: 12.8% 35.5%;
+    margin: 12.5% 35.5%;
 }
 .Inicio_Sesión, .Registro, .Olvide_Contraseña, .Contacto {
     width: 25%;
     border-radius: 8px;
     /*background-color: #F5D72F;*/
     /*background-color: black;*/
-    background-color: rgba(220, 220, 220, 0);
-    box-shadow: 0px 0px 5px whitesmoke;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px whitesmoke;
     padding: 2%;
     position: absolute;
 }
@@ -43,7 +43,7 @@
 }
 .controls {
     width: 90%;
-    color: white;
+    color: rgb(255, 255, 255, 1);
     /*color: black;*/
     /*background-color: black;*/
     /*background-color: white;*/
@@ -52,7 +52,7 @@
     border-radius: 5px;
     margin: 2% 0%;
     font-family: sans-serif;
-    font-size: 100%;
+    font-size: 115%;
 }
 /*#TyC {
     background-color: black;
