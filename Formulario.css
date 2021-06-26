@@ -1,4 +1,4 @@
-.sub_menu{
+/*.sub_menu{
     padding-top: 3.5%;
     width: 100%;
 }
@@ -35,10 +35,10 @@ ul, ol {
 .form1 li ul li {
     position: relative;
     background-color: rgba(0, 0, 0, 0.9);
-}
+}*/
 /*---------------------------------------------*/
 .contenido {
-    margin: 05% 0%;
+    padding: 3% 0%;
 }
 .Introducción {
     margin: 2% 15%;
