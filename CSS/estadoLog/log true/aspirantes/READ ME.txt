@@ -1,3 +1,4 @@
+<!-- Vinculacion con formularios css - estaba dentro de HTML/estadoLog/logtrue/aspirantes -->
 <!DOCTYPE html>
 <html lang="es">
     <head>

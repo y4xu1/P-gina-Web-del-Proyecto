@@ -1,43 +1,58 @@
 * {
     margin: 0px;
     padding: 0px;
+    transition: 0.5s;
 }
 .Barra_Navegacion {
-    background: rgb(0, 0, 0, 0.9);
+    background: rgba(10, 10, 10, 0.8);
     width: 100%;
     position: fixed;
+    transition: 0.5s;
     z-index: 3;
+    color: white;
+}
+.Barra_Navegacion:hover {
+    background: rgba(0, 0, 0, 0.9);
 }
 .Logo_Menú {
-    width: 4%;
-    overflow: hidden;
-    margin-top: 5px;
-    margin-left: 40px;
-    margin-bottom: 5px;
-    border: 0,5px solid rgba(128, 128, 128, 0.719);
+    width: 2.7%;
+    margin: 1% 1%;
+    float: left;
+}
+.Logo_Menú:hover {
+    transform: scale(1.3);
 }
 h1 {
-    color: white;
-    font-size: 29px;
-    overflow: hidden;
+    font-size: 230%;
     display: inline-block;
-    margin: 5px;
-}
-#menu {
-    float: right; /* Desplazamos el nav hacia la izquierda */
+    margin: 0.5%;
 }
 #menu ul {
     list-style: none;
-    overflow: hidden; /*Limpiamos errores de float*/
 }
 #menu ul li {
     float: right;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 125%;
 }
 #Perfil {
     width: 8%;
 }
+#menu ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 15px;
+    color: black;/*-cambiar-*/
+    text-decoration: none;
+    color: white;
+}
+#menu ul li a:hover {
+    color: black;
+}
+#menu ul li:hover {
+    background: #E9BD15;
+    transform: scale(1.05);
+}
+/*-- --*/
 #Logo_Notificacion {
     width: 15%;
     height: auto;
@@ -47,34 +62,37 @@ h1 {
     float: right;
     z-index: 10;
 }
-#menu ul li a {
-    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-    padding: 15px;
-    color: #fff;
-    text-decoration: none;
-}
-#menu ul li a:hover {
-    color: black;
-}
-#menu ul li:hover {
-    color: rgb(239, 255, 19);
-    background: #E9BD15;
-}
+/*-- --*/
 footer {
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.897);
+    border-top: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.9);/*-cambiar-*/
+    color: white;/*-cambiar-*/
+    font-family: sans-serif;
 }
 footer ul {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
+    padding: 1%;
 }
-footer ul li {
-    padding-left: 10px;
+footer ul h4  {
+    font-size: 150%;
+    margin-bottom: 1%;
+}
+footer ul div {
+    display: inline-block;
+    padding: 0.8% 1%;
+}
+footer ul .left {
+    margin: 0% 0.1%;
+    border-right: 4px double white;
+    text-align: right;
+}
+footer ul div li {
+    list-style: none;
+    font-size: 120%;
 }
 .copyright {
-    color: black;
-    padding: 4px;
-    background-color: #e7f521;
+    color: black;/*-cambiar-*/
+    padding: 0.3%;
+    background: #E9BD15;
     text-align: center;
+    font-size: 100%;
 }
