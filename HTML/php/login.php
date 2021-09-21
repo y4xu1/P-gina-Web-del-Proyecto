@@ -8,7 +8,7 @@
 
     #Login
     if(isset($_POST['btningresar'])){
-        $query = mysqli_query($conn,"SELECT * FROM login WHERE numIdentificacion = '$nombre' AND password = '$pass'");
+        $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE numIdentificacion = '$nombre' AND password = '$pass'");
         $nr = mysqli_num_rows($query);
 
         if($nr==1){
@@ -31,7 +31,7 @@
 
     #Registrar
     if(isset($_POST["btnregistrar"])){
-        $sqlgrabar = "INSERT INTO login(numIdentificacion,password,TipoRol) VALUES ('$nombre','$pass','$rol')";
+        $sqlgrabar = "INSERT INTO usuarios(numIdentificacion,password,TipoRol) VALUES ('$nombre','$pass','$rol')";
 
         if(mysqli_query($conn,$sqlgrabar)){
             echo "<script> alert('Usuario registrado con exito: $nombre'); window.location='../estadoLog/Inicio_Sesión.html'</script>";

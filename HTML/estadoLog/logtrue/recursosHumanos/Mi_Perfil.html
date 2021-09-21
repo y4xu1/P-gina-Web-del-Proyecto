@@ -22,7 +22,6 @@
                         <a href="../../../../index.html"><img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                         <h1 class="titulo">Trascendental</h1>
                         <li><a href="aspirantes.html" class="menu">Aspirantes</a></li>
-                        <li><a href="Agendamiento_citas.html" class="menu">Citas</a></li>
                         <li><a href="formularios/induccion.html" class="menu">Formularios</a></li>
                         <li><a href="contratos/Contrato_Fijo.html" class="menu">Contratos</a></li>
                     </ul>
@@ -57,16 +56,16 @@
                         <h2>Nombre de Usuario</h2>
                         <p>Foto de Perfil</p>
                         <input type="image" src="../../../../Imagenes/otros logos/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil">
-                        <form action="" method="POST">
+                        <form action="../../../php/RecursosHumanos.php" method="POST">
                             <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre"> 
                             <input class="controls" type="text" name="sNombre" id="" placeholder="Segundo Nombre">
                             <input class="controls" type="text" name="pApellido" id="" placeholder="Primer Apellido">
                             <input class="controls" type="text" name="sApellido" id="" placeholder="Segundo Apellido"> 
                                <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
                                 <option selected="selected">Selecione el Tipo de Identificación</option>
-                                <option value="CC">Cédula Ciudadanía (CC)</option>
-                                <option value="TI">Tarjeta de Identidad (TI)</option>
-                                <option value="CE">Cédula Extrangería</option> -->
+                                <option value="CC">Cédula de Ciudadanía (CC)</option>
+                                <option value="CE">Cédula de Extrangería (CE)</option> 
+                                <option value="PA">Pasaporte (PA)</option> 
                              </select> 
                             <input class="controls" type="text" name="docRecHum" id="Documento_de_Identidad" placeholder="Documento de Identidad">
                            <p>Fecha Expedición Documento<input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento"></p>

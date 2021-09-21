@@ -9,7 +9,7 @@
         <title>Perfil Aspirantes</title>
         <link rel="stylesheet" href="../../../../CSS/Formato_Base.css">
         <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/Mi_Perfil.css">
-        <link rel="icon" href="../../Imagenes/Logo_Principal.png">
+        <link rel="icon" href="../../../../Imagenes/Logo_Principal.png">
     </head>
     <body>
 <!--===============================================================================================================-->
@@ -21,7 +21,6 @@
                             <h1 class="titulo">Trascendental</h1>
                         <li id="Perfil"><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
                         <li><a href="Agendar_citas.html" class="menu">Agendar Cita</a></li>
-                        <li><a href="formularios.html" class="menu">Formulario Covid-19</a></li>
                     </ul>
                 </nav>
             </section>
@@ -52,24 +51,24 @@
 
                 <section class="Perfil">
                     <h2></h2>
-                    <form action="../../../php/aspirantes.php" method="POST">
+                    <form action="../../../php/Aspirantes.php" method="POST">
                         <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre"> 
                         <input class="controls" type="text" name="sNombre" id="" placeholder="Segundo Nombre">
                         <input class="controls" type="text" name="pApellido" id="" placeholder="Primer Apellido">
                         <input class="controls" type="text" name="sApellido" id="" placeholder="Segundo Apellido"> 
                            <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
                             <option selected="selected">Selecione el Tipo de Identificación</option>
-                            <option value="CC">Cédula Ciudadanía (CC)</option>
-                            <option value="TI">Tarjeta de Identidad (TI)</option>
-                            <option value="CE">Cédula Extrangería</option> -->
+                            <option value="CC">Cédula de Ciudadanía (CC)</option>
+                            <option value="CE">Cédula de Extrangería (CE)</option> 
+                            <option value="PA">Pasaporte (PA)</option> 
                          </select> 
                         <input class="controls" type="text" name="docAspirante" id="Documento_de_Identidad" placeholder="Documento de Identidad">
-                       <p>Fecha Expedición Documento<input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento"></p>
+                        <p>Fecha Expedición Documento<input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento"></p>
                         <input class="controls" type="text" name="Pais" id="Paisexpedición" placeholder="País de expedición">
                          <p>Fecha de Nacimiento<input class="controls" type="date" name="FechaNacimiento" id="Fecha_Nacimiento"></p>
                         <input class="controls" type="text" name="PaísNacimiento" id="País_de_Nacimiento" placeholder="País de Nacimiento">
                         <input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ciudad de Residencia">
-                       <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Dirección de Residencia">
+                        <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Dirección de Residencia">
                         <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Telefono de Contacto">
                         <input class="controls" type="text" name="CorreoElectrónico" id="Correo_Electrónico" placeholder="Correo Electrónico">
                         <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Cargo">
@@ -115,21 +114,37 @@
                     <input class="botons" type="submit" value="Actualizar">
                 </section>
                 <section class="Documentos_Aspirante">
-                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 1" id="Documento1">
-                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 2" id="Documento2">
-                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 3" id="Documento3">
-                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 4" id="Documento4">
-                    <input class="controls" type="submit" name="Boton_Documento" value="Documento 5" id="Documento5">
-                    <input class="controls" type="submit" name="Boton_Documento" value="Documento n" id="Documenton">
-                    <center>
-                        <input class="botons" type="submit" value="Agregar Documento">
-                        <input class="botons" type="submit" value="Borrar Documento">
-                        <input class="botons" type="submit" value="Actualizar Documento">
-                    </center>
-                    <div class="comentarios">
-                        <textarea class="controls" name="comentario" id="comentario" cols="30" rows="10" placeholder="Deja Tu Comentario"></textarea>
-                        <input class="botons" type="submit" name="Botón_Envío" value="Enviar" class="Botón_Envío"></br>
-                    </div>
+                    <form action="../../../php/documentosAspirantes.php" method="POST">
+                        <input type="text" name="docAspiranteS" class="controls" placeholder="Número de Identificación del aspirante">
+                        <label>Sube tu Curriculum</label>
+                        <input type="file" name="Curriculum" class="controls" value="Curriculum">
+                        <label>Sube tu Certificado de Alturas</label>
+                        <input type="file" name="CertificadoAlturas" class="controls" value="Certificado de Alturas">
+                        <label>Sube tu Certificado Judicial</label>
+                        <input type="file" name="CertificadoJudicial" class="controls" value="Certificado Judicial">
+                        <label>Sube tu Certificado Penal</label>
+                        <input type="file" name="CertificadoPenal" class="controls" value="Certificado Penal">
+                        <label>Sube tu Certificado Disciplinario</label>
+                        <input type="file" name="CertificadoDisciplinario" class="controls" value="Certificado Disciplinario">
+                        <label>Sube tu Resultados Médicos</label>
+                        <input type="file" name="ResultadosMédicos" class="controls" value="Resultados Médicos">
+                        <label>Sube tu Carnet de Vacunación Covid-19</label>
+                        <input type="file" name="CarnetVacunaciónCovid-19" class="controls" value="Carnet de Vacunación Covid-19">
+                        <label>Sube tu Referencias Personales</label>
+                        <input type="file" name="ReferenciasPersonales" class="controls" value="Referencias Personales">
+                        <label>Sube tu Referencias Laborales</label>
+                        <input type="file" name="ReferenciasLaborales" class="controls" value="Referencias Laborales">
+                        <center>
+                            <!-- <input class="botons" type="submit" value="Agregar Documento">
+                            <input class="botons" type="submit" value="Borrar Documento">
+                            <input class="botons" type="submit" value="Actualizar Documento"> -->
+                            <input type="submit" value="Subir documentos" name="btndocumentos" id="formulario">
+                        </center>
+                        <div class="comentarios">
+                            <textarea class="controls" name="comentario" id="comentario" cols="30" rows="10" placeholder="Deja Tu Comentario"></textarea>
+                            <input class="botons" type="submit" name="Botón_Envío" value="Enviar" class="Botón_Envío"></br>
+                        </div>
+                    </form>
                 </section>
         </section>
 <!--===============================================================================================================-->

@@ -6,7 +6,7 @@ include("Conexion.php");
 insertar($conn);
     function insertar ($conn){
         $idContrato=$_POST["idcontrato"];
-        $tipoContrato=$_POST["tipocontrato"];
+        $tipoContrato=$_POST["tipoContrato"];
         $docAspirante=$_POST["docAspirante"];
         $docRecursos=$_POST["docRecursos"];
         $cargo=$_POST["Cargo"]; 

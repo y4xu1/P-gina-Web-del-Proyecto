@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contrato indefinido</title>
+        <title>Contratos</title>
         <link rel="stylesheet" href="../../../../../CSS/Formato_Base.css">
         <link rel="stylesheet" href="../../../../../CSS/estadoLog/log true/recursosHumanos/Contratos.css">
         <link rel="icon" href="../../../../../Imagenes/logoProyect/Logo_Principal.png">
@@ -19,13 +19,12 @@
                 </section>
                 <nav id="menu">
                     <ul>
-                        <a href="../../../../../index.html"><img src="../../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
+                        <a href="../../../../../index.html" > <img src="../../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                             <h1 class="titulo">Trascendental</h1>
                         <li id="Perfil"><a href="../Mi_Perfil.html" class="menu">Mi Perfil</a><img src="../../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
-                        <li><a href="../Agendamiento_citas.html" class="menu">Citas</a></li>
                         <li><a href="../formularios/induccion.html" class="menu">Formularios</a></li>
                         <li><a href="Contrato_Fijo.html" class="menu">Contratos</a></li>
-                        <li><a href="../Perfil.html" class="menu">Aspirantes</a></li>
+                        <li><a href="../aspirantes.html" class="menu">Aspirantes</a></li>
                     </ul>
                 </nav>
             </section>
@@ -34,9 +33,9 @@
         <section class="contenido">
             <img src="../../../../../Imagenes/contrato/Incio_Contratos.jpg" alt="Imagen_inicio_contratos" class="Inicio_Contratos">
             <center>
-                <h2 id="Titulo_Contrato">Contrato a término indefinido</h2>
+                <h2 id="Titulo_Contrato">Contratos</h2>
             </center>
-            <div id="Tipo_Contrato">
+           <!--  <div id="Tipo_Contrato">
                 <ul class="Contratos">
                     <li><a href="">Tipos de Contratos</a>
                         <ul>
@@ -46,25 +45,37 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div>--> 
             <section class="Contrato">
                 <div>
-                    <input class="controls" type="text" name="idContrato" id="idContrato" placeholder="Tipo de Contrato">
-                    <input class="controls" type="text" name="tipoContrato" id="tipoContrato" placeholder="Tipo de Contrato">
-                    <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Tipo de Cargo a desempeñar">
-                    <input class="controls" type="text" name="Salario" id="Salario" placeholder="Salario">
-                    <input class="controls" type="text" name="Valor de prestaciones" id="Valor_de_prestaciones" placeholder="Valor de prestaciones">
-                    <input class="controls" type="text" name="Fecha de iniciación de labores" id="Fecha_de_iniciación_de_labores" placeholder="Fecha de iniciación de labores">
-                    <input class="controls" type="text" name="Nombre de la obra" id="Nombre_de_la_obra" placeholder="Nombre de la obra">
-                    <input class="controls" type="text" name="Ciudad donde fue contratado" id="Ciudad_donde_fue_contratado" placeholder="Ciudad donde fue contratado">
-                    <input class="controls" type="text" name="Firma" id="Firma" placeholder="Firma">
-                    <input class="botons" type="submit" value="Enviar Datos">
+                    <form action="../../../../php/contratos.php" method="POST">
+                        <input class="controls" type="text" name="idcontrato" id="idContrato" placeholder="Identificación del contrato">
+                        <center>
+                        <select class="controls" name="tipoContrato">
+                            <option>Selecione el Tipo de Contrato</option>
+                            <option value="Termino indefinido">Contrato a término Indefinido</option>
+                            <option value="Termino Fijo">Contrato a término Fijo</option> 
+                            <option value="Obra o Labor ">Contrato por Obra o Labor</option> 
+                        </select>
+                        </center>
+                        <input class="controls" type="text" name="docAspirante" id="docAspirante" placeholder="Número de Identificación del aspirante">
+                        <input class="controls" type="text" name="docRecursos" id="docRecursos" placeholder="Número de Identificación de recursos humanos">
+                        <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Tipo de Cargo a desempeñar">
+                        <input class="controls" type="text" name="Salario" id="Salario" placeholder="Salario">
+                        <input class="controls" type="text" name="Valorprestaciones" id="Valor_de_prestaciones" placeholder="Valor de prestaciones">
+                        <input class="controls" type="date" name="Fechainiciación" id="Fecha_de_iniciación_de_labores" placeholder="Fecha de iniciación de labores">
+                        <input class="controls" type="text" name="Nombreobra" id="Nombre_de_la_obra" placeholder="Nombre de la obra">
+                        <input class="controls" type="text" name="Ciudadcontratado" id="Ciudad_donde_fue_contratado" placeholder="Ciudad donde fue contratado">
+                        <input class="controls" type="file" name="Firma" id="Firma" placeholder="Firma"> 
+                        <center><input class="botons" type="submit" value="Enviar Datos" name="btnregistrar" id="formulario"></center>
                     <!--  <input class="botons" type="submit" value="Descargar Contrato">
                     <input class="botons" type="submit" value="Descargar Minuta de Contrato">
                     <input class="botons" type="submit" value="Actualizar">-->
+                    
+                  </form>
                 </div>
             </section>
-            <img src="../../../../../Imagenes/contrato/INDEFINIDO-DISSER.jpg" alt="Imagen_inicio_contratos" class="contrato1">
+            <img src="../../../../../Imagenes/contrato/OBRA A LABOR-DISSER.jpg" alt="Imagen_inicio_contratos" class="contrato1">
         </section>
 <!--===============================================================================================================-->
         <footer class="info_empres">
