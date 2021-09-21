@@ -21,7 +21,6 @@
                             <h1 class="titulo">Trascendental</h1>
                             <li id="Perfil"><a href=".Perfil_Aspirante.html" class="menu">Mi perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
                         <li><a href="Agendar_citas.html" class="menu">Agendar Cita</a></li>
-                        <li><a href="formularios.html" class="menu">Formulario Covid-19</a></li>
                     </ul>
                 </nav>
             </section>
@@ -32,17 +31,37 @@
                     <h2>Agende su cita</h1>
                     <p>Para realizar su proceso de agendación de citas, por favor realice el siguiente formulario</p>
                     <div>
-                        <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Información Básica del paciente</p>
-                        <input class="controls" type="email" name="Nombre" id="nombre" placeholder="Correo Electrónico">
-                        <input class="controls" type="text" placeholder="Nombres completos ">
-                        <input class="controls" type="text" placeholder="Apellidos completos">
+                        <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Información Básica del Medico</p>
+                        <input class="controls" type="text" name="docAspirante" id="Documento_de_Identidad" placeholder="Documento de Identidad">
+                        <input class="controls" type="email" name="Nombre" id="nombre" placeholder="Correo Electrónico"><br>
+                        <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Información Básica del Medico</p>
+                        <select class="controls" name="medicos" id="">
+                            <option >Seleccione Medico</option>
+                            <option value="Carlos Parra">Carlos Parra</option>
+                            <option value="Yaxul Cardenas">Yaxul Cardenas</option>
+                            <option value="Laura Castillo">Laura Castillo</option>
+                            <option value="Brayan Gomez">Brayan Gomez</option>
+                            <option value="Maicol Quiroga">Maicol Quiroga</option>
+                        </select>
                     </div>
                     <p>Fecha de hoy</p>
                     <input class="controls" type="date" name="Fecha de hoy">
                     <input class="controls" type="time" name="Hora de hoy">
                     <p>Fecha de asignacion de cita</p>
                     <input class="controls" type="date" name="Fecha de cita">
-                    <input class="controls" type="time" name="Hora de cita">
+                    <select class="controls" name="horas" id="">
+                        <option >Seleccione hora de la cita</option>
+                        <option value="6:00">6:00 A.M</option>
+                        <option value="6:30">6:30 A.M</option>
+                        <option value="7:00">7:00 A.M</option>
+                        <option value="7:30">7:30 A.M</option>
+                        <option value="8:00">8:00 A.M</option>
+                        <option value="8:30">8:30 A.M</option>
+                        <option value="9:00">9:00 A.M</option>
+                        <option value="9:30">9:30 A.M</option>
+                        <option value="10:00">10:00 A.M</option>
+                        <option value="10:30">10:30 A.M</option>
+                    </select>
                     <input class="controls" type="text" name="Comentarios" id="Comentarios" placeholder="Agregar un comentario">
                     <input class="botons" type="submit" name="enviar" id="enviar" value="Enviar">
                 </form>
