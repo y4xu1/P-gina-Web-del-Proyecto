@@ -51,68 +51,67 @@
 <!--===============================================================================================================-->
 
                 <section class="Perfil">
-                    <center>
-                        <h2>Nombre de Usuario</h2>
-                        <p>Foto de Perfil</p>
-                        <input type="image" src="../../../../Imagenes/otros logos/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil">
-                    </center>
-                    <select class="Seleccion" name="Tipo de Documento" id="Tipo_de_Identificación">
-                        <option selected="selected">Selecione el Tipo de Identificación</option>
-                        <option>Cédula Ciudadanía (CC)</option>
-                        <option>Tarjeta de Identidad (TI)</option>
-                        <option>Cédula Extrangería</option>
-                    </select>
-                    <input class="controls" type="text" name="Documento de Identidad" id="Documento_de_Identidad" placeholder="Documento de Identidad">
-                    <p>Fecha Expedición Documento<input class="controls" type="date" name="Fecha Expedición Documento" id="Fecha_Expedición_Documento"></p>
-                    <input class="controls" type="text" name="Ciudad de expedición" id="Ciudad_de_expedición" placeholder="País de expedición">
-                    <p>Fecha de Nacimiento<input class="controls" type="date" name="Fecha de Nacimiento" id="Fecha_Nacimiento"></p>
-                    <input class="controls" type="text" name="País de Nacimiento" id="País_de_Nacimiento" placeholder="País de Nacimiento">
-                    <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Dirección de Residencia">
-                    <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Telefono de Contacto">
-                    <input class="controls" type="text" name="Correo Electrónico" id="Correo_Electrónico" placeholder="Correo Electrónico">
-                    <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Cargo">
-                    <select class="Seleccion" name="Estado Cívil" id="Estado_Civil">
-                        <option selected="selected">Selecione su estado cívil</option>
-                        <option>Indiferente</option>
-                        <option>Soltero / Soltera</option>
-                        <option>Casado / Casada</option>
-                        <option>Unión Libre</option>
-                        <option>Separado</option>
-                        <option>Viudo</option>
-                        <option>Complicado</option>
-                    </select>
-                    <select class="Seleccion" name="Estrato" id="Estrado">
-                        <option selected="selected">Selecione su Estrato</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                    </select>
-                    <select class="Seleccion" name="Estrato" id="Estrado">
-                        <option selected="selected">Selecione su Estrato</option>
-                        <option>AB+</option>
-                        <option>AB-</option>
-                        <option>A+</option>
-                        <option>A-</option>
-                        <option>B+</option>
-                        <option>B-</option>
-                        <option>O+</option>
-                        <option>O-</option>
-                    </select>
-                    <select class="Seleccion" name="Género" id="Género">
-                        <option selected="selected">Selecione su Género</option>
-                        <option>Femenino</option>
-                        <option>Masculino</option>
-                    </select>
-                    <input class="controls" type="text" name="Libreta militar" id="Libreta_militar" placeholder="Libreta militar">
-                    <select class="Seleccion" name="Tiene EPS" id="EPS">
-                        <option selected="selected">Tiene EPS</option>
-                        <option>Sí</option>
-                        <option>No</option>
-                    </select>
-                    <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS">
+                    <h2></h2>
+                    <form action="../../../php/aspirantes.php" method="POST">
+                        <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre"> 
+                        <input class="controls" type="text" name="sNombre" id="" placeholder="Segundo Nombre">
+                        <input class="controls" type="text" name="pApellido" id="" placeholder="Primer Apellido">
+                        <input class="controls" type="text" name="sApellido" id="" placeholder="Segundo Apellido"> 
+                           <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
+                            <option selected="selected">Selecione el Tipo de Identificación</option>
+                            <option value="CC">Cédula Ciudadanía (CC)</option>
+                            <option value="TI">Tarjeta de Identidad (TI)</option>
+                            <option value="CE">Cédula Extrangería</option> -->
+                         </select> 
+                        <input class="controls" type="text" name="docAspirante" id="Documento_de_Identidad" placeholder="Documento de Identidad">
+                       <p>Fecha Expedición Documento<input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento"></p>
+                        <input class="controls" type="text" name="Pais" id="Paisexpedición" placeholder="País de expedición">
+                         <p>Fecha de Nacimiento<input class="controls" type="date" name="FechaNacimiento" id="Fecha_Nacimiento"></p>
+                        <input class="controls" type="text" name="PaísNacimiento" id="País_de_Nacimiento" placeholder="País de Nacimiento">
+                        <input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ciudad de Residencia">
+                       <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Dirección de Residencia">
+                        <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Telefono de Contacto">
+                        <input class="controls" type="text" name="CorreoElectrónico" id="Correo_Electrónico" placeholder="Correo Electrónico">
+                        <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Cargo">
+                         <select class="Seleccion" name="EstadoCívil" id="Estado_Civil">
+                            <option selected="selected">Selecione su estado cívil</option>
+                            <option value="Indiferente">Indiferente</option>
+                            <option value="Soltero">Soltero / Soltera</option>
+                            <option value="Casado">Casado / Casada</option>
+                            <option value="Unión Libre">Unión Libre</option>
+                            <option value="Separado">Separado</option>
+                            <option value="Viudo">Viudo</option>
+                        </select>
+                        <select class="Seleccion" name="Estrato" id="Estrado">
+                            <option selected="selected">Selecione su Estrato</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                        <select class="Seleccion" name="RH" id="RH">
+                            <option selected="selected">Selecione su RH</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                        <select class="Seleccion" name="Género" id="Género">
+                            <option selected="selected">Selecione su Género</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Masculino">Masculino</option>
+                        </select>
+                        <input class="controls" type="text" name="Libretamilitar" id="Libreta_militar" placeholder="Libreta militar">
+                        <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS">
+                        <input type="submit" value="Ingresar" name="btnregistrar" id="formulario">
+                         
+                       </form>
                     <input class="botons" type="submit" value="Actualizar">
                 </section>
                 <section class="Documentos_Aspirante">

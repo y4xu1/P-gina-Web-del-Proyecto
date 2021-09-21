@@ -1,3 +1,4 @@
+<?php include('../../../php/aspirantes.php')?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -44,6 +45,35 @@
             </div>
         </header>
 <!--===============================================================================================================-->
+        
+
+            $completo = mysqli_query($conn, $listado);
+            while ($dato = mysqli_fetch_arry(completo)) {
+
+                echo "<section class='contenido'>";
+                    echo"<section class='Perfil_Aspirante'>";
+                        echo"<section class='Foto_Perfil'>";
+        ?>
+        <?php=fotoPerfil($conn);?>
+        <?php
+                        echo"</section>";
+                        echo"<section class='Documentos_Aspirantes'>"
+        ?>
+        <?php=listaDoc_Aspirante($conn)?>
+        <?php
+                        "</section>";
+                        echo"<section class='Comentarios'>";
+                            echo"<textarea class='controls' rows='8.5' name='comentario' placeholder='Agregar un comenterio...' id='Comentario'></textarea>";
+                            echo"<input class='botons' type='submit' name='Botón_Envío' value='Enviar' id='Botón_Envío'>";
+                        echo"</section>";
+                    echo"</section>";
+                echo"</section>";
+
+            }
+            
+        
+
+
         <section class="contenido">
             <section class="Perfil_Aspirante">
                 <section class="Foto_Perfil">

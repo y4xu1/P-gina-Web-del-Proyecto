@@ -34,22 +34,14 @@
             <center>
                 <section class="Registro">
                     <section id="Contenido_Registro"></section>
-                        <center><h2> Registro</h2>
-                        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre"><br>
-                        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su apellido"><br>
-                        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo electrónico"><br>
-                        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su número de Identificación"><br>
-                        <select class="controls" name="cargos" id="cargos">
-                            <option selected="selected">Selecione su Cargo</option>
-                            <option>Director</option>
-                            <option>Bienestar - Técnico de Comunicación Interna</option>
-                            <option>Auxiliar</option>
-                            <option>Técnico de selección de personas</option>
-                            <option>Calidad - Técnico de TIC</option>
-                        <select>
-                        <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña"><br>
-                        <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
-                        <input class="botons" type="submit" value="Registrarme"></center>
+                        <form action="../php/Login.php" method="post">
+                            <center><h2> Registro</h2>
+                                <input class="controls" type="text" name="usuario" id="documento" placeholder="Ingrese su número de indentificación"><br>
+                                <input class="controls" type="password" name="pass" id="contraseña" placeholder="Ingrese su contraseña"><br>
+                                <input class="controls" type="text" name="TipoRol" id="contraseña" placeholder="Tipo de Rol"><br>
+                                <input class="controls" type="checkbox" name="Terminos y condiciones" id="TyC"><label for="">Estoy de acuerdo con <a href="#">Terminos y condiciones</a></label><br>
+                            <input class="botons" type="submit" value="Ingresar" name="btnregistrar">
+                        </form>
                     </section>
                 </section>
             </center>
