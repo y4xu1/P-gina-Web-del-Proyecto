@@ -85,7 +85,7 @@ actualizar ($conn);
     
        if(isset($_POST['btnActualizar'])){
           $query = mysqli_query($conn,"UPDATE aspirante SET idTipoDocumento='$tipo', PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps' WHERE docAspirante='$doca'");
-          $nr = mysqli_num_rows($query);
+          mysqli_close($conn);
     
        }
        else {

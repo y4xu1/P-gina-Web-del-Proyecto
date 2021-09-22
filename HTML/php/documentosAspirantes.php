@@ -29,6 +29,7 @@ function insertar ($conn) {
   $consulta= "INSERT INTO documentos (docAspirante,curriculum,certificadoAlturas,certificadoJudicial,certificadoPenal,certificadoDisciplinario,resultadosMedicos,carnetVacCovid,referenciasPersonales,referenciasLaborales) VALUES ('$docAspiranteS','$curriculum','$certificadoAlturas','$certificadoJudicial','$certificadoPenal','$certificadoDisciplinario','$resultadosMedicos','$carnetVacCovid','$referenciasPersonales','$referenciasLaborales')";
   mysqli_query($conn,$consulta);
   mysqli_close($conn);
+ 
 }
 function actualizar($conn){
   $docAspiranteS=($_POST["docAspiranteS"]);
@@ -44,12 +45,10 @@ function actualizar($conn){
   
      if(isset($_POST['btnActualizar'])){
         $query = mysqli_query($conn,"UPDATE documentos SET curriculum='$curriculum',certificadoAlturas='$certificadoAlturas',certificadoJudicial='$certificadoJudicial',certificadoPenal='$certificadoPenal',certificadoDisciplinario='$certificadoDisciplinario',resultadosMedicos='$resultadosMedicos',carnetVacCovid='$carnetVacCovid',referenciasPersonales='$referenciasPersonales',referenciasLaborales='$referenciasLaborales' WHERE docAspirante='$docAspiranteS'");
-        $nr = mysqli_num_rows($query);
-  
+        mysqli_close($conn);
      }
      else {
            echo "<script> alert('Error al actualizar'); window.location='Index.html'</script>";
         }
   }
-?>
 ?>

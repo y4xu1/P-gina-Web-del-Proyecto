@@ -63,7 +63,7 @@ function actualizar($conn){
     
        if(isset($_POST['btnActualizar'])){
           $query = mysqli_query($conn,"UPDATE contrato SET tipoContrato='$tipoContrato', docAspirante='$docAspirante', docRecHum='$docRecursos', tipoCargoDesp='$cargo', salario='$Salario', valorPrestaciones='$valor',fechaInicio='$fecha', nombreObra='$obra', ciudadObra='$cuidad',firma='$firma' WHERE idContrato='$idContrato'");
-          $nr = mysqli_num_rows($query);
+          mysqli_close($conn);
     
        }
        else {

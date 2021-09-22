@@ -65,7 +65,7 @@ function actualizar($conn){
   
      if(isset($_POST['btnActualizar'])){
         $query = mysqli_query($conn,"UPDATE recursoshumanos SET idTipoDocumento='$tipo', pNombreRh='$pnombre', sNombreRh='$snombre', pApellidoRh='$papellido', sApellidoRh='$sapellido', fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN', 	paisNacimiento='$paisN', direccionResidencia='$dir', telefonoContacto='$telefono', correoElectronico='$correo', tipoCargo='$cargo', estadoCivil='$estadoC', estrato='$estrato', rh='$rh', genero='$genero', eps='$eps' WHERE docRecHum='$doca'");
-        $nr = mysqli_num_rows($query);
+        mysqli_close($conn);
      }
      else {
            echo "<script> alert('Error al actualizar'); window.location='Index.html'</script>";
