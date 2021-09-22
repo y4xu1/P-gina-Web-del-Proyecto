@@ -45,7 +45,7 @@
 <!--===============================================================================================================-->
 <?php
 
-function listado ($conn) {
+/*function listado ($conn) {
 
     $listaAspirantes = "SELECT * FROM aspirante AND usuario";
     $completo = mysqli_query($conn, $listaAspirantes);
@@ -65,17 +65,21 @@ function listado ($conn) {
         echo "</section>";
     }
 
-}
+}*/
+
+
 
 ?>
 
+
         <section class="contenido">
-            <section class="Perfil_Aspirante">
-                <section class="Foto_Perfil">
+            <?=perfilAspirante($conn);?>
+            <!--<section class="Perfil_Aspirante">
+                <section class="Foto_Perfil" name=''>
                     <img src="../../../../Imagenes/otros logos/Logo_Usuario.png" alt="Logo_Usuario" class="Logo_Usuario">
                 </section>
                 <section class="Documentos_Aspirante">
-                    <p><a href="../aspirantes/Perfil_Aspirante.html">Nombre Aspirante</a></p>
+                    <p><a href='../aspirantes/Perfil_Aspirante.html' name='aspName'>Nombre Aspirante</a></p>
                     <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Curriculum" id="Documento_1P">
                     <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado de Alturas">
                     <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Judicial">
@@ -135,7 +139,7 @@ function listado ($conn) {
                     <textarea class="controls" rows="8.5" name="comentario" placeholder="Agregar un comenterio..." id="Comentario"></textarea>
                     <input class="botons" type="submit" name="Botón_Envío" value="Enviar" id="Botón_Envío">
                 </section>
-            </section>
+            </section>-->
         </section>
 <!--===============================================================================================================-->
         <footer class="info_empres">
