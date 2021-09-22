@@ -45,6 +45,7 @@
         </header>
 <!--===============================================================================================================-->
         <section class="contenido">
+            <form action="../../../../php/Formularios.php" method="POST">
             <section class="tablas-dotacion">
                 <table>
                     <tr>
@@ -61,14 +62,7 @@
                     <tr>
                         <td><input class="control" type="text" name="Nombres" id="Nombres" placeholder="Nombre del Trabajador"></td>
                         <td>
-                            <select class="control" name="Documento" id="Documento">
-                                <option selected="selected">Selecione su tipo de identificacion</option>
-                                <option>Cedula</option>
-                                <option>Cedula de extranjeria</option>
-                                <option>Pasaporte</option>
-                                <option>Tarjeta de identidad</option>
-                                <option>Libreta Militar</option>
-                            <select>
+                        <input class="controls" type="text" name="docAspirante" id="Documento_de_Identidad" placeholder="Documento de Identidad">
                         </td>
                         <td><input class="control" type="text" name="Cargo" id="Cargo" placeholder="Cargo  del Trabajador"></td>
                         <td><input class="control" type="text" name="Proceso" id="Proceso" placeholder="Proceso y/o Centro de trabajo"></td>
@@ -163,8 +157,25 @@
                         <th>EN CUMPLIMIENTO DE LOS DEBERES COMO TRABAJADOR DEFINIDOS EN LA LEY A TRAVES DE LA SIGUIENTE NORMATIVIDAD: CODIGO SUSTANTIVO DEL TRABAJO ART. 56 Y ART. 58 NUMERAL 7; LEY 9 DE 1979, ART DECRETO 1295 DE 1994 ART. 22</th>
                     </tr>
                 </table>
-                <a href=""><button>Enviar</button></a>
+<!--===============================================================================================================-->
+                <!-- lo nuevo -->
+
+                <input type="text" name="idFormulario" placeholder="Id Formulario"><br>
+                <select name="tipoFormulario">
+                    <option>Selecione el Tipo de Formulario</option>
+                    <option value="Formulario Dotación">Formulario Dotación</option>
+                    <option value="Formulario Inducción">Formulario Inducción</option> 
+                </select> <br>
+                <label>Fecha del Formulario</label><br>
+                <input type="date" name="fechaFormulario"><br>
+                <input type="text" name="docRecHum" placeholder="Número de Identificación de Recursos Humanos"><br>
+                <label>Archivo del Formulario</label><br>
+                <input type="file" name="archivoFormulario">
+                <input class="botons" type="submit" name="enviar" id="enviar" value="Enviar">
+               
                 <a href=""><button>Descargar</button></a>
+               
+                </form>
             </section>
         </section>
 <!--===============================================================================================================-->

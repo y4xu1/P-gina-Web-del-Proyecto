@@ -42,6 +42,7 @@
             </header>
 <!--===============================================================================================================-->
             <section class="contenido">
+                <form action="../../../../php/Formularios.php" method="POST">
                 <table class="Formato">
                     <tr>
                         <th>FORMATO DE INDUCCIÓN</th>
@@ -103,14 +104,14 @@
                         <td><input class="control" type="text" name="Numeros" id="Num" placeholder="1"></td>
                         <td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Pepito Pérez"></td>
                         <td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Asistencia"></td>
-                        <td><input class="control" type="text" name="Cédula" id="Cédula" placeholder="9999999999"></td>
+                        <td><input class="control" type="text" name="docAspirante" id="Cédula" placeholder="9999999999"></td>
                         <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
                     </tr>
                     <tr>
                         <td><input class="control" type="text" name="Numeros" id="Num" placeholder="2"></td>
                         <td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Ingrese el Nombre"></td>
                         <td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Ingrese el Cargo"></td>
-                        <td><input class="control" type="text" name="Cédula" id="Cédula" placeholder="Ingrese el Número de la cédula"></td>
+                        <td><input class="control" type="text" name="" id="Cédula" placeholder="Ingrese el Número de la cédula"></td>
                         <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
                     </tr>
                     <tr>
@@ -120,20 +121,7 @@
                         <td><input class="control" type="text" name="Cédula" id="Cédula" placeholder="Ingrese el Número de la cédula"></td>
                         <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
                     </tr>
-                    <tr>
-                        <td><input class="control" type="text" name="Numeros" id="Num" placeholder="4"></td>
-                        <td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Ingrese el Nombre"></td>
-                        <td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Ingrese el Cargo"></td>
-                        <td><input class="control" type="text" name="Cédula" id="Cédula" placeholder="Ingrese el Número de la cédula"></td>
-                        <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
-                    </tr>
-                    <tr>
-                        <td><input class="control" type="text" name="Numeros" id="Num" placeholder="5"></td>
-                        <td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Ingrese el Nombre"></td>
-                        <td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Ingrese el Cargo"></td>
-                        <td><input class="control" type="text" name="Cédula" id="Cédula" placeholder="Ingrese el Número de la cédula"></td>
-                        <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
-                    </tr>
+                  
                 </table>
                 <table id="Firmas">
                     <tr>
@@ -141,9 +129,25 @@
                         <th><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></th>
                     </tr>
                 </table>
-                <a href=""><button>Enviar</button></a>
+            
+<!--===============================================================================================================-->
+        <!-- Lo nuevo -->
+                <input type="text" name="idFormulario" placeholder="Id Formulario"><br>
+                <select name="tipoFormulario">
+                    <option>Selecione el Tipo de Formulario</option>
+                    <option value="Formulario Dotación">Formulario Dotación</option>
+                    <option value="Formulario Inducción">Formulario Inducción</option> 
+                </select> <br>
+                <label>Fecha del Formulario</label><br>
+                <input type="date" name="fechaFormulario"><br>
+                <input type="text" name="docRecHum" placeholder="Número de Identificación de Recursos Humanos"><br>
+                <label>Archivo del Formulario</label><br>
+                <input type="file" name="archivoFormulario">
+                <input class="botons" type="submit" name="enviar" id="enviar" value="Enviar">
                 <a href=""><button>Descargar</button></a>
             </section>
+        </form>
+            
 <!--===============================================================================================================-->
         <footer class="info_empres">
             <ul>
