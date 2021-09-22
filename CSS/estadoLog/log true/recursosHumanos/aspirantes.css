@@ -77,11 +77,13 @@ ul, ol {
     text-decoration: underline;
     text-shadow: 0px 0px 1px gray;
 }
+.Foto_Perfil, .Documentos_Aspirante, .Comentarios {
+    display: inline-flex;
+}
 .Documentos_Aspirante {
-    float: left;
     width: 30%;
     height: auto;
-    margin: -16% 16%;
+    /*margin: -16% 16%;*/
     padding: 1%;
 }
 .Boton_Documento {
@@ -106,9 +108,9 @@ ul, ol {
     background-color: #D1F2EBe0;
 }
 .Comentarios {
-    float: right;
+    /*float: right;*/
     width: 40%;
-    margin: -17% 0%;
+    /*margin: -17% 0%;*/
     padding: 1%;
 }
 #Comentario {
@@ -172,3 +174,5 @@ input:hover {
     margin: 5% 0% 0% 0%;
     width: 60%;
 }
+
+/*==========================================tabla de busquda de datos===============================================*/

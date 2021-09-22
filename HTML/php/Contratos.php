@@ -2,6 +2,16 @@
 
 include("Conexion.php");
 
+diferencia($conn);
+
+function diferencia($conn){
+if(isset($_POST ['btnregistrar'])){
+insertar($conn);
+}
+if(isset($_POST ['btnActualizar'])){
+actualizar ($conn);
+}
+}
 
 insertar($conn);
     function insertar ($conn){
@@ -37,4 +47,27 @@ insertar($conn);
 
 }
 
+#Boton Actualizar
+function actualizar($conn){
+    $idContrato=$_POST["idcontrato"];
+        $tipoContrato=$_POST["tipoContrato"];
+        $docAspirante=$_POST["docAspirante"];
+        $docRecursos=$_POST["docRecursos"];
+        $cargo=$_POST["Cargo"]; 
+        $Salario=$_POST["Salario"]; 
+        $valor=$_POST["Valorprestaciones"]; 
+        $fecha=$_POST["Fechainiciación"]; 
+        $obra=$_POST["Nombreobra"]; 
+        $cuidad=$_POST["Ciudadcontratado"];
+        $firma=$_POST["Firma"];
+    
+       if(isset($_POST['btnActualizar'])){
+          $query = mysqli_query($conn,"UPDATE contrato SET tipoContrato='$tipoContrato', docAspirante='$docAspirante', docRecHum='$docRecursos', tipoCargoDesp='$cargo', salario='$Salario', valorPrestaciones='$valor',fechaInicio='$fecha', nombreObra='$obra', ciudadObra='$cuidad',firma='$firma' WHERE idContrato='$idContrato'");
+          $nr = mysqli_num_rows($query);
+    
+       }
+       else {
+             echo "<script> alert('Error al actualizar'); window.location='Index.html'</script>";
+          }
+    }
 ?>

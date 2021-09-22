@@ -2,8 +2,6 @@
 
 include("conexion.php");
 
-
-insertar($conn);
 function insertar ($conn){
  $docA=$_POST["docAspirante"];
  $correo=$_POST["Correo"];
