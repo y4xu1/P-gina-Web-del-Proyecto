@@ -1,12 +1,27 @@
 <?php
 
-    include("Conexion.php");
+include("Conexion.php");
 
-    $nombre = $_POST['usuario'];
-    $pass = $_POST['pass'];
-    $rol = $_POST['TipoRol'];
+$nombre = $_POST['usuario'];
+$pass = $_POST['pass'];
+$rol = $_POST['TipoRol'];
 
-    #Login
+#Session
+session_start();
+
+$_SESSION["username"] = $nombre;
+
+if (isset($_SESSION["username"])!==true) {
+#if (isset($_SESSION(["username"])!==false) {
+
+#if (isset($_SESSION(["username"])))  {
+    #session_destroy();
+}
+else {
+    session_destroy();
+}
+
+#Login
     if(isset($_POST['btningresar'])){
         $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE numIdentificacion = '$nombre' AND password = '$pass'");
         $nr = mysqli_num_rows($query);
@@ -39,4 +54,5 @@
             echo "Error: ".$sql."<br>".mysqli_error($conn);
         }
     }
+
 ?>

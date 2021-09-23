@@ -13,7 +13,6 @@ function perfilAspirante ($conn) {
   #$listaAsp = mysqli_query($conn, $aspiranteDatos, $aspiranteDocs);
   $listaAsp = mysqli_query($conn, $aspiranteDatos) or die (mysqli_error($conn));
 
-
   while ($lista = mysqli_fetch_array($listaAsp)) {
     echo "<section class='Perfil_Aspirante'>";
       echo "<section class='Foto_Perfil'>";
