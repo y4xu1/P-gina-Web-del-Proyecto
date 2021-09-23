@@ -29,6 +29,8 @@ insertar($conn);
 if(isset($_POST ['btnActualizar'])){
 actualizar ($conn);
 }
+if(isset($_POST ['btndocumentos']))
+documentos($conn)
 }
 
   function insertar ($conn){
@@ -58,7 +60,22 @@ actualizar ($conn);
     mysqli_query($conn,$consulta);
     mysqli_close($conn);
   }
-
+  function documentos($conn){
+    $docAspiranteS=$_POST["docAspirante"];
+    $curriculum=$_POST["Curriculum"];
+    $certificadoAlturas=$_POST["CertificadoAlturas"];
+    $certificadoJudicial=$_POST["CertificadoJudicial"];
+    $certificadoPenal=$_POST["CertificadoPenal"];
+    $certificadoDisciplinario=$_POST["CertificadoDisciplinario"];
+    $resultadosMedicos=$_POST["ResultadosMédicos"];
+    $carnetVacCovid=$_POST["CarnetVacunaciónCovid-19"];
+    $referenciasPersonales=$_POST["ReferenciasPersonales"];
+    $referenciasLaborales=$_POST["ReferenciasLaborales"];
+    $docR=$_POST["DocRecHum"];
+    $consulta= "INSERT INTO documentos (docAspirante,curriculum,certificadoAlturas,certificadoJudicial,certificadoPenal,certificadoDisciplinario,resultadosMedicos,carnetVacCovid,referenciasPersonales,referenciasLaborales,docRecHum) VALUES ('$docAspiranteS','$curriculum','$certificadoAlturas','$certificadoJudicial','$certificadoPenal','$certificadoDisciplinario','$resultadosMedicos','$carnetVacCovid','$referenciasPersonales','$referenciasLaborales','$docR')";
+    mysqli_query($conn,$consulta);
+    mysqli_close($conn);
+  }
 
   function actualizar($conn){
     $pnombre=($_POST["pNombre"]);
