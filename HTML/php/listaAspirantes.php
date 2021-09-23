@@ -37,7 +37,7 @@ function perfilAspirante ($conn) {
         echo "<input class='botons' type='submit' name='Bloqueo' value='Bloquear' id='Botón_Bloqueo'>";
       echo "</section>";
       echo "<section class='Comentarios'>";
-        echo "<textarea class='controls' rows='8.5' name='comentario' placeholder='Agregar un comenterio...' id='Comentario'></textarea>";
+        echo "<textarea class='controls' rows='23' name='comentario' placeholder='Agregar un comenterio...' id='Comentario'></textarea>";
         echo "<input class='botons' type='submit' name='Botón_Envío' value='Enviar' id='Botón_Envío'>";
       echo "</section>";
     echo "</section>";

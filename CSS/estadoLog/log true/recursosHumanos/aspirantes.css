@@ -1,10 +1,13 @@
 #Barra_Herramientas {
     margin-top: 3.55%;
     float: right;
-    border-top: 2px solid rgba(160, 43, 0, 0.9);
+    /*border-top: 2px solid rgba(160, 43, 0, 0.9);*/
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(10, 10, 10, 0.8);
     font-family: sans-serif;
+}
+#Barra_Herramientas:hover {
+    background: rgba(0, 0, 0, 0.9);
 }
 ul, ol {
     list-style:none;
@@ -55,6 +58,7 @@ ul, ol {
 }
 .Perfil_Aspirante {
     border-radius: 5px;
+    display: inline-flex;
     width: 90%;
     background-color: white;
     margin: 1.5% 3%;
@@ -64,8 +68,15 @@ ul, ol {
 .Logo_Usuario {
     border-radius: 200px;
     background-color: #BFC9CA;
-    width: 15%;
+    width: 180%;
+    position:unset;
+    margin: 0% 50% 0% 0%;
 }
+/*
+.Logo_Usuario, .Documentos_Aspirante, .Comentarios {
+    position:absolute;
+}
+*/
 .Documentos_Aspirante p a {
     font-family: sans-serif;
     font-size: 100%;
@@ -77,14 +88,17 @@ ul, ol {
     text-decoration: underline;
     text-shadow: 0px 0px 1px gray;
 }
+/*
 .Foto_Perfil, .Documentos_Aspirante, .Comentarios {
     display: inline-flex;
 }
+*/
 .Documentos_Aspirante {
-    width: 30%;
+    width: 40%;
     height: auto;
     /*margin: -16% 16%;*/
     padding: 1%;
+    margin-left: 8%;
 }
 .Boton_Documento {
     width: 100%;
@@ -108,10 +122,11 @@ ul, ol {
     background-color: #D1F2EBe0;
 }
 .Comentarios {
-    /*float: right;*/
+    /*float: inline-end;*/
     width: 40%;
     /*margin: -17% 0%;*/
     padding: 1%;
+    margin-left: 5%;
 }
 #Comentario {
     width: 100%;
