@@ -19,7 +19,7 @@
                     <ul>
                         <a href="../../../../index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                             <h1 class="titulo">Trascendental</h1>
-                            <li id="Perfil"><a href=".Perfil_Aspirante.html" class="menu">Mi perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
+                            <li id="Perfil"><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
                         <li><a href="Agendar_citas.html" class="menu">Agendar Cita</a></li>
                     </ul>
                 </nav>
@@ -31,17 +31,17 @@
                     <h2>Agende su cita</h1>
                     <p>Para realizar su proceso de agendación de citas, por favor realice el siguiente formulario</p>
                     <div>
-                        <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Información Básica del Medico</p>
+                        <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Información Básica del Aspirante</p>
                         <input class="controls" type="text" name="docAspirante" id="Documento_de_Identidad" placeholder="Documento de Identidad">
                         <input class="controls" type="email" name="Correo" id="nombre" placeholder="Correo Electrónico"><br>
-                        <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Información Básica del Medico</p>
+                        <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Información del Médico</p>
                         <select class="controls" name="medicos" id="">
-                            <option >Seleccione Medico</option>
-                            <option value="Carlos Parra">Carlos Parra</option>
-                            <option value="Yaxul Cardenas">Yaxul Cardenas</option>
-                            <option value="Laura Castillo">Laura Castillo</option>
-                            <option value="Brayan Gomez">Brayan Gomez</option>
-                            <option value="Maicol Quiroga">Maicol Quiroga</option>
+                            <option >Seleccione su Médico</option>
+                            <option value="José Antonio Rodríguez">José Antonio Rodríguez</option>
+                            <option value="Richard Tovar Cárdenas">Richard Tovar Cárdenas</option>
+                            <option value=" Lucía Galán Bertrand">Lucía Galán Bertrand</option>
+                            <option value="Andrea Proaño Calderon">Andrea Proaño Calderon</option>
+                            <option value="Aarón Arturo Robles Ramírez">Aarón Arturo Robles Ramírez</option>
                         </select>
                     </div>
                     <p>Fecha de hoy</p>
@@ -49,7 +49,7 @@
                     <input class="controls" type="time" name="Horadehoy">
                     <p>Fecha de asignacion de cita</p>
                     <input class="controls" type="date" name="Fechadecita">
-                    <select class="controls" name="horas" id="">
+                    <select class="controls" name="horas">
                         <option >Seleccione hora de la cita</option>
                         <option value="6:00">6:00 A.M</option>
                         <option value="6:30">6:30 A.M</option>
@@ -62,7 +62,10 @@
                         <option value="10:00">10:00 A.M</option>
                         <option value="10:30">10:30 A.M</option>
                     </select>
-                    <input class="botons" type="submit" name="enviar" id="enviar" value="Enviar">
+                    <input class="botons" type="submit" name="enviar" id="enviar" value="Insertar">
+                    <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Si usted ya tiene agendada una cita medica por favor ingrese el numero de referencia si desea cancelar su cita</p>
+                    <input class="controls" type="text" name="numOrden" id="numOrden" placeholder="Número de Referencia"><br>
+                    <input class="botons" type="submit" name="eliminar" id="eliminar" value="Eliminar Cita">
                 </form>
                 
             </section>

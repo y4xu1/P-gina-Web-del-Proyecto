@@ -6,11 +6,15 @@ $nombre = $_POST['usuario'];
 $pass = $_POST['pass'];
 $rol = $_POST['TipoRol'];
 
+/*
 #Session
 session_start();
 
+#linea 14 segura
 $_SESSION["username"] = $nombre;
 
+
+#linea 18 a 26 sin total seguridad
 if (isset($_SESSION["username"])!==true) {
 #if (isset($_SESSION(["username"])!==false) {
 
@@ -20,6 +24,7 @@ if (isset($_SESSION["username"])!==true) {
 else {
     session_destroy();
 }
+*/
 
 #Login
     if(isset($_POST['btningresar'])){

@@ -47,6 +47,7 @@ if(isset($_POST ['Actualizardocumentos'])){
 
     $consulta= "INSERT INTO aspirante (docAspirante,idTipoDocumento,PnombreAspirante,SnombreAspirante,PapellidoAspirante,SapellidoAspirante,fechaExpDoc,paisExpDoc,fechaNacimiento,paisNacimiento,direccionResidencia,ciudad,telefonoContacto,correoElectronico,tipoCargo,estadoCivil,estrato,rh,genero,libretaMilitar,eps) VALUES ('$doca','$tipo','$pnombre','$snombre','$papellido','$sapellido','$fechaI','$paisE','$fechaN','$paisN','$dir','$cuidad','$telefono','$correo','$cargo','$estadoC','$estrato','$rh','$genero','$libretamilitar','$eps')";
     mysqli_query($conn,$consulta);
+
     mysqli_close($conn);
   }
   function documentos($conn){
@@ -87,16 +88,15 @@ if(isset($_POST ['Actualizardocumentos'])){
     $genero=($_POST["Género"]);
     $libretamilitar=($_POST["Libretamilitar"]);
     $eps=($_POST["EPS"]);
-    
-       if(isset($_POST['btnActualizar'])){
-          $query = mysqli_query($conn,"UPDATE aspirante SET idTipoDocumento='$tipo', PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps' WHERE docAspirante='$doca'");
-          mysqli_close($conn);
-    
-       }
-       else {
-             echo "<script> alert('Error al actualizar'); window.location='Index.html'</script>";
-          }
+
+    if(isset($_POST['btnActualizar'])){
+        $query = mysqli_query($conn,"UPDATE aspirante SET idTipoDocumento='$tipo', PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps' WHERE docAspirante='$doca'");
+        mysqli_close($conn);
     }
+    else {
+           echo "<script> alert('Error al actualizar'); window.location='Index.html'</script>";
+    }
+  }
 
     function Actualizardocumentos ($conn){
       $docAspirante=($_POST["docAspirante"]);

@@ -37,7 +37,15 @@ function insertar ($conn){
   $eps=($_POST["EPS"]);
 
   $consulta= "INSERT INTO recursoshumanos (docRecHum,idTipoDocumento,pNombreRh,sNombreRh,pApellidoRh,sApellidoRh,fechaExpDoc,paisExpDoc,fechaNacimiento,paisNacimiento,direccionResidencia,telefonoContacto,correoElectronico,tipoCargo,estadoCivil,estrato,rh,genero,eps) VALUES ('$doca','$tipo','$pnombre','$snombre','$papellido','$sapellido','$fechaI','$paisE','$fechaN','$paisN','$dir','$telefono','$correo','$cargo','$estadoC','$estrato','$rh','$genero','$eps')";
-  mysqli_query($conn,$consulta);
+
+  if(isset($_POST['btnregistrar'])) {
+    echo "<script> window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.html' </script>";
+    mysqli_query($conn,$consulta);
+  }
+  else {
+    echo "<script> alert('Error al registrar datos'); window.location='Index.html'</script>";
+ }
+  #
   mysqli_close($conn);
 }
 
@@ -63,8 +71,9 @@ function actualizar($conn){
   $genero=($_POST["Género"]);
   $eps=($_POST["EPS"]);
   
-     if(isset($_POST['btnActualizar'])){
+     if(isset($_POST['btnActualizar'])) {
         $query = mysqli_query($conn,"UPDATE recursoshumanos SET idTipoDocumento='$tipo', pNombreRh='$pnombre', sNombreRh='$snombre', pApellidoRh='$papellido', sApellidoRh='$sapellido', fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN', 	paisNacimiento='$paisN', direccionResidencia='$dir', telefonoContacto='$telefono', correoElectronico='$correo', tipoCargo='$cargo', estadoCivil='$estadoC', estrato='$estrato', rh='$rh', genero='$genero', eps='$eps' WHERE docRecHum='$doca'");
+        echo "<script> window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.html' </script>";
         mysqli_close($conn);
      }
      else {

@@ -30,6 +30,7 @@ insertar($conn);
         
         if (isset($_POST["btnregistrar"])) {
             $consulta= "INSERT INTO contrato (idContrato,tipoContrato,docAspirante,docRecHum,tipoCargoDesp,salario,valorPrestaciones,fechaInicio,nombreObra,ciudadObra,firma) VALUES ('$idContrato','$tipoContrato','$docAspirante','$docRecursos','$cargo','$Salario','$valor','$fecha', '$obra',' $cuidad','$firma')";
+            mysqli_query($conn,$consulta);
             echo "<script> window.location'../estadoLog/logtrue/recursosHumanos/contratos/Contrato_Fijo.html' </script>";
             /*if (mysqli_query($conn, $consulta)) {
                 echo "<script> alert('Se a finalizado la acción con exito'); window.location'../estadoLog/logtrue/recursosHumanos/contratos/Contrato_Fijo.html' </script>";
@@ -39,11 +40,12 @@ insertar($conn);
             }*/
         }
         else {
-            echo "Error: ".$sql."<br>".mysqli_error($conn);
+            #echo "Error: ". $sql ."<br>". mysqli_error($conn);
+            #echo "Error " . mysqli_error($conn) . "<br>";
+            echo "<a href='../estadoLog/logtrue/recursosHumanos/Contratos.html'>volver</a>";           
         }
-        
-        mysqli_query($conn,$consulta);
-        mysqli_close($conn);
+   
+        #mysqli_close($conn);
 
 }
 
