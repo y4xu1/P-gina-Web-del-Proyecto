@@ -9,7 +9,7 @@
         <title>Agendar Cita</title>
         <link rel="stylesheet" href="../../../../CSS/Formato_Base.css">
         <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/Citas.css">
-        <link rel="icon" href="Imagenes de la Página/Logo_Principal.png">
+        <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
     </head>
     <body>
 <!--===============================================================================================================-->
@@ -26,6 +26,40 @@
             </section>
         </header><!--encabezado de la pagina (fina)-->
 <!--===============================================================================================================-->
+
+<!-- -->
+<aside>
+    <img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
+    <section class="caja_notificaciones">
+        <center>
+            <img src="../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
+        </center>
+        <div class="infoNotif">
+            <h2>Recursos Humanos</h2>
+            <p>Se te notifica que continuas con el proceso de contrato</p>
+        </div>
+    </section>
+    <section class="caja_notificaciones">
+        <center>
+            <img src="../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
+        </center>
+        <div class="infoNotif">
+            <h2>Recursos Humanos</h2>
+            <p>Sus documentos fueron aceptados, espere confirmación</p>
+        </div>
+    </section>
+    <section class="caja_notificaciones">
+        <center>
+            <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
+        </center>
+        <div class="infoNotif">
+            <h2>Trascendental</h2>
+            <p>Sus documentos fueron entregados correctamente</p>
+        </div>
+    </section>
+</aside>
+<!-- -->
+
         <section class="contenido">
                 <form action="../../../php/citasMedicas.php" method="POST">
                     <h2>Agende su cita</h1>
@@ -63,9 +97,13 @@
                         <option value="10:30">10:30 A.M</option>
                     </select>
                     <input class="botons" type="submit" name="enviar" id="enviar" value="Insertar">
-                    <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Si usted ya tiene agendada una cita medica por favor ingrese el numero de referencia si desea cancelar su cita</p>
-                    <input class="controls" type="text" name="numOrden" id="numOrden" placeholder="Número de Referencia"><br>
-                    <input class="botons" type="submit" name="eliminar" id="eliminar" value="Eliminar Cita">
+                    <div id="cancelarCita">
+                        <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">
+                            Si usted ya tiene agendada una cita medica por favor ingrese el numero de referencia si desea cancelar su cita
+                        </p>
+                        <input class="controls" type="text" name="numOrden" id="numOrden" placeholder="Número de Referencia"><br>
+                        <input class="botons" type="submit" name="eliminar" id="eliminar" value="Eliminar Cita">
+                    </div>
                 </form>
                 
             </section>

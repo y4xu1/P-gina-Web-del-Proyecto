@@ -119,7 +119,7 @@ ul, ol {
 .botons:hover {
     box-shadow: 0px 0px 5px grey;
 }
-h2 {
+.contenido h2 {
     text-align: center;
     margin: 5% 0% 0% 0%;
     font-size: auto 300%;

@@ -40,12 +40,74 @@
                 </section>
             </header>
 <!--===============================================================================================================-->
+
+<!-- -->
+<aside>
+    <img src="../../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
+    <section class="caja_notificaciones">
+        <center>
+            <img src="../../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
+        </center>
+        <div class="infoNotif">
+            <h2>Trascendental</h2>
+            <p>El usuario <b>nombre aspirante</b> fue bloqueado correctamente de la plataforma</p>
+        </div>
+    </section>
+    <section class="caja_notificaciones">
+        <center>
+            <img src="../../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
+        </center>
+        <div class="infoNotif">
+            <h2>Nombre Aspirante</h2>
+            <p>Favor hacerme confirmación de que posea los documentos requeridos en su debido orden</p>
+        </div>
+    </section>
+    <section class="caja_notificaciones">
+        <center>
+            <img src="../../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
+        </center>
+        <div class="infoNotif">
+            <h2>Trascendental</h2>
+            <p>El aspirante <b>nombre aspirante</b> recibió correctamente su comentario</p>
+        </div>
+    </section>
+</aside>
+<!-- -->
+
             <section class="contenido">
                 <form action="../../../../php/Formularios.php" method="POST">
                 <table class="Formato">
                     <tr>
                         <th>FORMATO DE INDUCCIÓN</th>
                     </tr><!--</br>-->
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código único del formulario</th>
+                            <th>Tipo del formulario</th>
+                            <th>Fecha del formulario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class="control" type="text" name="idFormulario" placeholder="Id Formulario">
+                            </td>
+                            <td>
+                                <center>
+                                    <select class="control" name="tipoFormulario">
+                                        <option>Selecione el Tipo de Formulario</option>
+                                        <option value="Formulario Dotación">Formulario Dotación</option>
+                                        <option value="Formulario Inducción">Formulario Inducción</option> 
+                                    </select>
+                                </center>
+                            </td>
+                            <td>
+                                <input class="control" type="date" name="fechaFormulario">
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
                 <table id="Objetivo">
                     <tr>
@@ -128,10 +190,20 @@
                         <th><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></th>
                     </tr>
                 </table>
+                <table>
+                    <tr>
+                        <td>
+                            <input class="control" type="text" name="docRecHum" placeholder="Número de Identificación de Recursos Humanos">
+                        </td>
+                        <td>
+                            <input class="control" type="file" name="archivoFormulario">
+                        </td>
+                    </tr>
+                </table>
             
 <!--===============================================================================================================-->
         <!-- Lo nuevo -->
-                <input type="text" name="idFormulario" placeholder="Id Formulario"><br>
+                <!--<input type="text" name="idFormulario" placeholder="Id Formulario"><br>
                 <select name="tipoFormulario">
                     <option>Selecione el Tipo de Formulario</option>
                     <option value="Formulario Dotación">Formulario Dotación</option>
@@ -139,11 +211,14 @@
                 </select> <br>
                 <label>Fecha del Formulario</label><br>
                 <input type="date" name="fechaFormulario"><br>
+                
                 <input type="text" name="docRecHum" placeholder="Número de Identificación de Recursos Humanos"><br>
                 <label>Archivo del Formulario</label><br>
-                <input type="file" name="archivoFormulario">
-                <input class="botons" type="submit" name="enviar" id="enviar" value="Insertar Datos">
-                <a href=""><button>Descargar</button></a>
+                <input type="file" name="archivoFormulario">-->
+
+                <input class="btn" type="submit" name="enviar" id="enviar" value="Insertar Datos">
+                <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
+                <!--<a href=""><button>Descargar</button></a>-->
             </section>
         </form>
             

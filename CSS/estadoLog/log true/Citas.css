@@ -52,6 +52,9 @@ div .controls {
     float: inline-end;
     border-radius: 4px;
 }
+#cancelarCita {
+    margin-top: 5%;
+}
 #Comentarios {
     display: initial;
     width: 97%;
