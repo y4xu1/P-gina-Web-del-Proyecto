@@ -1,9 +1,9 @@
 <?php
 
 include("conexion.php");
-require_once("login.php");
+#require_once("login.php");
 
-echo $_SESSION["username"];
+#echo $_SESSION["username"];
 
 diferencia($conn);
 function diferencia($conn){
