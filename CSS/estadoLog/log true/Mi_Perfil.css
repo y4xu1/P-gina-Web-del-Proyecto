@@ -4,7 +4,7 @@
     height: auto;
     filter: blur(3px);
     z-index: -1;*/
-    background-image: url(../../../../Imagenes/Obra.jpg);
+    background-image: url(../../../../Imagenes/Obra-Notificaciones.jpg);
     background-attachment: fixed;
     background-size: 100%;
     padding: 5%;
@@ -99,10 +99,11 @@ body {
     width: 95%;
     margin: 1% 0%;
     padding: 1.5% 3%;
-    border-radius: 6px;
+    border-radius: 10px;
     background: white;
     font-family: sans-serif;
     font-size: 110%;
+    border: solid 2px #184394; 
 }
 .Seleccion {
     width: 101.6%;
@@ -126,4 +127,8 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 20px black;
     background-color: white;
+}
+label {
+    font-size: 130%;
+    font-family: sans-serif;
 }

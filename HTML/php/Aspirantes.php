@@ -7,18 +7,18 @@ include("conexion.php");
 
 diferencia($conn);
 function diferencia($conn){
-if(isset($_POST ['btnregistrar'])){
-insertar($conn);
-}
-if(isset($_POST ['btnActualizar'])){
-actualizar ($conn);
-}
-if(isset($_POST ['btndocumentos'])){
-documentos($conn);
-}
-if(isset($_POST ['Actualizardocumentos'])){
-  Actualizardocumentos($conn);
-}
+  if(isset($_POST ['btnregistrar'])){
+  insertar($conn);
+  }
+  if(isset($_POST ['btnActualizar'])){
+  actualizar ($conn);
+  }
+  if(isset($_POST ['btndocumentos'])){
+  documentos($conn);
+  }
+  if(isset($_POST ['Actualizardocumentos'])){
+    Actualizardocumentos($conn);
+  }
 }
 
 

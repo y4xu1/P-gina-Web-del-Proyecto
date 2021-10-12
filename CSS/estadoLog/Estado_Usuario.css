@@ -94,7 +94,7 @@
     margin: 1.5% 2%;
     padding-bottom: 1.5%;
     display: inline-flex;
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
     font-size: 110%;
     font-family: sans-serif;
     color:#000;

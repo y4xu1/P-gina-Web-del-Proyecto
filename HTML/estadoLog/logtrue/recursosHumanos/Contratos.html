@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/recursosHumanos/Contratos.css">
         <link rel="stylesheet" href="../../../../CSS/Formato_Base.css">
         <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
+        <!--<link rel="icon" href="../../../">-->
     </head>
     <body>
 <!--===============================================================================================================-->
@@ -62,13 +63,13 @@
         </div>
     </section>
 </aside>
-<!-- -->
 
         <section class="contenido">
-            <img src="../../../../Imagenes/contrato/Incio_Contratos.jpg" alt="Imagen_inicio_contratos" class="Inicio_Contratos">
-            <center>
+            <section class="contratosA">
+            <!--  <img src="../../../../Imagenes/contrato/Contratos.jpg" alt="Imagen_inicio_contratos" class="Inicio_Contratos">-->
+            <!--<center>
                 <h2 id="Titulo_Contrato">Contratos</h2>
-            </center>
+            </center>--> 
            <!--  <div id="Tipo_Contrato">
                 <ul class="Contratos">
                     <li><a href="">Tipos de Contratos</a>
@@ -80,18 +81,20 @@
                     </li>
                 </ul>
             </div>--> 
+            </section>
             <section class="Contrato">
                 <div>
                     <form action="../../../php/contratos.php" method="POST">
-                        <input class="controls" type="text" name="idcontrato" id="idContrato" placeholder="Identificación del contrato">
+                        <h2 class="tituloC">Contratos</h2><br>
                         <center>
-                        <select class="controls" name="tipoContrato">
-                            <option>Selecione el Tipo de Contrato</option>
-                            <option value="Termino indefinido">Contrato a término Indefinido</option>
-                            <option value="Termino Fijo">Contrato a término Fijo</option> 
-                            <option value="Obra o Labor ">Contrato por Obra o Labor</option> 
-                        </select>
+                            <select class="controls" name="tipoContrato">
+                                <option>Selecione el Tipo de Contrato</option>
+                                <option value="Termino indefinido">Contrato a término Indefinido</option>
+                                <option value="Termino Fijo">Contrato a término Fijo</option> 
+                                <option value="Obra o Labor ">Contrato por Obra o Labor</option> 
+                            </select>
                         </center>
+                        <input class="controls" type="text" name="idcontrato" id="idContrato" placeholder="Identificación del contrato">
                         <input class="controls" type="text" name="docAspirante" id="docAspirante" placeholder="Número de Identificación del aspirante">
                         <input class="controls" type="text" name="docRecursos" id="docRecursos" placeholder="Número de Identificación de recursos humanos">
                         <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Tipo de Cargo a desempeñar">
@@ -101,7 +104,7 @@
                         <input class="controls" type="text" name="Nombreobra" id="Nombre_de_la_obra" placeholder="Nombre de la obra">
                         <input class="controls" type="text" name="Ciudadcontratado" id="Ciudad_donde_fue_contratado" placeholder="Ciudad donde fue contratado">
                         <br><br>
-                        <label for="">Firma</label>
+                        <label>Firma</label>
                         <input class="controls" type="file" name="Firma" id="Firma" placeholder="Firma">
                         <br><br>
                         <center>
@@ -115,7 +118,7 @@
                   </form>
                 </div>
             </section>
-            <img src="../../../../Imagenes/contrato/OBRA A LABOR-DISSER.jpg" alt="Imagen_inicio_contratos" class="contrato1">
+            <img src="../../../../Imagenes/contrato/INDEFINIDO-DISSER.jpg" alt="Imagen_inicio_contratos" class="contrato1">
         </section>
 <!--===============================================================================================================-->
         <footer class="info_empres">

@@ -30,7 +30,12 @@
             </section>
             <div id="Barra_Herramientas">
                 <ul class="Herramientas">
-                    <li><input type="text" class="buscador" placeholder="Buscar"></br></li>
+                    <li id="buscar" style="display: inline-flex;">
+                        <form action="../../../php/listaAspirantes.php" method="post">
+                            <input type="text" name="datoAsp" class="buscador" placeholder="Buscar">
+                            <input type="submit" name="buscador" value="&#x1f50d;">
+                        </form>
+                    </br></li>
                     <li><a href="">Filtro</a>
                         <ul>
                             <li><a href="">Mas Reciente</a></li>

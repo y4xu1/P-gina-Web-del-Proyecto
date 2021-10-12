@@ -43,7 +43,8 @@ ul, ol {
 /*-------------------------------------*/
 .contenido {
     margin: 7.2% 2% 5% 2%;
-    box-shadow: 0px 0px 30px grey;
+    /*box-shadow: 0px 0px 5px rgb(36, 135, 248);*/
+    box-shadow: 0px 0px 15px rgb(124, 168, 251);
     font-family: sans-serif;
 }
 table {

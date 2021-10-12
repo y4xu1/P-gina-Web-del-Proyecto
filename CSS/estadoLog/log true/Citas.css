@@ -9,13 +9,14 @@ form {
     width: 70%;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px gray;
+    box-shadow: 1px 2px 20px black;
     padding: 3% 2%;
     margin: 5% 12.5%;
 }
 form h2 {
     font-size: 250%;
     margin-bottom: 1%;
+    color: rgb(16, 75, 172);
 }
 form p {
     font-size: 120%;
@@ -33,7 +34,7 @@ form input {
     margin: 1.5% 0%;
     padding: 1%;
     width: 47.1%;
-    border-radius: 4px;
+    border-radius: 8px;
     display: inline-block;
     /*float: left;*/
     text-shadow: rgb(122, 62, 62);  

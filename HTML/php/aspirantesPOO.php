@@ -1,5 +1,4 @@
 
-
 include ("conexion.php");
 
 class aspirante {

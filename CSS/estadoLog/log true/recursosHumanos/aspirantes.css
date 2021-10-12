@@ -21,10 +21,12 @@ ul, ol {
     padding: 14px 15px;
     display: block;
 }
-.Herramientas li input {
+.Herramientas li #buscar {
     width: 75%;
     padding: 3% 6%;
     margin: 6% 3%;
+}
+.Herramientas li input {
     border-radius: 3%;
     border: 2px groove #17202A;
     font-family: sans-serif;

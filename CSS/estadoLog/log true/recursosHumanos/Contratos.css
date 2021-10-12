@@ -1,3 +1,9 @@
+.contratosA {
+    padding: 25%;
+    background-image: url(../../../../Imagenes/contrato/Contratos.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
 #Tipo_Contrato {
     margin-top: -0.31%;
     float: right;
@@ -60,7 +66,7 @@ ul, ol {
     float: right;
     width: 39%;
     border-radius: 6px;
-    box-shadow: 0px 0px 15px goldenrod;
+    box-shadow: 0px 0px 15px rgb(151, 195, 253);
 }
 .controls {
     margin: 1% 0%;
@@ -126,4 +132,12 @@ ul, ol {
 }
 .contrato1 { 
     width: 50%;
+}
+.tituloC {
+    font-size: 280%;
+    color: rgb(82, 120, 248);
+}
+label {
+    font-size: 150%;
+    font-family: sans-serif;
 }
