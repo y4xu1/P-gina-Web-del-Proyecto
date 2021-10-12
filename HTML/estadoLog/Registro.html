@@ -38,8 +38,14 @@
                             <center><h2> Registro</h2>
                                 <input class="controls" type="text" name="usuario" id="documento" placeholder="Ingrese su número de indentificación"><br>
                                 <input class="controls" type="password" name="pass" id="contraseña" placeholder="Ingrese su contraseña"><br>
-                                <input class="controls" type="text" name="TipoRol" id="contraseña" placeholder="Tipo de Rol"><br>
-                                <input class="controls" type="checkbox" name="Terminos y condiciones" id="TyC"><label for="">Estoy de acuerdo con <a href="#">Terminos y condiciones</a></label><br>
+                                <!--<input class="controls" type="text" name="TipoRol" id="contraseña" placeholder="Tipo de Rol"><br>-->
+                                <select class="controls" name="TipoRol" id="rol" style="width: 97%;">
+                                    <option>Seleccione su rol</option>
+                                    <option value="1">Aspirantes</option>
+                                    <option value="2">Recursos humanos</option>
+                                </select>
+                                <input class="controls" type="password" name="aceptacion" id="contraseña" placeholder="Código de aceptación"><br>
+                                <input class="controls" type="checkbox" name="Terminos y condiciones" id="TyC"><label for="">Estoy de acuerdo con <a href="#">Términos y condiciones</a></label><br>
                             <input class="botons" type="submit" value="Ingresar" name="btnregistrar">
                         </form>
                     </section>

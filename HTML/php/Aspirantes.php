@@ -61,7 +61,8 @@ if(isset($_POST ['Actualizardocumentos'])){
     $carnetVacCovid=$_POST["CarnetVacunaciónCovid-19"];
     $referenciasPersonales=$_POST["ReferenciasPersonales"];
     $referenciasLaborales=$_POST["ReferenciasLaborales"];
-    $consulta= "INSERT INTO documentos (docAspirante,curriculum,certificadoAlturas,certificadoJudicial,certificadoPenal,certificadoDisciplinario,resultadosMedicos,carnetVacCovid,referenciasPersonales,referenciasLaborales) VALUES ('$docAspiranteS','$curriculum','$certificadoAlturas','$certificadoJudicial','$certificadoPenal','$certificadoDisciplinario','$resultadosMedicos','$carnetVacCovid','$referenciasPersonales','$referenciasLaborales')";
+    $firma=$_POST["firma"]
+    $consulta= "INSERT INTO documentos (docAspirante,curriculum,certificadoAlturas,certificadoJudicial,certificadoPenal,certificadoDisciplinario,resultadosMedicos,carnetVacCovid,referenciasPersonales,referenciasLaborales,firma) VALUES ('$docAspiranteS','$curriculum','$certificadoAlturas','$certificadoJudicial','$certificadoPenal','$certificadoDisciplinario','$resultadosMedicos','$carnetVacCovid','$referenciasPersonales','$referenciasLaborales','$firma')";
     mysqli_query($conn,$consulta);
     mysqli_close($conn);
   }
@@ -109,9 +110,10 @@ if(isset($_POST ['Actualizardocumentos'])){
       $carnetVacCovid=($_POST["CarnetVacunaciónCovid-19"]);
       $referenciasPersonales=($_POST["ReferenciasPersonales"]);
       $referenciasLaborales=($_POST["ReferenciasLaborales"]);
+      $firma=($_POST["firma"]);
       
          if(isset($_POST['Actualizardocumentos'])){
-            $query = mysqli_query($conn,"UPDATE documentos SET curriculum='$curriculum',certificadoAlturas='$certificadoAlturas',certificadoJudicial='$certificadoJudicial',certificadoPenal='$certificadoPenal',certificadoDisciplinario='$certificadoDisciplinario',resultadosMedicos='$resultadosMedicos',carnetVacCovid='$carnetVacCovid',referenciasPersonales='$referenciasPersonales',referenciasLaborales='$referenciasLaborales' WHERE docAspirante='$docAspirante'");
+            $query = mysqli_query($conn,"UPDATE documentos SET curriculum='$curriculum',certificadoAlturas='$certificadoAlturas',certificadoJudicial='$certificadoJudicial',certificadoPenal='$certificadoPenal',certificadoDisciplinario='$certificadoDisciplinario',resultadosMedicos='$resultadosMedicos',carnetVacCovid='$carnetVacCovid',referenciasPersonales='$referenciasPersonales',referenciasLaborales='$referenciasLaborales',firma='$firma' WHERE docAspirante='$docAspirante'");
             mysqli_close($conn);
          }
          else {

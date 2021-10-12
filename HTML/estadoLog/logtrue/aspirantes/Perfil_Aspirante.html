@@ -33,17 +33,17 @@
                         <div class="caja_notificaciones">
                             <img src="../../../../Imagenes/otros logos/casa.png" class="casa" id="casa_2">
                             <h2>Recursos Humanos</h2>
-                            <p>Se te notifica que continuas con el proceso de contrato</p>
-                        </div>
-                        <div class="caja_notificaciones">
-                            <img src="../../../../Imagenes/otros logos/casa.png" class="casa" id="casa_2">
-                            <h2>Recursos Humanos</h2>
-                            <p>Sus documentos fueron aceptados, espere confirmación</p>
+                            <p>Se le notifica que continua con el proceso de contratación</p>
                         </div>
                         <div class="caja_notificaciones">
                             <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="casa" id="casa_2">
                             <h2>Trascendental</h2>
                             <p>Sus documentos fueron entregados correctamente</p>
+                        </div>
+                        <div class="caja_notificaciones">
+                            <img src="../../../../Imagenes/otros logos/casa.png" class="casa" id="casa_2">
+                            <h2>Recursos Humanos</h2>
+                            <p>Sus documentos fueron aceptados, espere confirmación</p>
                         </div>
                     </div>
                 </section>
@@ -51,102 +51,106 @@
 <!--===============================================================================================================-->
 
                 <section class="Perfil">
-                    <h2></h2>
-                    <form action="../../../php/Aspirantes.php" method="POST">
-                        <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre"> 
-                        <input class="controls" type="text" name="sNombre" id="" placeholder="Segundo Nombre">
-                        <input class="controls" type="text" name="pApellido" id="" placeholder="Primer Apellido">
-                        <input class="controls" type="text" name="sApellido" id="" placeholder="Segundo Apellido"> 
-                           <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
-                            <option selected="selected">Selecione el Tipo de Identificación</option>
-                            <option value="CC">Cédula de Ciudadanía (CC)</option>
-                            <option value="CE">Cédula de Extrangería (CE)</option> 
-                            <option value="PA">Pasaporte (PA)</option> 
-                         </select> 
-                        <input class="controls" type="text" name="docAspirante" id="Documento_de_Identidad" placeholder="Documento de Identidad">
-                        <p>Fecha Expedición Documento<input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento"></p>
-                        <input class="controls" type="text" name="Pais" id="Paisexpedición" placeholder="País de expedición">
-                         <p>Fecha de Nacimiento<input class="controls" type="date" name="FechaNacimiento" id="Fecha_Nacimiento"></p>
-                        <input class="controls" type="text" name="PaísNacimiento" id="País_de_Nacimiento" placeholder="País de Nacimiento">
-                        <input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ciudad de Residencia">
-                        <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Dirección de Residencia">
-                        <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Telefono de Contacto">
-                        <input class="controls" type="text" name="CorreoElectrónico" id="Correo_Electrónico" placeholder="Correo Electrónico">
-                        <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Cargo">
-                         <select class="Seleccion" name="EstadoCívil" id="Estado_Civil">
-                            <option selected="selected">Selecione su estado cívil</option>
-                            <option value="Indiferente">Indiferente</option>
-                            <option value="Soltero">Soltero / Soltera</option>
-                            <option value="Casado">Casado / Casada</option>
-                            <option value="Unión Libre">Unión Libre</option>
-                            <option value="Separado">Separado</option>
-                            <option value="Viudo">Viudo</option>
-                        </select>
-                        <select class="Seleccion" name="Estrato" id="Estrado">
-                            <option selected="selected">Selecione su Estrato</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                        <select class="Seleccion" name="RH" id="RH">
-                            <option selected="selected">Selecione su RH</option>
-                            <option value="AB+">AB+</option>
-                            <option value="AB-">AB-</option>
-                            <option value="A+">A+</option>
-                            <option value="A-">A-</option>
-                            <option value="B+">B+</option>
-                            <option value="B-">B-</option>
-                            <option value="O+">O+</option>
-                            <option value="O-">O-</option>
-                        </select>
-                        <select class="Seleccion" name="Género" id="Género">
-                            <option selected="selected">Selecione su Género</option>
-                            <option value="Femenino">Femenino</option>
-                            <option value="Masculino">Masculino</option>
-                        </select>
-                        <input class="controls" type="text" name="Libretamilitar" id="Libreta_militar" placeholder="Libreta militar">
-                        <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS">
-
-                        <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
-                        <input class="botons" type="submit" name="btnActualizar" id="enviar" value="Actualizar Datos">
-                         
-                      <!--  </form> -->
-                    
-                </section>
-                <section class="Documentos_Aspirante">
-                    <!-- <form action="../../../php/documentosAspirantes.php" method="POST"> -->
-                        <!-- <input type="text" name="docAspiranteS" class="controls" placeholder="Número de Identificación del aspirante"> -->
-                        <label>Sube tu Curriculum</label>
-                        <input type="file" name="Curriculum" class="controls" value="Curriculum">
-                        <label>Sube tu Certificado de Alturas</label>
-                        <input type="file" name="CertificadoAlturas" class="controls" value="Certificado de Alturas">
-                        <label>Sube tu Certificado Judicial</label>
-                        <input type="file" name="CertificadoJudicial" class="controls" value="Certificado Judicial">
-                        <label>Sube tu Certificado Penal</label>
-                        <input type="file" name="CertificadoPenal" class="controls" value="Certificado Penal">
-                        <label>Sube tu Certificado Disciplinario</label>
-                        <input type="file" name="CertificadoDisciplinario" class="controls" value="Certificado Disciplinario">
-                        <label>Sube tu Resultados Médicos</label>
-                        <input type="file" name="ResultadosMédicos" class="controls" value="Resultados Médicos">
-                        <label>Sube tu Carnet de Vacunación Covid-19</label>
-                        <input type="file" name="CarnetVacunaciónCovid-19" class="controls" value="Carnet de Vacunación Covid-19">
-                        <label>Sube tu Referencias Personales</label>
-                        <input type="file" name="ReferenciasPersonales" class="controls" value="Referencias Personales">
-                        <label>Sube tu Referencias Laborales</label>
-                        <input type="file" name="ReferenciasLaborales" class="controls" value="Referencias Laborales">
-                        <center>
-                            
-                            <input class="botons" type="submit" value="Insertar Documentos" name="btndocumentos" id="formulario">
-                            <input class="botons" type="submit" name="Actualizardocumentos" id="enviar" value="Actualizar Documentos">
-                        </center>
-                        <div class="comentarios">
-                            <textarea class="controls" name="comentario" id="comentario" cols="30" rows="10" placeholder="Deja Tu Comentario"></textarea>
-                            <input class="botons" type="submit" name="Botón_Envío" value="Enviar" class="Botón_Envío"></br>
-                        </div>
-                    </form>
+                    <center>
+                        <h2>Nombre de Usuario</h2>
+                        <p>Foto de Perfil</p>
+                        <input type="image" src="../../../../Imagenes/otros logos/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil">
+                        <form action="../../../php/Aspirantes.php" method="POST">
+                            <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre"> 
+                            <input class="controls" type="text" name="sNombre" id="" placeholder="Segundo Nombre">
+                            <input class="controls" type="text" name="pApellido" id="" placeholder="Primer Apellido">
+                            <input class="controls" type="text" name="sApellido" id="" placeholder="Segundo Apellido"> 
+                               <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
+                                <option selected="selected">Selecione el Tipo de Identificación</option>
+                                <option value="CC">Cédula de Ciudadanía (CC)</option>
+                                <option value="CE">Cédula de Extrangería (CE)</option> 
+                                <option value="PA">Pasaporte (PA)</option> 
+                             </select> 
+                            <input class="controls" type="text" name="docAspirante" id="Documento_de_Identidad" placeholder="Documento de Identidad">
+                            <p>Fecha de Expedición del Documento<input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento"></p>
+                            <input class="controls" type="text" name="Pais" id="Paisexpedición" placeholder="País de expedición">
+                             <p>Fecha de Nacimiento<input class="controls" type="date" name="FechaNacimiento" id="Fecha_Nacimiento"></p>
+                            <input class="controls" type="text" name="PaísNacimiento" id="País_de_Nacimiento" placeholder="País de Nacimiento">
+                            <input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ciudad de Residencia">
+                            <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Dirección de Residencia">
+                            <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Teléfono de Contacto">
+                            <input class="controls" type="text" name="CorreoElectrónico" id="Correo_Electrónico" placeholder="Correo Electrónico">
+                            <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Cargo">
+                             <select class="Seleccion" name="EstadoCívil" id="Estado_Civil">
+                                <option selected="selected">Selecione su estado cívil</option>
+                                <option value="Indiferente">Indiferente</option>
+                                <option value="Soltero">Soltero / Soltera</option>
+                                <option value="Casado">Casado / Casada</option>
+                                <option value="Unión Libre">Unión Libre</option>
+                                <option value="Separado">Separado</option>
+                                <option value="Viudo">Viudo</option>
+                            </select>
+                            <select class="Seleccion" name="Estrato" id="Estrado">
+                                <option selected="selected">Selecione su Estrato</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <select class="Seleccion" name="RH" id="RH">
+                                <option selected="selected">Selecione su RH</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                            <select class="Seleccion" name="Género" id="Género">
+                                <option selected="selected">Selecione su Género</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Masculino">Masculino</option>
+                            </select>
+                            <input class="controls" type="text" name="Libretamilitar" id="Libreta_militar" placeholder="Libreta militar">
+                            <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS">
+                            <input class="controls" type="text" name="ARL" id="ARL" placeholder="ARL">
+    
+                            <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
+                            <input class="botons" type="submit" name="btnActualizar" id="enviar" value="Actualizar Datos">
+                             
+                          <!--  </form> -->
+                        
+                    </section>
+                    <section class="Documentos_Aspirante">
+                        <!-- <form action="../../../php/documentosAspirantes.php" method="POST"> -->
+                            <!-- <input type="text" name="docAspiranteS" class="controls" placeholder="Número de Identificación del aspirante"> -->
+                            <center><h2>Documentos</h2></center><br>
+                            <label>Suba su Curriculum</label>
+                            <input type="file" name="Curriculum" class="controls" value="Curriculum">
+                            <label>Suba su Certificado de Alturas</label>
+                            <input type="file" name="CertificadoAlturas" class="controls" value="Certificado de Alturas">
+                            <label>Suba su Certificado Judicial</label>
+                            <input type="file" name="CertificadoJudicial" class="controls" value="Certificado Judicial">
+                            <label>Suba su Certificado Penal</label>
+                            <input type="file" name="CertificadoPenal" class="controls" value="Certificado Penal">
+                            <label>Suba su Certificado Disciplinario</label>
+                            <input type="file" name="CertificadoDisciplinario" class="controls" value="Certificado Disciplinario">
+                            <label>Suba sus Resultados Médicos</label>
+                            <input type="file" name="ResultadosMédicos" class="controls" value="Resultados Médicos">
+                            <label>Suba su Carnet de Vacunación Covid-19</label>
+                            <input type="file" name="CarnetVacunaciónCovid-19" class="controls" value="Carnet de Vacunación Covid-19">
+                            <label>Suba sus Referencias Personales</label>
+                            <input type="file" name="ReferenciasPersonales" class="controls" value="Referencias Personales">
+                            <label>Suba sus Referencias Laborales</label>
+                            <input type="file" name="ReferenciasLaborales" class="controls" value="Referencias Laborales">
+                            <label>Suba su firma para el contrato</label>
+                            <input type="file" name="firma" class="controls" value="Firma para el contrato">
+                            <center>
+                                
+                                <input class="botons" type="submit" value="Insertar Documentos" name="btndocumentos" id="formulario">
+                                <input class="botons" type="submit" name="Actualizardocumentos" id="enviar" value="Actualizar Documentos">
+                            </center>
+                        </form>
+                    </center>
                 </section>
         </section>
 <!--===============================================================================================================-->

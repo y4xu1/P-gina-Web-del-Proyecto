@@ -28,7 +28,7 @@ else {
 
 #Login
     if(isset($_POST['btningresar'])){
-        $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE numIdentificacion = '$nombre' AND password = '$pass'");
+        $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE numIdentificacion = '$nombre' AND password = '$pass' AND estadoUsuarios = 1");
         $nr = mysqli_num_rows($query);
 
         if($nr==1){
@@ -36,28 +36,43 @@ else {
             switch($rol){
                 case /*"ASPIRANTE" || "aspirante" || "Aspirante" ||*/ 1:
                     echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
-                break;
+                    break;
                 case /*"RECURSOS HUMANOS" || "recursos humanos" || "Recursos humanos" || "Recursos Humanos" || "recursos Humanos" ||*/ 2:
                     echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php'</script>"; 
-                break;
+                    break;
 
-                default: "<script> alert('ERROR'); window.location='../../Inicio_Sesión.html'</script>";
+                default: "<script> alert('ERROR'); window.location='.../estadoLog/Inicio_Sesión.html'</script>";
             }
         }
         else {
-            echo "<script> alert('Usuario no existe'); window.location='../../Inicio_Sesión.html'</script>";
+           echo "<script> alert('Usuario no existe o se encentra bloqueado'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
         }
     }
+    #else {
+    #    echo "Error: ".$sql."<br>".mysqli_error($conn);
+    #}
+
+    $codigoaceptacion = $_POST['aceptacion'];
 
     #Registrar
     if(isset($_POST["btnregistrar"])){
-        $sqlgrabar = "INSERT INTO usuarios(numIdentificacion,password,TipoRol) VALUES ('$nombre','$pass','$rol')";
+        $sqlgrabar = "INSERT INTO usuarios(numIdentificacion, password, TipoRol, codigoAceptacion, estadoUsuarios) VALUES ('$nombre', '$pass', '$rol', 1, 1)";
 
-        if(mysqli_query($conn,$sqlgrabar)){
-            echo "<script> alert('Usuario registrado con exito: $nombre'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
-        }else {
-            echo "Error: ".$sql."<br>".mysqli_error($conn);
+        if($codigoaceptacion=='disser123'/*||'1'*/){
+
+            if(mysqli_query($conn,$sqlgrabar)){
+                echo "<script> alert('Usuario registrado con exito: $nombre'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
+            }
+            else{
+                   echo "<script> alert('error'); window.location='../estadoLog/Registro.html'</script>";
+            }
+        }
+        else {
+            echo "<script>alert('Código incorrecto, verfique.')</script>";
         }
     }
-
+    else {
+        echo "Error: ".$sql."<br>".mysqli_error($conn);
+    }
+    
 ?>
