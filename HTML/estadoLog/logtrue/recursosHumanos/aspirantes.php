@@ -31,9 +31,12 @@
             <div id="Barra_Herramientas">
                 <ul class="Herramientas">
                     <li id="buscar" style="display: inline-flex;">
-                        <form action="../../../php/listaAspirantes.php" method="post">
-                            <input type="text" name="datoAsp" class="buscador" placeholder="Buscar">
-                            <input type="submit" name="buscador" value="&#x1f50d;">
+                        <!--
+                            <form method="post">
+                        -->
+                        <form action="../../../php/listaAspirantes.php" method="GET">
+                        <input type="text" name="datoAsp" class="" placeholder="Buscar">
+                        <input type="submit" name="btnbuscador" value="&#x1f50d;">
                         </form>
                     </br></li>
                     <li><a href="">Filtro</a>
@@ -112,6 +115,20 @@
 
 
         <section class="contenido">
+            <?php
+            /*
+                function busqueda($conn) {
+                    if (isset($_POST['buscador'])){
+                      buscarAsp($conn);
+                      #echo "<script>window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php'</script>";
+                    }
+                    else{
+                        echo "<script>alert('No se encontro a ningún aspirante, verifique los datos ingresados');</script>";
+                    }
+                }
+            */
+            ?>
+            <?=busqueda($conn);?>
             <?=perfilAspirante($conn);?>
             <!--<section class="Perfil_Aspirante">
                 <section class="Foto_Perfil" name=''>

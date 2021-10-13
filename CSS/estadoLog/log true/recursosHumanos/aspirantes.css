@@ -1,5 +1,6 @@
 #Barra_Herramientas {
     margin-top: 3.55%;
+    position: fixed;
     float: right;
     /*border-top: 2px solid rgba(160, 43, 0, 0.9);*/
     width: 100%;
