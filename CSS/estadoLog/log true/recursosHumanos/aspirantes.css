@@ -23,11 +23,12 @@ ul, ol {
     display: block;
 }
 .Herramientas li #buscar {
-    width: 75%;
-    padding: 3% 6%;
+    display: inline-flex;
+    width: 100%;
     margin: 6% 3%;
 }
 .Herramientas li input {
+    padding: 3% 6%;
     border-radius: 3%;
     border: 2px groove #17202A;
     font-family: sans-serif;

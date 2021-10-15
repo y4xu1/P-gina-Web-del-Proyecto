@@ -30,13 +30,13 @@
             </section>
             <div id="Barra_Herramientas">
                 <ul class="Herramientas">
-                    <li id="buscar">
+                    <li id="buscar" style="display: inline-flex;">
                         <!--
                             <form method="post">
                         -->
                         <form action="../../../php/listaAspirantes.php" method="GET">
                         <input type="text" name="datoAsp" class="" placeholder="Buscar">
-                        <input type="submit" name="btnbuscador" value="&#x1f50d;" style="background:rgb(255, 255, 255,0.2);">
+                        <input type="submit" name="btnbuscador" value="&#x1f50d;">
                         </form>
                     </br></li>
                     <li><a href="">Filtro</a>
@@ -88,12 +88,9 @@
 <?php
 
 /*function listado ($conn) {
-
     $listaAspirantes = "SELECT * FROM aspirante AND usuario";
     $completo = mysqli_query($conn, $listaAspirantes);
-
     while ($dato = mysqli_fetch_array($completo)) {
-
         echo "<section class='contenido'>";
             echo "<section class='Perfil_Aspirante'>";
                 echo "<section class='Foto_Perfil' name'fotoPerfil'> <? =fotoPerfil($conn); ?> </section>";
@@ -106,7 +103,6 @@
             echo "</section>";
         echo "</section>";
     }
-
 }*/
 
 
@@ -128,20 +124,7 @@
                 }
             */
             ?>
-            <!--
-                <
-            ?=busqueda($conn);?>
-            -->
-            <?php
-            if (isset($_GET['btnbuscador'])){
-                #echo "<script>window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php';</script>";
-            
-                buscarAsp($conn);
-            }
-            else {
-              echo "<script>alert('No se encontro a ningún aspirante, verifique los datos ingresados');</script>";
-            }
-            ?>
+            <?=busqueda($conn);?>
             <?=perfilAspirante($conn);?>
             <!--<section class="Perfil_Aspirante">
                 <section class="Foto_Perfil" name=''>
