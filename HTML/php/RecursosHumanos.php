@@ -1,7 +1,9 @@
+<!--Vinculacion con la pagina Mi_Perfil -->
 <?php
 
 include("Conexion.php");
 
+#diferenciar cada boton encontrado en la pagina  
 diferencia($conn);
 
 function diferencia($conn){
@@ -13,7 +15,8 @@ actualizar ($conn);
 }
 }
 
-
+#Identificar cada variable de vinculacion con la pagina y la base de datos.
+#Insertar a la base de datos los datos ingresados en cada campo del formulario.
 insertar($conn);
 function insertar ($conn){
   $pnombre=($_POST["pNombre"]);
@@ -50,6 +53,7 @@ function insertar ($conn){
 }
 
 #Boton Actualizar
+#Actualizar los datos encontrados en la base de datos por los datos obtenidos en el formulario. 
 function actualizar($conn){
   $pnombre=($_POST["pNombre"]);
   $snombre=($_POST["sNombre"]);
@@ -72,7 +76,11 @@ function actualizar($conn){
   $eps=($_POST["EPS"]);
   
      if(isset($_POST['btnActualizar'])) {
-        $query = mysqli_query($conn,"UPDATE recursoshumanos SET idTipoDocumento='$tipo', pNombreRh='$pnombre', sNombreRh='$snombre', pApellidoRh='$papellido', sApellidoRh='$sapellido', fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN', 	paisNacimiento='$paisN', direccionResidencia='$dir', telefonoContacto='$telefono', correoElectronico='$correo', tipoCargo='$cargo', estadoCivil='$estadoC', estrato='$estrato', rh='$rh', genero='$genero', eps='$eps' WHERE docRecHum='$doca'");
+        $query = mysqli_query($conn,"UPDATE recursoshumanos SET idTipoDocumento='$tipo', pNombreRh='$pnombre',
+         sNombreRh='$snombre', pApellidoRh='$papellido', sApellidoRh='$sapellido', fechaExpDoc='$fechaI', 
+         paisExpDoc='$paisE', fechaNacimiento='$fechaN', 	paisNacimiento='$paisN', direccionResidencia='$dir', 
+         telefonoContacto='$telefono', correoElectronico='$correo', tipoCargo='$cargo', estadoCivil='$estadoC',
+          estrato='$estrato', rh='$rh', genero='$genero', eps='$eps' WHERE docRecHum='$doca'");
         echo "<script> window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.html' </script>";
         mysqli_close($conn);
      }

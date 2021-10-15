@@ -1,9 +1,13 @@
+/* Este archivo se encuentra vinculado con el archivo Contratos.html */
+
+/* Estilo del encabezado */
 .contratosA {
     padding: 25%;
     background-image: url(../../../../Imagenes/contrato/Contratos.jpg);
     background-size: 100%;
     background-attachment: fixed;
 }
+/*
 #Tipo_Contrato {
     margin-top: -0.31%;
     float: right;
@@ -39,7 +43,6 @@ ul, ol {
     position: relative;
     background-color: rgba(0, 0, 0, 0.9);
 }
-/*-------------------------------------------------*/
 .Inicio_Contratos {
     width: 100%;
     height: auto;
@@ -49,14 +52,16 @@ ul, ol {
     width: 40%;
     margin: -52% 29% 0% 29%;
     padding: 2%;
-    /*border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 10px black;*/
+    # border-radius: 10px;
+    # background-color: rgba(0, 0, 0, 0.1);
+    # box-shadow: 0px 0px 10px black;
     font-size: 350%;
     font-family: sans-serif;
     color: black;
     text-shadow: 11px 7px 5px gray;
 }
+*/
+/* Estilo del contrato */
 .contenido {
     margin-bottom: 25%;
 }
@@ -68,6 +73,7 @@ ul, ol {
     border-radius: 6px;
     box-shadow: 0px 0px 15px rgb(151, 195, 253);
 }
+/* Estilo del contenido */
 .controls {
     margin: 1% 0%;
     padding: 1% 2%;

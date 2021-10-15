@@ -1,3 +1,4 @@
+<!-- Este archivo menciona la conexión con la Base de Datos -->
 <?php
 
     $dbhost = "localhost";
@@ -7,7 +8,7 @@
     
     $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
-        if(!$conn){
-            die("No hay conexion: " .mysqli_connect_error());
-        }
+    if(!$conn){
+        die("No hay conexion: " .mysqli_connect_error());
+    }
 ?>

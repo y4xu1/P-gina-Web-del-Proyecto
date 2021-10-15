@@ -1,7 +1,9 @@
+<!--Vinculacion con la pagina de Contratos --> 
 <?php
 
 include("Conexion.php");
 
+#diferenciar cada boton encontrado en la pagina.  
 diferencia($conn);
 
 function diferencia($conn){
@@ -12,7 +14,8 @@ if(isset($_POST ['btnActualizar'])){
 actualizar ($conn);
 }
 }
-
+#Identificar cada variable de vinculacion con la pagina y la base de datos.
+#Insertar a la base de datos los datos ingresados en cada campo del formulario.
 insertar($conn);
     function insertar ($conn){
         $idContrato=$_POST["idcontrato"];
@@ -29,7 +32,10 @@ insertar($conn);
 
         
         if (isset($_POST["btnregistrar"])) {
-            $consulta= "INSERT INTO contrato (idContrato,tipoContrato,docAspirante,docRecHum,tipoCargoDesp,salario,valorPrestaciones,fechaInicio,nombreObra,ciudadObra,firma) VALUES ('$idContrato','$tipoContrato','$docAspirante','$docRecursos','$cargo','$Salario','$valor','$fecha', '$obra',' $cuidad','$firma')";
+            $consulta= "INSERT INTO contrato (idContrato,tipoContrato,docAspirante,
+            docRecHum,tipoCargoDesp,salario,valorPrestaciones,fechaInicio,nombreObra,ciudadObra,firma)
+             VALUES ('$idContrato','$tipoContrato','$docAspirante','$docRecursos','$cargo','$Salario',
+             '$valor','$fecha', '$obra',' $cuidad','$firma')";
             mysqli_query($conn,$consulta);
             echo "<script> window.location'../estadoLog/logtrue/recursosHumanos/contratos/Contrato_Fijo.html' </script>";
             /*if (mysqli_query($conn, $consulta)) {
@@ -50,6 +56,7 @@ insertar($conn);
 }
 
 #Boton Actualizar
+#Actualizar los datos encontrados en la base de datos por los datos obtenidos en el formulario. 
 function actualizar($conn){
     $idContrato=$_POST["idcontrato"];
         $tipoContrato=$_POST["tipoContrato"];

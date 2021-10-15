@@ -1,4 +1,5 @@
-/*-----------------------------------imagen central-------------------------------------------------*/
+/*Vinculacion con la pagina index*/
+/*Encabezado de la pagina */
 main {
     padding-top: 3.8%;
 }
@@ -31,7 +32,7 @@ main {
 .imagen_central section section p {
     font-size: 150%;
 }
-/*--------------------------------------------------------------------------------------------------*/
+/*Manual instructivo del aplicativo */
 .manual_instructivo {
     width: 100%;
     display: inline-block;
@@ -101,7 +102,7 @@ main {
     position: absolute;
     */
 }
-/*----------------------------------*/
+/*Informacion sobre la empresa Disser Ingenieria S.A.S */
 .contenido_acerca_disser{
     padding: 5% 15%;
     font-family: sans-serif;
@@ -115,7 +116,7 @@ main {
     text-align: center;
     padding: 1.5%;
 }
-/*-----------------------*/
+/*Empresas asociadas con la empresa Disser Ingenieria S.A.S */
 .personas_asociadas {
     padding: 5% 1%;
 }
@@ -132,7 +133,7 @@ main {
 .personas_asociadas .contenido_personas_asociadas a img:hover {
     transform: scale(1.2);
 }
-/*---------------------------*/
+/*Informacion acerca de los desarrolladores*/
 .contenido_acerca_desarrolladores {/* ----AQUI VA EL COLOR DE LA CAJA ----*/
     padding: 5% 0%;
     width: 100%;

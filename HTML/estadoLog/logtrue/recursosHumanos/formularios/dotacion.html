@@ -1,3 +1,4 @@
+<!-- Página en donde se muestra el formato de entrega de dotación y elementos de protección personal EPP para que el usuario lo diligencie -->
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -14,7 +15,7 @@
         <link rel="icon" href="../../../../../Imagenes/logoProyect/Logo_Principal.png">
     </head>
     <body>
-<!--===============================================================================================================-->
+<!-- Menú de herramientas -->
         <header>
             <section class="Barra_Navegacion">
                 <nav id="menu">
@@ -28,6 +29,7 @@
                     </ul>
                 </nav>
             </section>
+            <!-- Submenú -->
             <section class="sub_menu">
                 <div id="Tipo_Formularios">
                     <ul class="form1">
@@ -42,41 +44,38 @@
                 
             </section>
         </header>
-<!--===============================================================================================================-->
-
-<!-- -->
-<aside>
-    <img src="../../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
-    <section class="caja_notificaciones">
-        <center>
-            <img src="../../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
-        </center>
-        <div class="infoNotif">
-            <h2>Trascendental</h2>
-            <p>El usuario <b>nombre aspirante</b> fue bloqueado correctamente de la plataforma</p>
-        </div>
-    </section>
-    <section class="caja_notificaciones">
-        <center>
-            <img src="../../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
-        </center>
-        <div class="infoNotif">
-            <h2>Nombre Aspirante</h2>
-            <p>Favor hacerme confirmación de que posea los documentos requeridos en su debido orden</p>
-        </div>
-    </section>
-    <section class="caja_notificaciones">
-        <center>
-            <img src="../../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
-        </center>
-        <div class="infoNotif">
-            <h2>Trascendental</h2>
-            <p>El aspirante <b>nombre aspirante</b> recibió correctamente su comentario</p>
-        </div>
-    </section>
-</aside>
-<!-- -->
-
+<!-- Barra lateral desplegable con función de notificaciones -->
+        <aside>
+            <img src="../../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
+            <section class="caja_notificaciones">
+                <center>
+                    <img src="../../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
+                </center>
+                <div class="infoNotif">
+                    <h2>Trascendental</h2>
+                    <p>El usuario <b>nombre aspirante</b> fue bloqueado correctamente de la plataforma</p>
+                </div>
+            </section>
+            <section class="caja_notificaciones">
+                <center>
+                    <img src="../../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
+                </center>
+                <div class="infoNotif">
+                    <h2>Nombre Aspirante</h2>
+                    <p>Favor hacerme confirmación de que posea los documentos requeridos en su debido orden</p>
+                </div>
+            </section>
+            <section class="caja_notificaciones">
+                <center>
+                    <img src="../../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
+                </center>
+                <div class="infoNotif">
+                    <h2>Trascendental</h2>
+                    <p>El aspirante <b>nombre aspirante</b> recibió correctamente su comentario</p>
+                </div>
+            </section>
+        </aside>
+<!-- Formato de dotación para diligenciar -->
         <section class="contenido">
             <form action="../../../../php/Formularios.php" method="POST">
             <section class="tablas-dotacion">
@@ -215,7 +214,10 @@
                 </table>
                 <table>
                     <tr>
-                        <th>EN CUMPLIMIENTO DE LOS DEBERES COMO TRABAJADOR DEFINIDOS EN LA LEY A TRAVES DE LA SIGUIENTE NORMATIVIDAD: CODIGO SUSTANTIVO DEL TRABAJO ART. 56 Y ART. 58 NUMERAL 7; LEY 9 DE 1979, ART DECRETO 1295 DE 1994 ART. 22</th>
+                        <th>
+                            EN CUMPLIMIENTO DE LOS DEBERES COMO TRABAJADOR DEFINIDOS EN LA LEY A TRAVES DE LA SIGUIENTE NORMATIVIDAD: CODIGO SUSTANTIVO DEL TRABAJO ART. 56 Y
+                            ART. 58 NUMERAL 7; LEY 9 DE 1979, ART DECRETO 1295 DE 1994 ART. 22
+                        </th>
                     </tr>
                 </table>
                 <table>
@@ -233,30 +235,12 @@
                         </tr>
                     </tbody>
                 </table>
-
-<!--===============================================================================================================-->
-                <!-- lo nuevo -->
-
-                <!--<input type="text" name="idFormulario" placeholder="Id Formulario"><br>
-                <select name="tipoFormulario">
-                    <option>Selecione el Tipo de Formulario</option>
-                    <option value="Formulario Dotación">Formulario Dotación</option>
-                    <option value="Formulario Inducción">Formulario Inducción</option> 
-                </select> <br>
-                <label>Fecha del Formulario</label><br>
-                <input type="date" name="fechaFormulario"><br>
-                <input type="text" name="docRecHum" placeholder="Número de Identificación de Recursos Humanos"><br>
-                <label>Archivo del Formulario</label><br>
-                <input type="file" name="archivoFormulario">-->
-                <input class="btn" type="submit" name="enviar" id="enviar" value="Insertar Datos">
-                <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
-
-                <!--<a href=""><button>Descargar</button></a>-->
-               
-                </form>
-            </section>
+                    <input class="btn" type="submit" name="enviar" id="enviar" value="Insertar Datos">
+                    <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
+            </form>
         </section>
-<!--===============================================================================================================-->
+    </section>
+<!-- Información básica de la empresa -->
         <footer class="info_empres">
             <ul>
                 <center><h4>Disser Ingieniería S.A.S. Bogotá</h4></center>
@@ -274,6 +258,5 @@
                 <center><p>© Copyright. Todos los derechos reservados - 2021</p></center>
             </section>
         </footer>
-<!--===============================================================================================================-->
     </body>
 </html>

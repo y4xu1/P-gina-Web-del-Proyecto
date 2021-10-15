@@ -1,15 +1,16 @@
+<!-- Vinculacio con la pagina Agendar_citas -->
 <?php
 
 include("conexion.php");
 
 // diferencia($conn);
-
 // function diferencia($conn){
 // if(isset($_POST ['enviar'])){
 // insertar($conn);
 // }
 
-
+#Identificar cada variable de vinculacion con la pagina y la base de datos.
+#Insertar a la base de datos los datos ingresados en cada campo del formulario.
 insertar($conn);
 function insertar ($conn){
     $docA=$_POST["docAspirante"];
