@@ -1,3 +1,5 @@
+/* Este archivo se encuentra vinculado con el archivo Nosotros.html */
+/* Encabezado de la página */ 
 .contenido {
     padding-top:3.5%;
 }
@@ -19,7 +21,7 @@
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 13px 14px 5px #17202A;
 }
-/*--------------------------------------------*/
+/* Información principal de la empresa */
 .Quienes_Somos {
     padding: 5%;
     font-family: sans-serif;
@@ -58,7 +60,7 @@ h3 {
     padding: 20px;
     margin-bottom: 80px;
     border-bottom: 1px solid black;
- }
+}
 .Politica{
     font-size: 30px;
     font-family: sans-serif;

@@ -1,3 +1,5 @@
+<!-- Página principal del usuario con el rol de recursos humanos, le permite visualizar en una lista todos los aspirates con sus respectivos documentos -->
+<!-- Incluye funciones de automatización a utilizar en la página -->
 <?php include('../../../php/listaAspirantes.php')?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,7 +15,7 @@
         <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
     </head>
     <body>
-<!--===============================================================================================================-->
+<!-- Menú y submenú de herramientas -->
         <header>
             <section class="Barra_Navegacion">
                 <section class="Inicio">
@@ -28,6 +30,7 @@
                     </ul>
                 </nav>
             </section>
+            <!-- Submenú -->
             <div id="Barra_Herramientas">
                 <ul class="Herramientas">
                     <li id="buscar">
@@ -52,9 +55,7 @@
                 </ul>
             </div>
         </header>
-<!--===============================================================================================================-->
-
-<!-- -->
+<!--Barra lateral desplegable con función de las notificaciones -->
 <aside>
         <img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
         <section class="caja_notificaciones">
@@ -85,11 +86,10 @@
             </div>
         </section>
     </aside>
-<!-- -->
-
+<!-- BackUps o herramientas sin un funcionamiento aún -->
 <?php
-
-/*function listado ($conn) {
+/*
+function listado ($conn) {
 
     $listaAspirantes = "SELECT * FROM aspirante AND usuario";
     $completo = mysqli_query($conn, $listaAspirantes);
@@ -110,12 +110,8 @@
     }
 
 }*/
-
-
-
 ?>
-
-
+<!-- Listado de aspirantes -->
         <section class="contenido">
             <?php
             /*
@@ -134,6 +130,8 @@
                 <
             ?=busqueda($conn);?>
             -->
+
+            <!-- Llamado de función para buscar a un aspirante en especifico -->
             <?php
                 /*
                 if (isset($_GET['btnbuscador'])){
@@ -146,8 +144,12 @@
                 }
                 */
             ?>
+
+            <!-- Llamado de función del listado de los aspirantes (Función principal) -->
             <?=perfilAspirante($conn);?>
-            <!--<section class="Perfil_Aspirante">
+
+            <!--
+                <section class="Perfil_Aspirante">
                 <section class="Foto_Perfil" name=''>
                     <img src="../../../../Imagenes/otros logos/Logo_Usuario.png" alt="Logo_Usuario" class="Logo_Usuario">
                 </section>
@@ -168,53 +170,10 @@
                     <textarea class="controls" rows="8.5" name="comentario" placeholder="Agregar un comenterio..." id="Comentario"></textarea>
                     <input class="botons" type="submit" name="Botón_Envío" value="Enviar" id="Botón_Envío">
                 </section>
-            </section>
-            <section class="Perfil_Aspirante">
-                <section class="Foto_Perfil">
-                    <img src="../../../../Imagenes/otros logos/Logo_Usuario.png" alt="Logo_Usuario" class="Logo_Usuario">
                 </section>
-                <section class="Documentos_Aspirante">
-                    <p><a href="../aspirantes/Perfil_Aspirante.html">Nombre Aspirante</a></p>
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Curriculum">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado de Alturas" id="Documento_1P">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Judicial">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Penal">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Disciplinario">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Resultados Médicos" id="Documento_1P">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Carnet de Vacunación Covid-19">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Referencias Personales">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Referencias Laborales">
-                    <input class="botons" type="submit" name="Bloqueo" value="Bloquear" id="Botón_Bloqueo">
-                </section>
-                <section class="Comentarios">
-                    <textarea class="controls" rows="8.5" name="comentario" placeholder="Agregar un comenterio..." id="Comentario"></textarea>
-                    <input class="botons" type="submit" name="Botón_Envío" value="Enviar" id="Botón_Envío">
-                </section>
-            </section>
-            <section class="Perfil_Aspirante">
-                <section class="Foto_Perfil">
-                    <img src="../../../../Imagenes/otros logos/Logo_Usuario.png" alt="Logo_Usuario" class="Logo_Usuario">
-                </section>
-                <section class="Documentos_Aspirante">
-                    <p><a href="../aspirantes/Perfil_Aspirante.html">Nombre Aspirante</a></p>
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Curriculum">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado de Alturas">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Judicial">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Penal" id="Documento_1P">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Disciplinario">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Resultados Médicos">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Carnet de Vacunación Covid-19" id="Documento_1P">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Referencias Personales">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Referencias Laborales" id="Documento_1P">
-                    <input class="botons" type="submit" name="Bloqueo" value="Bloquear" id="Botón_Bloqueo">
-                </section>
-                <section class="Comentarios">
-                    <textarea class="controls" rows="8.5" name="comentario" placeholder="Agregar un comenterio..." id="Comentario"></textarea>
-                    <input class="botons" type="submit" name="Botón_Envío" value="Enviar" id="Botón_Envío">
-                </section>
-            </section>-->
+            -->
         </section>
-<!--===============================================================================================================-->
+<!-- Información básica de la empresa -->
         <footer class="info_empres">
             <ul>
                 <center><h4>Disser Ingieniería S.A.S. Bogotá</h4></center>
@@ -232,7 +191,5 @@
                 <center><p>© Copyright. Todos los derechos reservados - 2021</p></center>
             </section>
         </footer>
-<!--===============================================================================================================-->
-
     </body>
 </html>

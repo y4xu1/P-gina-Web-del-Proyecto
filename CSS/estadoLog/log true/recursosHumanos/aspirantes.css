@@ -1,3 +1,5 @@
+/* Este archivo se encuentra vinculado con el archivo de la lista de aspirantes (aspirantes.php) y las graficas */
+/* Estilo del submenú */
 #Barra_Herramientas {
     margin-top: 3.55%;
     position: fixed;
@@ -58,12 +60,13 @@ ul, ol {
     position: relative;
     background-color: rgba(0, 0, 0, 0.9);
 }
-/*-----------------------------------------------*/
+/* Estilo del contenido de las páginas */
 .contenido {
     padding-top: 7%;
     padding-bottom: 3%;
     background-color: #E5E8E8;
 }
+/* Arquitectura de cada perfil de los usuarios con el rol de aspirante */
 .Perfil_Aspirante {
     border-radius: 5px;
     display: inline-flex;
@@ -168,7 +171,7 @@ input:hover {
     background-color: #EAEDED;
     box-shadow: 0px 0px 2px gray;
 }
-/*-------------------------------------*/
+/* Estilo del contenido del archivo del gráfico estadistico */
 #Fondo {
     position: relative;
     float: left;
@@ -197,5 +200,3 @@ input:hover {
     margin: 5% 0% 0% 0%;
     width: 60%;
 }
-
-/*==========================================tabla de busquda de datos===============================================*/
