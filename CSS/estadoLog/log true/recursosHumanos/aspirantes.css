@@ -11,7 +11,7 @@
     background: rgba(0, 0, 0, 0.9);
 }
 ul, ol {
-    list-style:none;
+    list-style: none;
 }
 .Herramientas > li {
     float: right;
@@ -22,14 +22,18 @@ ul, ol {
     padding: 14px 15px;
     display: block;
 }
-.Herramientas li #buscar {
-    display: inline-flex;
-    width: 100%;
-    margin: 6% 3%;
+.Herramientas #buscar {
+    width: 14%;
+}
+.Herramientas #buscar div {
+    display: flex;
+    padding: 4.5% 2%;
+    float: left;
 }
 .Herramientas li input {
-    padding: 3% 6%;
-    border-radius: 3%;
+    margin: 0% 0% 0% 2%;
+    padding: 1% 2%;
+    border-radius: 5%;
     border: 2px groove #17202A;
     font-family: sans-serif;
     font-size: 12px;

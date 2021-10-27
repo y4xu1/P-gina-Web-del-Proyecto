@@ -35,10 +35,12 @@
                             <form method="post">
                         -->
                         <form action="../../../php/listaAspirantes.php" method="GET">
-                        <input type="text" name="datoAsp" class="" placeholder="Buscar">
-                        <input type="submit" name="btnbuscador" value="&#x1f50d;" style="background:rgb(255, 255, 255,0.2);">
-                        </form>
-                    </br></li>
+                            <div>
+                                <input type="text" name="datoAsp" class="" placeholder="Buscar">
+                                <input type="submit" name="btnbuscador" value="&#x1f50d;" style="background:rgb(255, 255, 255,0.2);">
+                            </div>
+                        </form></br>
+                    </li>
                     <li><a href="">Filtro</a>
                         <ul>
                             <li><a href="">Mas Reciente</a></li>
@@ -133,14 +135,16 @@
             ?=busqueda($conn);?>
             -->
             <?php
-            if (isset($_GET['btnbuscador'])){
-                #echo "<script>window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php';</script>";
-            
-                buscarAsp($conn);
-            }
-            else {
-              echo "<script>alert('No se encontro a ningún aspirante, verifique los datos ingresados');</script>";
-            }
+                /*
+                if (isset($_GET['btnbuscador'])){
+                    #echo "<script>window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php';</script>";
+                
+                    buscarAsp($conn);
+                }
+                else {
+                echo "<script>alert('No se encontro a ningún aspirante, verifique los datos ingresados');</script>";
+                }
+                */
             ?>
             <?=perfilAspirante($conn);?>
             <!--<section class="Perfil_Aspirante">
