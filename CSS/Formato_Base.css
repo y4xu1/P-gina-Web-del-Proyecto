@@ -115,6 +115,22 @@ aside .caja_notificaciones .infoNotif {
     padding-left: 1.5%;
     border-left: 3px double black;
 }
+/* icono para cerrar sesión */
+.logOut {
+    float: right;
+    position: fixed;
+    margin: 43% 93%;
+    width: 5%;
+    transition: 0.5s;
+}.logOut a {
+    width: 200%;
+}
+.logOut a img {
+    width: 100%;
+}
+.logOut:hover {
+    transform: scale(1.2);
+}
 /* Pie de página de los archivos (contiene la información básica de la empresa) */
 footer {
     border-top: 1px solid black;
