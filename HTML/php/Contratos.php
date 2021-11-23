@@ -1,7 +1,7 @@
 <!--Vinculacion con la pagina de Contratos --> 
 <?php
 
-include("Conexion.php");
+include("conexion.php");
 
 #diferenciar cada boton encontrado en la pagina.  
 diferencia($conn);
@@ -37,7 +37,8 @@ insertar($conn);
              VALUES ('$idContrato','$tipoContrato','$docAspirante','$docRecursos','$cargo','$Salario',
              '$valor','$fecha', '$obra',' $cuidad','$firma')";
             mysqli_query($conn,$consulta);
-            echo "<script> window.location'../estadoLog/logtrue/recursosHumanos/contratos/Contrato_Fijo.html' </script>";
+            echo "<script> alert('El contrato fue cargado correctamente.'); window.location='../estadoLog/logtrue/recursosHumanos/Contratos.html' </script>";  
+            #echo "<script> window.location'../estadoLog/logtrue/recursosHumanos/contratos/Contrato_Fijo.html' </script>";
             /*if (mysqli_query($conn, $consulta)) {
                 echo "<script> alert('Se a finalizado la acción con exito'); window.location'../estadoLog/logtrue/recursosHumanos/contratos/Contrato_Fijo.html' </script>";
             }
@@ -73,6 +74,8 @@ function actualizar($conn){
        if(isset($_POST['btnActualizar'])){
           $query = mysqli_query($conn,"UPDATE contrato SET tipoContrato='$tipoContrato', docAspirante='$docAspirante', docRecHum='$docRecursos', tipoCargoDesp='$cargo', salario='$Salario', valorPrestaciones='$valor',fechaInicio='$fecha', nombreObra='$obra', ciudadObra='$cuidad',firma='$firma' WHERE idContrato='$idContrato'");
           mysqli_close($conn);
+
+        echo "<script> alert('El contrato fue actualizado correctamente.'); window.location='../estadoLog/logtrue/recursosHumanos/Contratos.html' </script>";  
     
        }
        else {

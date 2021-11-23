@@ -108,3 +108,13 @@
 #correo:required, #contraseña:required {
     border: 1px groove #E74C3C;
 }
+/*.ub1 {
+    text-align:left;
+    font-weight: bold;
+    margin-bottom:0.5em;
+    margin-top:0.5em;
+}
+input[type=checkbox] {
+    margin-left:0;
+    width:10%;
+}*/

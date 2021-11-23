@@ -39,15 +39,18 @@
                             <form action="../php/login.php" method="POST">
                             <h2>Inicia Sesión</h2>
                             <input class="controls" type="text" name="usuario" id="documento" placeholder="Ingrese su número de indentificación"><br>
-                            <input class="controls" type="password" name="pass" id="contraseña" placeholder="Ingrese su contraseña"><br>
-                            <!--<input class="controls" type="text" name="TipoRol" id="contraseña" placeholder="Tipo de Rol"><br>-->
-                            
+                            <input class="controls" type="password" name="pass" id="txtpassword" placeholder="Ingrese su contraseña"><br>
+                           
+                            <div class="ub1">
+                                <input type="checkbox" onclick="verpassword()" >Mostrar contraseña
+                            </div>
+
                             <select class="controls" name="TipoRol" id="rol" style="width: 97%;">
                                 <option>Seleccione su rol</option>
                                 <option value="1">Aspirante</option>
                                 <option value="2">Recursos Humanos</option>
                             </select>
-                            
+
                             <p><a href="Registro.html">Registrarse</a></p>
                             <p><a href="Olvide_Contraseña.html">Olvidé mi contraseña</a></p><br>
                             <input class="botons" type="submit" value="Ingresar" name="btningresar">
@@ -76,4 +79,18 @@
             </section>
         </footer>
     </body>
+
+    <script>
+        function verpassword(){
+            var tipo = document.getElementById("txtpassword");
+            if(tipo.type == "password")
+            {
+                tipo.type = "text";
+            }
+            else
+            {
+                tipo.type = "password";
+            }
+        }
+    </script>
 </html>

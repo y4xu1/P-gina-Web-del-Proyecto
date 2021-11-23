@@ -4,15 +4,13 @@
     $dbhost = "localhost";
     $dbuser = "root";
     $dbpass = "";
-    $dbname = "bdtrascendental";
+    $dbname = "contratacion";
     
     $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+    #$dbconn=new PDO("mysql:host=$dbhost; dbname=$dbname", $dbuser, $dbpass);
 
     if(!$conn){
         die("No hay conexion: " .mysqli_connect_error());
-    }
-    else {
-        echo ("conexion establecida");
     }
 ?>
 

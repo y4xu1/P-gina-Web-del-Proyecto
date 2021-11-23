@@ -3,84 +3,49 @@
     registro en la plataforma
 -->
 <?php
+    include('conexion.php');
+?>
 
-include("conexion.php");
+<?php
 
-$nombre = $_POST['usuario'];
-$pass = $_POST['pass'];
-$rol = $_POST['TipoRol'];
+    #logeo o ingreso al sistema
+    $nombre = $_POST['usuario'];
+    $pass = $_POST['pass'];
+    $rol = $_POST['TipoRol'];
 
+    if(isset($_POST['btningresar'])) {
 
-
-/*
-#Session
-session_start();
- 
-#linea 14 segura
-$_SESSION["username"] = $nombre;
- 
- 
-if (isset($_SESSION["username"])!==true) {
-#if (isset($_SESSION(["username"])!==false) {
- 
-#if (isset($_SESSION(["username"])))  {
-    #session_destroy();
-}
-else {
-    session_destroy();
-}
-*/
-
-
-# Función de iniciar sesión
-# Login
-    if(isset($_POST['btningresar'])){
         $consulta = "SELECT * FROM usuarios WHERE numIdentificacion = '$nombre' AND password = '$pass' AND estadoUsuarios = 1";
         $query = mysqli_query($conn,$consulta); 
-        
-        /*
-        echo $consulta;
-        echo "<br>";
-        var_dump($query);
-        */
-        
+
         $nr = mysqli_num_rows($query);
 
-        /*
-        echo $consulta;
-        echo "<br>";
-        echo "numero registros";
-        echo "<br>";
-        echo $nr;
-        exit(0);
-        */
-        #mysqli_close($conn);
+        if ($nr == 1) {
 
-        $consulRol = "SELECT tipoRol FROM usuarios WHERE numIdentificacion='$nombre'";
-        $queryRol = mysqli_query($conn, $consulRol);
-/*
-        if ($queryRol==2) {
-            if($nr==1){
-                echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php'</script>"; 
+            #$consulRol = "SELECT tipoRol FROM usuarios WHERE numIdentificacion='$nombre'";
+            $consulRol = "SELECT * FROM usuarios WHERE numIdentificacion = $nombre AND password = '$pass' AND TipoRol = $rol";
+            $queryRol = mysqli_query($conn, $consulRol);
+            $numConsul = mysqli_num_rows($queryRol);
+
+            if ($numConsul == 1) {
+                #echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
+                switch ($rol){
+                    case 1:
+                        echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
+                        break;
+                    case 2:
+                        echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php'</script>"; 
+                        break;
+                    default:
+                        echo "<script> alert('ERROR: Rol no indicado'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
+                        break;
+                }
             }
             else {
-                echo "<script> alert('Usuario no existe o se encentra bloqueado'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
+                echo "<script> alert('ERROR: Rol no indicado o erroneo'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
             }
-        }
-        elseif ($queryRol==1) {
-            if($nr==1){
-                echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
-            }
-            else {
-                echo "<script> alert('Usuario no existe o se encentra bloqueado'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
-            }
-        }
-        else {
-            echo "<script> alert('ERROR'); window.location='.../estadoLog/Inicio_Sesión.html'</script>";
-        }
-*/
             /*
-            switch ($queryRol) {
+            switch ($numConsul){
                 case 1:
                     echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
                     break;
@@ -88,34 +53,24 @@ else {
                     echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php'</script>"; 
                     break;
                 default:
-                    echo "<script> alert('ERROR'); window.location='.../estadoLog/Inicio_Sesión.html'</script>";
+                    echo "<script> alert('ERROR: Rol no indicado'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
+                    break;
             }
             */
-        
-        if($nr==1){
-            
-            switch($rol){
-                case 1: #"ASPIRANTE" || "aspirante" || "Aspirante" ||
-                    echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
-                    break;
-                case 2: #"RECURSOS HUMANOS" || "recursos humanos" || "Recursos humanos" || "Recursos Humanos" || "recursos Humanos" ||
-                    echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php'</script>"; 
-                    break;
-
-                default: echo "<script> alert('ERROR'); window.location='.../estadoLog/Inicio_Sesión.html'</script>";
-            }
         }
         else {
-           echo "<script> alert('Usuario no existe o se encentra bloqueado'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
+            echo "<script> alert('Usuario incorrecto, inexistente o bloqueado o contraseña incorrecta.');window.location= '../estadoLog/Inicio_Sesión.html' </script>";
         }
-        
-        #mysqli_close($conn);
+
     }
     else {
-        echo "Error: ". $sql ."<br>" . mysqli_error($conn);
+        #echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        #echo "<h4>Error: </h4><br><h3>" . mysqli_error($conn) . "</h3>";
     }
 
-#Función de registro de un usuario
+?>
+
+<?php
 
     $codigoaceptacion = $_POST['aceptacion'];
 
@@ -123,7 +78,7 @@ else {
     if(isset($_POST["btnregistrar"])){
         $sqlgrabar = "INSERT INTO usuarios(numIdentificacion, password, TipoRol, codigoAceptacion, estadoUsuarios) VALUES ($nombre, '$pass', '$rol', 1, 1)";
         #echo $sqlgrabar;
-
+        
         if($codigoaceptacion=='disser123'){
 
             if(mysqli_query($conn,$sqlgrabar)){
@@ -139,6 +94,6 @@ else {
     }
     else {
         echo "Error: ".$sql."<br>".mysqli_error($conn);
-    } 
+    }
 
 ?>
