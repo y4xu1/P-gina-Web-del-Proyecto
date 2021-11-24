@@ -151,7 +151,8 @@ function actualizar($conn){
     $eps=($_POST["EPS"]);
     $arl=($_POST["ARL"]);
 
-    $consulta = "UPDATE aspirante SET docAspirante='$doca', numIdentificacion='$doca', PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps',arl='$arl' WHERE docAspirante='$doca'";
+    #$consulta = "UPDATE aspirante SET docAspirante='$doca', numIdentificacion='$doca', PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps',arl='$arl' WHERE docAspirante = '$doca'";
+    $consulta = "UPDATE aspirante SET PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps',arl='$arl' WHERE docAspirante = '$doca'";
     mysqli_query($conn, $consulta);
     mysqli_close($conn);
 }
@@ -170,7 +171,7 @@ function Actualizardocumentos ($conn){
   $referenciasLaborales=($_POST["ReferenciasLaborales"]);
   $firma=($_POST["firma"]);
   
-  $consulta = "UPDATE documentos SET curriculum='$curriculum',certificadoAlturas='$certificadoAlturas',certificadoJudicial='$certificadoJudicial',certificadoPenal='$certificadoPenal',certificadoDisciplinario='$certificadoDisciplinario',resultadosMedicos='$resultadosMedicos',carnetVacCovid='$carnetVacCovid',referenciasPersonales='$referenciasPersonales',referenciasLaborales='$referenciasLaborales',firma='$firma' WHERE docAspirante='$docAspirante'";
+  $consulta = "UPDATE documentos SET curriculum='$curriculum', certificadoAlturas='$certificadoAlturas', certificadoJudicial='$certificadoJudicial', certificadoPenal='$certificadoPenal', certificadoDisciplinario='$certificadoDisciplinario', resultadosMedicos='$resultadosMedicos', carnetVacCovid='$carnetVacCovid', referenciasPersonales='$referenciasPersonales', referenciasLaborales='$referenciasLaborales', firma='$firma' WHERE docAspirante='$docAspirante'";
   mysqli_query($conn, $consulta);
   mysqli_close($conn);
 }

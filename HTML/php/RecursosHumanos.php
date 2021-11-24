@@ -95,7 +95,8 @@ function actualizar($conn){
   $eps=($_POST["EPS"]);
   $arl=($_POST["ARL"]);
   
-  $consulta = "UPDATE recursoshumanos SET docRecHum='$doca' numIdentificacion='$doca', pNombreRh='$pnombre', sNombreRh='$snombre', pApellidoRh='$papellido', sApellidoRh='$sapellido', fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN', paisNacimiento='$paisN', direccionResidencia='$dir', telefonoContacto='$telefono', correoElectronico='$correo', tipoCargo='$cargo', estadoCivil='$estadoC',estrato='$estrato', rh='$rh', genero='$genero', eps='$eps', arl='$arl' WHERE docRecHum = '$doca'";
+  #$consulta = "UPDATE recursoshumanos SET docRecHum='$doca' numIdentificacion='$doca', pNombreRh='$pnombre', sNombreRh='$snombre', pApellidoRh='$papellido', sApellidoRh='$sapellido', fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN', paisNacimiento='$paisN', direccionResidencia='$dir', telefonoContacto='$telefono', correoElectronico='$correo', tipoCargo='$cargo', estadoCivil='$estadoC',estrato='$estrato', rh='$rh', genero='$genero', eps='$eps', arl='$arl' WHERE docRecHum = '$doca'";
+  $consulta = "UPDATE recursoshumanos SET pNombreRh='$pnombre', sNombreRh='$snombre', pApellidoRh='$papellido', sApellidoRh='$sapellido', fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN', paisNacimiento='$paisN', direccionResidencia='$dir', telefonoContacto='$telefono', correoElectronico='$correo', tipoCargo='$cargo', estadoCivil='$estadoC',estrato='$estrato', rh='$rh', genero='$genero', eps='$eps', arl='$arl' WHERE docRecHum = '$doca'";
   mysqli_query($conn,$consulta);
   mysqli_close($conn);
 
