@@ -4,7 +4,7 @@
     $dbhost = "localhost";
     $dbuser = "root";
     $dbpass = "";
-    $dbname = "contratacion";
+    $dbname = "trascendental";
     
     $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
     #$dbconn=new PDO("mysql:host=$dbhost; dbname=$dbname", $dbuser, $dbpass);
