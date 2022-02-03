@@ -144,7 +144,8 @@ main {
     width: 15%;
     float: right;
     margin: -2.5% 2%;
-    position:center ;
+    /* position: center; */
+    position: relative;
     width: 10%;
 }
 #dise {
