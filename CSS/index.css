@@ -133,19 +133,24 @@ main {
 .personas_asociadas .contenido_personas_asociadas a img:hover {
     transform: scale(1.2);
 }
+
+/* .contenido_personas_asociadas #imgEmpresas {
+    align-items: center;
+} */
+
 /*Informacion acerca de los desarrolladores*/
 .contenido_acerca_desarrolladores {/* ----AQUI VA EL COLOR DE LA CAJA ----*/
     padding: 5% 0%;
     width: 100%;
     background-color:  rgb(255, 255, 255);
-    box-shadow:inset 0px 0px 20px black;
+    box-shadow: inset 0px 0px 20px black;
 }
 .Logo_Sena {
     width: 15%;
     float: right;
     margin: -2.5% 2%;
     /* position: center; */
-    position: relative;
+    position: absolute;
     width: 10%;
 }
 #dise {

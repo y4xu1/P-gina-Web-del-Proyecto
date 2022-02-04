@@ -82,13 +82,14 @@ body {
     margin: 1%;
 }
 #Fecha_Nacimiento, #Fecha_Expedición_Documento {
-    margin-left: 2%;
+    margin-left: -1%;
+    text-align: left;
 }
 #Fecha_Expedición_Documento {
-    width: 58%;
+    width: 97%;
 }
 #Fecha_Nacimiento {
-    width: 67.5%;
+    width: 97%;
 }
 #Foto_Perfil {
     width: 15%;
@@ -132,6 +133,13 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 20px black;
     background-color: white;
+}
+#titleDoc {
+    font-family: arial;
+    width: 30%;
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+    border-bottom: 2px solid black;
 }
 label {
     font-size: 130%;
