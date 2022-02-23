@@ -4,7 +4,7 @@
 /*include("conexion.php");*/ 
 
 /*use Dompdf\Dompdf;*/
-namespace Dompdf;
+/*namespace Dompdf;*/
 require_once '../../dompdf/autoload.inc.php'; 
 
 /* INICIO - PDF */
@@ -133,7 +133,7 @@ if (isset($_POST['submit_val'])) {
     $dompdf -> render();
     $dompdf -> stream("",array ("Attachment" => false));
 
-    exit (0);
+    /*exit (0);*/
 
 }
 
