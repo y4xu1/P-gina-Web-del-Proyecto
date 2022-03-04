@@ -110,7 +110,7 @@ function __construct($orientation='P', $unit='mm', $size='A4')
 	// Font path
 	if(defined('FPDF_FONTPATH'))
 	{
-		/* $this->fontpath = FPDF_FONTPATH; */
+		$this->fontpath = FPDF_FONTPATH;
 		if(substr($this->fontpath,-1)!='/' && substr($this->fontpath,-1)!='\\')
 			$this->fontpath .= '/';
 	}
@@ -271,11 +271,11 @@ function AliasNbPages($alias='{nb}')
 	$this->AliasNbPages = $alias;
 }
 
-/* function Error($msg)
+function Error($msg)
 {
 	// Fatal error
 	throw new Exception('FPDF error: '.$msg);
-} */
+}
 
 function Close()
 {
@@ -1002,7 +1002,7 @@ function Output($dest='', $name='', $isUTF8=false)
 	{
 		case 'I':
 			// Send to standard output
-			$this->_checkoutput();
+			//$this->_checkoutput();
 			if(PHP_SAPI!='cli')
 			{
 				// We send to a browser
@@ -1062,8 +1062,8 @@ protected function _checkoutput()
 			// It contains only a UTF-8 BOM and/or whitespace, let's clean it
 			ob_clean();
 		}
-		/* else
-			$this->Error("Some data has already been output, can't send PDF file"); */
+		else
+			$this->Error("Some data has already been output, can't send PDF file");
 	}
 }
 

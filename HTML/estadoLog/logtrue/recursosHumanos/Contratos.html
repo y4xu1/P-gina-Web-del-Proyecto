@@ -88,47 +88,66 @@
                 </ul>
             </div>--> 
             </section>
-            <section class="Contrato">
-                <div>
-                    <form action="../../../php/Contratos.php" method="POST">
-                        <h2 class="tituloC">Contratos</h2><br>
-                        <center>
-                            <select class="controls" name="tipoContrato">
-                                <option>Selecione el Tipo de Contrato</option>
-                                <option value="Termino indefinido">Contrato a término Indefinido</option>
-                                <option value="Termino Fijo">Contrato a término Fijo</option> 
-                                <option value="Obra o Labor ">Contrato por Obra o Labor</option> 
-                            </select>
-                        </center>
-                        <input class="controls" type="text" name="idcontrato" id="idContrato" placeholder="Identificación del contrato">
-                        <input class="controls" type="text" name="docAspirante" id="docAspirante" placeholder="Número de Identificación del aspirante">
-                        <!--  -->
-                        <input class="controls" type="text" name="Nombre" id="nombresAsp" placeholder="Nombres y apellidos del aspirante">
-                        <input class="controls" type="text" name="Direccion" id="direccionAsp" placeholder="dirección de residencia del aspirante">
-                        <input class="controls" type="text" name="telefono" id="numContacto" placeholder="Número de contacto del aspirante">
-                        <!--  -->
-                        <input class="controls" type="text" name="docRecursos" id="docRecursos" placeholder="Número de Identificación de recursos humanos">
-                        <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Tipo de Cargo a desempeñar">
-                        <input class="controls" type="text" name="Salario" id="Salario" placeholder="Salario">
-                        <input class="controls" type="text" name="Valorprestaciones" id="Valor_de_prestaciones" placeholder="Valor de prestaciones">
-                        <input class="controls" type="date" name="Fechainiciación" id="Fecha_de_iniciación_de_labores" placeholder="Fecha de iniciación de labores">
-                        <input class="controls" type="text" name="Nombreobra" id="Nombre_de_la_obra" placeholder="Nombre de la obra">
-                        <input class="controls" type="text" name="Ciudadcontratado" id="Ciudad_donde_fue_contratado" placeholder="Ciudad donde fue contratado">
-                        <br><br>
-                        <label>Firma</label>
-                        <input class="controls" type="file" name="Firma" id="Firma" placeholder="Firma">
-                        <br><br>
-                        <center>
-                            <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
-                            <input class="botons" type="submit" name="btnActualizar" id="enviar" value="Actualizar Contrato">
-                            <input class="botons" type="submit" name= "btnPdf" value="Descargar Contrato">
-                        </center>
-                    <!--  <input class="botons" type="submit" value="Descargar Contrato">
-                    <input class="botons" type="submit" value="Descargar Minuta de Contrato">
-                    <input class="botons" type="submit" value="Actualizar">-->
-                    
-                  </form>
-                </div>
+            <section id="busContrato">
+                <nav>
+                    <button><a href="buscarContrato.php" target="_blank">Buscar contrato</a></button>
+                </nav>
+            </section>
+            <section class="contratos">
+                <section class="Contrato">
+                    <div>
+                        <form action="../../../php/buscarContrato.php" method="post">
+                            <h2 class="tituloC">Buscar contrato de trabajador</h2>
+                            <center>
+                                <input class="controls" type="text" name="docAspirante" id="numDoc">
+                                <input class="botons" type="submit" name="vContrato" value="Visualizar">
+                                <input class="botons" type="submit" name="btnPdf" value="Descargar">
+                            </center>
+                        </form>
+                    </div>
+                </section>
+                <section class="Contrato">
+                    <div>
+                        <form action="../../../php/Contratos.php" method="POST">
+                            <h2 class="tituloC">Contratos</h2><br>
+                            <center>
+                                <select class="controls" name="tipoContrato">
+                                    <option>Selecione el Tipo de Contrato</option>
+                                    <option value="TERMINO INDEFINIDO">Contrato a término Indefinido</option>
+                                    <option value="TERMINO FIJO">Contrato a término Fijo</option> 
+                                    <option value="OBRA A LABOR ">Contrato por Obra o Labor</option> 
+                                </select>
+                            </center>
+                            <input class="controls" type="text" name="idcontrato" id="idContrato" placeholder="Identificación del contrato">
+                            <input class="controls" type="text" name="docAspirante" id="docAspirante" placeholder="Número de Identificación del aspirante">
+                            <!--  -->
+                            <input class="controls" type="text" name="Nombre" id="nombresAsp" placeholder="Nombres y apellidos del aspirante">
+                            <input class="controls" type="text" name="Direccion" id="direccionAsp" placeholder="dirección de residencia del aspirante">
+                            <input class="controls" type="text" name="telefono" id="numContacto" placeholder="Número de contacto del aspirante">
+                            <!--  -->
+                            <input class="controls" type="text" name="docRecursos" id="docRecursos" placeholder="Número de Identificación de recursos humanos">
+                            <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Tipo de Cargo a desempeñar">
+                            <input class="controls" type="text" name="Salario" id="Salario" placeholder="Salario">
+                            <input class="controls" type="text" name="Valorprestaciones" id="Valor_de_prestaciones" placeholder="Valor de prestaciones">
+                            <input class="controls" type="date" name="Fechainiciación" id="Fecha_de_iniciación_de_labores" placeholder="Fecha de iniciación de labores">
+                            <input class="controls" type="text" name="Nombreobra" id="Nombre_de_la_obra" placeholder="Nombre de la obra">
+                            <input class="controls" type="text" name="Ciudadcontratado" id="Ciudad_donde_fue_contratado" placeholder="Ciudad donde fue contratado">
+                            <br><br>
+                            <label>Firma</label>
+                            <input class="controls" type="file" name="Firma" id="Firma" placeholder="Firma">
+                            <br><br>
+                            <center>
+                                <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
+                                <input class="botons" type="submit" name="btnActualizar" id="enviar" value="Actualizar Contrato">
+                                <input class="botons" type="submit" name= "btnPdf" value="Descargar Contrato">
+                            </center>
+                        <!--  <input class="botons" type="submit" value="Descargar Contrato">
+                        <input class="botons" type="submit" value="Descargar Minuta de Contrato">
+                        <input class="botons" type="submit" value="Actualizar">-->
+                        
+                    </form>
+                    </div>
+                </section>
             </section>
             <img src="../../../../Imagenes/contrato/INDEFINIDO-DISSER.jpg" alt="Imagen_inicio_contratos" class="contrato1">
         </section>
