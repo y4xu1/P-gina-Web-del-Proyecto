@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-02-2022 a las 14:23:45
+-- Tiempo de generación: 05-03-2022 a las 03:44:55
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -242,12 +242,12 @@ INSERT INTO `usuarios` (`numIdentificacion`, `password`, `TipoRol`, `codigoAcept
 (587, '123', '2', 1, 1),
 (789, '123', '1', 1, 1),
 (2021, '123', '1', 1, 1),
-(52729563, 'tuyyo451', 'Aspirante', 0, 1),
-(97414524, 'ares5621', 'Recursos Humanos', 0, 1),
-(98176120, 'asist7845', 'Recursos Humanos', 0, 1),
-(1000098763, '12634', 'Recursos Humanos', 0, 1),
-(1000620101, 'l2301', 'Aspirante', 0, 1),
-(1986300145, 'mario431', 'Aspirante', 0, 1);
+(52729563, 'tuyyo451', '1', 0, 1),
+(97414524, 'ares5621', '2', 0, 1),
+(98176120, 'asist7845', '2', 0, 1),
+(1000098763, '12634', '2', 0, 1),
+(1000620101, 'l2301', '1', 0, 1),
+(1986300145, 'mario431', '1', 0, 1);
 
 --
 -- Índices para tablas volcadas
