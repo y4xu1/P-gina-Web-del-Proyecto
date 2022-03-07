@@ -1,15 +1,99 @@
-.tituloContra {
-    font-size: 500%;
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
 }
-img {
-    width: 10%;
+/* formato de la página */
+body {
+    background: rgb(150, 150, 150);
 }
-.goback {
-    margin: 5%;
-    background: rgb(1, 1, 1);
-    border: 10px solid gray;
+.content {
+    margin: 6% 20%;
+    padding: 5% 7%;
+    background: white;
+    border-radius: 0.5%;
+    box-shadow: 0px 0px 20px rgb(25, 25, 25);
 }
-.goback a {
+/* btón de volver */
+.goBack {
+    width: 5%;
+    height: 4%;
+    margin: -4% 3%;
+    /* padding: 0.3% 1.5%; */
+    float: left;
+    position: absolute;
+    border: 3px groove rgb(190, 190, 190);
+    border-radius: 8%;
+    box-shadow: 0px 0px 8px rgb(25, 25, 25);
+}
+.goBack a {
+    padding: 12% 25%;
     font-size: 120%;
     text-decoration: none;
+    color: black;
+}
+/* titulo y cabecera */
+.logoTrascendental {
+    width: 5%;
+    position: absolute;
+    margin: -4.5% -27%;
+}
+#titulo h2 {
+    font-family: sans-serif;
+    font-size: 150%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+/* tabla de datos del contrato */
+.datos {
+    margin: 5% 0%;
+    width: 85%;
+    border-collapse: collapse;
+}
+.datos th {
+    width: 50%;
+}
+.datos th, .datos td {
+    padding: 1.5% 2%;
+    border: 2px solid black;
+}
+/* terminos del contrato */
+.parrafoC {
+    font-family: sans-serif;
+    font-size: 100%;
+    margin: 5% 0%;
+}
+/* tabla de firmas */
+.firmas {
+    width: 80%;
+    margin-bottom: 3%;
+}
+.firmas th {
+    width: 50%;
+}
+.firmas th,.firmas td {
+    width: 50%;
+    
+}
+.firmas .name {
+    text-align: center;
+}
+/* pie de página */
+.piePag {
+    margin-top: 8%;
+    margin-bottom: -4%;
+}
+/* botón de descarga */
+.btnDescarga {
+    /* margin: 5% -13.5%; */
+    margin: 2% -8%;
+    padding: 0.5% 1%;
+    font-size: 120%;
+    float: right;
+    border-radius: 5%;
+    border: 2px groove black;
+}
+.btnDescarga:hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 5px gray;
 }
