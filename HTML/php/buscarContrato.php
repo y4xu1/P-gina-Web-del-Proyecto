@@ -95,11 +95,7 @@
                     aspirante.docAspirante=contrato.docAspirante WHERE contrato.docAspirante = '$id'";
             
                 $resul = mysqli_query($conn, $consulta);
-
                 
-                /* echo '<button class="goBack"><a href="../estadoLog/logtrue/recursosHumanos/Contratos.html">Volver</a></button>'; */
-                /* Hex: &#x261c;
-                Dec: &#9756; */
                 while ($row = mysqli_fetch_assoc($resul)) {
                     
                     //Volver a la función de listado de contratos

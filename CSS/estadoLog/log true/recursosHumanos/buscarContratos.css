@@ -17,24 +17,18 @@ body {
 /* btón de volver */
 .goBack {
     margin: -7% 3%;
-    /* padding: 0% 3%; */
-    /* width: 10%;
-    height: 15%; */
     float: left;
     position: fixed;
     vertical-align: middle;
-    /* border: 3px groove rgb(190, 190, 190); */
     background: rgb(255, 255, 255, 0);
     border: 0px solid rgb(0, 0, 0, 0);
     border-radius: 8%;
-    /* box-shadow: 0px 0px 4px rgb(25, 25, 25); */
     text-shadow: 0px 0px 13px rgba(255, 255, 255, 1);
     font-size: 650%;
 }
 .goBack:hover {
     transition: 0.5s;
     transform: scale(1.1);
-    /* box-shadow: 0px 0px 7px black;; */
     text-shadow: 0px 0px 20px whitesmoke;
     color: black;
 }
@@ -91,7 +85,6 @@ body {
 }
 /* botón de descarga */
 .btnDescarga {
-    /* margin: 5% -13.5%; */
     margin: 2% -8%;
     padding: 0.5% 1%;
     font-size: 120%;
