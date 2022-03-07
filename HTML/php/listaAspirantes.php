@@ -2,15 +2,15 @@
 <?php
 
 include("conexion.php");
-#include("Aspirantes.php");
+//include("Aspirantes.php");
 
-#Es llamada desde el archivo principal (recursosHumanos/aspirantes.php) para consultar cada perfil de los usuarios con el rol de aspirante
+//Es llamada desde el archivo principal (recursosHumanos/aspirantes.php) para consultar cada perfil de los usuarios con el rol de aspirante
 function perfilAspirante ($conn) {
 
   $aspiranteDatos = "SELECT aspirante.PnombreAspirante, aspirante.SnombreAspirante, aspirante.PapellidoAspirante, aspirante.SapellidoAspirante, aspirante.docAspirante, documentos.curriculum, documentos.certificadoAlturas, documentos.certificadoJudicial, documentos.certificadoJudicial, documentos.certificadoPenal, documentos.certificadoDisciplinario, documentos.resultadosMedicos, documentos.carnetVacCovid, documentos.referenciasPersonales, documentos.referenciasLaborales FROM aspirante INNER JOIN documentos ON aspirante.docAspirante = documentos.docAspirante";
   $listaAsp = mysqli_query($conn, $aspiranteDatos) or die (mysqli_error($conn));
 
-  #Indica realizar la tarea mientras el botón de búsqueda no sea pulsado
+  //Indica realizar la tarea mientras el botón de búsqueda no sea pulsado
   do {
 
     #Realiza en bucle consulta de cada fila en la base de datos con la respectiva llave primaria y foranea de conexión de tablas en la base de datos para así mostrar en lista
@@ -26,14 +26,12 @@ function perfilAspirante ($conn) {
         echo "<section class='Documentos_Aspirante'>";
           echo "<p><a href='../aspirantes/Perfil_Aspirante.html' name='aspName'>" . $lista['PnombreAspirante'] . " " . $lista['SnombreAspirante'] . " " . $lista['PapellidoAspirante'] . " " . $lista['SapellidoAspirante'] . "</a></p>";
 
-          /*
-          if ($conn) {
+          /* if ($conn) {
             echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['docAspirante'] . "'>";
           }
           else {
             echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['docAspirante'] . "' id='Documento_1P'>";
-          }
-          */
+          } */
 
           echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['docAspirante'] . "'>";
           echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['curriculum'] . "'>";
@@ -117,10 +115,6 @@ function buscarAsp($conn) {
         echo "</section>";
   }
 }
-?>
-
-<?php
-
 
 /*
 function busueda($conn) {
@@ -185,4 +179,5 @@ function busueda($conn) {
   }
 }
 */
+
 ?>

@@ -1,9 +1,92 @@
+<!-- 
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contrato</title>
+        <link rel="stylesheet" href="../../CSS/Formato_Base.css">
+        <link rel="stylesheet" href="../../CSS/estadoLog/log true/recursosHumanos/buscarContrato.css">
+        <link rel="icon" href="../../Imagenes/logoProyect/Logo_Principal.png">
+    </head>
+    <body>
+        <section id="cabecera">
+                <div id="titulo">
+                    <center>
+                        <img src='../../Imagenes/logoProyect/Logo_Principal.png'>
+                        <h2>Contrato Individual de Trabajo a (Tipo de contrato)</h2>
+                    </center>
+                <div>
+                    <div id="cuerpo">
+                        <h2 class="tituloContra">Nombre del Empleador: Disser Ingenieria S.A.S.</h2>
+                        <h2 class="nit">NIT: 830.032.688 - 5</h2>
+                        <h2 class="">Domicilio del Empleador: Calle 169 Nº 20-06 Piso 2</h2>
+                        <h2>Nombre del Trabajador: Pepito Pérez</h2>
+                        <h2>Cedula: Si señor</h2>
+                        <h2>Direccion del Trabajador: Springfield avenida siempre viva</h2>
+                        <h2>Telefono: 911</h2>
+                        <h2>Cargo: stripper</h2>
+                        <h2>Salario: Propinas</h2>
+                        <h2>Prestaciones: Ninguna</h2>
+                        <h2>Forma de Pago: Mensual</h2>
+                        <h2>Fecha de Ingreso: 06/03/2022</h2>
+                        <h2>Nombre de la Obra: yaxul</h2>
+                        <h2>Ciudad de la Obra: Bogota</h2>
+                    </div>
+                    <div id="piePag">
+                        <p>
+                            Entre los suscritos a saber <b>de una parte, DISSER INGENIERIA S.A.S.</b>, sociedad de tipo comercial, legalmente constituida, identificada con el 
+                            <b>NIT. 830.032.688-5</b>, tal como consta en su correspondiente certificado de existencia y representación, expedido por la Cámara de Comercio de Bogotá, con domicilio en dicha 
+                            ciudad, actuando en el presente contrato a través de su representante legal Ing. <b>ANDRÉS EMILIO NOVA GARCÍA</b>, mayor de edad, con 
+                            domicilio y residencia en la ciudad de Bogotá, identificado con la C.C. No.<b>7.222.162 DE DUITAMA</b>, quien en adelante y para los efectos de este contrato se denominará <b>EL 
+                            EMPLEADOR</b> y, de otra, <b>OHM CIFUENTES SANCHEZ</b>, igualmente mayor de edad, domiciliado y residenciado en la ciudad de <b>BOGOTÁ</b> identificado con la C.C. No.<b>79.944.583 
+                            DE BOGOTÁ</b>, quien en adelante y para los efectos de este <b>OTRO SI</b> a este contrato se denominará <b>EL TRABAJADOR</b>, hemos acordado un cambio de proyecto para ÉXITO EL 
+                            ENSUEÑO A partir del 13 de Marzo de 2022.
+                        </p>
+                    </div>
+                    <h2>EL EMPLEADOR</h2>
+                    <h2>Andres Emilio Nova Garcia</h2>
+                    <h2>C.C. No. 7222162 de Duitama</h2>
+                    <h2>EL TRABAJADOR</h2>
+                    <h2>Pepito Pérez</h2>
+                    <h2>C.C. No. 123</h2>
+                </div>
+            </section>
+        }
+
+        //Generar PDF (¿se va a colocar? Toca revisar)
+        <form action="./buscarContrato.php" method="post"> //cambiar si se crea otro archivo
+            <input type="submit" name="btnPdf" value="Descargar">
+        </form>
+    </body>
+</html>
+
+ -->
 <?php
 
-include ('conexion.php');
+    include ('conexion.php');
 
     //Diferenciación de botones
     botones($conn);
+
+?>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contrato</title>
+        <!-- <title>
+            < ?=idContrato($conn);?>
+        </title> -->
+        <link rel="stylesheet" href="../../CSS/Formato_Base.css">
+        <link rel="stylesheet" href="../../CSS/estadoLog/log true/recursosHumanos/buscarContrato.css">
+        <link rel="icon" href="../../Imagenes/logoProyect/Logo_Principal.png">
+    </head>
+</html>
+<?php
 
     //Funcion de diferenciación de botones
     function botones($conn){
@@ -12,6 +95,22 @@ include ('conexion.php');
         }
         if (ISSET($_POST['vContrato'])) {
             busqContrato($conn);
+        }
+    }
+
+    //Consulta de identificación de contratado
+    //NOTA: No sirve la función en el head
+    function idContrato($conn) {
+
+        $id = $_POST['docAspirante'];
+        
+        $consulID = "SELECT aspirante.docAspirante, PnombreAspirante, SnombreAspirante, PapellidoAspirante, SapellidoAspirante FROM aspirante INNER JOIN contrato
+        ON aspirante=docAspirante=contrato.docAspirante WHERE contrato.docAspirante='$id'";
+
+        $query = mysqli_query($conn, $consulID);
+
+        while ($row=mysqli_fetch_assoc($query)) {
+            echo '<title>Contrato ' . $row['docAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['PnombreAspirante'] . '</title>';
         }
     }
 
@@ -53,54 +152,60 @@ include ('conexion.php');
         //Identificador del input en el formulario línea 20
         $id = $_POST['docAspirante'];
             
-        $consulta = "SELECT aspirante.docAspirante, tipoContrato, PnombreAspirante, SnombreAspirante, PapellidoAspirante, SapellidoAspirante, direccionResidencia, tipoCargoDesp,
-            salario, valorPrestaciones, fechaInicio, nombreObra, ciudadObra, firma, telefonoContacto FROM aspirante INNER JOIN contrato ON 
+        $consulta = "SELECT aspirante.docAspirante, aspirante.ciudad, tipoContrato, PnombreAspirante, SnombreAspirante, PapellidoAspirante, SapellidoAspirante, direccionResidencia, telefonoContacto, 
+            tipoCargoDesp, salario, valorPrestaciones, fechaInicio, nombreObra, ciudadObra, firma, telefonoContacto FROM aspirante INNER JOIN contrato ON 
             aspirante.docAspirante=contrato.docAspirante WHERE contrato.docAspirante = '$id'";
     
         $resul = mysqli_query($conn, $consulta);
 
         //Volver a la función de listado de contratos
-        echo '<a href="../estadoLog/logtrue/recursosHumanos/Contratos.html">Volver</a>';
+        echo '<button class="goBack"><a href="../estadoLog/logtrue/recursosHumanos/Contratos.html">Volver</a></button>';
 
         while ($row = mysqli_fetch_assoc($resul)) {
             
             echo '<section id="cabecera">';
                 echo '<div id="titulo">';
                     echo '<center>';
-                        echo '<h2>Otro si No° 1</h2>';
-                        echo '<h2>CONTRATO INDIVIDUAL DE TRABAJO A ' . $row['tipoContrato'] . '</h2>';
+                        echo "<img src='../../Imagenes/logoProyect/Logo_Principal.png'>";
+                        /*echo '<h2>Otro si No° 1</h2>';*/
+                        echo '<h2>Contrato Individual de Trabajo a ' . $row['tipoContrato'] . '</h2>';
                         /* echo '<h2></h2>'; */
                     echo '</center>';
                 echo '<div>';
-                echo '<div id="cuerpo">';
-                    echo '<h2>NOMBRE DEL EMPLEADO: DISSER INGENIERIA S.A.S.</h2>';
-                        echo '<h2>NIT: 830.032.688 - 5</h2>';
-                        echo '<h2>NOMBRE DEL TRABAJADOR: '  . $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante'] . '</h2>';
-                        echo '<h2>CEDULA: ' . $row['docAspirante'] . '</h2>';
-                        echo '<h2>DIRECCION DEL TRABAJADOR: ' . $row['direccionResidencia'] . '</h2>';
-                        echo '<h2>OFICIO QUE DESEMPEÑARA: ' . $row['tipoCargoDesp'] . '</h2>';
-                        echo '<h2>SALARIO: ' . $row['salario'] . '</h2>';
-                        echo '<h2>PRESTACIONES: ' . $row['valorPrestaciones'] . '</h2>';
-                        echo '<h2>FORMA DE PAGO: MENSUAL</h2>';
-                        echo '<h2>FECHA DE INGRESO: ' . $row['fechaInicio'] . '</h2>';
-                        echo '<h2>PROYECTO OTRO SI ' . $row['nombreObra'] . ' en ' . $row['ciudadObra'] . '</h2>';
-                        echo '';
+                    echo '<div id="cuerpo">';
+                        echo '<h2 class="tituloContra">Nombre del Empleador: Disser Ingenieria S.A.S.</h2>';
+                        echo '<h2 class="nit">NIT: 830.032.688 - 5</h2>';
+                        echo '<h2 class="">Domicilio del Empleador: Calle 169 Nº 20-06 Piso 2</h2>';
+                        echo '<h2>Nombre del Trabajador: '  . $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante'] . '</h2>';
+                        echo '<h2>Cedula: ' . $row['docAspirante'] . ' de ' . $row['ciudad'] . '</h2>';
+                        echo '<h2>Direccion del Trabajador: ' . $row['direccionResidencia'] . '</h2>';
+                        echo '<h2>Telefono: ' . $row['telefonoContacto'] . '</h2>';
+                        echo '<h2>Cargo: ' . $row['tipoCargoDesp'] . '</h2>';
+                        echo '<h2>Salario: ' . $row['salario'] . '</h2>';
+                        echo '<h2>Prestaciones: ' . $row['valorPrestaciones'] . '</h2>';
+                        echo '<h2>Forma de Pago: Mensual</h2>';
+                        echo '<h2>Fecha de Ingreso: ' . $row['fechaInicio'] . '</h2>';
+                        echo '<h2>Nombre de la Obra: ' . $row['nombreObra'] . '</h2>';
+                        echo '<h2>Ciudad de la Obra: ' . $row['ciudadObra'] . '</h2>';
                     echo '</div>';
-                echo '<div id="piePag">';
-                    echo ' <p>
-                        Entre los suscritos a saber <strong>de una parte, DISSER INGENIERÍA S.A.S.</strong>, sociedad de tipo 
-                        comercial, legalmente constituida, identificada con el <strong>NIT. 830.032.688-5</strong>, tal como consta 
-                        en su correspondiente certificado de existencia y representación, expedido por la Cámara 
-                        de Comercio de Bogotá, con domicilio en dicha ciudad, actuando en el presente contrato a 
-                        través de su representante legal Ing. <strong>ANDRÉS EMILIO NOVA GARCÍA</strong>, mayor de edad, con 
-                        domicilio y residencia en la ciudad de Bogotá, identificado con la C.C. No.<strong>7.222.162 DE 
-                        DUITAMA</strong>, quien en adelante y para los efectos de este contrato se denominará <strong>EL 
-                        EMPLEADOR</strong> y, de otra, <strong>OHM CIFUENTES SANCHEZ</strong>, igualmente mayor de edad, 
-                        domiciliado y residenciado en la ciudad de <strong>BOGOTÁ</strong> identificado con la C.C. No.<strong>79.944.583 
-                        DE BOGOTÁ</strong>, quien en adelante y para los efectos de este <strong>OTRO SI</strong> a este contrato se 
-                        denominará <strong>EL TRABAJADOR</strong>, hemos acordado un cambio de proyecto para ÉXITO EL 
-                        ENSUEÑO A partir del 13 de Marzo de 2022.
-                    </p>';
+                    echo '<div id="piePag">';
+                        echo ' <p>
+                        Entre los suscritos a saber <b>de una parte, DISSER INGENIERIA S.A.S.</b>, sociedad de tipo comercial, legalmente constituida, identificada con el
+                        <b>NIT. 830.032.688 - 5</b>, tal como consta en su correspondiente certificado de existencia y representacion, expedido por la Camara de Comercio de Bogota, con domicilio en dicha
+                        ciudad, actuando en el presente contrato a traves de su representante legal Ing. <b>Andres Emilio Nova Garcia,</b> mayor de edad, con domicilio y residencia en la ciudad de Bogota,
+                        identificado con la C.C. No. <b>7222162 de Duitama</b>, quien en adelante y para los efectos de este contrato se denominara <b>EL EMPLEADOR</b> y, de otra,
+                        <b>' . $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante'] . '</b>, igualmente mayor de edad, domiciliado
+                        y residenciado en la ciudad de <b>' . $row['ciudad'] . '</b> identificado con la C.C. No. <b>' . $row['docAspirante'] . ' de ' . $row['ciudad'] .'</b>, quien en adelante y para los
+                        efectos de este <b>otro si</b> a este contrato se denominara <b>EL TRABAJADOR</b>, hemos acordado un cambio de proyecto
+                        para ' . $row['nombreObra'] . ' en la ciudad de '. $row['ciudadObra'] . ' a partir del ' . $row['fechaInicio'] . '.
+                        </p>';
+                    echo '</div>';
+                    echo '<h2>EL EMPLEADOR</h2>';
+                    echo '<h2>Andres Emilio Nova Garcia</h2>';
+                    echo '<h2>C.C. No. 7222162 de Duitama</h2>';
+                    echo '<h2>EL TRABAJADOR</h2>';
+                    echo '<h2>'  . $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante'] . '</h2>';
+                    echo '<h2>C.C. No. ' . $row['docAspirante'] . ' de ' . $row['ciudad'] . '</h2>';
                 echo '</div>';
             echo '</section>';
         }
@@ -242,14 +347,11 @@ include ('conexion.php');
             $pdf->Cell(75,8, 'Domicilio del Empleador', 1, 0, 'C', 0);
             $pdf->Cell(75,8, 'Calle 169 N 20-06 Piso 2', 1, 1, 'C', 0);
             
-            $pdf->Cell(75,8, 'Nombres del Empleado', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'], 1, 1, 'C', 0);
-        
-            $pdf->Cell(75,8, 'Apellidos del Empleado', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['PapellidoAspirante'] . " " . $row['SapellidoAspirante'], 1, 1, 'C', 0);
+            $pdf->Cell(75,8, 'Nombre del Trabajador', 1, 0, 'C', 0);
+            $pdf->Cell(75,8, $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . " " . $row['SapellidoAspirante'], 1, 1, 'C', 0);
     
-            $pdf->Cell(75,8, 'Cedula del Empleado', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['docAspirante'], 1, 1, 'C', 0);
+            $pdf->Cell(75,8, 'Cedula', 1, 0, 'C', 0);
+            $pdf->Cell(75,8, $row['docAspirante'] . ' ' . $row['ciudad'], 1, 1, 'C', 0);
     
             $pdf->Cell(75,8, 'Direccion del Empleado', 1, 0, 'C', 0);
             $pdf->Cell(75,8, $row['direccionResidencia'], 1, 1, 'C', 0);

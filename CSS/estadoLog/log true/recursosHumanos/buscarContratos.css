@@ -1,4 +1,15 @@
-* {
-    margin: 0%;
-    padding: 0%;
+.tituloContra {
+    font-size: 500%;
+}
+img {
+    width: 10%;
+}
+.goback {
+    margin: 5%;
+    background: rgb(1, 1, 1);
+    border: 10px solid gray;
+}
+.goback a {
+    font-size: 120%;
+    text-decoration: none;
 }

@@ -62,100 +62,69 @@
             </div>
         </header>
 <!--Barra lateral desplegable con función de las notificaciones -->
-<aside>
-        <img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
-        <section class="caja_notificaciones">
-            <center>
-                <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
-            </center>
-            <div class="infoNotif">
-                <h2>Trascendental</h2>
-                <p>El usuario <b>nombre aspirante</b> fue bloqueado correctamente de la plataforma</p>
-            </div>
-        </section>
-        <section class="caja_notificaciones">
-            <center>
-                <img src="../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
-            </center>
-            <div class="infoNotif">
-                <h2>Nombre Aspirante</h2>
-                <p>Favor hacerme confirmación de que posea los documentos requeridos en su debido orden</p>
-            </div>
-        </section>
-        <section class="caja_notificaciones">
-            <center>
-                <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
-            </center>
-            <div class="infoNotif">
-                <h2>Trascendental</h2>
-                <p>El aspirante <b>nombre aspirante</b> recibió correctamente su comentario</p>
-            </div>
-        </section>
-    </aside>
-<!-- BackUps o herramientas sin un funcionamiento aún -->
-<?php
-/*
-function listado ($conn) {
+        <aside>
+            <img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
+            <section class="caja_notificaciones">
+                <center>
+                    <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
+                </center>
+                <div class="infoNotif">
+                    <h2>Trascendental</h2>
+                    <p>El usuario <b>nombre aspirante</b> fue bloqueado correctamente de la plataforma</p>
+                </div>
+            </section>
+            <section class="caja_notificaciones">
+                <center>
+                    <img src="../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
+                </center>
+                <div class="infoNotif">
+                    <h2>Nombre Aspirante</h2>
+                    <p>Favor hacerme confirmación de que posea los documentos requeridos en su debido orden</p>
+                </div>
+            </section>
+            <section class="caja_notificaciones">
+                <center>
+                    <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
+                </center>
+                <div class="infoNotif">
+                    <h2>Trascendental</h2>
+                    <p>El aspirante <b>nombre aspirante</b> recibió correctamente su comentario</p>
+                </div>
+            </section>
+        </aside>
 
-    $listaAspirantes = "SELECT * FROM aspirante AND usuario";
-    $completo = mysqli_query($conn, $listaAspirantes);
 
-    while ($dato = mysqli_fetch_array($completo)) {
+    <!-- Listado de aspirantes -->
 
-        echo "<section class='contenido'>";
-            echo "<section class='Perfil_Aspirante'>";
-                echo "<section class='Foto_Perfil' name'fotoPerfil'> <? =fotoPerfil($conn); ?> </section>";
-                echo "<section> <? =nombreAsp; ?>"
-                echo "<section class='Documentos_Aspirantes'> <? =listaDoc_Aspirante($conn); ?> </section>";
-                echo "<section class='Comentarios'>";
-                    echo "<textarea class='controls' rows='8.5' name='comentario' placeholder='Agregar un comenterio...' id='Comentario'></textarea>";
-                    echo "<input class='botons' type='submit' name='Botón_Envío' value='Enviar' id='Botón_Envío'>";
-                echo "</section>";
-            echo "</section>";
-        echo "</section>";
-    }
-
-}*/
-?>
-<!-- Listado de aspirantes -->
         <section class="contenido">
-            <?php
-            /*
-                function busqueda($conn) {
-                    if (isset($_POST['buscador'])){
-                      buscarAsp($conn);
-                      #echo "<script>window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php'</script>";
-                    }
-                    else{
-                        echo "<script>alert('No se encontro a ningún aspirante, verifique los datos ingresados');</script>";
-                    }
-                }
-            */
-            ?>
-            <!--
-                <
-            ?=busqueda($conn);?>
-            -->
-
-            <!-- Llamado de función para buscar a un aspirante en especifico -->
-            <?php
-                /*
-                if (isset($_GET['btnbuscador'])){
-                    #echo "<script>window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php';</script>";
-                
-                    buscarAsp($conn);
-                }
-                else {
-                echo "<script>alert('No se encontro a ningún aspirante, verifique los datos ingresados');</script>";
-                }
-                */
-            ?>
-
+            
             <!-- Llamado de función del listado de los aspirantes (Función principal) -->
             <?=perfilAspirante($conn);?>
+        </section>
 
-            <!--
-                <section class="Perfil_Aspirante">
+        <!-- Información básica de la empresa -->
+
+        <footer class="info_empres">
+            <ul>
+                <center><h4>Disser Ingieniería S.A.S. Bogotá</h4></center>
+                <center>
+                    <div class="left">
+                        <li class="ubicación">Dirección: Calle 169 # 20-06</li>
+                        <li class="contacto">Tel: (1)7042440</li>
+                    </div>
+                    <div class="right">
+                        <li class="actividad">Actividad: Contratación en Obras Cíviles</li>
+                    </div>
+                </center>
+            </ul>
+            <section class="copyright">
+                <center><p>© Copyright. Todos los derechos reservados - 2021</p></center>
+            </section>
+        </footer>
+    </body>
+</html>
+
+                <!-- <section class="Perfil_Aspirante">
                 <section class="Foto_Perfil" name=''>
                     <img src="../../../../Imagenes/otros logos/Logo_Usuario.png" alt="Logo_Usuario" class="Logo_Usuario">
                 </section>
@@ -176,26 +145,4 @@ function listado ($conn) {
                     <textarea class="controls" rows="8.5" name="comentario" placeholder="Agregar un comenterio..." id="Comentario"></textarea>
                     <input class="botons" type="submit" name="Botón_Envío" value="Enviar" id="Botón_Envío">
                 </section>
-                </section>
-            -->
-        </section>
-<!-- Información básica de la empresa -->
-        <footer class="info_empres">
-            <ul>
-                <center><h4>Disser Ingieniería S.A.S. Bogotá</h4></center>
-                <center>
-                    <div class="left">
-                        <li class="ubicación">Dirección: Calle 169 # 20-06</li>
-                        <li class="contacto">Tel: (1)7042440</li>
-                    </div>
-                    <div class="right">
-                        <li class="actividad">Actividad: Contratación en Obras Cíviles</li>
-                    </div>
-                </center>
-            </ul>
-            <section class="copyright">
-                <center><p>© Copyright. Todos los derechos reservados - 2021</p></center>
-            </section>
-        </footer>
-    </body>
-</html>
+                </section> -->

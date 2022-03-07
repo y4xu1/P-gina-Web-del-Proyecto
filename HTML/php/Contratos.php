@@ -13,16 +13,6 @@ function diferencia($conn){
     if(ISSET($_POST ['btnActualizar'])){
         actualizar ($conn);
     }
-    /* if (ISSET($_POST['btnPdf'])){
-        pdfDoc($conn);
-    }
-    if () {
-        busqContrato($conn);
-    } */
-    /* if (ISSET($_POST['busqContrato'])) {
-        echo '<script>window.location="../estadoLog/logtrue/recursosHumanos/buscarContrato.php"</script>';
-        busqContrato($conn);
-    } */
 }
 
 //Identificar cada variable de vinculacion con la pagina y la base de datos.
@@ -163,7 +153,7 @@ function actualizar($conn){
 
 //Botón Descargar contrato. 
 //Genera PDF del contrato.
-/* function pdfDoc($conn) {
+/*function pdfDoc($conn) {
 
     require 'pdfLibreria/fpdf.php';
     $conn = mysqli_connect('localhost', 'root', '', 'trascendental');
