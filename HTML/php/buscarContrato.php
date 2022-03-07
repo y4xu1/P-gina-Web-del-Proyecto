@@ -31,6 +31,9 @@
                 if (ISSET($_POST['vContrato'])) {
                     busqContrato($conn);
                 }
+                if (ISSET($_POST['btnD_Pdf'])) {
+                    descargarPDF($conn);
+                }
             }
 
             //Consulta de identificación de contratado
@@ -100,7 +103,9 @@
                 while ($row = mysqli_fetch_assoc($resul)) {
                     
                     //Volver a la función de listado de contratos
-                    echo '  <button class="goBack" id="btnGB" href=""><a href="../estadoLog/logtrue/recursosHumanos/Contratos.html">&#x261c Volver</a></button>
+                    echo '  <form action="../estadoLog/logtrue/recursosHumanos/Contratos.html" method="post">
+                                <input class="goBack" id="btnGB" type="submit" value="&#9756">
+                            </form>
                             <article class="content">
                                 <section id="cabecera">
                                     <div id="titulo">
@@ -213,13 +218,20 @@
 
                         //Generar PDF
                         echo '  <div class="descarga">
-                                    <form action="./buscarContrato.php" method="post">'; //cambiar si se crea otro archivo
-                                echo '  <input type="submit" name="btnPdf" value="Descargar" class="btnDescarga" id="btnD">
+                                    <form action="./buscarContrato.php" method="post">
+                                        <input type="text" name="docAspirante" value="' . $row['docAspirante'] . '" style="visibility: hidden;">';
+                                echo '  <input type="submit" name="btnD_Pdf" value="Descargar" class="btnDescarga" id="btnD">
                                     </form>
                                 </div>
                             </article>';
                 }
 
+            }
+
+            //botón de descargar en la visualización de contrato
+            function descargarPDF($conn) {
+                        
+                pdfDoc($conn);
             }
 
             //Función para generar PDF
@@ -359,10 +371,10 @@
                     $pdf->Cell(75,8, 'Cedula', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, $row['docAspirante'] . ' de ' . $row['ciudad'], 1, 1, 'C', 0);
             
-                    $pdf->Cell(75,8, 'Direccion del Empleado', 1, 0, 'C', 0);
+                    $pdf->Cell(75,8, 'Direccion del Trabajador', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, $row['direccionResidencia'], 1, 1, 'C', 0);
                     
-                    $pdf->Cell(75,8, 'Telefono del Empleado', 1, 0, 'C', 0);
+                    $pdf->Cell(75,8, 'Telefono', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, $row['telefonoContacto'], 1, 1, 'C', 0);
             
                     $pdf->Cell(75,8, 'Cargo', 1, 0, 'C', 0);
@@ -371,19 +383,19 @@
                     $pdf->Cell(75,8, 'Salario', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, $row['salario'], 1, 1, 'C', 0);
             
-                    $pdf->Cell(75,8, 'Valor de Prestaciones', 1, 0, 'C', 0);
+                    $pdf->Cell(75,8, 'Prestaciones', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, $row['valorPrestaciones'], 1, 1, 'C', 0);
             
                     $pdf->Cell(75,8, 'Forma de Pago', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, 'Mensual', 1, 1, 'C', 0);
             
-                    $pdf->Cell(75,8, 'Fecha de Inicio', 1, 0, 'C', 0);
+                    $pdf->Cell(75,8, 'Fecha de Ingreso', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, $row['fechaInicio'], 1, 1, 'C', 0);
             
-                    $pdf->Cell(75,8, 'Nombre Obra', 1, 0, 'C', 0);
+                    $pdf->Cell(75,8, 'Nombre de la Obra', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, $row['nombreObra'], 1, 1, 'C', 0);
             
-                    $pdf->Cell(75,8, 'Ciudad Obra', 1, 0, 'C', 0);
+                    $pdf->Cell(75,8, 'Ciudad de la Obra', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, $row['ciudadObra'], 1, 1, 'C', 0);
                     
                     //Salto de línea
@@ -406,9 +418,9 @@ para ' . $row['nombreObra'] . ' en la ciudad de '. $row['ciudadObra'] . ' a part
             
                     //FIRMA
                         //IZQUIERDA
-                        $pdf->Cell(75,8, 'EMPLEADOR', 0, 0, 'C', 0);
+                        $pdf->Cell(75,8, 'EL EMPLEADOR', 0, 0, 'C', 0);
                         //DERECHA
-                        $pdf->Cell(75,8, 'TRABAJADOR', 0, 1, 'C', 0);
+                        $pdf->Cell(75,8, 'EL TRABAJADOR', 0, 1, 'C', 0);
                         //IZQUIERDA
                         $pdf->Cell(75,20, '', 0, 0, 'C', 0);
                         //DERECHA
