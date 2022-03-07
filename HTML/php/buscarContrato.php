@@ -93,12 +93,14 @@
             
                 $resul = mysqli_query($conn, $consulta);
 
-                //Volver a la función de listado de contratos
+                
                 /* echo '<button class="goBack"><a href="../estadoLog/logtrue/recursosHumanos/Contratos.html">Volver</a></button>'; */
-
+                /* Hex: &#x261c;
+                Dec: &#9756; */
                 while ($row = mysqli_fetch_assoc($resul)) {
                     
-                    echo '  <button class="goBack" id="btnGB" href=""><a href="../estadoLog/logtrue/recursosHumanos/Contratos.html">Volver</a></button>
+                    //Volver a la función de listado de contratos
+                    echo '  <button class="goBack" id="btnGB" href=""><a href="../estadoLog/logtrue/recursosHumanos/Contratos.html">&#x261c Volver</a></button>
                             <article class="content">
                                 <section id="cabecera">
                                     <div id="titulo">
@@ -355,7 +357,7 @@
                     $pdf->Cell(75,8, $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . " " . $row['SapellidoAspirante'], 1, 1, 'C', 0);
             
                     $pdf->Cell(75,8, 'Cedula', 1, 0, 'C', 0);
-                    $pdf->Cell(75,8, $row['docAspirante'] . ' ' . $row['ciudad'], 1, 1, 'C', 0);
+                    $pdf->Cell(75,8, $row['docAspirante'] . ' de ' . $row['ciudad'], 1, 1, 'C', 0);
             
                     $pdf->Cell(75,8, 'Direccion del Empleado', 1, 0, 'C', 0);
                     $pdf->Cell(75,8, $row['direccionResidencia'], 1, 1, 'C', 0);
@@ -387,14 +389,14 @@
                     //Salto de línea
                     $pdf->ln(10);
             
-                    $html = 'Entre los suscritos a saber <b>de una parte, DISSER INGENIERIA S.A.S.</b>, sociedad de tipo comercial, legalmente constituida, identificada con el
-            <b>NIT. 830.032.688 - 5</b>, tal como consta en su correspondiente certificado de existencia y representacion, expedido por la Camara de Comercio de Bogota, con domicilio en dicha
-            ciudad, actuando en el presente contrato a traves de su representante legal Ing. <b>Andres Emilio Nova Garcia,</b> mayor de edad, con domicilio y residencia en la ciudad de Bogota,
-            identificado con la C.C. No. <b>7222162 de Duitama</b>, quien en adelante y para los efectos de este contrato se denominara <b>EL EMPLEADOR</b> y, de otra,
-            <b>' . $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante'] . '</b>, igualmente mayor de edad, domiciliado
-            y residenciado en la ciudad de <b>' . $row['ciudad'] . '</b> identificado con la C.C. No. <b>' . $row['docAspirante'] . ' de ' . $row['ciudad'] .'</b>, quien en adelante y para los
-            efectos de este <b>otro si</b> a este contrato se denominara <b>EL TRABAJADOR</b>, hemos acordado un cambio de proyecto
-            para ' . $row['nombreObra'] . ' en la ciudad de '. $row['ciudadObra'] . ' a partir del ' . $row['fechaInicio'] . '.';
+                    $html = 'Entre los suscritos a saber <b>de una parte, DISSER INGENIERIA S.A.S.</b>, sociedad de tipo comercial, legalmente constituida, identificada con el 
+<b>NIT. 830.032.688 - 5</b>, tal como consta en su correspondiente certificado de existencia y representacion, expedido por la Camara de Comercio de Bogota, con domicilio en dicha
+ciudad, actuando en el presente contrato a traves de su representante legal Ing. <b>Andres Emilio Nova Garcia,</b> mayor de edad, con domicilio y residencia en la ciudad de Bogota,
+identificado con la C.C. No. <b>7222162 de Duitama</b>, quien en adelante y para los efectos de este contrato se denominara <b>EL EMPLEADOR</b> y, de otra,
+<b>' . $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante'] . '</b>, igualmente mayor de edad, domiciliado
+y residenciado en la ciudad de <b>' . $row['ciudad'] . '</b> identificado con la C.C. No. <b>' . $row['docAspirante'] . ' de ' . $row['ciudad'] .'</b>, quien en adelante y para los
+efectos de este <b>otro si</b> a este contrato se denominara <b>EL TRABAJADOR</b>, hemos acordado un cambio de proyecto
+para ' . $row['nombreObra'] . ' en la ciudad de '. $row['ciudadObra'] . ' a partir del ' . $row['fechaInicio'] . '.';
             
                     //Impresión del html || Variable $html
                     $pdf->WriteHTML($html);
