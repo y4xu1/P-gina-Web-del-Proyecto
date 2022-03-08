@@ -40,21 +40,24 @@
             <div id="Barra_Herramientas">
                 <ul class="Herramientas">
                     <li id="buscar">
-                        <!--
-                            <form method="post">
-                        -->
-                        <form action="../../../php/listaAspirantes.php" method="GET">
+                        <!-- <form action="../../../php/listaAspirantes.php" method="post"> -->
+                        <form action="./aspirantes.php" method="POST">
                             <div>
-                                <input type="text" name="datoAsp" class="" placeholder="Buscar">
-                                <input type="submit" name="btnbuscador" value="&#x1f50d;" style="background:rgb(255, 255, 255,0.2);">
+                                <input type="text" name="docAspirante" class="" placeholder="Buscar">
+                                <input type="submit" name="btnbuscador" value="&#x1f50d" style="background:rgb(255, 255, 255,0.2);">
+                                <?php
+                                    if (ISSET($_POST['btnbuscador'])) {
+                                        echo '<input type="submit" name="listAsp" value="↩️" style="background:rgb(255, 255, 255,0.2);">';
+                                    }
+                                ?>
                             </div>
                         </form></br>
                     </li>
-                    <li><a href="">Filtro</a>
+                    <li><a>Filtro</a>
                         <ul>
-                            <li><a href="">Mas Reciente</a></li>
-                            <li><a href="">Perfil Completo</a></li>
-                            <li><a href="">Perfil Incompleto</a></li>
+                            <li><a>Mas Reciente</a></li>
+                            <li><a>Perfil Completo</a></li>
+                            <li><a>Perfil Incompleto</a></li>
                         </ul>
                     </li>
                     <li><a href="Graficas.html">Gráficos Estadísticos</a></li>
@@ -99,7 +102,17 @@
         <section class="contenido">
             
             <!-- Llamado de función del listado de los aspirantes (Función principal) -->
-            <?=perfilAspirante($conn);?>
+            <?php
+                if (ISSET($_POST['btnbuscador'])){
+                    busqAspirante($conn);
+                }
+                else if (ISSET($POST['listAsp'])){
+                    perfilAspirante($conn);
+                }
+                else {
+                    perfilAspirante($conn);
+                }
+            ?>
         </section>
 
         <!-- Información básica de la empresa -->

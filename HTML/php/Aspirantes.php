@@ -2,37 +2,44 @@
 <?php
 
 include("conexion.php");
-    /*require_once("login.php");
-    echo $_SESSION["username"];
-    diferenciar cada boton encontrado en la pagina.*/
+    
+/*require_once("login.php");
+echo $_SESSION["username"];*/
+//diferenciar cada boton encontrado en la pagina.
 
-    if(isset($_POST['btnregistrar'])) {
-      insertar($conn);
-      echo "<script>";
-        echo "alert('Su perfil fue cargado correctamente');";
-        echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
-      echo "</script>";
-    } else if(isset($_POST['btnActualizar'])) {
-      actualizar ($conn);
-      echo "<script>";
-        echo "alert('Su perfil fue actualizado correctamente');";
-        echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
-      echo "</script>";
-    } else if(isset($_POST['btndocumentos'])) {
-      documentos($conn);
-      echo "<script>";
-        echo "alert('Sus documentos fuerón cargados correctamente');";
-        echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
-      echo "</script>";
-    } if(isset($_POST['Actualizardocumentos'])) {
-      Actualizardocumentos($conn);
-      echo "<script>";
-        echo "alert('Sus documentos fuerón actualiazados correctamente');";
-        echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
-      echo "</script>";
-    } else {
-      echo "<script>alert('Error')</script>";
-    }
+if(isset($_POST['btnregistrar'])) {
+  insertar($conn);
+  echo "<script>";
+    echo "alert('Su perfil fue cargado correctamente');";
+    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
+  echo "</script>";
+} else if(isset($_POST['btnActualizar'])) {
+  actualizar ($conn);
+  echo "<script>";
+    echo "alert('Su perfil fue actualizado correctamente');";
+    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
+  echo "</script>";
+} else if(isset($_POST['btndocumentos'])) {
+  documentos($conn);
+  echo "<script>";
+    echo "alert('Sus documentos fuerón cargados correctamente');";
+    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
+  echo "</script>";
+} else if(isset($_POST['Actualizardocumentos'])) {
+  Actualizardocumentos($conn);
+  echo "<script>";
+    echo "alert('Sus documentos fuerón actualiazados correctamente');";
+    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
+  echo "</script>";
+} else if (ISSET($_POST['bloquear'])) {
+  bloqueo($conn);
+  echo "<script>
+          alert('El usuario fue bloqueado correctamente');
+          window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php';
+        </script>";
+} else {
+  echo "<script>alert('Error')</script>";
+}
 
 /*diferencia($conn);
 
@@ -102,7 +109,7 @@ function insertar ($conn){
     $eps=($_POST["EPS"]);
     $arl=($_POST["ARL"]);
 
-    $consulta = "INSERT INTO aspirante (docAspirante,numIdentificacion,PnombreAspirante,SnombreAspirante,PapellidoAspirante,SapellidoAspirante,fechaExpDoc,paisExpDoc,fechaNacimiento,paisNacimiento,direccionResidencia,ciudad,telefonoContacto,correoElectronico,tipoCargo,estadoCivil,estrato,rh,genero,libretaMilitar,eps,arl) VALUES ('$doca',$doca,'$pnombre','$snombre','$papellido','$sapellido','$fechaI','$paisE','$fechaN','$paisN','$dir','$cuidad','$telefono','$correo','$cargo','$estadoC','$estrato','$rh','$genero','$libretamilitar','$eps','$arl')";
+    $consulta = "INSERT INTO aspirante (docAspirante,numIdentificacion,PnombreAspirante,SnombreAspirante,PapellidoAspirante,SapellidoAspirante,fechaExpDoc,paisExpDoc,fechaNacimiento,paisNacimiento,direccionResidencia,ciudad,telefonoContacto,correoElectronico,tipoCargo,estadoCivil,estrato,rh,genero,libretaMilitar,eps,arl,estadoAspirante	) VALUES ('$doca',$doca,'$pnombre','$snombre','$papellido','$sapellido','$fechaI','$paisE','$fechaN','$paisN','$dir','$cuidad','$telefono','$correo','$cargo','$estadoC','$estrato','$rh','$genero','$libretamilitar','$eps','$arl',1)";
     mysqli_query($conn,$consulta);
 
     mysqli_close($conn);
@@ -122,7 +129,12 @@ function documentos($conn){
   $referenciasLaborales=$_POST["ReferenciasLaborales"];
   $firma=$_POST["firma"];
 
-  $consulta= "INSERT INTO documentos(docAspirante,curriculum,certificadoAlturas,certificadoJudicial,certificadoPenal,certificadoDisciplinario,resultadosMedicos,carnetVacCovid,referenciasPersonales,referenciasLaborales,firma) VALUES ('$docAspiranteS','$curriculum','$certificadoAlturas','$certificadoJudicial','$certificadoPenal','$certificadoDisciplinario','$resultadosMedicos','$carnetVacCovid','$referenciasPersonales','$referenciasLaborales','$firma')";
+  $consulta= "INSERT INTO documentos(docAspirante, curriculum, certificadoAlturas, certificadoJudicial,
+  certificadoPenal, certificadoDisciplinario, resultadosMedicos, carnetVacCovid, referenciasPersonales,
+  referenciasLaborales, firma) VALUES ('$docAspiranteS', '$curriculum', '$certificadoAlturas', '$certificadoJudicial',
+  '$certificadoPenal', '$certificadoDisciplinario', '$resultadosMedicos', '$carnetVacCovid', '$referenciasPersonales',
+  '$referenciasLaborales', '$firma')";
+  
   mysqli_query($conn,$consulta);
   mysqli_close($conn);
 }
@@ -176,5 +188,13 @@ function Actualizardocumentos ($conn){
   mysqli_close($conn);
 }
 
+function bloqueo($conn) {
+  $id = $_POST['docAspirante'];
+
+  $consulta = "UPDATE aspirante, usuarios SET aspirante.estadoAspirante = 0, usuarios.estadoUsuarios = 0
+  WHERE aspirante.docAspirante = '$id' AND usuarios.numIdentificacion = '$id'";
+  mysqli_query($conn, $consulta);
+  mysqli_close($conn);
+}
 
 ?>

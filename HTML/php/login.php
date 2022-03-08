@@ -59,7 +59,7 @@
             */
         }
         else {
-            echo "<script> alert('Usuario incorrecto, inexistente o bloqueado o contraseña incorrecta.');window.location= '../estadoLog/Inicio_Sesión.html' </script>";
+            echo "<script> alert('Usuario incorrecto, bloqueado o la contraseña esta incorrecta.');window.location= '../estadoLog/Inicio_Sesión.html' </script>";
         }
 
     }

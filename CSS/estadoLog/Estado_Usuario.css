@@ -77,26 +77,26 @@
 }
 /* Mostrar contraseña */
 .ub1 {
-    width: 30%;
+    width: 50%;
     float: left;
-    margin: 0% 35%;
+    margin: 0% 5.5%;
     display: inline-flex;
 }
 .ub1 input {
-    margin-right: 4%;
+    margin: 0.5% 3%;
 }
 .ub1 h4 {
     font-family: sans-serif;
 }
 .tC {
-    width: 70%;
+    width: 80%;
     float: left;
-    margin: 0% 20%;
+    margin: 0% 17%;
     display: inline-flex;
     font-family: sans-serif;
 }
 .tC input {
-    margin-right: 2%;
+    margin: 0.4% 2%;
 }
 .tC h4 {
     font-weight: normal;
