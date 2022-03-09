@@ -1,0 +1,84 @@
+main {
+    padding: 13% 15%;
+    background-color: rgb(212, 212, 211);
+}
+main article {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2%;
+    width: 33%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px gray;
+}
+main article:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 0px 8px black;
+}
+main fieldset {
+    padding: 3% 5%;
+    border-radius: 8px;
+}
+main fieldset legend {
+    padding-left: 2%;
+    margin-right: 55%;
+    padding-right: 2%;
+    font-size: 120%;
+    font-weight:bold;
+    text-align: left;
+}
+.controls {
+    width: 95%;
+    margin: 1% 0%;
+    padding: 1.5% 3%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 110%;
+    border: solid 2px #184394; 
+}
+.controls:hover {
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px gray;
+}
+.botons {
+    width: auto;
+    border-radius: 10px;
+    margin: 1% 0%;
+    padding: 1% 1.5%;
+    font-size: 120%;  
+}
+main .ub1 {
+    display: inline-flex;
+    width: 55%;
+    text-align: center;
+}
+main .ub1 input {
+    margin-right: 3%;
+}
+main .ub1 input:hover {
+    transform: scale(1.3);
+}
+main #noR {
+    display: inline-flex;
+    padding: 10px;
+    border: 2px solid rgb(236, 233, 233);
+    background: whitesmoke;
+    box-shadow: 0px 0px 2px gray;
+}
+main #noR:hover {
+    box-shadow: 0px 0px 2px rgba(128, 128, 128, 0);
+}
+main #noR .letra {
+    padding: 5% 0%;
+    display: inline-flex; 
+    width: 82%;
+    font-family: sans-serif;
+    font-size: 120%;
+}
+main #noR .letra input {
+    margin-right: 3%;
+}
+main #noR .letra input:hover {
+    transform: scale(1.3);
+}
+main #noR #captcha {
+    width: 15%;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi contrato</title>
+        <link rel="stylesheet" href="../../../../CSS/Formato_Base.css">
+        <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/recursosHumanos/buscarContratos.css">
+        <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/aspirantes/contrato.css">
+        <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
+    </head>
+    <body>
+
+<!--Menu de herramientas-->
+        <header>
+            <section class="Barra_Navegacion">
+                <nav id="menu">
+                    <ul>
+                        <a href="../../../../index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
+                        <h1 class="titulo">Trascendental</h1>
+                        <li id="Perfil"><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
+                        <li><a href="Agendar_citas.html" class="menu">Agendar Cita</a></li>
+                        <li><a href="miContrato.php" class="menu">Contrato</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+<!-- Formulario para mostrar el contrato -->
+        <main>
+            <center>
+                <article>
+                    <fieldset>
+                        <legend>Mi Contrato</legend>
+                        <form action="./miContrato.php" method="post">
+                            <input class="controls" type="text" name="docAspirante" id="numDoc" placeholder="Digite su número de identificación"><br>
+                            <input class="controls" type="password" name="password" id="txtpassword" placeholder="Digite su contraseña"><br><br>
+                            <div class="ub1">
+                                <input type="checkbox" onclick="verpassword()" >
+                                <h4>Mostrar contraseña</h4>
+                            </div><br><br>
+                            <div id="noR">
+                                <div class="letra">
+                                    <input type="checkbox" name="noRobot" id="nR" required>
+                                    <h5>No soy un robot</h5>
+                                </div>
+                                <img src="../../../../Imagenes/captcha.png" id="captcha">
+                            </div><br><br>
+                            <input class="botons" type="submit" name="miContrato" value="Acceder">
+                        </form>
+                    </fieldset>
+                </article>
+            </center>
+        </main>
+        <footer class="info_empres">
+            <ul>
+                <center><h4>Disser Ingieniería S.A.S. Bogotá</h4></center>
+                <center>
+                    <div class="left">
+                        <li class="ubicación">Dirección: Calle 169 # 20-06</li>
+                        <li class="contacto">Tel: (1)7042440</li>
+                    </div>
+                    <div class="right">
+                        <li class="actividad">Actividad: Contratación en Obras Cíviles</li>
+                    </div>
+                </center>
+            </ul>
+            <section class="copyright">
+                <center><p>© Copyright. Todos los derechos reservados - 2021</p></center>
+            </section>
+        </footer>
+    </body>
+    
+    <!-- Función para mostrar contraseña -->
+    <script>
+        function verpassword(){
+            var tipo = document.getElementById("txtpassword");
+            if(tipo.type == "password")
+            {
+                tipo.type = "text";
+            }
+            else
+            {
+                tipo.type = "password";
+            }
+        }
+    </script>
+</html>
