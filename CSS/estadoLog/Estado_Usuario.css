@@ -75,11 +75,9 @@
     border: none;
     color: black;
 }
-/* Mostrar contraseña */
+/* Mostrar contraseña y términos y condiciones*/
 .ub1 {
-    width: 50%;
-    float: left;
-    margin: 0% 5.5%;
+    width: 39%;
     display: inline-flex;
 }
 .ub1 input {
