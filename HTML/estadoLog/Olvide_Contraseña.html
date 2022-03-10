@@ -35,17 +35,27 @@
             <center>
                 <section class="Olvide_Contraseña">
                     <center>
-                        <h2>Olvide mi Contraseña</h2>
-                        <p>Ingrese el código de confirmación enviado al correo u****io@ejemplo.com</p>
-                        <input class="controls" type="text" name="Código" id="codigo" placeholder="Ingrese el Código">
-                        <input class="controls" type="text" name="Nueva Contraseña" id="nueva_contraseña" placeholder="Ingrese la nueva contraseña">
-                        <input class="controls" type="text" name="Verificacion de Nueva Contraseña" id="verificacion_contraseña" placeholder="Ingrese la verificación de la contraseña">
-                        <br><br>
-                        <div class="tC">
-                            <input type="checkbox" name="Terminos y condiciones" id="TyC">
-                            <h4>Estoy de acuerdo con <a href="#">Términos y condiciones</a></h4>
-                        </div><br><br>
-                        <input class="botons" type="submit" value="Cambiar Contraseña">
+                        <form action="../php/restablecerContraseña.php" method="POST">
+                        
+                            <h2>Olvide mi Contraseña</h2>
+                            <!-- <p>Ingrese el código de confirmación enviado al correo u****io@ejemplo.com</p> -->
+                            <input class="controls" type="text" name="docAspirante" id="docAsp" placeholder="Ingrese su Número de identificación">
+                            <img src="../../Imagenes/enviar.png" style="width: 30px;">
+                            <input class="botons" type="submit" value="Enviar" name="btnenviar">
+
+                            <input class="controls" type="text" name="codigo" id="codigo" placeholder="Ingrese el código de confirmación">
+                            <img src="../../Imagenes/verificado.png" style="width: 30px;">
+                            <input class="botons" type="submit" value="Verificar" name="btnverificar">
+                            
+                            <input class="controls" type="password" name="nuevaContraseña" id="txtpassword" placeholder="Ingrese la nueva contraseña">
+                            <input class="controls" type="password" name="verificacionContraseña" id="txtpassword" placeholder="Ingrese la verificación de la contraseña">
+                            <br><br>
+                            <div class="tC">
+                                <input type="checkbox" name="Terminos y condiciones" id="TyC">
+                                <h4>Estoy de acuerdo con <a href="#">Términos y condiciones</a></h4>
+                            </div><br><br>
+                            <input class="botons" type="submit" name="cambiar" value="Cambiar Contraseña">
+                        </form>
                     </center>
                 </section>
             </center>
