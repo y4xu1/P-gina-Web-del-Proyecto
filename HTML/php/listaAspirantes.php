@@ -151,5 +151,4 @@ function bloqueo($conn) {
   mysqli_close($conn);
 
 }
-
 ?>
