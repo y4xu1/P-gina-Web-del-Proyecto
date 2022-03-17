@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aspirantes</title>
         <link rel="stylesheet" href="../../../../CSS/Formato_Base.css">
+        <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/recursosHumanos/Contratos.css">
         <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/recursosHumanos/aspirantes.css">
         <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
     </head>
@@ -28,19 +29,20 @@
                 </section>
                 <nav id="menu">
                     <ul>
-                        <a href="../../../../index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
+                        <a href="index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                             <h1 class="titulo">Trascendental</h1>
                         <li id="Perfil"><a href="Mi_Perfil.html" class="menu">Mi Perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
                         <li><a href="formularios/induccion.html" class="menu">Formularios</a></li>
                         <li><a href="Contratos.html" class="menu">Contratos</a></li>
+                        <li><a href="obras.php" class="menu">Obras</a></li>
+                        <li><a href="aspirantes.php" class="menu">Aspirantes</a></li>
                     </ul>
                 </nav>
             </section>
             <!-- Submenú -->
-            <div id="Barra_Herramientas">
+            <!-- <div id="Barra_Herramientas">
                 <ul class="Herramientas">
                     <li id="buscar">
-                        <!-- <form action="../../../php/listaAspirantes.php" method="post"> -->
                         <form action="./aspirantes.php" method="POST">
                             <div>
                                 <input type="text" name="docAspirante" class="" placeholder="Buscar">
@@ -60,9 +62,8 @@
                             <li><a>Perfil Incompleto</a></li>
                         </ul>
                     </li>
-                    <li><a href="Graficas.html">Gráficos Estadísticos</a></li>
                 </ul>
-            </div>
+            </div> -->
         </header>
 <!--Barra lateral desplegable con función de las notificaciones -->
         <aside>
@@ -96,6 +97,24 @@
             </section>
         </aside>
 
+        <!-- Submenú -->
+        <div id="submenu">
+            <!-- <div id="Barra_Herramientas">
+                <ul class="Herramientas">
+                    <li><a>Filtro</a>
+                        <ul>
+                            <li><a>Mas Reciente</a></li>
+                            <li><a>Perfil Completo</a></li>
+                            <li><a>Perfil Incompleto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> -->
+            <form action="./aspirantes.php" method="post">
+                <input class="text" type="text" name="docAspirante" id="numDoc" placeholder="Buscar aspirante">
+                <input class="button" type="submit" name="vContrato" value="&#x1f50d">
+            </form>
+        </div>
 
     <!-- Listado de aspirantes -->
 

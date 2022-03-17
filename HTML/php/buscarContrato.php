@@ -227,7 +227,6 @@
 
                 //botón de descargar en la visualización de contrato
                 function descargarPDF($conn) {
-                            
                     pdfDoc($conn);
                 }
 

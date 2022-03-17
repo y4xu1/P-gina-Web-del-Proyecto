@@ -1,0 +1,225 @@
+main{
+    padding: 4%;
+}
+h3{
+    font-size: 300%;
+    font-family: 'Gill Sans';
+    text-align: center;
+    margin: 1%;
+}
+.empresas_asociadas{
+    width: 12%;
+    display:inline-block;
+    padding: 2%;
+}
+#colpatria{
+    font-size: 350%;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 2%;
+    padding: 2%;
+    border-top: 1px solid black;
+}
+.obras2{
+    border-radius: 6px;
+    box-shadow: 0px 0px 20px green;
+    background-color: yellowgreen;
+    Padding: 3%;
+    margin-bottom: 5%;
+}
+.obras3{
+    background-color:yellow;
+    border-radius: 6px;
+    box-shadow: 0px 0px 30px #E5BE01;
+    Padding: 3%;
+    margin-bottom: 5%;
+}
+.obras4{
+    background-color: #C81D11;
+    border-radius: 6px;
+    box-shadow: 0px 0px 30px #5E2129;
+    Padding: 3%;
+    margin-bottom: 5%;
+}
+.obras5{
+    background-color: #7FFFD4;
+    border-radius: 6px;
+    box-shadow: 0px 0px 30px #5DC1B9;
+    Padding: 3%;
+    margin-bottom: 5%;
+}
+.obras6 {
+    background-color: #507DBC;
+    border-radius: 6px;
+    box-shadow: 0px 0px 30px #252850;
+    Padding: 3%;
+    margin-bottom: 5%;
+}
+.obras7 {
+    background-color: pink;
+    border-radius: 6px;
+    box-shadow: 0px 0px 30px #b76E79;
+    Padding: 3%;
+    margin-bottom: 5%;
+}
+#ig {
+    margin-bottom: 2%;
+   width: 20%;
+   height: auto;
+}
+.in-ba {
+    display: flex;
+    margin-bottom: 2%;
+    /*justify-content: space-around;*/
+}
+.info_basica {
+    /*text-align: center;*/
+    padding: 0% 10%;
+    font-family: sans-serif;
+    font-size: 170%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    font-size: 100%;
+    font-family: sans-serif;
+    padding: 0.5%;
+}
+table input, table select {
+    margin: 2% 0%;
+    background-color: inherit;
+    color: black;
+    border: none;
+    width: 99%;
+    font-size: 60%;
+}
+div {
+    margin-top: 1%;
+}
+div input {
+    padding: 0.5% 1%;
+    font-size: 100%;
+    font-family: sans-serif;
+    border-radius: 4px;
+    border: 2px groove black;
+}
+.controls:hover, .botons:hover {
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 0px 3px gray;
+    font-weight: bolder;
+}
+.controls:focus, .botons:focus {
+    border: 2px groove navy;
+}
+.Creacion {
+    width: 30%;
+    margin: 0% 35%;
+    padding: 2%;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px  grey;
+    font-family: sans-serif;
+}
+.Creacion h4 {
+    margin-bottom: 2%;
+    font-size: 150%;
+    text-align: center;
+}
+.Creacion .controls {
+    display: inline-block;
+    width: 90%;
+    margin: 1.5%;
+    padding: 5px 10px;
+    font-size: 100%;
+    border-radius: 4px;
+}
+#Documento {
+    width: 96.4%;
+}
+.Creacion .botons {
+    margin-top: 2%;
+    margin-left: 3%;
+    padding: 1% 2%;
+    font-size: 100%;
+    border-radius: 4px;
+}
+* {
+    font-family: sans-serif;
+}
+.title {
+    font-size: 180%;
+    text-shadow: 1px 2px 3px black;
+}
+article table {
+    width: 95%;
+    border-collapse: collapse;
+}
+#busq {
+    position: fixed;
+    width: 92%;
+    float: left;
+    margin: 0% 4%;
+    padding-top: 0%;
+    background: rgb(200, 200, 200);
+    border-radius: 7px;
+}
+#busq #x {
+    margin-right: 0%;
+    padding: 5px 0.8%;
+    float: right;
+    position: relative;
+    border: none;
+    background: rgb(0, 0, 0, 0);
+    font-size: 110%;
+    border-top-right-radius: 7px;
+}
+#busq #x:hover {
+    background: #D32F2F;
+}
+#busq section {
+    margin: 0.2%;
+    margin-top: 35px;
+    padding: 3% 1.5%;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background: whitesmoke;
+}
+#busq table {
+    width: 100%;
+    border-radius: 5px;
+}
+table {
+    background: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px gray;
+}
+article td, article th {
+    border: 1px solid black;
+}
+article table th {
+    padding: 0.5% 0%;
+    background: #DABF5D;
+    font-size: 105%;
+}
+article input {
+    text-align: center;
+    background: rgb(0, 0, 0, 0);
+    color: black;
+}
+article .texto {
+    margin: 0%;
+    padding: 1% 0.5%;
+    width: 95%;
+    border: none;
+    font-size: 90%;
+}
+article .boton {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 110%;
+}

@@ -26,7 +26,7 @@ if(isset($_POST["btnenviar"])){
     }
     else{
         echo"<script>
-                alert('ERROR: Verifique la información enviada');
+                alert('Error: Verifique la información enviada');
             </script>";
     }    
 }
@@ -45,12 +45,12 @@ if (isset($_POST["btnverificar"])){
 
     if ($numRow==1) {
         echo"<script>
-                alert('El codigo de verificación es correcto');
+                alert('El código de verificación es correcto ');
             </script>";
     }
     else {
         echo"<script>
-                alert('El codigo de verificación es incorrecto');
+                alert('El código de verificación es incorrecto ');
             </script>";
     }
 }  
@@ -65,7 +65,7 @@ if (isset ($_POST['cambiar'])){
 
         $query = mysqli_query($conn,"UPDATE usuarios SET password = '$contraseña' WHERE numIdentificacion='$_SESSION[Con]'");
         echo"<script>
-                alert('Su contraseña ha logrado ser actualizada con exito');
+                alert('Su contraseña ha logrado ser actualizada con éxito');
             </script>";
 
     }else{
@@ -118,7 +118,7 @@ if (isset ($_POST['cambiar'])){
                                 //formulario 2
                                 echo'<form action="./Olvide_Contraseña.php" method="POST">
                                         <h2>Olvide mi Contraseña</h2>
-                                        <p>Recuerde el código de confirmación notificado en pantalla.<br>Si no recuerda el código presione la tecla "f5" para generar un nuevo código.</p>';
+                                        <p>Recuerde el código de confirmación notificado en pantalla.<br>Si no recuerda el código presione la tecla "F5" para generar un nuevo código.</p>';
                                         if ($_POST['TipoRol']==1) {
                                             echo'<select class="controls" name="TipoRol" id="rol" style="width: 97%;" disabled="disabled">
                                                     <option value="1">Aspirante</option>
@@ -139,7 +139,7 @@ if (isset ($_POST['cambiar'])){
                                 //formulario 3
                                 echo'<form action="./Olvide_Contraseña.php" method="POST">
                                         <h2>Recuperar Contraseña</h2>
-                                        <p>Para recuerar la contraseña, tenga en cuenta en una que no fácil de recordar</p>
+                                        <p>Para recuperar la contraseña, tenga en cuenta en una que no fácil de recordar.</p>
                                         <input class="controls" type="password" name="nuevaContraseña" id="txtpassword" placeholder="Ingrese la nueva contraseña">
                                         <input class="controls" type="password" name="verificacionContraseña" id="txtpassword" placeholder="Ingrese la verificación de la contraseña">
                                         <br><br>
