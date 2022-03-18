@@ -82,7 +82,7 @@
                     font-family: sans-serif;
                 }
                 .title {
-                    font-size: 180%;
+                    font-size: 250%;
                     text-shadow: 1px 2px 3px black;
                 }
                 article table {
@@ -128,6 +128,15 @@
                     border-radius: 5px;
                     box-shadow: 0px 0px 10px gray;
                 }
+                table thead .texto {
+                    font-weight: bolder;
+                    color: black;
+                    font-size: 100%;
+                }
+                table thead th {
+                    color: #442;
+                    opacity: 1;
+                }
                 article td, article th {
                     border: 1px solid black;
                 }
@@ -135,6 +144,17 @@
                     padding: 0.5% 0%;
                     background: #DABF5D;
                     font-size: 105%;
+                }
+                article table #fechas {
+                    display: inline-flex;
+                    vertical-align: middle;
+                }
+                article table #fechas .date {
+                    margin: 0%;
+                    padding: 0%;
+                    width: 122px;
+                    border: none;
+                    font-size: 95%;
                 }
                 article input {
                     text-align: center;
@@ -157,14 +177,7 @@
                     font-size: 110%;
                 }
             </style>
-
-            <div id="submenu">
-                <form action="./obras.php" method="post">
-                    <input class="text" type="text" name="docAspirante" id="numDoc" placeholder="Buscar">
-                    <input class="button" type="submit" name="buscar" value="&#x1f50d">
-                </form>
-            </div>
-            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br>
             <article>
                 
                 <?php
@@ -178,19 +191,60 @@
                 ?>
 
                 <center>
-                    <h3 class="title">Obras de los trabajadores</h3><br>
+                    <h3 class="title">Listado de obras</h3><br>
                     <table>
                         <thead>
                             <tr>
-                                <th>Nombre de la obra</th>
-                                <th>Fecha de inicio</th>
-                                <th>Fecha de finalización</th>
-                                <th>N° Documento</th>
-                                <th>Nombres y Apellidos</th>
-                                <th>Ciudad</th>
-                                <th>EPS</th>
-                                <th style="border-right: none">ARL</th>
-                                <th style="border-left: none"></th>
+                                <form action="./obras.php" method="post">
+                                    <th style="width: 200px;">
+                                        <input type="text" class="texto" name="nombreObra" list="items_nombreOb" id="" placeholder="Nombre de la Obra">
+                                        <datalist id="items_nombreOb">
+                                            <?php
+                                                $nombreOb = "SELECT nombreObra FROM contrato";
+
+                                                $query_nombreOb = mysqli_query($conn, $nombreOb);
+
+                                                while ($row_nombreOb = mysqli_fetch_assoc($query_nombreOb)) {
+                                                    echo '<option value="'. $row_nombreOb['nombreObra'] . '">' . $row_nombreOb['nombreObra'] . '</option>';
+                                                }
+                                            ?>
+                                        </datalist>
+                                        
+                                    </th>
+                                    <th style="width: 200px;">
+                                        <input type="text" class="texto" name="ciudadObra" list="items_ciudadOb" id="" placeholder="Ciudad de la Obra">
+                                        <datalist id="items_ciudadOb">
+                                            <?php
+                                                $ciudadOb = "SELECT ciudadObra FROM contrato";
+
+                                                $query_ciudadOb = mysqli_query($conn, $ciudadOb);
+
+                                                while ($row_ciudadOb = mysqli_fetch_assoc($query_ciudadOb)) {
+                                                    echo '<option value="'. $row_ciudadOb['ciudadObra'] . '">' . $row_ciudadOb['ciudadObra'] . '</option>';
+                                                }
+                                            ?>
+                                        </datalist>
+                                        
+                                    </th>
+                                    <th style="width: 380px;">
+                                        <h4>Fecha</h4>
+                                        <div id="fechas">
+                                            <center>
+                                                Desde <input type="date" class="date" name="fecha1" id="">
+                                                Hasta
+                                                <input type="date" class="date" name="fecha2" id="">
+                                            </center>
+                                        </div>
+                                    </th>
+                                    <th style = "width: 140px;">N° Documento</th>
+                                    <th>Nombres y Apellidos</th>
+                                    <th>Cargo</th>
+                                    <th>EPS</th>
+                                    <th style="border-right: none">ARL</th>
+                                    <th style="width: 40px; border-left: none">
+                                        <input type="submit" class="boton" name="buscar" value="&#x1f50d">
+                                    </th>
+                                </form>
                             </tr>
                         </thead>
                         <tbody>
@@ -225,9 +279,9 @@
 
     function listaObra($conn) {
 
-        $consulta  = "SELECT contrato.nombreObra, contrato.fechaInicio, contrato.fechaFin, aspirante.docAspirante,
-        aspirante.PnombreAspirante, aspirante.SnombreAspirante, aspirante.PapellidoAspirante, aspirante.SapellidoAspirante,
-        contrato.ciudadObra, aspirante.eps, aspirante.arl FROM contrato INNER JOIN aspirante ON contrato.docAspirante = aspirante.docAspirante; ";
+        $consulta  = "SELECT contrato.nombreObra, contrato.ciudadObra, contrato.fechaInicio, aspirante.docAspirante,
+        aspirante.PnombreAspirante, aspirante.SnombreAspirante, contrato.tipoCargoDesp, aspirante.PapellidoAspirante, aspirante.SapellidoAspirante,
+        aspirante.eps, aspirante.arl FROM contrato INNER JOIN aspirante ON contrato.docAspirante = aspirante.docAspirante ORDER BY nombreObra ";
         
         $obraConsulta = mysqli_query($conn, $consulta);
 
@@ -235,15 +289,14 @@
             echo '
             <tr>
                 <form action="./obras.php" method="post">
-                    <td class="colum1"><input type="text" class="texto" name="nombreObra" id="nombreObra" value="' . $row['nombreObra'] . '" disabled></td>
-                    <td class="colum2"><input type="text" class="texto" name="fechaInicio" id="fechaInicio" value="' . $row['fechaInicio'] . '" disabled></td>
-                    <td class="colum1"><input type="text" class="texto" name="fechaFin" id="fechaFin" value="' . $row['fechaFin'] .'" disabled></td>
-                    <td class="colum2"><input type="text" class="texto" name="docAspirante" id="docAspirante" value="' . $row['docAspirante'] . '" disabled></td>
-                    <td class="colum1"><input type="text" class="texto" name="nombres" id="nombres" value="' . $row['PnombreAspirante'] . " " . $row['SnombreAspirante'] . " "  . $row['PapellidoAspirante'] . " "  . $row['SapellidoAspirante'] . '" disabled></td>
-                    <td class="colum2"><input type="text" class="texto" name="ciudadObra" id="ciudadObra" value="' . $row['ciudadObra'] . '" disabled></td>
-                    <td class="colum1"><input type="text" class="texto" name="eps" id="eps" value="' . $row['eps'] . '" disabled></td>
-                    <td class="colum2"><input type="text" class="texto" name="arl" id="arl" value="' . $row['arl'] . '" disabled></td>
-                    <td class="colum1"><input type="submit" class="boton" name="btnDescargar" id="descargar" value="&#x1f4e5"></td>
+                    <td ><input type="text" class="texto" name="nombreObra" id="nombreObra" value="' . $row['nombreObra'] . '" disabled></td>
+                    <td ><input type="text" class="texto" name="ciudadObra" id="ciudadObra" value="' . $row['ciudadObra'] . '" disabled></td>
+                    <td ><input type="text" class="texto" name="fechaInicio" id="fechaInicio" value="' . $row['fechaInicio'] . '" disabled></td>
+                    <td ><input type="text" class="texto" name="docAspirante" id="docAspirante" value="' . $row['docAspirante'] . '" disabled></td>
+                    <td ><input type="text" class="texto" name="nombres" id="nombres" value="' . $row['PnombreAspirante'] . " " . $row['SnombreAspirante'] . " "  . $row['PapellidoAspirante'] . " "  . $row['SapellidoAspirante'] . '" disabled></td>
+                    <td ><input type="text" class="texto" name="tipoCargo" id="tipoCargo" value="' . $row['tipoCargoDesp'] . '" disabled></td>
+                    <td ><input type="text" class="texto" name="eps" id="eps" value="' . $row['eps'] . '" disabled></td>
+                    <td colspan="2"><input type="text" class="texto" name="arl" id="arl" value="' . $row['arl'] . '" disabled></td>
                 </form>
             </tr>';
         }
@@ -251,12 +304,16 @@
 
     function busq($conn) {
 
-        $id = $_POST['docAspirante'];
+        $id = $_POST['nombreObra'];
+        $id2 = $_POST['ciudadObra'];
+        $fecha1 = $_POST['fecha1'];
+        $fecha2 = $_POST['fecha2'];
 
-        $query  = "SELECT contrato.nombreObra, contrato.fechaInicio, contrato.fechaFin, aspirante.docAspirante,
-        aspirante.PnombreAspirante, aspirante.SnombreAspirante, aspirante.PapellidoAspirante, aspirante.SapellidoAspirante,
-        contrato.ciudadObra, aspirante.eps, aspirante.arl FROM contrato INNER JOIN aspirante
-        ON contrato.docAspirante = aspirante.docAspirante WHERE aspirante.docAspirante = '$id'";
+        $query = "SELECT contrato.nombreObra, contrato.ciudadObra, contrato.fechaInicio, aspirante.docAspirante,
+        aspirante.PnombreAspirante, contrato.tipoCargoDesp, aspirante.SnombreAspirante, aspirante.PapellidoAspirante,
+        aspirante.SapellidoAspirante, aspirante.eps, aspirante.arl FROM contrato INNER JOIN aspirante
+        ON contrato.docAspirante = aspirante.docAspirante WHERE contrato.nombreObra = '$id' AND contrato.ciudadObra = '$id2'
+        AND contrato.fechaInicio BETWEEN '$fecha1' AND '$fecha2' ORDER BY fechaInicio";
 
         $queryObra = mysqli_query($conn, $query);
 
@@ -268,30 +325,28 @@
                 </form>
                 <section>
                     <center>
-                        <h3 class="title">Resultados para la búsqueda '. $id . '</h3><br>
+                        <h3 class="title">Resultados para la búsqueda</h3><br>
                         <table>
                             <tr>
                                 <th>Nombre de la obra</th>
+                                <th>Ciudad de la obra</th>
                                 <th>Fecha de inicio</th>
-                                <th>Fecha de finalización</th>
                                 <th>N° Documento</th>
                                 <th>Nombres y Apellidos</th>
-                                <th>Ciudad</th>
+                                <th>Cargo</th>
                                 <th>EPS</th>
-                                <th style="border-right: none">ARL</th>
-                                <th style="border-left: none"></th>
+                                <th>ARL</th>
                             </tr>
                             <tr>
                                 <form action="./obras.php" method="post">
                                     <td><input type="text" class="texto" name="nombreObra" id="nombreObra" value="' . $row['nombreObra'] . '" disabled></td>
+                                    <td><input type="text" class="texto" name="ciudadObra" id="ciudadObra" value="' . $row['ciudadObra'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="fechaInicio" id="fechaInicio" value="' . $row['fechaInicio'] . '" disabled></td>
-                                    <td><input type="text" class="texto" name="fechaFin" id="fechaFin" value="' . $row['fechaFin'] .'" disabled></td>
                                     <td><input type="text" class="texto" name="docAspirante" id="docAspirante" value="' . $row['docAspirante'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="nombres" id="nombres" value="' . $row['PnombreAspirante'] . " " . $row['SnombreAspirante'] . " "  . $row['PapellidoAspirante'] . " "  . $row['SapellidoAspirante'] . '" disabled></td>
-                                    <td><input type="text" class="texto" name="ciudadObra" id="ciudadObra" value="' . $row['ciudadObra'] . '" disabled></td>
+                                    <td><input type="text" class="texto" name="eps" id="eps" value="' . $row['tipoCargoDesp'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="eps" id="eps" value="' . $row['eps'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="arl" id="arl" value="' . $row['arl'] . '" disabled></td>
-                                    <td><input type="submit" class="boton" name="btnDescargar" id="descargar" value="&#x1f4e5"></td>
                                 </form>
                             </tr>
                         </table>
