@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-03-2022 a las 03:44:55
+-- Tiempo de generación: 18-03-2022 a las 23:54:46
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -59,9 +59,16 @@ CREATE TABLE `aspirante` (
 --
 
 INSERT INTO `aspirante` (`docAspirante`, `numIdentificacion`, `PnombreAspirante`, `SnombreAspirante`, `PapellidoAspirante`, `SapellidoAspirante`, `fotoAspirante`, `fechaExpDoc`, `paisExpDoc`, `fechaNacimiento`, `paisNacimiento`, `direccionResidencia`, `ciudad`, `telefonoContacto`, `correoElectronico`, `tipoCargo`, `estadoCivil`, `estrato`, `rh`, `genero`, `libretaMilitar`, `eps`, `arl`, `estadoAspirante`) VALUES
-(52729563, 52729563, 'Carlos ', 'Daniel ', 'Mendoza', 'Pinzón', '', '2004-08-19', 'Colombia', '1986-05-05', 'Colombia', 'Carrera 21b # 09-25', 'Medellín ', 3136947812, 'carmendoza@gmail.com', 'Operario de Maquinas', 'Soltero', 4, 'A+', 'Masculino', 368941, 'Compensar', 'Bolívar ', 1),
-(1000620101, 1000620101, 'Juan ', 'Felipe', 'Lozano', 'Ramirez', '', '1987-01-19', 'Colombia', '1845-02-01', 'Colombia', 'Diagonal 2a #78-03', 'Cota', 3226954152, 'juan12@gmail.com', 'Operario de Maquinas', 'Viudo', 2, 'AB-', 'Masculino', 260595, 'Cruz Blanca', 'Sura', 1),
-(1986300145, 1986300145, 'Mario', 'Andrés ', 'Duarte', 'Cárdenas ', '', '1996-05-23', 'Colombia', '1978-02-19', 'Colombia', 'Calle 14a #10a-79', 'Bogotá D.C', 3225974512, 'marioandy@gmail.com', 'Obrero', 'Casado', 3, 'O+', 'Masculino', 401547, 'Famisanar', 'Axa Colpatria', 1);
+(34532270, 34532270, 'Diana', 'Catalina', 'Díaz', 'Beltrán', '', '2022-05-08', 'Colombia', '1990-09-03', 'Colombia', 'Carrera 13L # 68 - 11', 'Medellín', 3159874563, 'catalinabeltran@gmail.com', 'Obrero', 'Soltero', 3, 'A-', 'Femenino', 0, 'Compensar', 'Colpatria', 1),
+(34564978, 34564978, 'Laura', 'Camila', 'Sánchez', 'Prada', '', '2022-03-09', 'Colombia', '1995-09-21', 'Argentina', 'Trasversal 14c # 12 - 74', 'Armenia', 3160014596, 'lauracamila@gmail.com', 'Operario de maquina pesada', 'Casado', 5, 'A+', 'Femenino', 0, 'Saludcoop', 'Sura', 1),
+(41733718, 41733718, 'Jenny', 'Viviana', 'Rey', 'Botero', '', '2021-11-24', 'Colombia', '1994-08-11', 'Argentina', 'Calle 15 # 10 - 56', 'Barranquilla', 3145264006, 'viviana548521@gmail.com', 'Operario de maquinas', 'Separado', 4, 'B-', 'Femenino', 0, 'Colseguros', 'Aurora', 1),
+(52729563, 52729563, 'Carlos', 'Daniel', 'Mendoza', 'Pinzón', '', '2004-08-19', 'Colombia', '1986-05-05', 'Colombia', 'Carrera 21b # 09 - 25', 'Medellín', 3136947812, 'carmendoza@gmail.com', 'Operario de maquinas', 'Soltero', 4, 'A+', 'Masculino', 368941, 'Compensar', 'Bolívar', 1),
+(67609436, 67609436, 'Claudia', 'Liliana', 'Nieto', 'Bustos', '', '2022-06-08', 'Colombia', '1994-10-12', 'Bolivia', 'Diagonal 3 # 12 - 14', 'Cartagena', 3196784231, 'claudiab@gmail.com', 'Operario de maquina pesada', 'Soltero', 2, 'O-', 'Femenino', 0, 'Sanitas', 'Colmena', 1),
+(1000620101, 1000620101, 'Juan', 'Felipe', 'Lozano', 'Ramírez', '', '1987-01-19', 'Colombia', '1845-02-01', 'Colombia', 'Diagonal 84 # 78 - 03', 'Cota', 3226954152, 'juan12@gmail.com', 'Operario de maquinas', 'Viudo', 2, 'AB-', 'Masculino', 260595, 'Cruz Blanca', 'Sura', 1),
+(1053963400, 1053963400, 'Ángela', 'Patricia', 'Cruz', 'García', '', '2021-09-07', 'Colombia', '1992-12-16', 'Brasil', 'Avenida 12 # 4 - 10', 'Cali', 3179687100, 'angelapc237@gmail.com', 'Obrero', 'Casado', 2, 'O+', 'Femenino', 0, 'Cafesalud', 'Sura', 1),
+(1054780841, 1054780841, 'Carlos', 'Felipe', 'Mogollón', 'Pachón', '', '2021-06-29', 'Colombia', '1991-05-01', 'Chile', 'Calle 20 # 5 - 22', 'Armenia', 3106987453, 'carlos54654@gmail.com', 'Operario de maquina pesada', 'Separado', 3, 'A+', 'Masculino', 358945, 'Salud Total', 'Positiva', 1),
+(1869300472, 1869300472, 'Camilo', 'Alberto', 'Cortes', 'Montejo', '', '2022-03-15', 'Colombia', '1999-06-24', 'Argentina', 'Carrera 19 # 7 - 34', 'Barranquilla', 3145967820, 'camilocortes523@gmail.com', 'Obrero', 'Casado', 2, 'AB+', 'Masculino', 895412, 'Salud Colmena', 'Colpatria', 1),
+(1986300145, 1986300145, 'Mario', 'Andrés', 'Duarte', 'Cárdenas', '', '1996-05-23', 'Colombia', '1978-02-19', 'Colombia', 'Calle 14a # 10a - 79', 'Bogotá D.C', 3225974512, 'marioandy@gmail.com', 'Obrero', 'Casado', 3, 'O+', 'Masculino', 401547, 'Famisanar', 'Axa Colpatria', 1);
 
 -- --------------------------------------------------------
 
@@ -86,9 +93,16 @@ CREATE TABLE `citasmedicas` (
 --
 
 INSERT INTO `citasmedicas` (`numOrden`, `docAspirante`, `nombresCompletosDoctor`, `diaHoy`, `horaHoy`, `diaCita`, `horaCita`, `correoElectronicoAspirante`, `estadoCitas`) VALUES
-(1, 52729563, 'Richard Tovar Cárdenas', '2021-06-01', '10:00:00', '2021-07-15', '08:00:00', 'carmendoza@gmail.com', 1),
-(2, 1000620101, 'José Antonio Rodríguez', '2021-06-11', '16:25:00', '2021-08-13', '09:00:00', 'juan12@gmail.com', 1),
-(3, 1986300145, 'Lucía Galán Bertrand', '2021-10-17', '08:15:00', '2021-11-04', '07:00:00', 'marioandy@gmail.com', 1);
+(1, 34532270, 'Richard Tovar Cárdenas', '2021-06-09', '20:35:00', '2021-08-12', '10:30:00', 'catalinabeltran@gmail.com', 1),
+(2, 34564978, 'Andrea Proaño Calderon', '2021-02-24', '08:40:00', '2021-12-01', '08:30:00', 'lauracamila@gmail.com', 1),
+(3, 41733718, 'Aarón Arturo Robles Ramírez', '2021-05-07', '09:30:00', '2021-07-21', '06:00:00', 'viviana548521@gmail.com', 1),
+(4, 52729563, ' Lucía Galán Bertrand', '2021-10-14', '18:43:00', '2021-12-09', '07:30:00', 'carmendoza@gmail.com', 1),
+(5, 67609436, 'Richard Tovar Cárdenas', '2021-09-16', '07:21:00', '2021-10-12', '08:00:00', 'claudiab@gmail.com', 1),
+(6, 1000620101, 'José Antonio Rodríguez', '2022-01-05', '06:50:00', '2022-03-11', '09:30:00', 'juan12@gmail.com', 1),
+(7, 1053963400, 'Richard Tovar Cárdenas', '2022-02-27', '10:00:00', '2022-04-07', '10:00:00', 'angelapc237@gmail.com', 1),
+(8, 1054780841, ' Lucía Galán Bertrand', '2022-03-18', '16:50:00', '2022-05-08', '06:00:00', 'carlos54654@gmail.com', 1),
+(9, 1869300472, 'Andrea Proaño Calderon', '2022-06-22', '12:00:00', '2022-08-18', '09:00:00', 'camilocortes523@gmail.com', 1),
+(10, 1986300145, 'Aarón Arturo Robles Ramírez', '2022-10-13', '05:55:00', '2022-11-14', '07:00:00', 'marioandy@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -116,9 +130,16 @@ CREATE TABLE `contrato` (
 --
 
 INSERT INTO `contrato` (`idContrato`, `tipoContrato`, `docAspirante`, `docRecHum`, `tipoCargoDesp`, `salario`, `valorPrestaciones`, `fechaInicio`, `nombreObra`, `ciudadObra`, `firma`, `estadoContrato`) VALUES
-(2001, 'Termino indefinido', 52729563, 97414524, 'Obrero ', 1000000, 200000, '2021-09-22', 'Amarilo', 'Madrid', '', 1),
-(2002, 'Termino Fijo', 1000620101, 98176120, 'Operario de Maquinas ', 2000000, 3000000, '2021-09-15', 'Colpatria', 'Medellín ', '', 1),
-(2003, 'Obra a Labor', 1986300145, 1000098763, 'Obrero ', 1300000, 180000, '2021-06-01', 'Colsubsidio', 'Bogotá D.C', '', 1);
+(1001, 'TERMINO INDEFINIDO', 34532270, 15133916, 'Obrero', 1500000, 1000000, '2021-01-06', 'Amarilo', ' Bogotá', '', 1),
+(1002, 'TERMINO FIJO', 34564978, 76308613, 'Operario de maquina pesada', 1200000, 300000, '2021-05-07', 'Colpatria', ' Medellín', '', 1),
+(1003, 'OBRA A LABOR ', 41733718, 76415948, 'Operario de maquinas', 3000000, 1000000, '2021-11-23', 'Grupo éxito', ' Barranquilla', '', 1),
+(1004, 'TERMINO INDEFINIDO', 52729563, 97414524, 'Operario de maquinas', 2000000, 1300000, '2021-03-04', 'Konecta cloud', ' Bogotá', '', 1),
+(1005, 'TERMINO FIJO', 67609436, 98176120, 'Operario de maquina pesada', 2000000, 1100000, '2021-06-09', 'Colsubsidio', ' Barranquilla', '', 1),
+(1006, 'OBRA A LABOR ', 1000620101, 1000098763, 'Operario de maquinas', 1550000, 1000000, '2022-03-10', 'Avianca', ' Cota', '', 1),
+(1007, 'TERMINO INDEFINIDO', 1053963400, 1017896301, 'Obrero', 4000000, 2000000, '2022-05-03', 'Amarilo', ' Cota', '', 1),
+(1008, 'TERMINO FIJO', 1054780841, 1942371104, 'Operario de maquina pesada', 4000000, 1000000, '2022-07-14', 'Colpatria', ' Medellín', '', 1),
+(1009, 'OBRA A LABOR ', 1869300472, 2745086420, 'Obrero', 1550000, 2000000, '2022-10-12', 'Grupo éxito', ' Barranquilla', '', 1),
+(1010, 'TERMINO INDEFINIDO', 1986300145, 3452918100, 'Obrero', 5000000, 3000000, '2022-11-08', 'Konecta cloud', ' Bogotá', '', 1);
 
 -- --------------------------------------------------------
 
@@ -147,9 +168,16 @@ CREATE TABLE `documentos` (
 --
 
 INSERT INTO `documentos` (`idDocumentos`, `docAspirante`, `curriculum`, `certificadoAlturas`, `certificadoJudicial`, `certificadoPenal`, `certificadoDisciplinario`, `resultadosMedicos`, `carnetVacCovid`, `referenciasPersonales`, `referenciasLaborales`, `firma`, `estadoDocumentos`) VALUES
-(1001, 52729563, '', '', '', '', '', '', '', '', '', '', 1),
-(1002, 1000620101, '', '', '', '', '', '', '', '', '', '', 1),
-(1003, 1986300145, '', '', '', '', '', '', '', '', '', '', 1);
+(1, 34532270, '', '', '', '', '', '', '', '', '', '', 1),
+(2, 34564978, '', '', '', '', '', '', '', '', '', '', 1),
+(3, 41733718, '', '', '', '', '', '', '', '', '', '', 1),
+(4, 52729563, '', '', '', '', '', '', '', '', '', '', 1),
+(5, 67609436, '', '', '', '', '', '', '', '', '', '', 1),
+(6, 1000620101, '', '', '', '', '', '', '', '', '', '', 1),
+(7, 1053963400, '', '', '', '', '', '', '', '', '', '', 1),
+(8, 1054780841, '', '', '', '', '', '', '', '', '', '', 1),
+(9, 1869300472, '', '', '', '', '', '', '', '', '', '', 1),
+(10, 1986300145, '', '', '', '', '', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -172,9 +200,16 @@ CREATE TABLE `formulario` (
 --
 
 INSERT INTO `formulario` (`idFormulario`, `tipoFormulario`, `archivoFormulario`, `fechaFormulario`, `docRecHum`, `docAspirante`, `estadoFormularios`) VALUES
-(3001, 'Formulario Dotación', '', '2021-05-28', 97414524, 52729563, 1),
-(3002, 'Formulario Inducción', '', '2021-05-28', 98176120, 1000620101, 1),
-(3003, 'Formulario Dotación', '', '2021-07-27', 1000098763, 1986300145, 1);
+(1, 'Formulario Dotación', '', '2021-06-16', 15133916, 34532270, 1),
+(2, 'Formulario Dotación', '', '2021-08-07', 76308613, 34564978, 1),
+(3, 'Formulario Dotación', '', '2021-11-10', 76415948, 41733718, 1),
+(4, 'Formulario Dotación', '', '2021-11-04', 97414524, 52729563, 1),
+(5, 'Formulario Dotación', '', '2021-06-13', 98176120, 67609436, 1),
+(6, 'Formulario Inducción', '', '2022-01-05', 1000098763, 1000620101, 1),
+(7, 'Formulario Inducción', '', '2022-03-23', 1017896301, 1053963400, 1),
+(8, 'Formulario Inducción', '', '2022-06-08', 1942371104, 1054780841, 1),
+(9, 'Formulario Inducción', '', '2022-08-03', 2745086420, 1869300472, 1),
+(10, 'Formulario Inducción', '', '2022-11-30', 3452918100, 1986300145, 1);
 
 -- --------------------------------------------------------
 
@@ -212,9 +247,16 @@ CREATE TABLE `recursoshumanos` (
 --
 
 INSERT INTO `recursoshumanos` (`docRecHum`, `numIdentificacion`, `pNombreRh`, `sNombreRh`, `pApellidoRh`, `sApellidoRh`, `fotoRh`, `fechaExpDoc`, `paisExpDoc`, `fechaNacimiento`, `paisNacimiento`, `direccionResidencia`, `telefonoContacto`, `correoElectronico`, `tipoCargo`, `estadoCivil`, `estrato`, `rh`, `genero`, `eps`, `arl`, `estadoRecHum`) VALUES
-(97414524, 97414524, 'Emma ', 'Alejandra ', 'Valencia ', 'Calderón ', '', '2008-06-20', 'Colombia', '1990-03-29', 'Colombia', 'Av. Calle 78a #10f-84', 3027482001, 'aleja12@gmail.com', 'Asistente de Recursos Humanos', 'Soltera', 3, 'A-', 'Femenino', 'Cruz Blanca ', 'Bolívar ', 1),
-(98176120, 98176120, 'Adriana ', 'Carolina ', 'Hernández ', 'Monterrosa ', '', '1996-05-04', 'Colombia', '1883-10-03', 'Colombia', 'Cr.8a # 15-63', 3115789640, 'achm56@gmail.com', 'Bienestar', 'Unión Libre', 2, 'AB-', 'Femenino', 'Cafesalud ', 'Positiva ', 1),
-(1000098763, 1000098763, 'Laura', 'Sofía ', 'López ', 'Díaz ', '', '2000-10-15', 'Colombia', '1982-05-21', 'Colombia', 'Diagonal 45b # 78-95', 3236987415, 'lauralopez@gmail.com', 'Coordinador de Recursos Humanos', 'Casada', 2, 'A+', 'Femenino', 'Famisanar ', 'Colmena', 1);
+(15133916, 15133916, 'María', 'Alejandra', 'Beltrán', 'Castillo', '', '2022-01-11', 'Colombia', '1997-10-28', 'Canadá', 'Carrera 15a # 13 - 02', 3110321456, 'mariacastillo45@gmail.com', 'Auxiliar de recursos humanos', 'Soltero', 2, 'AB-', 'Femenino', 'Cruz Blanca', 'Positiva', 1),
+(76308613, 76308613, 'Karen', 'Eliana', 'Hernández', 'Pulido', '', '2022-03-02', 'Colombia', '1993-02-07', 'Argentina', 'Diagonal 03 # 23 - 11', 3189745620, 'karenh423@gmail.com', 'Asistente de recursos humanos', 'Casado', 2, 'AB+', 'Femenino', 'Cafesalud ', 'Colmena', 1),
+(76415948, 76415948, 'Lina', 'María', 'Novoa', 'Gómez', '', '2021-05-04', 'Colombia', '1989-11-05', 'Colombia', 'Carrera 38 # 04 - 32', 3144062713, 'lmng930@gmail.com', 'Coordinador de recursos humanos', 'Separado', 2, 'A+', 'Femenino', 'Salud Colmena', 'Positiva', 1),
+(97414524, 97414524, 'Emma ', 'Alejandra ', 'Valencia ', 'Calderón ', '', '2008-06-20', 'Colombia', '1990-03-29', 'Colombia', 'Av. Calle 78a # 10f - 84', 3027482001, 'aleja12@gmail.com', 'Asistente de recursos humanos', 'Soltera', 3, 'A-', 'Femenino', 'Cruz Blanca ', 'Bolívar ', 1),
+(98176120, 98176120, 'Adriana ', 'Carolina ', 'Hernández ', 'Monterrosa ', '', '1996-05-04', 'Colombia', '1883-10-03', 'Colombia', 'Calle 8a # 15 - 63', 3115789640, 'achm56@gmail.com', 'Bienestar', 'Unión Libre', 2, 'AB-', 'Femenino', 'Cafesalud ', 'Positiva ', 1),
+(1000098763, 1000098763, 'Laura', 'Sofía ', 'López ', 'Díaz ', '', '2000-10-15', 'Colombia', '1982-05-21', 'Colombia', 'Diagonal 45b # 11 - 30', 3236987415, 'lauralopez@gmail.com', 'Coordinador de recursos humanos', 'Casada', 2, 'A+', 'Femenino', 'Famisanar ', 'Colmena', 1),
+(1017896301, 1017896301, 'Ana', 'Milena', 'Escobar', 'Solís', '', '2021-05-13', 'Colombia', '1997-12-23', 'Argentina', 'Carrera 26 # 8 - 45', 3179200631, 'anamilenaescobar@gmail.com', 'Bienestar', 'Casado', 3, 'A+', 'Femenino', 'Salud Total', 'Aurora', 1),
+(1942371104, 1942371104, 'Paola', 'Andrea', 'Casas', 'Páez', '', '2021-06-09', 'Colombia', '1986-07-31', 'Colombia', 'Calle 16n sur # 14 - 03', 3172031469, 'paolal111@gmail.com', 'Asistente de recursos humanos', 'Separado', 3, 'B+', 'Femenino', 'SuSalud', 'Axa colpatria', 1),
+(2745086420, 2745086420, 'Gloria', 'Marcela', 'Mora', 'Muños', '', '2021-04-07', 'Colombia', '1990-05-15', 'Colombia', 'Avenida 98 # 8 - 47', 3153001496, 'gloriamora@gmail.com', 'Bienestar', 'Casado', 3, 'B-', 'Femenino', 'Cruz Blanca', 'Positiva', 1),
+(3452918100, 3452918100, 'Luz', 'Alba', 'Fierro', 'Galvis', '', '2022-06-15', 'Colombia', '1993-02-28', 'Colombia', 'Diagonal 47 # 10 - 04', 3119876520, 'luzalba@gmail.com', 'Bienestar', 'Soltero', 3, 'A+', 'Femenino', 'Humana Vivir', 'Colpatria', 1);
 
 -- --------------------------------------------------------
 
@@ -225,6 +267,7 @@ INSERT INTO `recursoshumanos` (`docRecHum`, `numIdentificacion`, `pNombreRh`, `s
 CREATE TABLE `usuarios` (
   `numIdentificacion` double NOT NULL,
   `password` varchar(100) DEFAULT NULL,
+  `codigoVerificacion` double NOT NULL,
   `TipoRol` varchar(20) NOT NULL,
   `codigoAceptacion` tinyint(1) NOT NULL,
   `estadoUsuarios` tinyint(1) DEFAULT NULL
@@ -234,20 +277,27 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`numIdentificacion`, `password`, `TipoRol`, `codigoAceptacion`, `estadoUsuarios`) VALUES
-(22, '123', '2', 1, 1),
-(30, '01', '1', 1, 1),
-(40, '03', '2', 1, 1),
-(369, '123', '2', 1, 1),
-(587, '123', '2', 1, 1),
-(789, '123', '1', 1, 1),
-(2021, '123', '1', 1, 1),
-(52729563, 'tuyyo451', '1', 0, 1),
-(97414524, 'ares5621', '2', 0, 1),
-(98176120, 'asist7845', '2', 0, 1),
-(1000098763, '12634', '2', 0, 1),
-(1000620101, 'l2301', '1', 0, 1),
-(1986300145, 'mario431', '1', 0, 1);
+INSERT INTO `usuarios` (`numIdentificacion`, `password`, `codigoVerificacion`, `TipoRol`, `codigoAceptacion`, `estadoUsuarios`) VALUES
+(15133916, '123', 0, '2', 1, 1),
+(34532270, '123', 0, '1', 1, 1),
+(34564978, '123', 0, '1', 1, 1),
+(41733718, '123', 0, '1', 1, 1),
+(52729563, '123', 0, '1', 1, 1),
+(67609436, '123', 0, '1', 1, 1),
+(76308613, '123', 0, '2', 1, 1),
+(76415948, '123', 0, '2', 1, 1),
+(97414524, '123', 0, '2', 1, 1),
+(98176120, '123', 0, '2', 1, 1),
+(1000098763, '123', 0, '2', 1, 1),
+(1000620101, '123', 0, '1', 1, 1),
+(1017896301, '123', 0, '2', 1, 1),
+(1053963400, '123', 0, '1', 1, 1),
+(1054780841, '123', 0, '1', 1, 1),
+(1869300472, '123', 0, '1', 1, 1),
+(1942371104, '123', 0, '2', 1, 1),
+(1986300145, '123', 0, '1', 1, 1),
+(2745086420, '123', 0, '2', 1, 1),
+(3452918100, '123', 0, '2', 1, 1);
 
 --
 -- Índices para tablas volcadas
@@ -302,6 +352,28 @@ ALTER TABLE `recursoshumanos`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`numIdentificacion`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `citasmedicas`
+--
+ALTER TABLE `citasmedicas`
+  MODIFY `numOrden` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `documentos`
+--
+ALTER TABLE `documentos`
+  MODIFY `idDocumentos` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `formulario`
+--
+ALTER TABLE `formulario`
+  MODIFY `idFormulario` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
