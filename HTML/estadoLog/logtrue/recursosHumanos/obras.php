@@ -1,6 +1,7 @@
 <?php
     //Conexión con la base de datos
     include ("../../../php/conexion.php");
+    include ("../../../php/obrasFunciones.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -129,12 +130,15 @@
                     box-shadow: 0px 0px 10px gray;
                 }
                 table thead .texto {
-                    font-weight: bolder;
+                    color: #63572A;
+                    font-size: 95%;
+                    font-weight: 700;
+                }
+                table thead .texto::placeholder {
                     color: black;
-                    font-size: 100%;
                 }
                 table thead th {
-                    color: #442;
+                    color: #63572A;
                     opacity: 1;
                 }
                 article td, article th {
@@ -154,7 +158,9 @@
                     padding: 0%;
                     width: 122px;
                     border: none;
+                    color: #63572A;
                     font-size: 95%;
+                    font-weight: 700;
                 }
                 article input {
                     text-align: center;
@@ -176,8 +182,24 @@
                     text-align: left;
                     font-size: 110%;
                 }
+                article .download {
+                    display: inline-flex;
+                    vertical-align: middle;
+                    float: right;
+                    margin: 5px 0px;
+                    border: none;
+                }
+                article .download p {
+                    margin: 14px 5px;
+                }
+                article .download input {
+                    font-size: 180%;
+                    border: none;
+                    padding: 0%;
+                    margin-top: -10px;
+                }
             </style>
-            <br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
             <article>
                 
                 <?php
@@ -185,9 +207,9 @@
                     if (isset($_POST['buscar'])) {
                         busq($conn);
                     }
-                    else if (isset($_POST['btnDescargar'])) {
+                    /* else if (isset($_POST['descargar'])) {
                         dPDF($conn);
-                    }
+                    } */
                 ?>
 
                 <center>
@@ -280,8 +302,8 @@
     function listaObra($conn) {
 
         $consulta  = "SELECT contrato.nombreObra, contrato.ciudadObra, contrato.fechaInicio, aspirante.docAspirante,
-        aspirante.PnombreAspirante, aspirante.SnombreAspirante, contrato.tipoCargoDesp, aspirante.PapellidoAspirante, aspirante.SapellidoAspirante,
-        aspirante.eps, aspirante.arl FROM contrato INNER JOIN aspirante ON contrato.docAspirante = aspirante.docAspirante ORDER BY nombreObra ";
+        aspirante.PnombreAspirante, aspirante.SnombreAspirante, aspirante.PapellidoAspirante, aspirante.SapellidoAspirante, contrato.tipoCargoDesp,
+        aspirante.eps, aspirante.arl FROM contrato INNER JOIN aspirante ON contrato.docAspirante = aspirante.docAspirante ORDER BY ciudadObra";
         
         $obraConsulta = mysqli_query($conn, $consulta);
 
@@ -304,26 +326,30 @@
 
     function busq($conn) {
 
-        $id = $_POST['nombreObra'];
-        $id2 = $_POST['ciudadObra'];
+        $nombreObra_ = $_POST['nombreObra'];
+        $ciudadObra_ = $_POST['ciudadObra'];
         $fecha1 = $_POST['fecha1'];
         $fecha2 = $_POST['fecha2'];
 
         $query = "SELECT contrato.nombreObra, contrato.ciudadObra, contrato.fechaInicio, aspirante.docAspirante,
-        aspirante.PnombreAspirante, contrato.tipoCargoDesp, aspirante.SnombreAspirante, aspirante.PapellidoAspirante,
-        aspirante.SapellidoAspirante, aspirante.eps, aspirante.arl FROM contrato INNER JOIN aspirante
-        ON contrato.docAspirante = aspirante.docAspirante WHERE contrato.nombreObra = '$id' AND contrato.ciudadObra = '$id2'
+        aspirante.PnombreAspirante, aspirante.SnombreAspirante, aspirante.PapellidoAspirante,
+        aspirante.SapellidoAspirante, contrato.tipoCargoDesp, aspirante.eps, aspirante.arl FROM contrato INNER JOIN aspirante
+        ON contrato.docAspirante = aspirante.docAspirante WHERE contrato.nombreObra = '$nombreObra_' AND contrato.ciudadObra = '$ciudadObra_'
         AND contrato.fechaInicio BETWEEN '$fecha1' AND '$fecha2' ORDER BY fechaInicio";
 
         $queryObra = mysqli_query($conn, $query);
 
-        while ($row = mysqli_fetch_assoc($queryObra)) {
-            echo '
-            <section id="busq">
-                <form action="" method="post">
-                    <input type="submit" id="x" name="hide" value="&#x2716">
-                </form>
-                <section>
+        echo '
+        <section id="busq">
+            <form action="./obras.php" method="post">
+                <input type="submit" id="x" name="hide" value="&#x2716">
+            </form>
+            <section>
+                <form action="../../../php/obrasFunciones.php" method="post">
+                    <input type="text" name="nombre_Obra" value="' . $nombreObra_ .'" style="visibility: hidden;">
+                    <input type="text" name="ciudad_Obra" value="' . $ciudadObra_ .'" style="visibility: hidden;">
+                    <input type="text" name="1fecha" value="' . $fecha1 .'" style="visibility: hidden;">
+                    <input type="text" name="2fecha" value="' . $fecha2 .'" style="visibility: hidden;">
                     <center>
                         <h3 class="title">Resultados para la búsqueda</h3><br>
                         <table>
@@ -336,106 +362,30 @@
                                 <th>Cargo</th>
                                 <th>EPS</th>
                                 <th>ARL</th>
-                            </tr>
-                            <tr>
-                                <form action="./obras.php" method="post">
+                            </tr>';
+
+                            while ($row = mysqli_fetch_assoc($queryObra)) {
+                                echo'
+                                <tr>
                                     <td><input type="text" class="texto" name="nombreObra" id="nombreObra" value="' . $row['nombreObra'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="ciudadObra" id="ciudadObra" value="' . $row['ciudadObra'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="fechaInicio" id="fechaInicio" value="' . $row['fechaInicio'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="docAspirante" id="docAspirante" value="' . $row['docAspirante'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="nombres" id="nombres" value="' . $row['PnombreAspirante'] . " " . $row['SnombreAspirante'] . " "  . $row['PapellidoAspirante'] . " "  . $row['SapellidoAspirante'] . '" disabled></td>
-                                    <td><input type="text" class="texto" name="eps" id="eps" value="' . $row['tipoCargoDesp'] . '" disabled></td>
+                                    <td><input type="text" class="texto" name="tipoCargo" id="tipoCargo" value="' . $row['tipoCargoDesp'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="eps" id="eps" value="' . $row['eps'] . '" disabled></td>
                                     <td><input type="text" class="texto" name="arl" id="arl" value="' . $row['arl'] . '" disabled></td>
-                                </form>
-                            </tr>
-                        </table>
-                        </center>
-                </section>
+                                </tr>';
+                            }
+        
+                    echo'</table>
+                    </center>
+                    <div class="download">
+                        <p>Descargar </p>
+                        <input type="submit" name="descargar" value="&#x1f4e5">
+                    </div>
+                </form>
             </section>
-            ';
-        }
-    }
-
-    //Función para generar PDF
-    function dPDF($conn) {
-
-        /* require '../../../php/pdfLibreria/fpdf.php';
-
-        //Inicio clase del pdf
-        class PDF extends FPDF {
-                        
-            //Cabecera del PDF
-            function header() {
-                // Arial bold 12
-                $this->SetFont('Arial','B',12);
-                // Move to the right
-                $this->Cell(50);
-                // Title
-                $this->Cell(50,20,'Información de la obras del trabajador',0,1,'C');
-                // Line break
-                $this->Ln(0);
-            }
-
-            function SetStyle($tag, $enable) {
-                // Modificar estilo y escoger la fuente correspondiente
-                $this->$tag += ($enable ? 1 : -1);
-                $style = '';
-                foreach(array('B', 'I', 'U') as $s){
-                    if($this->$s>0)
-                        $style .= $s;
-                }
-                $this->SetFont('',$style);
-            }
-        }
-
-        $dato = $_POST['docAspirante'];
-        $consulta = "SELECT contrato.nombreObra, contrato.fechaInicio, contrato.fechaFin, aspirante.docAspirante,
-        aspirante.PnombreAspirante, aspirante.SnombreAspirante, aspirante.PapellidoAspirante, aspirante.SapellidoAspirante,
-        contrato.ciudadObra, aspirante.eps, aspirante.arl FROM contrato INNER JOIN aspirante
-        ON contrato.docAspirante = aspirante.docAspirante WHERE aspirante.docAspirante = '$dato'";
-    
-        $resul = mysqli_query($conn, $consulta);
-
-        //Generar nuevo PDF    
-        $pdf = new PDF('P','mm','A4');
-        //Definición de márgenes del pdf
-        $pdf->SetLeftMargin(30);
-        $pdf->SetRightMargin(30);
-        //Pronombres de las páginas
-        $pdf->AliasNbPages();
-        //Agregación de páginas
-        $pdf->AddPage();
-        //Definición de caligrafía, negrilla y tamaño
-        $pdf->SetFont('Arial','',11);
-
-        while ($row = mysqli_fetch_assoc($resul)){
-    
-            $pdf->Cell(75,8, 'Nombre de la Obra', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['nombreObra'], 1, 1, 'C', 0);
-
-            $pdf->Cell(75,8, 'Fecha de inicio', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['fechaInicio'], 1, 1, 'C', 0);
-            
-            $pdf->Cell(75,8, 'Fecha de finalización', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['fechaFin'], 1, 1, 'C', 0);
-            
-            $pdf->Cell(75,8, 'N° Documento', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['docAspirante'], 1, 1, 'C', 0);
-
-            $pdf->Cell(75,8, 'Nombres y Apellidos', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . " " . $row['SapellidoAspirante'], 1, 1, 'C', 0);
-
-            $pdf->Cell(75,8, 'Ciudad', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['ciudadObra'], 1, 1, 'C', 0);  
-
-            $pdf->Cell(75,8, 'EPS', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['eps'], 1, 1, 'C', 0);  
-
-            $pdf->Cell(75,8, 'ARL', 1, 0, 'C', 0);
-            $pdf->Cell(75,8, $row['arl'], 1, 1, 'C', 0); 
-        }
-    
-        $pdf -> Output();*/
+        </section>';
     }
 ?>
