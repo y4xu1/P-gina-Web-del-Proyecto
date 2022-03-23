@@ -207,9 +207,6 @@
                     if (isset($_POST['buscar'])) {
                         busq($conn);
                     }
-                    /* else if (isset($_POST['descargar'])) {
-                        dPDF($conn);
-                    } */
                 ?>
 
                 <center>

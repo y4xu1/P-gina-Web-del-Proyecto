@@ -108,7 +108,7 @@
                                         <div id="titulo">
                                             <center>
                                                 <img src="../../Imagenes/otros logos/disserLogo.jpg" class="logoTrascendental" alt="logoTrascendental">';
-                                        echo '  <h2>Contrato Individual de Trabajo a ' . $row['tipoContrato'] . '</h2>';
+                                        echo '  <h2>CONTRATO INDIVIDUAL DE TRABAJO A ' . $row['tipoContrato'] . '</h2>';
                                     echo '  </center>
                                         </div>
                                     </section>
@@ -242,7 +242,7 @@
                         //Cabecera del PDF
                         function header() {
                             // Logo
-                            $this->Image('../../Imagenes/logoProyect/Logo_Principal.png',25,9,20);
+                            $this->Image('../../Imagenes/otros logos/disserLogo.jpg',10,9,20);
                             // Arial bold 12
                             $this->SetFont('Arial','B',12);
                             // Move to the right
@@ -323,7 +323,7 @@
                             // Arial italic 8
                             $this->SetFont('Arial','',8);
                             // Page number
-                            $this->Cell(0,10,utf8_decode('Página ').$this->PageNo(),0,0,'C');
+                            $this->Cell(0,10, utf8_decode ('Página ').$this->PageNo(),0,0,'C');
                         }
                     }
                 
@@ -349,62 +349,62 @@
                 
                     while ($row = mysqli_fetch_assoc($resul)){
                 
-                        $pdf->Cell(75,8, 'Tipo de Contrato', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['tipoContrato'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Tipo de Contrato'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ($row['tipoContrato']), 1, 1, 'C', 0);
                         
-                        $pdf->Cell(75,8, 'Nombre del Empleador', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, 'Disser Ingenieria S.A.S', 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Nombre del Empleador'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Disser Ingenieria S.A.S'), 1, 1, 'C', 0);
                         
-                        $pdf->Cell(75,8, 'NIT', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, '830.032.688 - 5', 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('NIT'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('830.032.688 - 5'), 1, 1, 'C', 0);
                         
-                        $pdf->Cell(75,8, 'Domicilio del Empleador', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, 'Calle 169 N 20-06 Piso 2', 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Domicilio del Empleador'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Calle 169 N° 20 - 06 Piso 2'), 1, 1, 'C', 0);
                         
-                        $pdf->Cell(75,8, 'Nombre del Trabajador', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . " " . $row['SapellidoAspirante'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Nombre del Trabajador'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ($row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . " " . $row['SapellidoAspirante']), 1, 1, 'C', 0);
                 
-                        $pdf->Cell(75,8, 'Cedula', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['docAspirante'] . ' de ' . $row['ciudad'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Cedula'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ($row['docAspirante'] . ' de ' . $row['ciudad']), 1, 1, 'C', 0);
                 
-                        $pdf->Cell(75,8, 'Direccion del Trabajador', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['direccionResidencia'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Dirección del Trabajador'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ($row['direccionResidencia']), 1, 1, 'C', 0);
                         
-                        $pdf->Cell(75,8, 'Telefono', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['telefonoContacto'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Teléfono'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ($row['telefonoContacto']), 1, 1, 'C', 0);
                 
-                        $pdf->Cell(75,8, 'Cargo', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['tipoCargoDesp'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Cargo'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ($row['tipoCargoDesp']), 1, 1, 'C', 0);
                 
-                        $pdf->Cell(75,8, 'Salario', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['salario'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Salario'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('$' . $row['salario']), 1, 1, 'C', 0);
                 
-                        $pdf->Cell(75,8, 'Prestaciones', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['valorPrestaciones'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Prestaciones'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('$' . $row['valorPrestaciones']), 1, 1, 'C', 0);
                 
-                        $pdf->Cell(75,8, 'Forma de Pago', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, 'Mensual', 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Forma de Pago'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Mensual'), 1, 1, 'C', 0);
                 
-                        $pdf->Cell(75,8, 'Fecha de Ingreso', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['fechaInicio'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Fecha de Ingreso'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ($row['fechaInicio']), 1, 1, 'C', 0);
                 
-                        $pdf->Cell(75,8, 'Nombre de la Obra', 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Nombre de la Obra'), 1, 0, 'C', 0);
                         $pdf->Cell(75,8, $row['nombreObra'], 1, 1, 'C', 0);
                 
-                        $pdf->Cell(75,8, 'Ciudad de la Obra', 1, 0, 'C', 0);
-                        $pdf->Cell(75,8, $row['ciudadObra'], 1, 1, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ('Ciudad de la Obra'), 1, 0, 'C', 0);
+                        $pdf->Cell(75,8, utf8_decode ($row['ciudadObra']), 1, 1, 'C', 0);
                         
                         //Salto de línea
                         $pdf->ln(10);
                 
-                        $html = 'Entre los suscritos a saber <b>de una parte, DISSER INGENIERIA S.A.S.</b>, sociedad de tipo comercial, legalmente constituida, identificada con el 
-    <b>NIT. 830.032.688 - 5</b>, tal como consta en su correspondiente certificado de existencia y representacion, expedido por la Camara de Comercio de Bogota, con domicilio en dicha
-    ciudad, actuando en el presente contrato a traves de su representante legal Ing. <b>Andres Emilio Nova Garcia,</b> mayor de edad, con domicilio y residencia en la ciudad de Bogota,
-    identificado con la C.C. No. <b>7222162 de Duitama</b>, quien en adelante y para los efectos de este contrato se denominara <b>EL EMPLEADOR</b> y, de otra,
-    <b>' . $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante'] . '</b>, igualmente mayor de edad, domiciliado
-    y residenciado en la ciudad de <b>' . $row['ciudad'] . '</b> identificado con la C.C. No. <b>' . $row['docAspirante'] . ' de ' . $row['ciudad'] .'</b>, quien en adelante y para los
-    efectos de este <b>otro si</b> a este contrato se denominara <b>EL TRABAJADOR</b>, hemos acordado un cambio de proyecto
-    para ' . $row['nombreObra'] . ' en la ciudad de '. $row['ciudadObra'] . ' a partir del ' . $row['fechaInicio'] . '.';
+                        $html = utf8_decode ('Entre los suscritos a saber <b>de una parte, DISSER INGENIERIA S.A.S.</b>, sociedad de tipo comercial, legalmente constituida, identificada con el
+<b>NIT. 830.032.688 - 5</b>, tal como consta en su correspondiente certificado de existencia y representación, expedido por la Cámara de Comercio de Bogotá, con domicilio en dicha
+ciudad, actuando en el presente contrato a través de su representante legal Ing. <b>Andres Emilio Nova García,</b> mayor de edad, con domicilio y residencia en la ciudad de Bogotá,
+identificado con la C.C. No. <b>7222162 de Duitama</b>, quien en adelante y para los efectos de este contrato se denominará <b>EL EMPLEADOR</b> y, de otra,
+<b>' . $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante'] . '</b>, igualmente mayor de edad, domiciliado
+y residenciado en la ciudad de <b>' . $row['ciudad'] . '</b> identificado con la C.C. No. <b>' . $row['docAspirante'] . ' de ' . $row['ciudad'] .'</b>, quien en adelante y para los
+efectos de este <b>otro si</b> a este contrato se denominará <b>EL TRABAJADOR</b>, hemos acordado un cambio de proyecto
+para ' . $row['nombreObra'] . ' en la ciudad de '. $row['ciudadObra'] . ' a partir del ' . $row['fechaInicio'] . '.');
                 
                         //Impresión del html || Variable $html
                         $pdf->WriteHTML($html);
@@ -422,13 +422,13 @@
                             //DERECHA
                             $pdf->Cell(75,20, '', 0, 1, 'C', 0);
                             //IZQUIERDA
-                            $pdf->Cell(75,4, 'Andres Emilio Nova Garcia', 0, 0, 'C', 0);
+                            $pdf->Cell(75,4, utf8_decode ('Andres Emilio Nova García'), 0, 0, 'C', 0);
                             //DERECHA
-                            $pdf->Cell(75,4, $row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante'], 0, 1, 'C', 0);
+                            $pdf->Cell(75,4, utf8_decode ($row['PnombreAspirante'] . ' ' . $row['SnombreAspirante'] . ' ' . $row['PapellidoAspirante'] . ' ' . $row['SapellidoAspirante']), 0, 1, 'C', 0);
                             //IZQUIERDA
-                            $pdf->Cell(75,4, 'C.C. No. 7222162 de Duitama', 0, 0, 'C', 0);
+                            $pdf->Cell(75,4, utf8_decode ('C.C. No. 7222162 de Duitama'), 0, 0, 'C', 0);
                             //DERECHA
-                            $pdf->Cell(75,4, 'C.C. No. ' . $row['docAspirante'] . ' de ' . $row['ciudad'], 0, 1, 'C', 0);
+                            $pdf->Cell(75,4, utf8_decode ('C.C. No. ' . $row['docAspirante'] . ' de ' . $row['ciudad']), 0, 1, 'C', 0);
                     }
                 
                     $pdf -> Output();

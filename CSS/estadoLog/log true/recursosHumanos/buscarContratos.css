@@ -56,6 +56,7 @@ body {
 .datos th, .datos td {
     padding: 1.5% 2%;
     border: 2px solid black;
+    text-align: center;
 }
 /* terminos del contrato */
 .parrafoC {
