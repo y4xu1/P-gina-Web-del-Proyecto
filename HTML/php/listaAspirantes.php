@@ -30,8 +30,8 @@ function perfilAspirante ($conn) {
     //Contenido del perfil del aspirante
     echo "<section class='Perfil_Aspirante'>";
       echo "<section class='Foto_Perfil'>";
-      //echo "" . $lista['fotoAspirante'] . "";
-      echo "<img src='../../../../Imagenes/otros logos/Logo_Usuario.png' alt='Logo_Usuario' class='Logo_Usuario'>";
+        //echo "" . $lista['fotoAspirante'] . "";
+        echo "<img src='../../../../Imagenes/otros logos/Logo_Usuario.png' alt='Logo_Usuario' class='Logo_Usuario'>";
       echo "</section>";
       echo "<section class='Documentos_Aspirante'>";
         echo "<p><a href='../aspirantes/Perfil_Aspirante.html' name='aspName'>" . $lista['PnombreAspirante'] . " " . $lista['SnombreAspirante'] . " " . $lista['PapellidoAspirante'] . " " . $lista['SapellidoAspirante'] . "</a></p>";
@@ -92,10 +92,10 @@ function busqAspirante($conn) {
 
   while ($row = mysqli_fetch_array($fQuery)) {
       //Contenido del perfil del aspirante
-      echo "<section class='Perfil_Aspirante'>";
+    echo "<section class='Perfil_Aspirante'>";
       echo "<section class='Foto_Perfil'>";
-      //echo "" . $lista['fotoAspirante'] . "";
-      echo "<img src='../../../../Imagenes/otros logos/Logo_Usuario.png' alt='Logo_Usuario' class='Logo_Usuario'>";
+        //echo "" . $lista['fotoAspirante'] . "";
+        echo "<img src='../../../../Imagenes/otros logos/Logo_Usuario.png' alt='Logo_Usuario' class='Logo_Usuario'>";
       echo "</section>";
       echo "<section class='Documentos_Aspirante'>";
         echo "<p><a href='../aspirantes/Perfil_Aspirante.html' name='aspName'>" . $row['PnombreAspirante'] . " " . $row['SnombreAspirante'] . " " . $row['PapellidoAspirante'] . " " . $row['SapellidoAspirante'] . "</a></p>";
