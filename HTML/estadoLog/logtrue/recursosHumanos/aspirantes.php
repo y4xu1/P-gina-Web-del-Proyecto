@@ -16,13 +16,15 @@
         <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
     </head>
     <body>
+
         <!-- Función de cerrar sesión -->
         <article class='logOut'>
             <a href="../../../php/cerrarSesion.php" class='btn_logOut'>
                 <img src="../../../../Imagenes/otros logos/quit.png" alt="Log_Out_Symbol" class='logOut_icon'>
             </a>
         </article>
-<!-- Menú y submenú de herramientas -->
+
+        <!-- Menú y submenú de herramientas -->
         <header>
             <section class="Barra_Navegacion">
                 <section class="Inicio">
@@ -39,33 +41,9 @@
                     </ul>
                 </nav>
             </section>
-            <!-- Submenú -->
-            <!-- <div id="Barra_Herramientas">
-                <ul class="Herramientas">
-                    <li id="buscar">
-                        <form action="./aspirantes.php" method="POST">
-                            <div>
-                                <input type="text" name="docAspirante" class="" placeholder="Buscar">
-                                <input type="submit" name="btnbuscador" value="&#x1f50d" style="background:rgb(255, 255, 255,0.2);">
-                                <?php
-                                    if (ISSET($_POST['btnbuscador'])) {
-                                        echo '<input type="submit" name="listAsp" value="↩️" style="background:rgb(255, 255, 255,0.2);">';
-                                    }
-                                ?>
-                            </div>
-                        </form></br>
-                    </li>
-                    <li><a>Filtro</a>
-                        <ul>
-                            <li><a>Mas Reciente</a></li>
-                            <li><a>Perfil Completo</a></li>
-                            <li><a>Perfil Incompleto</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div> -->
         </header>
-<!--Barra lateral desplegable con función de las notificaciones -->
+
+        <!--Barra lateral desplegable con función de las notificaciones -->
         <aside>
             <img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
             <section class="caja_notificaciones">
@@ -112,12 +90,16 @@
             </div> -->
             <form action="./aspirantes.php" method="post">
                 <input class="text" type="text" name="docAspirante" id="numDoc" placeholder="Buscar aspirante">
-                <input class="button" type="submit" name="vContrato" value="&#x1f50d">
+                <input class="button" type="submit" name="btnbuscador" value="&#x1f50d">
+                <?php
+                    if (ISSET($_POST['btnbuscador'])) {
+                        echo '<input type="submit" name="listAsp" value="↩️" style="background:rgb(255, 255, 255,0.2);">';
+                    }
+                ?>
             </form>
         </div>
 
     <!-- Listado de aspirantes -->
-
         <section class="contenido">
             
             <!-- Llamado de función del listado de los aspirantes (Función principal) -->
@@ -125,9 +107,9 @@
                 if (ISSET($_POST['btnbuscador'])){
                     busqAspirante($conn);
                 }
-                else if (ISSET($POST['listAsp'])){
+                /* else if (ISSET($POST['listAsp'])){
                     perfilAspirante($conn);
-                }
+                } */
                 else {
                     perfilAspirante($conn);
                 }
@@ -155,26 +137,3 @@
         </footer>
     </body>
 </html>
-
-                <!-- <section class="Perfil_Aspirante">
-                <section class="Foto_Perfil" name=''>
-                    <img src="../../../../Imagenes/otros logos/Logo_Usuario.png" alt="Logo_Usuario" class="Logo_Usuario">
-                </section>
-                <section class="Documentos_Aspirante">
-                    <p><a href='../aspirantes/Perfil_Aspirante.html' name='aspName'>Nombre Aspirante</a></p>
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Curriculum" id="Documento_1P">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado de Alturas">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Judicial">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Penal">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Certificado Disciplinario" id="Documento_1P">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Resultados Médicos">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Carnet de Vacunación Covid-19">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Referencias Personales">
-                    <input type="submit" name="Boton_Documento" class="Boton_Documento" value="Referencias Laborales" id="Documento_1P">
-                    <input class="botons" type="submit" name="Bloqueo" value="Bloquear" id="Botón_Bloqueo">
-                </section>
-                <section class="Comentarios">
-                    <textarea class="controls" rows="8.5" name="comentario" placeholder="Agregar un comenterio..." id="Comentario"></textarea>
-                    <input class="botons" type="submit" name="Botón_Envío" value="Enviar" id="Botón_Envío">
-                </section>
-                </section> -->
