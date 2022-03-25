@@ -7,15 +7,30 @@
     #Insertar a la base de datos los datos ingresados en cada campo del formulario.
 
     function insertar ($conn){
-        
+        $Nombres=$_POST["Nombres"];
         $docA=$_POST["docAspirante"];
-        $idFormulario=$_POST["idFormulario"];
-        $tipoF=$_POST["tipoFormulario"]; 
-        $fechaF=$_POST["fechaFormulario"]; 
-        $docRecHumS=$_POST["docRecHum"]; 
-        $archivoF=$_POST["archivoFormulario"]; 
+        $cargo=$_POST["Cargo"];
+        $proceso=$_POST["Proceso"];
+        $fechaE=$_POST["fechaEntrega"];
+        $casco=$_POST["Casco"];
+        $overol=$_POST["Overol"];
+        $botasMaterial["botasMaterial"];
+        $botasCaucho=$_POST["botasCaucho"];
+        $guantesCarnaza=$_POST["guantesCarnaza"];
+        $guantesVaqueta=$_POST["guantesVaqueta"];
+        $guantesNitrilo=$_POST["guantesNitrilo"];
+        $protAuditivo=$_POST["protAuditivo"];
+        $protAuditivoCopa=$_POST["protAuditivoCopa"];
+        $Tapabocas=$_POST["Tapabocas"];
+        $Gafas=$_POST["Gafas"];
+        $Barbuquejo=$_POST["Barbuquejo"];
+        $docRecHum=$_POST["docRecHum"];
+        $firmaResponsable=$_POST["firmaResponsable"];
+        $firmaTrabajador=$_POST["firmaTrabajador"];
+        $fechaFormulario=$_POST["fechaFormulario"];
 
-        $query_subirDatos= "INSERT INTO formulario (idFormulario,tipoFormulario,archivoFormulario,fechaFormulario,docRecHum,docAspirante) VALUES ('$idFormulario','$tipoF','$archivoF','$fechaF','$docRecHumS','$docA')";
+
+        $query_subirDatos= "INSERT INTO formulario_dotacion (nombresCompletos,docAspirante,) VALUES ('$Nombres','$docA','$cargo','$proceso','$fechaE','$casco','$overol','$botasMaterial','$botasCaucho','$guantesCarnaza','')";
         mysqli_query($conn, $query_subirDatos);
 
         echo "<script> alert('El formulario de dotación fue cargado correctamente.'); window.location='../estadoLog/logtrue/recursosHumanos/formularios/dotacion.html' </script>";

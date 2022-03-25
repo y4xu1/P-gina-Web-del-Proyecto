@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-03-2022 a las 23:54:46
+-- Tiempo de generación: 25-03-2022 a las 16:31:39
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -130,16 +130,16 @@ CREATE TABLE `contrato` (
 --
 
 INSERT INTO `contrato` (`idContrato`, `tipoContrato`, `docAspirante`, `docRecHum`, `tipoCargoDesp`, `salario`, `valorPrestaciones`, `fechaInicio`, `nombreObra`, `ciudadObra`, `firma`, `estadoContrato`) VALUES
-(1001, 'TERMINO INDEFINIDO', 34532270, 15133916, 'Obrero', 1500000, 1000000, '2021-01-06', 'Amarilo', ' Bogotá', '', 1),
-(1002, 'TERMINO FIJO', 34564978, 76308613, 'Operario de maquina pesada', 1200000, 300000, '2021-05-07', 'Colpatria', ' Medellín', '', 1),
-(1003, 'OBRA A LABOR ', 41733718, 76415948, 'Operario de maquinas', 3000000, 1000000, '2021-11-23', 'Grupo éxito', ' Barranquilla', '', 1),
-(1004, 'TERMINO INDEFINIDO', 52729563, 97414524, 'Operario de maquinas', 2000000, 1300000, '2021-03-04', 'Konecta cloud', ' Bogotá', '', 1),
-(1005, 'TERMINO FIJO', 67609436, 98176120, 'Operario de maquina pesada', 2000000, 1100000, '2021-06-09', 'Colsubsidio', ' Barranquilla', '', 1),
-(1006, 'OBRA A LABOR ', 1000620101, 1000098763, 'Operario de maquinas', 1550000, 1000000, '2022-03-10', 'Avianca', ' Cota', '', 1),
-(1007, 'TERMINO INDEFINIDO', 1053963400, 1017896301, 'Obrero', 4000000, 2000000, '2022-05-03', 'Amarilo', ' Cota', '', 1),
-(1008, 'TERMINO FIJO', 1054780841, 1942371104, 'Operario de maquina pesada', 4000000, 1000000, '2022-07-14', 'Colpatria', ' Medellín', '', 1),
-(1009, 'OBRA A LABOR ', 1869300472, 2745086420, 'Obrero', 1550000, 2000000, '2022-10-12', 'Grupo éxito', ' Barranquilla', '', 1),
-(1010, 'TERMINO INDEFINIDO', 1986300145, 3452918100, 'Obrero', 5000000, 3000000, '2022-11-08', 'Konecta cloud', ' Bogotá', '', 1);
+(1001, 'TERMINO INDEFINIDO', 34532270, 15133916, 'Obrero', 1500000, 1000000, '2021-01-06', 'Amarilo', 'Bogotá', '', 1),
+(1002, 'TERMINO FIJO', 34564978, 76308613, 'Operario de maquina pesada', 1200000, 300000, '2021-05-07', 'Colpatria', 'Medellín', '', 1),
+(1003, 'OBRA A LABOR ', 41733718, 76415948, 'Operario de maquinas', 3000000, 1000000, '2021-11-23', 'Grupo éxito', 'Barranquilla', '', 1),
+(1004, 'TERMINO INDEFINIDO', 52729563, 97414524, 'Operario de maquinas', 2000000, 1300000, '2021-03-04', 'Konecta cloud', 'Bogotá', '', 1),
+(1005, 'TERMINO FIJO', 67609436, 98176120, 'Operario de maquina pesada', 2000000, 1100000, '2021-06-09', 'Colsubsidio', 'Barranquilla', '', 1),
+(1006, 'OBRA A LABOR ', 1000620101, 1000098763, 'Operario de maquinas', 1500000, 1000000, '2022-03-10', 'Avianca', 'Cota', '', 1),
+(1007, 'TERMINO INDEFINIDO', 1053963400, 1017896301, 'Obrero', 4000000, 2000000, '2022-05-03', 'Amarilo', 'Cota', '', 1),
+(1008, 'TERMINO FIJO', 1054780841, 1942371104, 'Operario de maquina pesada', 4000000, 1000000, '2022-07-14', 'Colpatria', 'Medellín', '', 1),
+(1009, 'OBRA A LABOR ', 1869300472, 2745086420, 'Obrero', 1550000, 2000000, '2022-10-12', 'Grupo éxito', 'Barranquilla', '', 1),
+(1010, 'TERMINO INDEFINIDO', 1986300145, 3452918100, 'Obrero', 5000000, 3000000, '2022-11-08', 'Konecta cloud', 'Bogotá', '', 1);
 
 -- --------------------------------------------------------
 
@@ -182,34 +182,58 @@ INSERT INTO `documentos` (`idDocumentos`, `docAspirante`, `curriculum`, `certifi
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `formulario`
+-- Estructura de tabla para la tabla `formulario_dotacion`
 --
 
-CREATE TABLE `formulario` (
-  `idFormulario` double NOT NULL,
-  `tipoFormulario` varchar(60) NOT NULL,
-  `archivoFormulario` blob NOT NULL,
-  `fechaFormulario` date NOT NULL,
-  `docRecHum` double NOT NULL,
+CREATE TABLE `formulario_dotacion` (
+  `idFormularioD` double NOT NULL,
+  `nombresCompletos` varchar(60) NOT NULL,
   `docAspirante` double NOT NULL,
-  `estadoFormularios` tinyint(1) DEFAULT NULL
+  `docRecHum` double NOT NULL,
+  `cargo` varchar(60) NOT NULL,
+  `pct` varchar(60) NOT NULL,
+  `fechaEntrega` date NOT NULL,
+  `casco` int(10) NOT NULL,
+  `overol` int(10) NOT NULL,
+  `botasMaterial` int(10) NOT NULL,
+  `botasCaucho` int(10) NOT NULL,
+  `guantesCarnaza` int(10) NOT NULL,
+  `guantesCaucho` int(10) NOT NULL,
+  `guantesVaqueta` int(10) NOT NULL,
+  `guantesNitrilo` int(10) NOT NULL,
+  `protAuditivo` int(10) NOT NULL,
+  `protAuditivoCopa` int(10) NOT NULL,
+  `tapabocas` int(10) NOT NULL,
+  `gafas` int(10) NOT NULL,
+  `barbuquejo` int(10) NOT NULL,
+  `firmaRRHH` blob NOT NULL,
+  `firmaTrabajador` blob NOT NULL,
+  `fechaFormulario` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Volcado de datos para la tabla `formulario`
+-- Estructura de tabla para la tabla `formulario_induccion`
 --
 
-INSERT INTO `formulario` (`idFormulario`, `tipoFormulario`, `archivoFormulario`, `fechaFormulario`, `docRecHum`, `docAspirante`, `estadoFormularios`) VALUES
-(1, 'Formulario Dotación', '', '2021-06-16', 15133916, 34532270, 1),
-(2, 'Formulario Dotación', '', '2021-08-07', 76308613, 34564978, 1),
-(3, 'Formulario Dotación', '', '2021-11-10', 76415948, 41733718, 1),
-(4, 'Formulario Dotación', '', '2021-11-04', 97414524, 52729563, 1),
-(5, 'Formulario Dotación', '', '2021-06-13', 98176120, 67609436, 1),
-(6, 'Formulario Inducción', '', '2022-01-05', 1000098763, 1000620101, 1),
-(7, 'Formulario Inducción', '', '2022-03-23', 1017896301, 1053963400, 1),
-(8, 'Formulario Inducción', '', '2022-06-08', 1942371104, 1054780841, 1),
-(9, 'Formulario Inducción', '', '2022-08-03', 2745086420, 1869300472, 1),
-(10, 'Formulario Inducción', '', '2022-11-30', 3452918100, 1986300145, 1);
+CREATE TABLE `formulario_induccion` (
+  `idFormularioInduc` double NOT NULL,
+  `objetivo` varchar(500) NOT NULL,
+  `fecha` date NOT NULL,
+  `hora` time NOT NULL,
+  `lugar` varchar(60) NOT NULL,
+  `oficinaPrincipal` varchar(60) NOT NULL,
+  `responsables` varchar(60) NOT NULL,
+  `cargoResponsable` varchar(60) NOT NULL,
+  `tema` varchar(500) NOT NULL,
+  `nombresCompletos` varchar(60) NOT NULL,
+  `cargoAspirante` varchar(60) NOT NULL,
+  `docAspirante` double NOT NULL,
+  `docRecHum` double NOT NULL,
+  `firmaAspirante` blob NOT NULL,
+  `firmaResponsable` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -333,12 +357,22 @@ ALTER TABLE `documentos`
   ADD KEY `docAspirante` (`docAspirante`);
 
 --
--- Indices de la tabla `formulario`
+-- Indices de la tabla `formulario_dotacion`
 --
-ALTER TABLE `formulario`
-  ADD PRIMARY KEY (`idFormulario`),
+ALTER TABLE `formulario_dotacion`
+  ADD PRIMARY KEY (`idFormularioD`),
+  ADD KEY `docAspirante` (`docAspirante`),
+  ADD KEY `docRecHum` (`docRecHum`);
+
+--
+-- Indices de la tabla `formulario_induccion`
+--
+ALTER TABLE `formulario_induccion`
+  ADD PRIMARY KEY (`idFormularioInduc`),
+  ADD KEY `docAspirante` (`docAspirante`),
   ADD KEY `docRecHum` (`docRecHum`),
-  ADD KEY `docAspirante` (`docAspirante`);
+  ADD KEY `docRecHum_2` (`docRecHum`),
+  ADD KEY `docRecHum_3` (`docRecHum`);
 
 --
 -- Indices de la tabla `recursoshumanos`
@@ -370,10 +404,16 @@ ALTER TABLE `documentos`
   MODIFY `idDocumentos` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT de la tabla `formulario`
+-- AUTO_INCREMENT de la tabla `formulario_dotacion`
 --
-ALTER TABLE `formulario`
-  MODIFY `idFormulario` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `formulario_dotacion`
+  MODIFY `idFormularioD` double NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `formulario_induccion`
+--
+ALTER TABLE `formulario_induccion`
+  MODIFY `idFormularioInduc` double NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -405,11 +445,11 @@ ALTER TABLE `documentos`
   ADD CONSTRAINT `documentos_ibfk_1` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`);
 
 --
--- Filtros para la tabla `formulario`
+-- Filtros para la tabla `formulario_dotacion`
 --
-ALTER TABLE `formulario`
-  ADD CONSTRAINT `formulario_ibfk_1` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`),
-  ADD CONSTRAINT `formulario_ibfk_2` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`);
+ALTER TABLE `formulario_dotacion`
+  ADD CONSTRAINT `docAspirante` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`),
+  ADD CONSTRAINT `docRecHum` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`);
 
 --
 -- Filtros para la tabla `recursoshumanos`

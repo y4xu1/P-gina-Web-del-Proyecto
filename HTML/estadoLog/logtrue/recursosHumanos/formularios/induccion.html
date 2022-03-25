@@ -87,7 +87,7 @@
                     </tr>
                 </table>
                 <table>
-                    <thead>
+                    <!-- <thead>
                         <tr>
                             <th>Código único del formulario</th>
                             <th>Tipo del formulario</th>
@@ -112,11 +112,11 @@
                                 <input class="control" type="date" name="fechaFormulario">
                             </td>
                         </tr>
-                    </tbody>
+                    </tbody> -->
                 </table>
                 <table id="Objetivo">
                     <tr>
-                        <th>OBJETIVO:</th>
+                        <th>OBJETIVO</th>
                     </tr>
                     <tr>
                         <td><input class="control" type="text" name="Objetivos" id="Objetivos" placeholder="CAPACITAR AL TRABAJADOR ACERCA DE SU PERFIL DE CARGO COMO AYUDANTE DE OBRA"></td>
@@ -173,7 +173,23 @@
                         <td><input class="control" type="text" name="docAspirante" id="Cédula" placeholder="9999999999"></td>
                         <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
                     </tr>
-                    <tr>
+                    <div id="aggAsp">
+
+                    </div>
+                    <button onclick="aggAsp()">Agregar Participante</button>
+                    <script>
+                        function aggAsp() {
+                            
+                            var aggParticipante = getElementById('aggAsp')
+
+                            document.aggParticipante.outerHTML = '<td><input class="control" type="text" name="Numeros" id="Num" placeholder="1"></td>' +
+                                                                 '<td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Pepito Pérez"></td>' +
+                                                                 '<td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Asistencia"></td>' +
+                                                                 '<td><input class="control" type="text" name="docAspirante" id="Cédula" placeholder="9999999999"></td>' +
+                                                                 '<td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>';
+                        }
+                    </script>
+                    <!-- <tr>
                         <td><input class="control" type="text" name="Numeros" id="Num" placeholder="2"></td>
                         <td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Ingrese el Nombre"></td>
                         <td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Ingrese el Cargo"></td>
@@ -186,7 +202,7 @@
                         <td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Ingrese el Cargo"></td>
                         <td><input class="control" type="text" name="Cédula" id="Cédula" placeholder="Ingrese el Número de la cédula"></td>
                         <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
-                    </tr>
+                    </tr> -->
                   
                 </table>
                 <table id="Firmas">
@@ -195,7 +211,7 @@
                         <th><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></th>
                     </tr>
                 </table>
-                <table>
+                <!-- <table>
                     <tr>
                         <td>
                             <input class="control" type="text" name="docRecHum" placeholder="Número de Identificación de Recursos Humanos">
@@ -204,7 +220,7 @@
                             <input class="control" type="file" name="archivoFormulario">
                         </td>
                     </tr>
-                </table>
+                </table> -->
                     <input class="btn" type="submit" name="sendIndu" id="enviar" value="Insertar Datos">
                     <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
             </section>
