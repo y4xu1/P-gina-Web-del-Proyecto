@@ -86,40 +86,12 @@
                         <th>FORMATO DE INDUCCIÓN</th>
                     </tr>
                 </table>
-                <table>
-                    <!-- <thead>
-                        <tr>
-                            <th>Código único del formulario</th>
-                            <th>Tipo del formulario</th>
-                            <th>Fecha del formulario</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <input class="control" type="text" name="idFormulario" placeholder="Id Formulario">
-                            </td>
-                            <td>
-                                <center>
-                                    <select class="control" name="tipoFormulario">
-                                        <option>Selecione el Tipo de Formulario</option>
-                                        <option value="Formulario Dotación">Formulario Dotación</option>
-                                        <option value="Formulario Inducción">Formulario Inducción</option> 
-                                    </select>
-                                </center>
-                            </td>
-                            <td>
-                                <input class="control" type="date" name="fechaFormulario">
-                            </td>
-                        </tr>
-                    </tbody> -->
-                </table>
                 <table id="Objetivo">
                     <tr>
                         <th>OBJETIVO</th>
                     </tr>
                     <tr>
-                        <td><input class="control" type="text" name="Objetivos" id="Objetivos" placeholder="CAPACITAR AL TRABAJADOR ACERCA DE SU PERFIL DE CARGO COMO AYUDANTE DE OBRA"></td>
+                        <td><input class="control" type="text" name="objetivo" id="objetivo" placeholder="CAPACITAR AL TRABAJADOR ACERCA DE SU PERFIL DE CARGO COMO AYUDANTE DE OBRA"></td>
                     </tr>
                 </table>
                 <table id="Datos">
@@ -130,24 +102,25 @@
                         <th>OFICINA PRINCIPAL</th>
                     </tr>
                     <tr>
-                        <td><input class="control" type="date" name="Fecha" id="Nombres" placeholder="Ingrese la Fecha"></td>
-                        <td><input class="control" type="time" name="Hora" id="Horas" placeholder="Ingrese la Hora"></td>
-                        <td><input class="control" type="text" name="Lugar" id="Lugares" placeholder="Ingrese el lugar"></td>
-                        <td><input class="control" type="text" name="Oficina" id="Oficinas" placeholder="Ingrese la Oficina Principal"></td>
+                        <td><input class="control" type="date" name="fecha" id="fecha"></td>
+                        <td><input class="control" type="time" name="hora" id="hora"></td>
+                        <td><input class="control" type="text" name="lugar" id="lugar" placeholder="Ingrese el lugar"></td>
+                        <td><input class="control" type="text" name="oficinaPrincipal" id="oficinaPrincipal" placeholder="Ingrese la Oficina Principal"></td>
                     </tr>
                 </table>
                 <table id="Responsables">
                     <tr>
                         <th>RESPONSABLE(S):</th>
+                        <th>CEDULA:</th>
                         <th>CARGO:</th>
                     </tr>
                     <tr>
-                        <td><input class="control" type="text" name="Nombres y Apellidos de los Responsables" id="NA_Responsables" placeholder="Johanna Navarrete"></td>
-                        <td><input class="control" type="text" name="Cargo de la persona Responsable" id="Cargo_PR" placeholder="Coordinadora SST"></td>
+                        <td><input class="control" type="text" name="responsables" id="responsables" placeholder="Johanna Navarrete"></td>
+                        <td><input class="control" type="text" name="cargoResponsable" id="cargoResponsable" placeholder="Coordinadora SST"></td>
                     </tr>
                     <tr>
-                        <td><input class="control" type="text" name="Nombres y Apellidos de los Responsables" id="NA_Responsables" placeholder="Nombres y Apellidos del Responsable"></td>
-                        <td><input class="control" type="text" name="Cargo de la persona Responsable" id="Cargo_PR" placeholder="Cargo de la Persona Responsable"></td>
+                        <td><input class="control" type="text" name="responsables" id="responsables" placeholder="Nombres y Apellidos del Responsable"></td>
+                        <td><input class="control" type="text" name="cargoResponsable" id="cargoResponsable" placeholder="Cargo de la Persona Responsable"></td>
                     </tr>
                 </table>
                 <table id="Temas">
@@ -155,7 +128,7 @@
                         <th>TEMA (S):</th>
                     </tr>
                     <tr>
-                        <th><textarea class="control" rows="2" name="Temas" id="Temas" placeholder="OBLIGACIONES Y RESPONSABILIDADES DEL TRABAJADOR, LABORES MANUALES DE LIMPIEZA, MANTENIMIENTO, ADECUACIONES A INSTALACIONES FÍSICAS U OTRAS PARA EL DESARROLLO DE LAS ACTIVIDADES DE CONSTRUCCIÓN, APOYO A OFICIALES DE OBRA Y CUMPLIMIENTO DE METAS EN EL PROYECTO, RESPONSABILIDADES SST, ORDEN Y ASEO, MANUAL DE SANSIONES."></textarea></th>
+                        <th><textarea class="control" rows="2" name="tema" id="tema" placeholder="OBLIGACIONES Y RESPONSABILIDADES DEL TRABAJADOR, LABORES MANUALES DE LIMPIEZA, MANTENIMIENTO, ADECUACIONES A INSTALACIONES FÍSICAS U OTRAS PARA EL DESARROLLO DE LAS ACTIVIDADES DE CONSTRUCCIÓN, APOYO A OFICIALES DE OBRA Y CUMPLIMIENTO DE METAS EN EL PROYECTO, RESPONSABILIDADES SST, ORDEN Y ASEO, MANUAL DE SANSIONES."></textarea></th>
                     </tr>
                 </table>
                 <table id="Datos2">
@@ -167,60 +140,54 @@
                         <th>FIRMA</th>
                     </tr>
                     <tr>
-                        <td><input class="control" type="text" name="Numeros" id="Num" placeholder="1"></td>
-                        <td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Pepito Pérez"></td>
-                        <td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Asistencia"></td>
-                        <td><input class="control" type="text" name="docAspirante" id="Cédula" placeholder="9999999999"></td>
-                        <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
+                        <td><input class="control" type="text" name="numLista" id="numLista" placeholder="1"></td>
+                        <td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Pepito Pérez"></td>
+                        <td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Asistencia"></td>
+                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="9999999999"></td>
+                        <td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
                     </tr>
-                    <div id="aggAsp">
-
+                    <!-- <div id="aggAsp">
                     </div>
-                    <button onclick="aggAsp()">Agregar Participante</button>
+                    
                     <script>
-                        function aggAsp() {
+                        /* function aggAsp() {
                             
                             var aggParticipante = getElementById('aggAsp')
 
-                            document.aggParticipante.outerHTML = '<td><input class="control" type="text" name="Numeros" id="Num" placeholder="1"></td>' +
-                                                                 '<td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Pepito Pérez"></td>' +
-                                                                 '<td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Asistencia"></td>' +
-                                                                 '<td><input class="control" type="text" name="docAspirante" id="Cédula" placeholder="9999999999"></td>' +
-                                                                 '<td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>';
-                        }
+                            document.aggParticipante.outerHTML = '<tr>' +
+                                                                    '<td><input class="control" type="text" name="Numeros" id="Num" placeholder="1"></td>' +
+                                                                    '<td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Pepito Pérez"></td>' +
+                                                                    '<td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Asistencia"></td>' +
+                                                                    '<td><input class="control" type="text" name="docAspirante" id="Cédula" placeholder="9999999999"></td>' +
+                                                                    '<td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>' +
+                                                                 '</tr>';
+                        } */
                     </script>
-                    <!-- <tr>
-                        <td><input class="control" type="text" name="Numeros" id="Num" placeholder="2"></td>
-                        <td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Ingrese el Nombre"></td>
-                        <td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Ingrese el Cargo"></td>
-                        <td><input class="control" type="text" name="" id="Cédula" placeholder="Ingrese el Número de la cédula"></td>
-                        <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
+                    <tr>
+                        <a href="" onclick="aggAsp()">Agregar Participante</a>
+                    </tr> -->
+                    <tr>
+                        <td><input class="control" type="text" name="numLista" id="numLista" placeholder="2"></td>
+                        <td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Ingrese el Nombre"></td>
+                        <td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Ingrese el Cargo"></td>
+                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="Ingrese el Número de la cédula"></td>
+                        <td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
                     </tr>
                     <tr>
-                        <td><input class="control" type="text" name="Numeros" id="Num" placeholder="3"></td>
-                        <td><input class="control" type="text" name="Nombre" id="Nom" placeholder="Ingrese el Nombre"></td>
-                        <td><input class="control" type="text" name="Cargo" id="Carg" placeholder="Ingrese el Cargo"></td>
-                        <td><input class="control" type="text" name="Cédula" id="Cédula" placeholder="Ingrese el Número de la cédula"></td>
-                        <td><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></td>
-                    </tr> -->
+                        <td><input class="control" type="text" name="numLista" id="numLista" placeholder="3"></td>
+                        <td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Ingrese el Nombre"></td>
+                        <td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Ingrese el Cargo"></td>
+                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="Ingrese el Número de la cédula"></td>
+                        <td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
+                    </tr>
                   
                 </table>
                 <table id="Firmas">
                     <tr>
                         <th>FIRMA RESPONSABLE DE LA CAPACITACION</th>
-                        <th><input class="control" type="text" name="Firma" id="Firma" placeholder="Adjunte su firma dígital"></th>
+                        <th><input class="control" type="text" name="firmaResponsable" id="firmaResponsable" placeholder="Adjunte su firma dígital"></th>
                     </tr>
                 </table>
-                <!-- <table>
-                    <tr>
-                        <td>
-                            <input class="control" type="text" name="docRecHum" placeholder="Número de Identificación de Recursos Humanos">
-                        </td>
-                        <td>
-                            <input class="control" type="file" name="archivoFormulario">
-                        </td>
-                    </tr>
-                </table> -->
                     <input class="btn" type="submit" name="sendIndu" id="enviar" value="Insertar Datos">
                     <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
             </section>
