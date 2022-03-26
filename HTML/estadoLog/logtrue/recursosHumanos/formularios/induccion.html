@@ -79,8 +79,8 @@
             </section>
         </aside>
 <!-- Formato de inducción para diligenciar -->
-            <section class="contenido">
-                <form action="../../../../php/formularioInduccion.php" method="POST">
+        <section class="contenido">
+            <form action="../../../../php/formularioInduccion.php" method="POST">
                 <table class="Formato">
                     <tr>
                         <th>FORMATO DE INDUCCIÓN</th>
@@ -110,18 +110,20 @@
                 </table>
                 <table id="Responsables">
                     <tr>
-                        <th>RESPONSABLE(S):</th>
-                        <th>CEDULA:</th>
-                        <th>CARGO:</th>
+                        <th>RESPONSABLE(S)</th>
+                        <th>CEDULA</th>
+                        <th>CARGO</th>
                     </tr>
                     <tr>
                         <td><input class="control" type="text" name="responsables" id="responsables" placeholder="Johanna Navarrete"></td>
+                        <td><input class="control" type="text" name="docRecHum" id="docRecHum" placeholder="33333333"></td>
                         <td><input class="control" type="text" name="cargoResponsable" id="cargoResponsable" placeholder="Coordinadora SST"></td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td><input class="control" type="text" name="responsables" id="responsables" placeholder="Nombres y Apellidos del Responsable"></td>
+                        <td><input class="control" type="text" name="docRecHum" id="docRecHum" placeholder="Número de la cédula del Responsable"></td>
                         <td><input class="control" type="text" name="cargoResponsable" id="cargoResponsable" placeholder="Cargo de la Persona Responsable"></td>
-                    </tr>
+                    </tr> -->
                 </table>
                 <table id="Temas">
                     <tr>
@@ -139,17 +141,126 @@
                         <th>CEDULA</th>
                         <th>FIRMA</th>
                     </tr>
-                    <tr>
-                        <td><input class="control" type="text" name="numLista" id="numLista" placeholder="1"></td>
-                        <td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Pepito Pérez"></td>
-                        <td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Asistencia"></td>
-                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="9999999999"></td>
-                        <td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
+                    <!-- <tr>
+                        <td>
+                            <select class="controls" name="num_Asp" id="numAsp" onchange="numAsp(this.name)">
+                                <!-- <?php
+                                    
+                                    $x=1;
+
+                                    echo '  <option value="">Selecione la cantidad de participantes</option>
+                                            <option value="' . $x . '">' . $x . ' Participante</option>';
+                                    
+                                    x=x++
+
+                                    for ($x == 2; $x<=20; $x++) {
+                                        echo '<option value="' $x . '">' . $x ' Participantes</option>';
+                                    }
+                                ?> -- >
+                                <option value="">Selecione la cantidad de participantes</option>
+                                <option value="1">1 Participante</option>
+                                <option value="2">2 Participantes</option>
+                                <option value="3">3 Participantes</option>
+                                <option value="4">4 Participantes</option>
+                                <option value="5">5 Participantes</option>
+                                <option value="6">6 Participantes</option>
+                                <option value="7">7 Participantes</option>
+                                <option value="8">8 Participantes</option>
+                                <option value="9">9 Participantes</option>
+                                <option value="10">10 Participantes</option>
+                                <option value="11">11 Participantes</option>
+                                <option value="12">12 Participantes</option>
+                                <option value="13">13 Participantes</option>
+                                <option value="14">14 Participantes</option>
+                                <option value="15">15 Participantes</option>
+                                <option value="16">16 Participantes</option>
+                                <option value="17">17 Participantes</option>
+                                <option value="18">18 Participantes</option>
+                                <option value="19">19 Participantes</option>
+                                <option value="20">20 Participantes</option>
+                                <option value="21">21 Participantes</option>
+                                <option value="22">22 Participantes</option>
+                                <option value="23">23 Participantes</option>
+                                <option value="24">24 Participantes</option>
+                            </select>
+                        </td>
                     </tr>
-                    <!-- <div id="aggAsp">
-                    </div>
+                    <style>
+                        #numLista, #nombresCompletos, #cargoAspirante #docAspirante, #firmaAspirante {
+                            visibility: hidden;
+                            position: absolute;
+                        }
+                    </style>
+                    <script>
+                        function numAsp() {
+                            
+                            var cantidadAsp = getElementById('numAsp').value;
+
+                            switch (cantidadAsp) {
+                                
+                                case 1: document.getElementsById('numLista', 'nombresCompletos', 'cargoAspirante', 'docAspirante', 'firmaAspirante').style.visibility =  'visible';
+                                    document.getElementsById('numLista', 'nombresCompletos', 'cargoAspirante', 'docAspirante', 'firmaAspirante').style.position =  'relative';
+                                    break;
+                                case 2: print('<tr>' +
+                                                '<td><input class="control" type="text" name="numLista" id="numLista" value="1" disabled></td>' +
+                                                '<td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Pepito Pérez"></td>' +
+                                                '<td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Asistencia"></td>' +
+                                                '<td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="9999999999"></td>' +
+                                                '<td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>' +
+                                            '</tr>');
+                                    break;
+                                case 3: ;
+                                    break;
+                                case 4: ;
+                                    break;
+                                case 5: ;
+                                    break;
+                                case 6: ;
+                                    break;
+                                case 7: ;
+                                    break;
+                                case 8: ;
+                                    break;
+                                case 9: ;
+                                    break;
+                                case 10: ;
+                                    break;
+                                case 11: ;
+                                    break;
+                                case 12: ;
+                                    break;
+                                case 13: ;
+                                    break;
+                                case 14: ;
+                                    break;
+                                case 15: ;
+                                    break;
+                                case 16: ;
+                                    break;
+                                case 17: ;
+                                    break;
+                                case 18: ;
+                                    break;
+                                case 19: ;
+                                    break;
+                                case 20: ;
+                                    break;
+                                case 21: ;
+                                    break;
+                                case 22: ;
+                                    break;
+                                case 23: ;
+                                    break;
+                                case 24: 
+                                    break;
+                                default: ;
+                                    break;
+                            }
+                        }
+                    </script> -- >
                     
                     <script>
+                        //hay que cambiar los names de los inputs
                         /* function aggAsp() {
                             
                             var aggParticipante = getElementById('aggAsp')
@@ -167,19 +278,26 @@
                         <a href="" onclick="aggAsp()">Agregar Participante</a>
                     </tr> -->
                     <tr>
-                        <td><input class="control" type="text" name="numLista" id="numLista" placeholder="2"></td>
+                        <td><input class="control" type="text" name="numLista" id="numLista" value="1" disabled></td>
+                        <td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Pepito Pérez"></td>
+                        <td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Asistencia"></td>
+                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="9999999999"></td>
+                        <td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
+                    </tr>
+                    <!-- <tr>
+                        <td><input class="control" type="text" name="numLista" id="numLista" value="2" disabled></td>
                         <td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Ingrese el Nombre"></td>
                         <td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Ingrese el Cargo"></td>
-                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="Ingrese el Número de la cédula"></td>
+                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="Ingrese el número de la cédula"></td>
                         <td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
                     </tr>
                     <tr>
-                        <td><input class="control" type="text" name="numLista" id="numLista" placeholder="3"></td>
+                        <td><input class="control" type="text" name="numLista" id="numLista" value="3" disabled></td>
                         <td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Ingrese el Nombre"></td>
                         <td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Ingrese el Cargo"></td>
-                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="Ingrese el Número de la cédula"></td>
+                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="Ingrese el número de la cédula"></td>
                         <td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
-                    </tr>
+                    </tr> -->
                   
                 </table>
                 <table id="Firmas">
@@ -188,10 +306,10 @@
                         <th><input class="control" type="text" name="firmaResponsable" id="firmaResponsable" placeholder="Adjunte su firma dígital"></th>
                     </tr>
                 </table>
-                    <input class="btn" type="submit" name="sendIndu" id="enviar" value="Insertar Datos">
-                    <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
-            </section>
-        </form>
+                <input class="btn" type="submit" name="sendIndu" id="enviar" value="Insertar Datos">
+                <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
+            </form>
+        </section>
 <!-- Información básica de la empresa -->
         <footer class="info_empres">
             <ul>
