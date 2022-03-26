@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-03-2022 a las 16:31:39
+-- Tiempo de generación: 26-03-2022 a las 21:30:40
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `trascendental`
+-- Base de datos: `contratacion`
 --
 
 -- --------------------------------------------------------
@@ -208,7 +208,8 @@ CREATE TABLE `formulario_dotacion` (
   `barbuquejo` int(10) NOT NULL,
   `firmaRRHH` blob NOT NULL,
   `firmaTrabajador` blob NOT NULL,
-  `fechaFormulario` date NOT NULL
+  `fechaFormulario` date NOT NULL,
+  `estadoDotacion` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -232,7 +233,8 @@ CREATE TABLE `formulario_induccion` (
   `docAspirante` double NOT NULL,
   `docRecHum` double NOT NULL,
   `firmaAspirante` blob NOT NULL,
-  `firmaResponsable` blob NOT NULL
+  `firmaResponsable` blob NOT NULL,
+  `estadoInduccion` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -370,9 +372,7 @@ ALTER TABLE `formulario_dotacion`
 ALTER TABLE `formulario_induccion`
   ADD PRIMARY KEY (`idFormularioInduc`),
   ADD KEY `docAspirante` (`docAspirante`),
-  ADD KEY `docRecHum` (`docRecHum`),
-  ADD KEY `docRecHum_2` (`docRecHum`),
-  ADD KEY `docRecHum_3` (`docRecHum`);
+  ADD KEY `docRecHum` (`docRecHum`);
 
 --
 -- Indices de la tabla `recursoshumanos`
@@ -386,34 +386,6 @@ ALTER TABLE `recursoshumanos`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`numIdentificacion`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `citasmedicas`
---
-ALTER TABLE `citasmedicas`
-  MODIFY `numOrden` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT de la tabla `documentos`
---
-ALTER TABLE `documentos`
-  MODIFY `idDocumentos` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT de la tabla `formulario_dotacion`
---
-ALTER TABLE `formulario_dotacion`
-  MODIFY `idFormularioD` double NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `formulario_induccion`
---
-ALTER TABLE `formulario_induccion`
-  MODIFY `idFormularioInduc` double NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -435,8 +407,8 @@ ALTER TABLE `citasmedicas`
 -- Filtros para la tabla `contrato`
 --
 ALTER TABLE `contrato`
-  ADD CONSTRAINT `contrato_ibfk_1` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`),
-  ADD CONSTRAINT `contrato_ibfk_2` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`);
+  ADD CONSTRAINT `contrato_ibfk_1` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`),
+  ADD CONSTRAINT `contrato_ibfk_2` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`);
 
 --
 -- Filtros para la tabla `documentos`
@@ -448,8 +420,15 @@ ALTER TABLE `documentos`
 -- Filtros para la tabla `formulario_dotacion`
 --
 ALTER TABLE `formulario_dotacion`
-  ADD CONSTRAINT `docAspirante` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`),
-  ADD CONSTRAINT `docRecHum` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`);
+  ADD CONSTRAINT `formulario_dotacion_ibfk_1` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`),
+  ADD CONSTRAINT `formulario_dotacion_ibfk_2` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`);
+
+--
+-- Filtros para la tabla `formulario_induccion`
+--
+ALTER TABLE `formulario_induccion`
+  ADD CONSTRAINT `formulario_induccion_ibfk_1` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`),
+  ADD CONSTRAINT `formulario_induccion_ibfk_2` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`);
 
 --
 -- Filtros para la tabla `recursoshumanos`

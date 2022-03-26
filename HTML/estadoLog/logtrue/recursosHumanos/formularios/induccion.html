@@ -278,7 +278,7 @@
                         <a href="" onclick="aggAsp()">Agregar Participante</a>
                     </tr> -->
                     <tr>
-                        <td><input class="control" type="text" name="numLista" id="numLista" value="1" disabled></td>
+                        <td><input class="control" type="number" name="numLista" id="numLista" value="1" minlength="1" maxlength="40"></td>
                         <td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Pepito Pérez"></td>
                         <td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Asistencia"></td>
                         <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="9999999999"></td>
@@ -298,7 +298,15 @@
                         <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="Ingrese el número de la cédula"></td>
                         <td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
                     </tr> -->
-                  
+                  <!-- 
+                        for a==1; a<=30; a++
+                        <td><input class="control" type="number" name="numLista" id="numLista" value="' + a + '" minlength="1" maxlength="40" disabled></td>
+                        <td><input class="control" type="text" name="nombresCompletos" id="nombresCompletos" placeholder="Pepito Pérez"></td>
+                        <td><input class="control" type="text" name="cargoAspirante" id="cargoAspirante" placeholder="Asistencia"></td>
+                        <td><input class="control" type="text" name="docAspirante" id="docAspirante" placeholder="9999999999"></td>
+                        <td><input class="control" type="text" name="firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
+                        <?=insertar($conn)?>
+                   -->
                 </table>
                 <table id="Firmas">
                     <tr>
@@ -307,7 +315,7 @@
                     </tr>
                 </table>
                 <input class="btn" type="submit" name="sendIndu" id="enviar" value="Insertar Datos">
-                <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
+                <!-- <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar"> -->
             </form>
         </section>
 <!-- Información básica de la empresa -->
@@ -330,3 +338,20 @@
         </footer>
     </body>
 </html>
+
+<!-- 
+
+js - oprimir un botón automaticamente
+
+$(document).ready(function(){
+        // indicamos que se ejecuta la funcion a los 5 segundos de haberse
+        // cargado la pagina
+        setTimeout(clickbutton,5000);
+        function clickbutton(){
+            // simulamos el click del mouse en el boton del formulario
+            $("#action-button").click();
+            alert("Aqui llega");  //Debugger
+        }
+ });
+
+ -->

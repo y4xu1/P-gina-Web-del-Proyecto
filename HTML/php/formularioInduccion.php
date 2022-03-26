@@ -9,36 +9,32 @@
         insertar($conn);
     } 
 
-    //insertar($conn);
     function insertar($conn) {
 
-        $docAspirante = isset($_POST ["docAspirante"]);
-        $docRecHum = isset($_POST["docRecHum"]);
-        $objetivo = isset($_POST["objetivo"]);
-        $fecha = isset($_POST["fecha"]);
-        $hora = isset($_POST["hora"]);
-        $lugar = isset($_POST["lugar"]);
-        $oficinaPrincipal = isset($_POST["oficinaPrincipal"]);
-        $responsables = isset($_POST["responsables"]);
-        $cargoResponsable = isset($_POST["cargoResponsable"]);
-        $tema = isset($_POST["tema"]);
-        $numLista = isset($_POST["numLista"]);
-        $nombresCompletos = isset($_POST["nombresCompletos"]);
-        $cargoAspirante = isset($_POST["cargoAspirante"]);
-        //$firmaAspirante = isset($_POST["firmaAspirante"]);
-        //$firmaResponsable = isset($_POST["firmaResponsable"]);
+        $docAspirante = $_POST ["docAspirante"];
+        $docRecHum = $_POST["docRecHum"];
+        $objetivo = $_POST["objetivo"];
+        $fecha = $_POST["fecha"];
+        $hora = $_POST["hora"];
+        $lugar = $_POST["lugar"];
+        $oficinaPrincipal = $_POST["oficinaPrincipal"];
+        $responsables = $_POST["responsables"];
+        $cargoResponsable = $_POST["cargoResponsable"];
+        $tema = $_POST["tema"];
+        $numLista = $_POST["numLista"];
+        $nombresCompletos = $_POST["nombresCompletos"];
+        $cargoAspirante = $_POST["cargoAspirante"];
+        $firmaAspirante = $_POST["firmaAspirante"];
+        $firmaResponsable = $_POST["firmaResponsable"];
 
-        //echo '<script>alert("si");</script>';
+        //$consulta = "INSERT INTO formulario_induccion (objetivo, fecha, hora, lugar, oficinaPrincipal, responsables, cargoResponsable, tema, numLista, nombresCompletos, cargoAspirante, docAspirante, docRecHum, firmaAspirante, firmaResponsable, estadoInduccion) VALUES ('objetivo', '', '', 'lugar', 'oficinaPrincipal', 'responsables', 'cargoResponsable', 'tema', '1', 'nombresCompletos', 'cargoAspirante', '34532270', '76308613', '', '', '')";
 
-        $consulta = "INSERT INTO formulario_induccion (docAspirante, docRRHH, objetivo, fecha, hora, lugar, oficinaPrincipal, responsables, cargoResponsable, tema, numLista,
-        nombresCompletos, cargoAspirante) VALUES ('$docAspirante', '$docRecHum' '$objetivo', '$fecha', '$hora', '$lugar', '$oficinaPrincipal', '$responsables',
-        '$cargoResponsable', '$tema', '$numLista', '$nombresCompletos', '$cargoAspirante')"; //, firmaAspirante, firmaResponsable--, '$firmaAspirante', '$firmaResponsable'
+        $consulta = "INSERT INTO formulario_induccion (objetivo, fecha, hora, lugar, oficinaPrincipal, responsables, cargoResponsable, tema, numLista,
+        nombresCompletos, cargoAspirante, docAspirante, docRecHum, firmaAspirante, firmaResponsable, estadoInduccion)
+        VALUES ('$objetivo', '$fecha', '$hora', '$lugar', '$oficinaPrincipal', '$responsables', '$cargoResponsable', '$tema', '$numLista',
+        '$nombresCompletos', '$cargoAspirante', '$docAspirante', '$docRecHum', '$firmaAspirante', '$firmaResponsable', '1')";
 
-        //echo '<script>alert("si x2");</script>';
-
-        mysqli_query($conn, $consulta);
-
-        echo '<script>alert("si x3");</script>';
+        //mysqli_query($conn, $consulta);
 
         if (mysqli_query($conn, $consulta) == true) {
             
@@ -53,7 +49,16 @@
     }
 
 ?>
+<script>
+
+    <?php
+
+    ?>
+
+</script>
 <!--
+
+---------
 < ?php
 
 
