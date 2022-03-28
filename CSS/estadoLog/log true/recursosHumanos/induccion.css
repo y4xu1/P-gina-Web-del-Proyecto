@@ -66,12 +66,23 @@ th, td {
     border: 1px solid black;
     font-size: 160%;
 }
+.RRHH th, .tabla1 th, .asp th, .footer th {
+    font-size: 143%;
+}
+.tabla1 .control {
+    padding: 6% 2%;
+    text-align: center;
+}
+.control[type="date"] {
+    text-align: center;
+}
 .control {
     width: 95%;
     margin: 1%;
     padding: 2% 1%;
     border: none;
     font-size: 80%;
+    text-align: center;
 }
 form option {
     width: 100.02%;

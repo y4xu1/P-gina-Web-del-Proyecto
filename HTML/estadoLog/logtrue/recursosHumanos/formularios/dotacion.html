@@ -87,10 +87,10 @@
                             <th>FORMATO DE ENTREGA DE DOTACIÓN Y ELEMENTOS DE PROTECCIÓN PERSONAL EPP</th>
                         </tr>
                     </table>
-                    <table>
+                    <table class="RRHH">
                         <tr>
                             <th>Nombre del Trabajador</th>
-                            <th>Cedula del Trabajador</th>
+                            <th>Cédula del Trabajador</th>
                             <th>Cargo del Trabajador</th>
                             <th>Proceso y/o Centro de trabajo</th>
                         </tr>
@@ -99,7 +99,7 @@
                             <td>
                             <input class="control" type="text" name="docAspirante" id="Documento_de_Identidad" placeholder="Documento de Identidad">
                             </td>
-                            <td><input class="control" type="text" name="cargo" id="cargo" placeholder="Cargo  del Trabajador"></td>
+                            <td><input class="control" type="text" name="cargo" id="cargo" placeholder="Cargo del Trabajador"></td>
                             <td><input class="control" type="text" name="proceso" id="proceso" placeholder="Proceso y/o Centro de trabajo"></td>
                         </tr>
                     </table>
@@ -137,55 +137,23 @@
                                 <td><input class="control" type="text" name="gafas" id="Numero" placeholder="..."></td>
                                 <td><input class="control" type="text" name="barbuquejo" id="Numero" placeholder="..."></td>
                             </tr>
-                            <tr>
-                                <td><input class="control" type="date" name="fechaEntrega" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="casco" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="overol" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="botasMaterial" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="botasCaucho" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="guantesCarnaza" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="guantesCaucho" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="guantesVaqueta" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="guantesNitrilo" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="protAuditivo" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="protAuditivoCopa" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="tapabocas" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="gafas" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="barbuquejo" id="Numero" placeholder="..."></td>
-                            </tr>
-                            <tr>
-                                <td><input class="control" type="date" name="fechaEntrega" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="casco" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="overol" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="botasMaterial" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="botasCaucho" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="guantesCarnaza" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="guantesCaucho" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="guantesVaqueta" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="guantesNitrilo" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="protAuditivo" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="protAuditivoCopa" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="tapabocas" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="gafas" id="Numero" placeholder="..."></td>
-                                <td><input class="control" type="text" name="barbuquejo" id="Numero" placeholder="..."></td>
-                            </tr>
                         </center>
                     </table>
-                    <table>
+                    <table class="asp">
                         <tr>
-                            <th>Cedula Responsable</th>
+                            <th style="width: 19%;">Cédula Responsable </th>
                             <th>Firma Responsable</th>
                             <th>Firma Trabajador</th>
-                            <th>Fecha del Formulario</th>
+                            <th style="width: 19%;">Fecha del Formulario</th>
                         </tr>
                         <tr>
                             <td><input class="control" type="text" name="docRecHum" id="docRecHum" placeholder="Documento de Identidad"></td>
-                            <td><input class="control" type="text" name="firmaResponsable" id="Firma" placeholder="Firma"></td>
-                            <td><input class="control" type="text" name="firmaTrabajador" id="Firma" placeholder="Firma"></td>
+                            <td><input class="control" type="file" name="firmaResponsable" id="Firma" placeholder="Firma"></td>
+                            <td><input class="control" type="file" name="firmaTrabajador" id="Firma" placeholder="Firma"></td>
                             <td><input class="control" type="date" name="fechaFormulario" id="Fecha"></td>
                         </tr>
                     </table>
-                    <table>
+                    <table class="footer">
                         <tr>
                             <th>
                                 EN CUMPLIMIENTO DE LOS DEBERES COMO TRABAJADOR DEFINIDOS EN LA LEY A TRAVES DE LA SIGUIENTE NORMATIVIDAD: CODIGO SUSTANTIVO DEL TRABAJO ART. 56 Y
@@ -194,6 +162,7 @@
                         </tr>
                     </table>
                     <input class="btn" type="submit" name="sendDota" id="enviar" value="Insertar Datos">
+                    <input class="btn" type="submit" name="Actualizar" id="Actualizar" value="Actualizar">
                     <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
                 </section>
             </form>
