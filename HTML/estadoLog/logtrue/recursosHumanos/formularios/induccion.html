@@ -47,7 +47,7 @@
                 </div>
             </section>
         </header>
-<!-- Barra lateral desplegable con función de notificaciones -->
+        <!-- Barra lateral desplegable con función de notificaciones -->
         <aside>
             <img src="../../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
             <section class="caja_notificaciones">
@@ -78,7 +78,7 @@
                 </div>
             </section>
         </aside>
-<!-- Formato de inducción para diligenciar -->
+        <!-- Formato de inducción para diligenciar -->
         <section class="contenido">
             <form action="../../../../php/formularioInduccion.php" method="POST">
                 <table class="Formato">
@@ -91,7 +91,7 @@
                         <th>Objetivo</th>
                     </tr>
                     <tr>
-                        <td><input class="control" type="text" name="objetivo" id="objetivo" placeholder="CAPACITAR AL TRABAJADOR ACERCA DE SU PERFIL DE CARGO COMO AYUDANTE DE OBRA"></td>
+                        <td><input class="control" type="text" name="objetivo" id="objetivo" placeholder="CAPACITAR AL TRABAJADOR ACERCA DE SU PERFIL DE CARGO COMO AYUDANTE DE LA OBRA"></td>
                     </tr>
                 </table>
                 <table id="Datos">
@@ -109,21 +109,58 @@
                     </tr>
                 </table>
                 <table id="Responsables">
+
+                    <!-- <style>
+                        .tituloResp, .filaRRHH_1, .filaRRHH_2, .filaRRHH_3, .filaRRHH_4, .filaRRHH_5,
+                        .filaRRHH_6, .filaRRHH_7, .filaRRHH_8, .filaRRHH_9, .filaRRHH_10 {
+                            visibility: hidden;
+                            position: absolute;
+                        }
+                    </style>
+
+                    <tr>
+                        <td colspan="3">
+                            <select class="controls" onChange="cantRRHH(this.name)" name="totalRRHH" id="cantRRHH">
+                                <option value="">Seleccione la cantidad de personas encargadas para este formulario</option>
+                                <script>
+                                    for (nEncargados=1; nEncargados<=5; nEncargados++) {
+                                        document.write('<option value="'+ nEncargados + '">'+ nEncargados +' Encargados (as)</option>')
+                                    }
+                                </script>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr class="tituloResp">
+                        <th>Responsable (S)</th>
+                        <th>Cédula</th>
+                        <th>Cargo</th>
+                    </tr>
+
+                    < !-- Bucle dependiente de la cantidad de los Participantes -- >
+                    <script>
+                        for (filaRRHH=1; filaRRHH<nEncargados; filaRRHH++) {
+
+                            document.write('<tr class="filaRRHH_"'+ filaRRHH +'">' +
+                                '<td><input class="control" type="text" name="'+ filaRRHH +'responsables" id="responsables" placeholder="Nombres y Apellidos del Responsable"></td>' +
+                                '<td><input class="control" type="text" name="'+ filaRRHH +'docRecHum" id="docRecHum" placeholder="Número de la cédula del Responsable"></td>' +
+                                '<td><input class="control" type="text" name="'+ filaRRHH +'cargoResponsable" id="cargoResponsable" placeholder="Cargo de la Persona Responsable"></td>' +
+                            '</tr>');
+                        }
+                    </script> -->
+
                     <tr>
                         <th>Responsable (S)</th>
                         <th>Cédula</th>
                         <th>Cargo</th>
                     </tr>
+
                     <tr>
-                        <td><input class="control" type="text" name="responsables" id="responsables" placeholder="Johanna Navarrete"></td>
-                        <td><input class="control" type="text" name="docRecHum" id="docRecHum" placeholder="33333333"></td>
-                        <td><input class="control" type="text" name="cargoResponsable" id="cargoResponsable" placeholder="Coordinadora SST"></td>
-                    </tr>
-                    <!-- <tr>
                         <td><input class="control" type="text" name="responsables" id="responsables" placeholder="Nombres y Apellidos del Responsable"></td>
                         <td><input class="control" type="text" name="docRecHum" id="docRecHum" placeholder="Número de la cédula del Responsable"></td>
                         <td><input class="control" type="text" name="cargoResponsable" id="cargoResponsable" placeholder="Cargo de la Persona Responsable"></td>
-                    </tr> -->
+                    </tr>
+
                 </table>
                 <table id="Temas">
                     <tr>
@@ -148,8 +185,8 @@
                     </style>
 
                     <tr>
-                        <td colspan="">
-                            <select class="controls" onChange="cantAsp(this.name)" name="cantAsp" id="cant_Asp">
+                        <td colspan="5">
+                            <select class="controls" onChange="cantAsp(this.name)" name="totalAsp" id="cant_Asp">
                                 <option value="">Seleccione la cantidad de participantes</option>
                                 <script>
                                     for (nParticipantes=1; nParticipantes<=20; nParticipantes++) {
@@ -157,13 +194,6 @@
                                     }
                                 </script>
                             </select>
-                        </td>
-                        <td>
-                            <!-- <script>
-                                <input type="text" name="cantAsp" id="totalAsp" value="asjak">
-                                var totalAsp = document.getElementById(cant_Asp).value;
-                                document.write('<input type="text" name="cantAsp" id="totalAsp" value="asjak">');
-                            </script> -->
                         </td>
                     </tr>
 
@@ -179,17 +209,14 @@
                     <script>
                         for (filaAsp=1; filaAsp<nParticipantes; filaAsp++) {
                             document.write ('<tr id="filaAsp'+ filaAsp +'">' +
-                                '<td><input class="control" type="text" name="'+ filaAsp +'numLista" id="numLista" value="'+ filaAsp +'" disabled></td>' +
-                                '<td><input class="control" type="text" name="'+ filaAsp +'nombresCompletos" id="nombresCompletos" placeholder="Nombres completos"></td>' +
+                                '<td><input class="control" type="number" name="'+ filaAsp +'numLista" id="numLista" value="'+ filaAsp +'" disabled></td>' +
+                                '<td><input class="control" type="text" name="'+ filaAsp +'nombresCompletos" id="nombresCompletos" placeholder="Nombres y apellidos"></td>' +
                                 '<td><input class="control" type="text" name="'+ filaAsp +'cargoAspirante" id="cargoAspirante" placeholder="Cargo del Aspirante"></td>' +
                                 '<td><input class="control" type="text" name="'+ filaAsp +'docAspirante" id="docAspirante" placeholder="Número de identificación"></td>' +
                                 '<td><input class="control" type="file" name="'+ filaAsp +'firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>' +
                             '</tr>');
                         }
                     </script>
-                    <!-- 
-                        <?=insertar($conn)?>
-                    -->
                 </table>
                 <table id="Firmas">
                     <tr>
@@ -201,7 +228,8 @@
                 <!-- <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar"> -->
             </form>
         </section>
-<!-- Información básica de la empresa -->
+
+        <!-- Información básica de la empresa -->
         <footer class="info_empres">
             <ul>
                 <center><h4>Disser Ingieniería S.A.S. Bogotá</h4></center>
@@ -221,11 +249,66 @@
         </footer>
     </body>
     <script>
+
+        function cantidadPerson() {
+            if (get.getElementById('cantRRHH')) {
+
+                var val_cantRRHH = document.getElementById('cantRRHH').value;
+
+                if (val_cantRRHH != "" || val_cantRRHH != 0) {
+                    document.getElementById('tituloResp').style.visibility = 'visible';
+                    document.getElementById('tituloResp').style.position = 'relative';
+
+                    for (a=1; a<=val_cantRRHH; a++) {
+                        document.getElementById('filaRRHH'+a).style.visibility = 'visible';
+                        document.getElementById('filaRRHH'+a).style.position = 'relative';
+                    }
+                }
+                else {}
+            }
+            else if (get.getElementById('cantAsp')) {
+                var val_cantAsp = document.getElementById('cant_Asp').value;
+
+                if (val_cantAsp != "" || val_cantAsp != 0) {
+
+                    document.getElementById('tituloAsp').style.visibility = 'visible';
+                    document.getElementById('tituloAsp').style.position = 'relative';
+
+                    for (i=1; i<=val_cantAsp; i++) {
+                        document.getElementById('filaAsp'+i).style.visibility = 'visible';
+                        document.getElementById('filaAsp'+i).style.position = 'relative';
+                    }
+                }
+                else {}
+            }
+            else {}
+        }
+
+        function cantRRHH() {
+
+            alert('Correcto');
+
+            var val_cantRRHH = document.getElementById('cantRRHH').value;
+
+            alert('Ohhh si ');
+
+            if (val_cantRRHH != "" || val_cantRRHH != 0) {
+                document.getElementsByClassName('tituloResp').style.visibility = 'visible';
+                document.getElementsByClassName('tituloResp').style.position = 'relative';
+
+                alert('Tambien ohh si xd');
+
+                for (a=1; a<=val_cantRRHH; a++) {
+                    document.getElementsByClassName('filaRRHH'+a).style.visibility = 'visible';
+                    document.getElementsByClassName('filaRRHH'+a).style.position = 'relative';
+                }
+            }
+            else {}
+        }
+
         function cantAsp() {
 
             var val_cantAsp = document.getElementById('cant_Asp').value;
-
-
 
             if (val_cantAsp != "" || val_cantAsp != 0) {
 
@@ -238,7 +321,7 @@
                 }
             }
             else {}
-        }
+        } 
     </script>
 </html>
 

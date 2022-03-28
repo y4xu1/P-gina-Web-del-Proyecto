@@ -11,11 +11,11 @@
 
     function insertar($conn) {
 
-        $cantAsp = $_POST['cantAsp'];
+        $cantAsp = $_POST['totalAsp'];
 
         for ($x=1; $x<=$cantAsp; $x++) {
 
-            $docAspirante = $_POST [$x . "docAspirante"];
+            $docAspirante = $_POST[$x."docAspirante"]; //datos de los aspirantes
             $docRecHum = $_POST["docRecHum"];
             $objetivo = $_POST["objetivo"];
             $fecha = $_POST["fecha"];
@@ -25,10 +25,10 @@
             $responsables = $_POST["responsables"];
             $cargoResponsable = $_POST["cargoResponsable"];
             $tema = $_POST["tema"];
-            $numLista = $_POST[$x . "numLista"];
-            $nombresCompletos = $_POST[$x . "nombresCompletos"];
-            $cargoAspirante = $_POST[$x . "cargoAspirante"];
-            $firmaAspirante = $_POST[$x . "firmaAspirante"];
+            $numLista = $_POST[$x."numLista"]; //datos de los aspirantes
+            $nombresCompletos = $_POST[$x."nombresCompletos"]; //datos de los aspirantes
+            $cargoAspirante = $_POST[$x."cargoAspirante"]; //datos de los aspirantes
+            $firmaAspirante = $_POST[$x."firmaAspirante"]; //datos de los aspirantes
             $firmaResponsable = $_POST["firmaResponsable"];
 
             //$consulta = "INSERT INTO formulario_induccion (objetivo, fecha, hora, lugar, oficinaPrincipal, responsables, cargoResponsable, tema, numLista, nombresCompletos, cargoAspirante, docAspirante, docRecHum, firmaAspirante, firmaResponsable, estadoInduccion) VALUES ('objetivo', '', '', 'lugar', 'oficinaPrincipal', 'responsables', 'cargoResponsable', 'tema', '1', 'nombresCompletos', 'cargoAspirante', '34532270', '76308613', '', '', '')";
@@ -52,29 +52,5 @@
 
         mysqli_close($conn);
     }
-
-?>
-<script>
-
-    <?php
-
-    ?>
-
-</script>
-<!--
-
----------
-< ?php
-
-
-for ($a==1; $a<=30; $a++) {
-    echo '  <tr>
-                <td><input class="control'. $a . '" type="text" name="numLista'. $a . '" id="numLista" value="'. $a . '" disabled></td>
-                <td><input class="control'. $a . '" type="text" name="nombresCompletos'. $a . '" id="nombresCompletos" placeholder="Pepito Pérez"></td>
-                <td><input class="control'. $a . '" type="text" name="cargoAspirante'. $a . '" id="cargoAspirante" placeholder="Asistencia"></td>
-                <td><input class="control'. $a . '" type="text" name="docAspirante'. $a . '" id="docAspirante" placeholder="9999999999"></td>
-                <td><input class="control'. $a . '" type="text" name="firmaAspirante'. $a . '" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>
-            </tr>';
-}
 
 ?>
