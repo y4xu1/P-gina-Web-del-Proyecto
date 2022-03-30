@@ -210,7 +210,7 @@
                             <div id="titulo">
                                 <center>
                                     <img src="../../../../Imagenes/otros logos/disserLogo.jpg" class="logoTrascendental" alt="logoTrascendental">';
-                            echo '  <h2>Contrato Individual de Trabajo a ' . $row['tipoContrato'] . '</h2>';
+                            echo '  <h2>CONTRATO INDIVIDUAL DE TRABAJO A ' . $row['tipoContrato'] . '</h2>';
                         echo '  </center>
                             </div>
                         </section>

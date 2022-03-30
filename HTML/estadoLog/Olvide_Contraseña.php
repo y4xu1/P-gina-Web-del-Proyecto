@@ -139,7 +139,7 @@ if (isset ($_POST['cambiar'])){
                                 //formulario 3
                                 echo'<form action="./Olvide_Contraseña.php" method="POST">
                                         <h2>Recuperar Contraseña</h2>
-                                        <p>Para recuperar la contraseña, tenga en cuenta en una que no fácil de recordar.</p>
+                                        <p>Recuerde que... Debe ingresar una contraseña que tenga como mínimo 5 caracteres numéricos, una letra minúscula y una letra mayúscula.</p>
                                         <input class="controls" type="password" name="nuevaContraseña" id="txtpassword" placeholder="Ingrese la nueva contraseña">
                                         <input class="controls" type="password" name="verificacionContraseña" id="txtpassword" placeholder="Ingrese la verificación de la contraseña">
                                         <br><br>

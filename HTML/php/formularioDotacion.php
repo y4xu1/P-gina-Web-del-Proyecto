@@ -113,9 +113,7 @@
                 $this->Cell(50);
                 //Title
                 $this->Ln(30);
-                $this->Cell(384,20, utf8_decode ('FORMATO DE ENTREGA DE DOTACIÓN Y ELEMENTOS DE PROTECCIÓN PERSONAL EPP ' ), 0, 1,'C');
-                //$this->Cell(0,20, utf8_decode ('FORMATO DE ENTREGA DE DOTACIÓN Y ELEMENTOS DE PROTECCIÓN PERSONAL EPP ' ), 0, 1,'C');
-
+                $this->Cell(384,20, utf8_decode ('FORMATO DE ENTREGA DE DOTACIÓN Y ELEMENTOS DE PROTECCIÓN PERSONAL EPP'), 0, 1,'C');
                 // Line break
                 $this->Ln(2);
             }

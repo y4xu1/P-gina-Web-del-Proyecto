@@ -72,6 +72,7 @@
     border-radius: 5px;
     font-family: sans-serif;
     font-size: 120%;
+    text-align: center;
 }
 .controls:hover {
     box-shadow: 0px 0px 5px grey;
@@ -133,8 +134,10 @@
 .tituloC {
     font-size: 280%;
     color: rgb(82, 120, 248);
+    text-shadow: 3px 2px 2px blue;
 }
-label {
-    font-size: 150%;
+.tituloF {
+    font-size: 140%;
     font-family: sans-serif;
+    text-shadow: 1px 1px 1px black;
 }

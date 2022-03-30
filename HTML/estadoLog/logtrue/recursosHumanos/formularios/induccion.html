@@ -29,6 +29,7 @@
                             <li id="Perfil"><a href="../Mi_Perfil.html" class="menu">Mi Perfil</a><img src="../../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
                         <li><a href="induccion.html" class="menu">Formularios</a></li>
                         <li><a href="../Contratos.html" class="menu">Contratos</a></li>
+                        <li><a href="../obras.php" class="menu">Obras</a></li>
                         <li><a href="../aspirantes.php" class="menu">Aspirantes</a></li>
                     </ul>
                 </nav>
@@ -39,8 +40,8 @@
                     <ul class="form1">
                         <li><a href="">Formularios</a>
                             <ul>
-                                <li><a href="induccion.html">Formulario Inducción</a></li>
-                                <li><a href="dotacion.html">Formulario Dotación</a></li>
+                                <li><a href="induccion.html">Formulario de Inducción</a></li>
+                                <li><a href="dotacion.html">Formulario de Dotación</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -91,7 +92,7 @@
                         <th>Objetivo</th>
                     </tr>
                     <tr>
-                        <td><input class="control" type="text" name="objetivo" id="objetivo" placeholder="CAPACITAR AL TRABAJADOR ACERCA DE SU PERFIL DE CARGO COMO AYUDANTE DE LA OBRA"></td>
+                        <td><input class="control" type="text" name="objetivo" id="objetivo" placeholder="Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra."></td>
                     </tr>
                 </table>
                 <table id="Datos">
@@ -157,17 +158,17 @@
 
                     <tr>
                         <td><input class="control" type="text" name="responsables" id="responsables" placeholder="Nombres y Apellidos del Responsable"></td>
-                        <td><input class="control" type="text" name="docRecHum" id="docRecHum" placeholder="Número de la cédula del Responsable"></td>
+                        <td><input class="control" type="text" name="docRecHum" id="docRecHum" placeholder="Cédula del Responsable"></td>
                         <td><input class="control" type="text" name="cargoResponsable" id="cargoResponsable" placeholder="Cargo de la Persona Responsable"></td>
                     </tr>
 
                 </table>
                 <table id="Temas">
                     <tr>
-                        <th>Tema (S):</th>
+                        <th>Tema (S)</th>
                     </tr>
                     <tr>
-                        <th><textarea class="control" rows="2" name="tema" id="tema" placeholder="OBLIGACIONES Y RESPONSABILIDADES DEL TRABAJADOR, LABORES MANUALES DE LIMPIEZA, MANTENIMIENTO, ADECUACIONES A INSTALACIONES FÍSICAS U OTRAS PARA EL DESARROLLO DE LAS ACTIVIDADES DE CONSTRUCCIÓN, APOYO A OFICIALES DE OBRA Y CUMPLIMIENTO DE METAS EN EL PROYECTO, RESPONSABILIDADES SST, ORDEN Y ASEO, MANUAL DE SANSIONES."></textarea></th>
+                        <th><textarea class="control" rows="2" name="tema" id="tema" placeholder="Obligaciones y responsabilidades del trabajador, labores manuales de limpieza, mantenimiento, adecuaciones a instalaciones físicas u otras para el desarrollo de las actividades de construcción, apoyo a oficiales de obra y cumplimiento de metas en el proyecto, responsabilidades SST, orden y aseo, manual de sanciones."></textarea></th>
                     </tr>
                 </table>
                 <table id="Datos2">
@@ -209,11 +210,11 @@
                     <script>
                         for (filaAsp=1; filaAsp<nParticipantes; filaAsp++) {
                             document.write ('<tr id="filaAsp'+ filaAsp +'">' +
-                                '<td><input class="control" type="number" name="'+ filaAsp +'numLista" id="numLista" value="'+ filaAsp +'" disabled></td>' +
+                                '<td><input class="control" type="text" name="'+ filaAsp +'numLista" id="numLista" value="'+ filaAsp +'" disabled></td>' +
                                 '<td><input class="control" type="text" name="'+ filaAsp +'nombresCompletos" id="nombresCompletos" placeholder="Nombres y apellidos"></td>' +
                                 '<td><input class="control" type="text" name="'+ filaAsp +'cargoAspirante" id="cargoAspirante" placeholder="Cargo del Aspirante"></td>' +
-                                '<td><input class="control" type="text" name="'+ filaAsp +'docAspirante" id="docAspirante" placeholder="Número de identificación"></td>' +
-                                '<td><input class="control" type="file" name="'+ filaAsp +'firmaAspirante" id="firmaAspirante" placeholder="Adjunte su firma dígital"></td>' +
+                                '<td><input class="control" type="text" name="'+ filaAsp +'docAspirante" id="docAspirante" placeholder="Cédula del Aspirante"></td>' +
+                                '<td><input class="control" type="file" name="'+ filaAsp +'firmaAspirante" id="firmaAspirante"></td>' +
                             '</tr>');
                         }
                     </script>
@@ -221,11 +222,11 @@
                 <table id="Firmas">
                     <tr>
                         <th>Firma del Responsable de la Capacitación</th>
-                        <th><input class="control" type="file" name="firmaResponsable" id="firmaResponsable" placeholder="Adjunte su firma dígital"></th>
+                        <th><input class="control" type="file" name="firmaResponsable" id="firmaResponsable"></th>
                     </tr>
                 </table>
                 <input class="btn" type="submit" name="sendIndu" id="enviar" value="Insertar Datos">
-                <!-- <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar"> -->
+                <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
             </form>
         </section>
 

@@ -8,6 +8,12 @@
     if(isset($_POST['sendIndu'])) {
         insertar($conn);
     } 
+    /* else if (isset($_POST['descargar'])) {
+        generarPDF($conn);
+    }
+    else {
+        echo "<script>alert('Error')</script>";
+    } */
 
     function insertar($conn) {
 
@@ -25,7 +31,7 @@
             $responsables = $_POST["responsables"];
             $cargoResponsable = $_POST["cargoResponsable"];
             $tema = $_POST["tema"];
-            $numLista = $_POST[$x."numLista"]; //datos de los aspirantes
+            //$numLista = $_POST[$x."numLista"]; //datos de los aspirantes
             $nombresCompletos = $_POST[$x."nombresCompletos"]; //datos de los aspirantes
             $cargoAspirante = $_POST[$x."cargoAspirante"]; //datos de los aspirantes
             $firmaAspirante = $_POST[$x."firmaAspirante"]; //datos de los aspirantes
@@ -33,9 +39,9 @@
 
             //$consulta = "INSERT INTO formulario_induccion (objetivo, fecha, hora, lugar, oficinaPrincipal, responsables, cargoResponsable, tema, numLista, nombresCompletos, cargoAspirante, docAspirante, docRecHum, firmaAspirante, firmaResponsable, estadoInduccion) VALUES ('objetivo', '', '', 'lugar', 'oficinaPrincipal', 'responsables', 'cargoResponsable', 'tema', '1', 'nombresCompletos', 'cargoAspirante', '34532270', '76308613', '', '', '')";
 
-            $consulta = "INSERT INTO formulario_induccion (objetivo, fecha, hora, lugar, oficinaPrincipal, responsables, cargoResponsable, tema, numLista,
+            $consulta = "INSERT INTO formulario_induccion (objetivo, fecha, hora, lugar, oficinaPrincipal, responsables, cargoResponsable, tema,
             nombresCompletos, cargoAspirante, docAspirante, docRecHum, firmaAspirante, firmaResponsable, estadoInduccion)
-            VALUES ('$objetivo', '$fecha', '$hora', '$lugar', '$oficinaPrincipal', '$responsables', '$cargoResponsable', '$tema', '$numLista',
+            VALUES ('$objetivo', '$fecha', '$hora', '$lugar', '$oficinaPrincipal', '$responsables', '$cargoResponsable', '$tema',
             '$nombresCompletos', '$cargoAspirante', '$docAspirante', '$docRecHum', '$firmaAspirante', '$firmaResponsable', '1')";
 
             //mysqli_query($conn, $consulta);
@@ -53,4 +59,187 @@
         mysqli_close($conn);
     }
 
+    //Función para generar PDF
+    /* function generarPDF($conn) {
+
+        require 'pdfLibreria/fpdf.php';
+        $conn = mysqli_connect('localhost', 'root', '', 'trascendental');
+    
+        //Inicio clase del pdf
+        class PDF extends FPDF {
+            
+            //Cabecera del PDF
+            function header() {
+                //Logo
+                $this->Image('../../Imagenes/otros logos/disserLogo.jpg',15,12,30);
+                //Arial bold 12
+                $this->SetFont('Arial','B',20);
+                //Move to the right
+                $this->Cell(50);
+                //Title
+                $this->Ln(30);
+                $this->Cell(0,20, utf8_decode ('FORMATO DE INDUCCIÓN'), 0, 1,'C');
+                // Line break
+                $this->Ln(2);
+            }
+    
+            //Función si se quiere escribir un texto || Colocar variable $html
+            function WriteHTML($html){
+                
+                // HTML parser || Analizador de HTML
+                $html = str_replace("\n",' ',$html);
+                $a = preg_split('/<(.*)>/U',$html,-1,PREG_SPLIT_DELIM_CAPTURE);
+                foreach($a as $i=>$e){
+                    if($i%2==0){
+                            $this->Write(5,$e);
+                    }
+                    else{
+                        if($e[0]=='/')
+                            $this->CloseTag(strtoupper(substr($e,1)));
+                        else{
+                            $a2 = explode(' ',$e);
+                            $tag = strtoupper(array_shift($a2));
+                            $attr = array();
+                            foreach($a2 as $v){
+                                if(preg_match('/([^=]*)=["\']?([^"\']*)/',$v,$a3))
+                                    $attr[strtoupper($a3[1])] = $a3[2];
+                            }
+                            $this->OpenTag($tag,$attr);
+                        }
+                    }
+                }
+            }
+            
+            function OpenTag($tag, $attr) {
+                if($tag=='BR') {
+                    $this->Ln(8);
+                }
+            }
+    
+            function CloseTag($tag) {
+                // Etiqueta de cierre
+                if($tag=='B' || $tag=='I' || $tag=='U')
+                    $this->SetStyle($tag,false);
+                if($tag=='A')
+                    $this->HREF = '';
+            }
+    
+            function SetStyle($tag, $enable) {
+                // Modificar estilo y escoger la fuente correspondiente
+                $this->$tag += ($enable ? 1 : -1);
+                $style = '';
+                foreach(array('B', 'I', 'U') as $s)
+                {
+                    if($this->$s>0)
+                        $style .= $s;
+                }
+                $this->SetFont('',$style);
+            }
+    
+            function PutLink($URL, $txt) {
+                // Escribir un hiper-enlace
+                $this->SetTextColor(0,0,255);
+                $this->SetStyle('U',true);
+                $this->Write(5,$txt,$URL);
+                $this->SetStyle('U',false);
+                $this->SetTextColor(0);
+            }
+            
+            //Pie de página
+            function Footer() {
+                // Position at 1.5 cm from bottom
+                $this->SetY(-15);
+                // Arial italic 8
+                $this->SetFont('Arial','',8);
+                // Page number
+                $this->Cell(0,10, utf8_decode ('Página ').$this->PageNo(),0,0,'C');
+            }
+        }
+    
+        $fecha = $_POST["fecha"];
+
+        $consulta = "SELECT * FROM formulario_induccion WHERE fecha = '$fecha'";
+    
+        $resul = mysqli_query($conn, $consulta);
+    
+        //Generar nuevo PDF    
+        $pdf = new PDF('L','mm','A3');
+        //Definición de márgenes del pdf
+        $pdf->SetLeftMargin(30);
+        $pdf->SetRightMargin(30);
+        //Pronombres de las páginas
+        $pdf->AliasNbPages();
+        //Agregación de páginas
+        $pdf->AddPage();
+        //Definición de caligrafía, negrilla y tamaño
+        $pdf->SetFont('Arial','',11);
+    
+        while ($row = mysqli_fetch_assoc($resul)){
+    
+            $pdf->SetFont('Arial','B',15);
+            $pdf->Cell(360,15, utf8_decode ('Objetivo'), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','',15);
+            $pdf->Cell(360,40, utf8_decode ($row['objetivo']), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','B',15);
+            $pdf->Cell(94.5,15, utf8_decode ('Fecha'), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ('Hora'), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ('Lugar'), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ('Oficina Principal'), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','',15);
+            $pdf->Cell(94.5,15, utf8_decode ($row['fecha']), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ($row['hora']), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ($row['lugar']), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ($row['oficinaPrincipal']), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','B',15);
+            $pdf->Cell(94.5,15, utf8_decode ('Responsable (S)'), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ('Cédula'), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ('Cargo'), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','',15);
+            $pdf->Cell(94.5,15, utf8_decode ($row['responsables']), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ($row['docRecHum']), 1, 0, 'C');
+            $pdf->Cell(94.5,15, utf8_decode ($row['cargoResponsable']), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','B',15);
+            $pdf->Cell(360,15, utf8_decode ('Tema (S)'), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','',15);
+            $pdf->Cell(360,40, utf8_decode ($row['tema']), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','B',15);
+            //$pdf->Cell(40,15, utf8_decode ('Nº'), 1, 0, 'C');
+            $pdf->Cell(80,15, utf8_decode ('Nombre'), 1, 0, 'C');
+            $pdf->Cell(80,15, utf8_decode ('Cargo'), 1, 0, 'C');
+            $pdf->Cell(80,15, utf8_decode ('Cédula'), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','',15);
+            //$pdf->Cell(80,15, utf8_decode ($row['numLista']), 1, 0, 'C');
+            $pdf->Cell(80,15, utf8_decode ($row['nombresCompletos']), 1, 0, 'C');
+            $pdf->Cell(80,15, utf8_decode ($row['cargoAspirante']), 1, 0, 'C');
+            $pdf->Cell(80,15, utf8_decode ($row['docAspirante']), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','B',15);
+            $pdf->Cell(180,30, utf8_decode ('Firma del Aspirante'), 1, 0, 'C');
+
+            $pdf->SetFont('Arial','',15);
+            $pdf->Cell(180,30, utf8_decode ($row['firmaAspirante']), 1, 1, 'C');
+
+            $pdf->SetFont('Arial','B',15);
+            $pdf->Cell(180,30, utf8_decode ('Firma del Responsable de la Capacitación'), 1, 0, 'C');
+
+            $pdf->SetFont('Arial','',15);
+            $pdf->Cell(180,30, utf8_decode ($row['firmaResponsable']), 1, 1, 'C');
+        }
+    
+            $html = utf8_decode (' ');
+    
+            //Impresión del html || Variable $html
+            $pdf->WriteHTML($html);
+
+        $pdf -> Output();
+    } */
 ?>
