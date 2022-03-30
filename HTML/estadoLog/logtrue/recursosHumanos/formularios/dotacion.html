@@ -40,11 +40,20 @@
                     <ul class="form1">
                         <li><a href="">Formularios</a>
                             <ul>
-                                <li><a href="induccion.html">Formulario Inducción</a></li>
-                                <li><a href="dotacion.html">Formulario Dotación</a></li>
+                                <li><a href="induccion.html">Formulario de Inducción</a></li>
+                                <li><a href="dotacion.html">Formulario de Dotación</a></li>
                             </ul>
                         </li>
                     </ul>
+                    <div class="busq">
+                        <form action="../../../../php/formularioDotacion.php" method="post">
+                            <label for="">
+                                <p id="format">Descargar formato</p>
+                                <input type="text" name="docAspirante" class="texto" id="docAsp" placeholder="N° Documento">
+                            </label>
+                            <input type="submit" name="descargar" class="boton" id="busq" value="&#x1f4e5">
+                        </form>
+                    </div>
                 </div>
             </section>
         </header>
@@ -164,7 +173,6 @@
                     </table>
                     <input class="btn" type="submit" name="sendDota" id="enviar" value="Insertar Datos">
                     <input class="btn" type="submit" name="Actualizar" id="Actualizar" value="Actualizar">
-                    <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
                 </section>
             </form>
         </section>

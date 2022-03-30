@@ -45,6 +45,16 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="busq">
+                        <form action="../../../../php/formularioInduccion.php" method="post">
+                            <label for="">
+                                <p>Descargar formato</p>
+                                <input type="date" name="fecha" class="texto" id="fechaBusq">
+                                <input type="time" name="hora" class="texto" id="horaBusq">
+                            </label>
+                            <input type="submit" name="descargar" class="boton" id="busq" value="&#x1f4e5">
+                        </form>
+                    </div>
                 </div>
             </section>
         </header>
@@ -151,7 +161,8 @@
                     </script> -->
 
                     <tr>
-                        <th>Responsable (S)</th>
+                        <!-- <th>Responsable (S)</th> -->
+                        <th>Responsable</th>
                         <th>Cédula</th>
                         <th>Cargo</th>
                     </tr>
@@ -201,8 +212,8 @@
                     <tr id="tituloAsp">
                         <th>Nº</th>
                         <th>Nombre</th>
-                        <th>Cargo</th>
                         <th>Cédula</th>
+                        <th>Cargo</th>
                         <th>Firma</th>
                     </tr>
 
@@ -210,10 +221,10 @@
                     <script>
                         for (filaAsp=1; filaAsp<nParticipantes; filaAsp++) {
                             document.write ('<tr id="filaAsp'+ filaAsp +'">' +
-                                '<td><input class="control" type="text" name="'+ filaAsp +'numLista" id="numLista" value="'+ filaAsp +'" disabled></td>' +
+                                '<td><input class="control" type="text" name="'+ filaAsp +'numLista" id="numLista" value="'+ filaAsp +'"></td>' +
                                 '<td><input class="control" type="text" name="'+ filaAsp +'nombresCompletos" id="nombresCompletos" placeholder="Nombres y apellidos"></td>' +
-                                '<td><input class="control" type="text" name="'+ filaAsp +'cargoAspirante" id="cargoAspirante" placeholder="Cargo del Aspirante"></td>' +
                                 '<td><input class="control" type="text" name="'+ filaAsp +'docAspirante" id="docAspirante" placeholder="Cédula del Aspirante"></td>' +
+                                '<td><input class="control" type="text" name="'+ filaAsp +'cargoAspirante" id="cargoAspirante" placeholder="Cargo del Aspirante"></td>' +
                                 '<td><input class="control" type="file" name="'+ filaAsp +'firmaAspirante" id="firmaAspirante"></td>' +
                             '</tr>');
                         }
@@ -226,7 +237,6 @@
                     </tr>
                 </table>
                 <input class="btn" type="submit" name="sendIndu" id="enviar" value="Insertar Datos">
-                <input class="btn" type="submit" name="descargar" id="Descargar" value="Descargar">
             </form>
         </section>
 
@@ -273,11 +283,11 @@
                 if (val_cantAsp != "" || val_cantAsp != 0) {
 
                     document.getElementById('tituloAsp').style.visibility = 'visible';
-                    document.getElementById('tituloAsp').style.position = 'relative';
+                    document.getElementById('tituloAsp').style.position = 'absolute';
 
                     for (i=1; i<=val_cantAsp; i++) {
                         document.getElementById('filaAsp'+i).style.visibility = 'visible';
-                        document.getElementById('filaAsp'+i).style.position = 'relative';
+                        document.getElementById('filaAsp'+i).style.position = 'absolute';
                     }
                 }
                 else {}

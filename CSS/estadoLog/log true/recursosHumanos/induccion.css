@@ -5,19 +5,56 @@
 /* Estilo del Submenú */
 .sub_menu{
     padding-top: 3.5%;
-    width: 100%;
+    float: rigth;
+    /* width: 100%; */
 }
 #Tipo_Formularios {
+    /* padding-left: 56%; */
+    position: fixed;
     float: right;
     width: 100%;
+    display: inline-flex;
     background-color:rgba(10, 10, 10, 0.8);
     font-family: sans-serif;
 }
 #Tipo_Formularios:hover {
     background-color:rgba(0, 0, 0, 0.9);
 }
+.sub_menu .busq {
+    margin-left: 60%;
+    padding: 7px;
+    width: 200%;
+    float: rigth;
+    display: inline-flex;
+}
+.sub_menu .busq label {
+    display: inline-flex;
+    color: white;
+}
+.sub_menu .busq label p {
+    padding: 6px 10px;
+    width: 140px;
+}
+.sub_menu .busq label .texto {
+    margin: 0% 1%;
+    padding: 3px 5px;
+    font-size: 100%;
+}
+.sub_menu .busq label input[type="date"] {
+    width: 140px;
+    text-align: center;
+}
+.sub_menu .busq label input[type="time"] {
+    width: 118px;
+    text-align: center;
+}
+.sub_menu .busq input[type="submit"]  {
+    float: rigth;
+    font-size: 18px;
+}
 ul, ol {
     list-style: none;
+    margin-left: 1%;
 }
 .form1 > li {
     float: right;
@@ -66,6 +103,9 @@ th, td {
     border: 1px solid black;
     font-size: 160%;
 }
+#Objetivo th, #Datos th, #Responsables th, #Temas th, #Datos2 th, #Firmas th {
+    font-size: 143%;
+}
 .RRHH th, .tabla1 th, .asp th, .footer th {
     font-size: 143%;
 }
@@ -82,6 +122,15 @@ th, td {
     padding: 2% 1%;
     border: none;
     font-size: 80%;
+    text-align: center;
+}
+table select {
+    padding: 0.7% 1%;
+    margin: 0% 40%;
+    width: 365px;
+    background: none;
+    border: none;
+    font-size: 70%;
     text-align: center;
 }
 form option {
