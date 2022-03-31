@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-03-2022 a las 21:30:40
+-- Tiempo de generación: 31-03-2022 a las 23:48:25
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `contratacion`
+-- Base de datos: `trascendental`
 --
 
 -- --------------------------------------------------------
@@ -132,13 +132,13 @@ CREATE TABLE `contrato` (
 INSERT INTO `contrato` (`idContrato`, `tipoContrato`, `docAspirante`, `docRecHum`, `tipoCargoDesp`, `salario`, `valorPrestaciones`, `fechaInicio`, `nombreObra`, `ciudadObra`, `firma`, `estadoContrato`) VALUES
 (1001, 'TERMINO INDEFINIDO', 34532270, 15133916, 'Obrero', 1500000, 1000000, '2021-01-06', 'Amarilo', 'Bogotá', '', 1),
 (1002, 'TERMINO FIJO', 34564978, 76308613, 'Operario de maquina pesada', 1200000, 300000, '2021-05-07', 'Colpatria', 'Medellín', '', 1),
-(1003, 'OBRA A LABOR ', 41733718, 76415948, 'Operario de maquinas', 3000000, 1000000, '2021-11-23', 'Grupo éxito', 'Barranquilla', '', 1),
+(1003, 'OBRA O LABOR ', 41733718, 76415948, 'Operario de maquinas', 3000000, 1000000, '2021-11-23', 'Grupo éxito', 'Barranquilla', '', 1),
 (1004, 'TERMINO INDEFINIDO', 52729563, 97414524, 'Operario de maquinas', 2000000, 1300000, '2021-03-04', 'Konecta cloud', 'Bogotá', '', 1),
 (1005, 'TERMINO FIJO', 67609436, 98176120, 'Operario de maquina pesada', 2000000, 1100000, '2021-06-09', 'Colsubsidio', 'Barranquilla', '', 1),
-(1006, 'OBRA A LABOR ', 1000620101, 1000098763, 'Operario de maquinas', 1500000, 1000000, '2022-03-10', 'Avianca', 'Cota', '', 1),
+(1006, 'OBRA O LABOR ', 1000620101, 1000098763, 'Operario de maquinas', 1500000, 1000000, '2022-03-10', 'Avianca', 'Cota', '', 1),
 (1007, 'TERMINO INDEFINIDO', 1053963400, 1017896301, 'Obrero', 4000000, 2000000, '2022-05-03', 'Amarilo', 'Cota', '', 1),
 (1008, 'TERMINO FIJO', 1054780841, 1942371104, 'Operario de maquina pesada', 4000000, 1000000, '2022-07-14', 'Colpatria', 'Medellín', '', 1),
-(1009, 'OBRA A LABOR ', 1869300472, 2745086420, 'Obrero', 1550000, 2000000, '2022-10-12', 'Grupo éxito', 'Barranquilla', '', 1),
+(1009, 'OBRA O LABOR ', 1869300472, 2745086420, 'Obrero', 1550000, 2000000, '2022-10-12', 'Grupo éxito', 'Barranquilla', '', 1),
 (1010, 'TERMINO INDEFINIDO', 1986300145, 3452918100, 'Obrero', 5000000, 3000000, '2022-11-08', 'Konecta cloud', 'Bogotá', '', 1);
 
 -- --------------------------------------------------------
@@ -212,6 +212,22 @@ CREATE TABLE `formulario_dotacion` (
   `estadoDotacion` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `formulario_dotacion`
+--
+
+INSERT INTO `formulario_dotacion` (`idFormularioD`, `nombresCompletos`, `docAspirante`, `docRecHum`, `cargo`, `pct`, `fechaEntrega`, `casco`, `overol`, `botasMaterial`, `botasCaucho`, `guantesCarnaza`, `guantesCaucho`, `guantesVaqueta`, `guantesNitrilo`, `protAuditivo`, `protAuditivoCopa`, `tapabocas`, `gafas`, `barbuquejo`, `firmaRRHH`, `firmaTrabajador`, `fechaFormulario`, `estadoDotacion`) VALUES
+(1, 'Diana Catalina Díaz Beltrán', 34532270, 15133916, 'Obrero', 'Disser Ingenieria S.A.S', '2021-01-12', 1, 1, 1, 1, 2, 2, 1, 2, 1, 2, 1, 1, 2, '', '', '2021-01-11', 1),
+(2, 'Laura Camila Sánchez Prada', 34564978, 76308613, 'Operario de maquina pesada', 'Disser Ingenieria S.A.S', '2021-02-18', 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, '', '', '2021-02-17', 1),
+(3, 'Jenny Viviana Rey Botero', 41733718, 76415948, 'Operario de maquinas', 'Disser Ingenieria S.A.S', '2021-03-23', 5, 5, 5, 5, 5, 5, 5, 1, 1, 1, 1, 1, 1, '', '', '2021-03-22', 1),
+(4, 'Carlos Daniel Mendoza Pinzón', 52729563, 97414524, 'Operario de maquinas', 'Disser Ingenieria S.A.S', '2021-04-06', 3, 2, 3, 2, 3, 3, 3, 2, 2, 2, 2, 2, 2, '', '', '2021-04-05', 1),
+(5, 'Claudia Liliana Nieto Bustos', 67609436, 98176120, 'Operario de maquina pesada', 'Disser Ingenieria S.A.S', '2021-11-10', 2, 2, 2, 2, 3, 3, 3, 3, 3, 2, 2, 1, 1, '', '', '2021-11-09', 1),
+(6, 'Juan Felipe Lozano Ramírez', 1000620101, 1000098763, 'Operario de maquinas', 'Disser Ingenieria S.A.S', '2022-01-03', 5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3, '', '', '2022-01-02', 1),
+(7, 'Ángela Patricia Cruz García', 1053963400, 1017896301, 'Obrero', 'Disser Ingenieria S.A.S', '2022-02-15', 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, '', '', '2022-02-14', 1),
+(8, 'Carlos Felipe Mogollón Pachón', 1054780841, 1942371104, 'Operario de maquina pesada', 'Disser Ingenieria S.A.S', '2022-03-02', 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, '', '', '2022-03-01', 1),
+(9, 'Camilo Alberto Cortes Montejo', 1869300472, 2745086420, 'Obrero', 'Disser Ingenieria S.A.S', '2022-05-17', 1, 2, 2, 2, 5, 5, 5, 4, 1, 4, 1, 4, 2, '', '', '2022-05-16', 1),
+(10, 'Mario Andrés Duarte Cárdenas', 1986300145, 3452918100, 'Obrero', 'Disser Ingenieria S.A.S', '2022-07-28', 4, 5, 1, 2, 2, 2, 1, 1, 5, 1, 8, 1, 1, '', '', '2022-07-27', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -228,6 +244,7 @@ CREATE TABLE `formulario_induccion` (
   `responsables` varchar(60) NOT NULL,
   `cargoResponsable` varchar(60) NOT NULL,
   `tema` varchar(500) NOT NULL,
+  `numLista` double NOT NULL,
   `nombresCompletos` varchar(60) NOT NULL,
   `cargoAspirante` varchar(60) NOT NULL,
   `docAspirante` double NOT NULL,
@@ -236,6 +253,22 @@ CREATE TABLE `formulario_induccion` (
   `firmaResponsable` blob NOT NULL,
   `estadoInduccion` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `formulario_induccion`
+--
+
+INSERT INTO `formulario_induccion` (`idFormularioInduc`, `objetivo`, `fecha`, `hora`, `lugar`, `oficinaPrincipal`, `responsables`, `cargoResponsable`, `tema`, `numLista`, `nombresCompletos`, `cargoAspirante`, `docAspirante`, `docRecHum`, `firmaAspirante`, `firmaResponsable`, `estadoInduccion`) VALUES
+(1, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-01-01', '07:30:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Lina María Novoa Gómez', 'Coordinador de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 1, 'Diana Catalina Díaz Beltrán', 'Obrero', 34532270, 76415948, '', '', 1),
+(2, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-01-01', '07:30:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Lina María Novoa Gómez', 'Coordinador de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 2, 'Laura Camila Sánchez Prada', 'Operario de maquina pesada', 34564978, 76415948, '', '', 1),
+(3, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-01-01', '07:30:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Lina María Novoa Gómez', 'Coordinador de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 3, 'Jenny Viviana Rey Botero', 'Operario de maquinas', 41733718, 76415948, '', '', 1),
+(4, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-01-01', '07:30:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Lina María Novoa Gómez', 'Coordinador de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 4, 'Carlos Daniel Mendoza Pinzón', 'Operario de maquinas', 52729563, 76415948, '', '', 1),
+(5, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-01-01', '07:30:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Lina María Novoa Gómez', 'Coordinador de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 5, 'Claudia Liliana Nieto Bustos', 'Operario de maquina pesada', 67609436, 76415948, '', '', 1),
+(6, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-03-15', '10:00:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Paola Andrea Casas Páez', 'Asistente de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 1, 'Juan Felipe Lozano Ramírez', 'Operario de maquinas', 1000620101, 1942371104, '', '', 1),
+(7, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-03-15', '10:00:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Paola Andrea Casas Páez', 'Asistente de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 2, 'Ángela Patricia Cruz García', 'Obrero', 1053963400, 1942371104, '', '', 1),
+(8, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-03-15', '10:00:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Paola Andrea Casas Páez', 'Asistente de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 3, 'Carlos Felipe Mogollón Pachón', 'Operario de maquina pesada', 1054780841, 1942371104, '', '', 1),
+(9, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-03-15', '10:00:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Paola Andrea Casas Páez', 'Asistente de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 4, 'Camilo Alberto Cortes Montejo', 'Obrero', 1869300472, 1942371104, '', '', 1),
+(10, 'Capacitar al trabajador acerca de su perfil de cargo como ayudante de la obra.', '2022-03-15', '10:00:00', 'Bogotá D.C', 'Disser Ingenieria S.A.S', 'Paola Andrea Casas Páez', 'Asistente de recursos humanos', 'Obligaciones y responsabilidades del trabajador.', 5, 'Mario Andrés Duarte Cárdenas', 'Obrero', 1986300145, 1942371104, '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -388,6 +421,34 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`numIdentificacion`);
 
 --
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `citasmedicas`
+--
+ALTER TABLE `citasmedicas`
+  MODIFY `numOrden` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `documentos`
+--
+ALTER TABLE `documentos`
+  MODIFY `idDocumentos` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `formulario_dotacion`
+--
+ALTER TABLE `formulario_dotacion`
+  MODIFY `idFormularioD` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `formulario_induccion`
+--
+ALTER TABLE `formulario_induccion`
+  MODIFY `idFormularioInduc` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -407,8 +468,8 @@ ALTER TABLE `citasmedicas`
 -- Filtros para la tabla `contrato`
 --
 ALTER TABLE `contrato`
-  ADD CONSTRAINT `contrato_ibfk_1` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`),
-  ADD CONSTRAINT `contrato_ibfk_2` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`);
+  ADD CONSTRAINT `contrato_ibfk_1` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`),
+  ADD CONSTRAINT `contrato_ibfk_2` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`);
 
 --
 -- Filtros para la tabla `documentos`
@@ -420,8 +481,8 @@ ALTER TABLE `documentos`
 -- Filtros para la tabla `formulario_dotacion`
 --
 ALTER TABLE `formulario_dotacion`
-  ADD CONSTRAINT `formulario_dotacion_ibfk_1` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`),
-  ADD CONSTRAINT `formulario_dotacion_ibfk_2` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`);
+  ADD CONSTRAINT `formulario_dotacion_ibfk_1` FOREIGN KEY (`docAspirante`) REFERENCES `aspirante` (`docAspirante`),
+  ADD CONSTRAINT `formulario_dotacion_ibfk_2` FOREIGN KEY (`docRecHum`) REFERENCES `recursoshumanos` (`docRecHum`);
 
 --
 -- Filtros para la tabla `formulario_induccion`
