@@ -6,7 +6,6 @@
 .sub_menu{
     padding-top: 3.5%;
     float: rigth;
-    /* width: 100%; */
 }
 #Tipo_Formularios {
     /* padding-left: 56%; */
@@ -20,8 +19,9 @@
 #Tipo_Formularios:hover {
     background-color:rgba(0, 0, 0, 0.9);
 }
+
 .sub_menu .busq {
-    margin-left: 60%;
+    margin-left: 69%;
     padding: 7px;
     width: 200%;
     float: rigth;
@@ -39,9 +39,10 @@
     margin: 0% 1%;
     padding: 3px 5px;
     font-size: 100%;
+    width: 140px;
 }
 .sub_menu .busq label input[type="date"] {
-    width: 140px;
+    width: 146px;
     text-align: center;
 }
 .sub_menu .busq label input[type="time"] {
@@ -52,13 +53,13 @@
     float: rigth;
     font-size: 18px;
 }
+
 ul, ol {
     list-style: none;
     margin-left: 1%;
 }
 .form1 > li {
-    float: right;
-    margin-right: 3.8%;
+    float: left;
 }
 .form1 li a {
     color: white;
@@ -85,7 +86,7 @@ ul, ol {
 
 /* Estilo de los formatos */
 .contenido {
-    margin: 7.2% 2% 5% 2%;
+    margin: 7.2% 4% 6% 4%;
     box-shadow: 0px 0px 15px rgb(124, 168, 251);
     font-family: sans-serif;
 }
@@ -126,7 +127,7 @@ th, td {
 }
 table select {
     padding: 0.7% 1%;
-    margin: 0% 40%;
+    /* margin: 0% 39%; */
     width: 365px;
     background: none;
     border: none;

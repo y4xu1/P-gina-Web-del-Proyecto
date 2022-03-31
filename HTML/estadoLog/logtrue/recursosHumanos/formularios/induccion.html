@@ -50,7 +50,7 @@
                             <label for="">
                                 <p>Descargar formato</p>
                                 <input type="date" name="fecha" class="texto" id="fechaBusq">
-                                <input type="time" name="hora" class="texto" id="horaBusq">
+                                <!-- <input type="time" name="hora" class="texto" id="horaBusq"> -->
                             </label>
                             <input type="submit" name="descargar" class="boton" id="busq" value="&#x1f4e5">
                         </form>
@@ -196,18 +196,22 @@
                         }
                     </style>
 
-                    <tr>
-                        <td colspan="5">
-                            <select class="controls" onChange="cantAsp(this.name)" name="totalAsp" id="cant_Asp">
-                                <option value="">Seleccione la cantidad de participantes</option>
-                                <script>
-                                    for (nParticipantes=1; nParticipantes<=20; nParticipantes++) {
-                                        document.write('<option value="'+ nParticipantes +'">'+ nParticipantes +' Participantes</option>');
-                                    }
-                                </script>
-                            </select>
-                        </td>
-                    </tr>
+                    <center>
+                        <tr>
+                            <td colspan="5">
+                                <center>
+                                    <select class="controls" onChange="cantAsp(this.name)" name="totalAsp" id="cant_Asp">
+                                        <option value="">Seleccione la cantidad de participantes</option>
+                                        <script>
+                                            for (nParticipantes=1; nParticipantes<=20; nParticipantes++) {
+                                                document.write('<option value="'+ nParticipantes +'">'+ nParticipantes +' Participantes</option>');
+                                            }
+                                        </script>
+                                    </select>
+                                </center>
+                            </td>
+                        </tr>
+                    </center>
 
                     <tr id="tituloAsp">
                         <th>Nº</th>

@@ -41,49 +41,6 @@ if(isset($_POST['btnregistrar'])) {
   echo "<script>alert('Error')</script>";
 }
 
-/*diferencia($conn);
-
-function diferencia($conn){
-
-  if(isset($_POST['btnregistrar'])) {
-    insertar($conn);
-    echo "<script>";
-      echo "alert('Su perfil fue cargado correctamente');";
-      echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirantes.html';";
-    echo "</script>";
-  } else {
-    echo "<script>alert('Error')</script>";
-  }
-  if(isset($_POST['btnActualizar'])) {
-    actualizar ($conn);
-    echo "<script>";
-      echo "alert('Su perfil fue actualizado correctamente');";
-      echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirantes.html';";
-    echo "</script>";
-  } else {
-    echo "<script>alert('Error')</script>";
-  }
-  if(isset($_POST['btndocumentos'])) {
-    documentos($conn);
-    echo "<script>";
-      echo "alert('Sus documentos fuerón cargados correctamente');";
-      echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirantes.html';";
-    echo "</script>";
-  } else {
-    echo "<script>alert('Error')</script>";
-  }
-  if(isset($_POST['Actualizardocumentos'])) {
-    Actualizardocumentos($conn);
-    echo "<script>";
-      echo "alert('Sus documentos fuerón actualiazados correctamente');";
-      echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirantes.html';";
-    echo "</script>";
-  } else {
-    echo "<script>alert('Error')</script>";
-  }
-
-}*/
-
 #Identificar cada variable de vinculacion con la pagina y la base de datos.
 #Insertar a la base de datos los datos ingresados en cada campo del formulario.
 function insertar ($conn){

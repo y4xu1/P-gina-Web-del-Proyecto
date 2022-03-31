@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aspirantes</title>
         <link rel="stylesheet" href="../../../../CSS/Formato_Base.css">
-        <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/recursosHumanos/Contratos.css">
+        <!-- <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/recursosHumanos/Contratos.css"> -->
         <link rel="stylesheet" href="../../../../CSS/estadoLog/log true/recursosHumanos/aspirantes.css">
         <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
     </head>
@@ -93,7 +93,7 @@
                 <input class="button" type="submit" name="btnbuscador" value="&#x1f50d">
                 <?php
                     if (ISSET($_POST['btnbuscador'])) {
-                        echo '<input type="submit" name="listAsp" value="↩️" style="background:rgb(255, 255, 255,0.2);">';
+                        echo '<input class="button" type="submit" name="listAsp" value="↩️" style="background:rgb(255, 255, 255,0.2);">';
                     }
                 ?>
             </form>

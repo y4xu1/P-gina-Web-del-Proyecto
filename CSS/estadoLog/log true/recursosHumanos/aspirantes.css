@@ -59,28 +59,68 @@ ul, ol {
     position: relative;
     background-color: rgba(0, 0, 0, 0.9);
 }
+/* submenu -> buscador */
+#submenu {
+    width: 99.6%;
+    margin-top: 3.65%;
+    padding: 0.2%;
+    float: left;
+    box-shadow: 0px 5px 10px gray;
+    background-color:rgba(0, 0, 0, 0.75);
+    position: fixed;
+}
+#submenu:hover {
+    background-color:rgba(0, 0, 0, 0.95);
+    box-shadow: 0px 5px 10px black;
+}
+#submenu form {
+    width: 21.5%;
+    float: right;
+    position: relative;
+}
+.text, .button {
+    vertical-align: middle;
+    border-radius: 5px;
+    background: rgb(255, 255, 255, 0.85);
+    font-family: sans-serif;
+    font-size: 130%;
+}
+.text:hover, .button:hover {
+    transition: 0.5s;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px whitesmoke;
+}
+.text {
+    padding: 0.5% 2%;
+}
+.button {
+    padding: 0.2% 0.5%;
+}
+.button:hover {
+    transform: scale(1.08);
+}
 /* Estilo del contenido de las páginas */
 .contenido {
     padding-top: 7%;
-    padding-bottom: 3%;
+    padding-bottom: 40px;
     background-color: #E5E8E8;
 }
 /* Arquitectura de cada perfil de los usuarios con el rol de aspirante */
 .Perfil_Aspirante {
-    border-radius: 5px;
-    display: inline-flex;
-    width: 90%;
-    background-color: white;
     margin: 1.5% 3%;
     padding: 1.8%;
+    width: 90%;
+    display: inline-flex;
+    background-color: white;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px rgb(49, 48, 48);
 }
 .Logo_Usuario {
-    border-radius: 200px;
-    background-color: #BFC9CA;
+    margin: 0% 50% 0% 0%;
     width: 180%;
     position:unset;
-    margin: 0% 50% 0% 0%;
+    background-color: #BFC9CA;
+    border-radius: 200px;
 }
 .Documentos_Aspirante p a {
     font-family: sans-serif;
@@ -140,7 +180,7 @@ ul, ol {
     box-shadow: 0px 0px 3px gray;
 }
 #Comentario:focus {
-    border: 2px groove rgba(0, 0, 128, 0.2);
+    border: 2px groove rgb(0, 0, 128, 0.2);
 }
 .botons {
     float: inline-end;
@@ -157,6 +197,8 @@ input:hover {
     background-color: #EAEDED;
     box-shadow: 0px 0px 2px gray;
 }
+
+/* No sirve (borrar?) */
 /* Estilo del contenido del archivo del gráfico estadistico */
 #Fondo {
     position: relative;

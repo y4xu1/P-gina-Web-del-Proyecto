@@ -282,8 +282,9 @@
             $pdf->Cell(94.5,50, utf8_decode ($row['firmaRRHH']), 1, 0, 'C');
             $pdf->Cell(94.5,50, utf8_decode ($row['firmaTrabajador']), 1, 0, 'C');
             $pdf->Cell(94.5,50, utf8_decode ($row['fechaFormulario']), 1, 1, 'C');
-        }
 
+        }
+        
         $html = utf8_decode ('         EN CUMPLIMIENTO DE LOS DEBERES COMO TRABAJADOR DEFINIDOS EN LA LEY A TRAVES DE LA SIGUIENTE NORMATIVIDAD: CODIGO <br>
                             SUSTANTIVO DEL TRABAJO ART. 56 Y ART. 58 NUMERAL 7; LEY 9 DE 1979, ART DECRETO 1295 DE 1994 ART. 22');
         $pdf->Cell(0, 22, (''), 1, 0, 'C');

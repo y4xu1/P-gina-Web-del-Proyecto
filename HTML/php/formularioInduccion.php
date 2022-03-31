@@ -107,9 +107,10 @@
         }
     
         $fecha = $_POST["fecha"];
-        $hora = $_POST["hora"];
+        /* $hora = $_POST["hora"]; */
 
-        $consulta = "SELECT DISTINCT objetivo, fecha, hora, lugar, oficinaPrincipal, tema, responsables, cargoResponsable, docRecHum, firmaResponsable FROM formulario_induccion WHERE fecha = '$fecha' AND hora = '$hora'";
+        /* $consulta = "SELECT DISTINCT objetivo, fecha, hora, lugar, oficinaPrincipal, tema, responsables, cargoResponsable, docRecHum, firmaResponsable FROM formulario_induccion WHERE fecha = '$fecha' AND hora = '$hora'"; */
+        $consulta = "SELECT DISTINCT objetivo, fecha, hora, lugar, oficinaPrincipal, tema, responsables, cargoResponsable, docRecHum, firmaResponsable FROM formulario_induccion WHERE fecha = '$fecha'";
     
         $resul = mysqli_query($conn, $consulta);
     
@@ -175,24 +176,26 @@
             $pdf->SetFont('Arial','',15);
             $pdf->Cell(360,40, utf8_decode ($row['tema']), 1, 1, 'C');
 
+            $pdf->ln(50);
+
             $pdf->SetFont('Arial','B',15);
             $pdf->Cell(40,15, utf8_decode ('Nº'), 1, 0, 'C');
             $pdf->Cell(85,15, utf8_decode ('Nombre'), 1, 0, 'C');
-            $pdf->Cell(50,15, utf8_decode ('Cédula'), 1, 0, 'C');
+            $pdf->Cell(55,15, utf8_decode ('Cédula'), 1, 0, 'C');
             $pdf->Cell(85,15, utf8_decode ('Cargo'), 1, 0, 'C');
-            $pdf->Cell(100,15, utf8_decode ('Firma'), 1, 1, 'C');
+            $pdf->Cell(95,15, utf8_decode ('Firma'), 1, 1, 'C');
 
             //$consulta3 = mysqli_query($conn, "SELECT numLista, nombresCompletos, docAspirante, cargoAspirante, firmaAspirante FROM formulario_induccion WHERE fecha = '$fecha' AND hora = '$hora'");
-            $consulta3 = mysqli_query($conn, "SELECT numLista, nombresCompletos, docAspirante, cargoAspirante, firmaAspirante FROM formulario_induccion WHERE fecha = '$fecha' AND hora = '$hora'");
+            $consulta3 = mysqli_query($conn, "SELECT numLista, nombresCompletos, docAspirante, cargoAspirante, firmaAspirante FROM formulario_induccion WHERE fecha = '$fecha'");
 
             while ($nAsp = mysqli_fetch_assoc($consulta3)) {
 
                 $pdf->SetFont('Arial','',15);
                 $pdf->Cell(40,50, utf8_decode ($nAsp['numLista']), 1, 0, 'C');
                 $pdf->Cell(85,50, utf8_decode ($nAsp['nombresCompletos']), 1, 0, 'C');
-                $pdf->Cell(50,50, utf8_decode ($nAsp['docAspirante']), 1, 0, 'C');
+                $pdf->Cell(55,50, utf8_decode ($nAsp['docAspirante']), 1, 0, 'C');
                 $pdf->Cell(85,50, utf8_decode ($nAsp['cargoAspirante']), 1, 0, 'C');
-                $pdf->Cell(100,50, utf8_decode ($nAsp['firmaAspirante']), 1, 1, 'C');
+                $pdf->Cell(95,50, utf8_decode ($nAsp['firmaAspirante']), 1, 1, 'C');
 
             }
 
