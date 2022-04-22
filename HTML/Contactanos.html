@@ -36,7 +36,7 @@
                 <section class="Contacto">
                     <section id="Contenido_Contacto">
                         <center>
-                            <h2>Para realizar una comunicación directa, favor complete el cuestionario</h2>
+                            <!-- <h2>Para realizar una comunicación directa, favor complete el cuestionario</h2>
                             <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
                             <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
                             <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
@@ -44,7 +44,20 @@
                             <input class="controls" type="date" name="Calendario" id="Calendario">
                             <p>¿En qué podemos ayudarle?</p>
                             <input class="controls" type="text" name="comentario" id="comentario" placeholder="Agregué aquí su comentario, inquietud, queja o reclamo">
-                            <input class="botons" type="submit" value="Enviar">
+                            <input class="botons" type="submit" value="Enviar"> -->
+                            <form action="https://formsubmit.co/lauratatianagomez23@gmail.com" method="POST">
+                                <h2>Contáctanos</h2>
+                                <label for="name">Nombre Completo <samp>*</samp></label><br>
+                                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombres y Apellidos" required><br><br>
+             
+                                <label for="email">Correo Electrónico <samp>*</samp></label><br>
+                                <input class="controls" type="email" name="correo" id="correo" placeholder="Email" ><br><br>
+             
+                                <label for="mensaje">Mensaje <samp>*</samp></label><br>
+                                <textarea class="controls" name="comentario" id="comentario" cols="40" rows="10" required></textarea><br><br>
+             
+                                <input class="botons" type="submit" value="Enviar">
+                            </form>
                         </center>
                     </section>
                 </section>
