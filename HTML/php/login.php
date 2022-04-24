@@ -13,21 +13,23 @@
     $pass = $_POST['pass'];
     $rol = $_POST['TipoRol'];
 
+    $pass_cifrado=password_hash($pass,PASSWORD_DEFAULT);
+
     if(isset($_POST['btningresar'])) {
 
-        $consulta = "SELECT * FROM usuarios WHERE numIdentificacion = '$nombre' AND password = '$pass' AND estadoUsuarios = 1";
+        $consulta = "SELECT * FROM usuarios WHERE numIdentificacion = '$nombre' AND password = '$pass' AND estadoUsuarios = 1 AND TipoRol = $rol";
         $query = mysqli_query($conn,$consulta); 
 
-        $nr = mysqli_num_rows($query);
+        //$nr = mysqli_num_rows($query);
 
-        if ($nr == 1) {
+        //if ($nr == 1) {
 
             #$consulRol = "SELECT tipoRol FROM usuarios WHERE numIdentificacion='$nombre'";
-            $consulRol = "SELECT * FROM usuarios WHERE numIdentificacion = $nombre AND password = '$pass' AND TipoRol = $rol";
-            $queryRol = mysqli_query($conn, $consulRol);
-            $numConsul = mysqli_num_rows($queryRol);
+           // $consulRol = "SELECT * FROM usuarios WHERE numIdentificacion = $nombre AND password = '$pass_cifrado AND TipoRol = $rol";
+            //$queryRol = mysqli_query($conn, $consulRol);
+            //$numConsul = mysqli_num_rows($queryRol);
 
-            if ($numConsul == 1) {
+            if (password_verify($pass,$pass_cifrado)) {
                 #echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
                 switch ($rol){
                     case 1:
@@ -42,7 +44,7 @@
                 }
             }
             else {
-                echo "<script> alert('ERROR: Rol no indicado o erroneo'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
+                echo "<script> alert('Usuario incorrecto, bloqueado o la contraseña esta incorrecta.'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
             }
             /*
             switch ($numConsul){
@@ -57,10 +59,10 @@
                     break;
             }
             */
-        }
-        else {
-            echo "<script> alert('Usuario incorrecto, bloqueado o la contraseña esta incorrecta.');window.location= '../estadoLog/Inicio_Sesión.html' </script>";
-        }
+        //}
+        //else {
+            //echo "<script> alert('Usuario incorrecto, bloqueado o la contraseña esta incorrecta.');window.location= '../estadoLog/Inicio_Sesión.html' </script>";
+        //}
 
     }
     else {
@@ -76,7 +78,7 @@
 
     #Registrar
     if(isset($_POST["btnregistrar"])){
-        $sqlgrabar = "INSERT INTO usuarios(numIdentificacion, password, TipoRol, codigoAceptacion, estadoUsuarios) VALUES ($nombre, '$pass', '$rol', 1, 1)";
+        $sqlgrabar = "INSERT INTO usuarios(numIdentificacion, password, TipoRol, codigoAceptacion, estadoUsuarios) VALUES ($nombre, '$pass_cifrado', '$rol', 1, 1)";
         #echo $sqlgrabar;
         
         if($codigoaceptacion=='disser123'){
