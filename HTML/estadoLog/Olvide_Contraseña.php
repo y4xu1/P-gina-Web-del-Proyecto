@@ -60,10 +60,11 @@ if (isset($_POST["btnverificar"])){
 if (isset ($_POST['cambiar'])){
     
     $contraseña = $_POST['nuevaContraseña'];
+    $pass_cifrado=password_hash($contraseña,PASSWORD_DEFAULT);
     
     if ($_POST['nuevaContraseña'] == $_POST['verificacionContraseña']){  
 
-        $query = mysqli_query($conn,"UPDATE usuarios SET password = '$contraseña' WHERE numIdentificacion='$_SESSION[Con]'");
+        $query = mysqli_query($conn,"UPDATE usuarios SET password = '$pass_cifrado' WHERE numIdentificacion='$_SESSION[Con]'");
         echo"<script>
                 alert('Su contraseña ha logrado ser actualizada con éxito');
             </script>";
