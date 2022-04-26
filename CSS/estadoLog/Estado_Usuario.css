@@ -13,17 +13,9 @@
 }
 .Inicio_Sesión,
 .Registro,
-.Contacto {
-    width: 35%;
-    margin: 5% 0%;
-    border-radius: 5px;
-    background-color: rgba(200, 200, 200, 0.4);
-    box-shadow: 0px 0px 10px black;
-    padding: 2%;
-}
 .Olvide_Contraseña {
     width: 35%;
-    margin: 10% 0%;
+    margin: 5% 0%;
     border-radius: 5px;
     background-color: rgba(200, 200, 200, 0.4);
     box-shadow: 0px 0px 10px black;
@@ -82,6 +74,46 @@
     border: none;
     color: black;
 }
+/* Preguntas frecuentes */  
+
+.questions{
+    text-align: center;
+  }
+  
+  .questions__container{
+      display: grid;
+      gap: 2em;
+      padding-top: 50px;
+      padding-bottom: 100px;
+  }
+  
+  .questions__padding{
+      padding: 0;
+      transition: padding .3s;
+      border: 1px solid #000;
+      border-radius: 6px;
+  }
+  
+  .questions__padding--add{
+      padding-bottom: 40px;
+  }
+  
+  .questions__answer{
+      padding: 0 30px 0;
+      overflow: hidden;
+  }
+  
+  .questions__title{
+      text-align: left;
+      display: flex;
+      font-size: 20px;
+      padding: 30px 0 30px;
+      cursor: pointer;
+      color: var(--color-title);
+      justify-content: space-between;
+  
+
+
 /* Mostrar contraseña y términos y condiciones*/
 .ub1 {
     width: 39%;

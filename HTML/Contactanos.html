@@ -7,10 +7,99 @@
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contactanos</title>
+        <title>Preguntas frecuentes</title>
         <link rel="stylesheet" href="../CSS/Formato_Base.css">
         <link rel="stylesheet" href="../CSS/estadoLog/Estado_Usuario.css">
         <link rel="icon" href="../Imagenes/logoProyect/Logo_Principal.png">
+
+        <style>
+            .Contacto {
+                width: 80%;
+                margin: 2% 0%;
+                padding: 1% 3%;
+                border-radius: 5px;
+                background-color: rgba(200, 200, 200, 0.4);
+                box-shadow: 0px 0px 10px black;
+                display: grid;
+                gap: 2em;
+            }
+            .questions__container{
+                width: 50%;
+                display: grid;
+                gap: 2%;
+                /* padding-top: 50px; */
+                padding-bottom: 3%;
+            }
+
+            .questions__padding{
+                padding: ;
+                transition: padding .3s;
+                border: 1px solid #000;
+                border-radius: 6px;
+            }
+
+            .questions__padding--add{
+                padding-bottom: 40px;
+            }
+
+            .questions__answer{
+                padding: 0 30px 0;
+                overflow: hidden;
+            }
+
+            .questions__title{
+                text-align: left;
+                display: flex;
+                font-size: 20px;
+                padding: 30px 0 30px;
+                cursor: pointer;
+                color: var(--color-title);
+                justify-content: space-between;
+            }
+
+            .questions__arrow{
+                border-radius: 50%;
+                background-color: var(--color-title);
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-self: flex-end;
+                margin-left: 10px;
+                transition:  transform .3s;
+            }
+
+            .questions__arrow--rotate{
+                transform: rotate(180deg);
+            }
+
+            .questions__show{
+                text-align: left;
+                height: 0;
+                transition: height .3s;
+            }
+
+            .questions__img{
+                display: block;
+                width: 30px;
+            }
+
+            .questions__copy{
+                width: 60%;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+
+            .contenedor{
+                max-width: 1170px;
+                margin:auto;
+            }
+            .row{
+                display: flex;
+                flex-wrap: wrap;
+            }
+        </style>
     </head>
     <body>
 <!-- Menú de herramientas -->
@@ -22,7 +111,7 @@
                     <ul>
                         <a href="../index.html" > <img src="../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                             <h1 class="titulo">Trascendental</h1>
-                        <li><a href="Contactanos.html" class="menu">Contactanos</a></li>
+                        <li><a href="Contactanos.html" class="menu">Ayuda</a></li>
                         <li><a href="Nosotros.html">Quienes Somos</a></li>
                         <li><a href="estadoLog/Inicio_Sesión.html" class="menu">Inicia Sesión</a></li>
                         <li><a href="../index.html" class="menu">Inicio</a></li>
@@ -31,40 +120,61 @@
             </section>
         </header>
 <!-- Formulario de dudas, inquietudes, solicitudes, quejas, reclamos o sugerencias por parte de un usuario (FAQ) -->
-        <section class="contenido">
-            <center>
-                <section class="Contacto">
-                    <section id="Contenido_Contacto">
-                        <center>
-                            <!-- <h2>Para realizar una comunicación directa, favor complete el cuestionario</h2>
-                            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-                            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-                            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-                            <p>Ingrese la fecha de hoy</p>
-                            <input class="controls" type="date" name="Calendario" id="Calendario">
-                            <p>¿En qué podemos ayudarle?</p>
-                            <input class="controls" type="text" name="comentario" id="comentario" placeholder="Agregué aquí su comentario, inquietud, queja o reclamo">
-                            <input class="botons" type="submit" value="Enviar"> -->
-                            <form action="https://formsubmit.co/lauratatianagomez23@gmail.com" method="POST">
-                                <h2>Contáctanos</h2>
-                                <label for="name">Nombre Completo <samp>*</samp></label><br>
-                                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombres y Apellidos" required><br><br>
-             
-                                <label for="email">Correo Electrónico <samp>*</samp></label><br>
-                                <input class="controls" type="email" name="correo" id="correo" placeholder="Email" ><br><br>
-             
-                                <label for="mensaje">Mensaje <samp>*</samp></label><br>
-                                <textarea class="controls" name="comentario" id="comentario" cols="40" rows="10" required></textarea><br><br>
-             
-                                <input class="botons" type="submit" value="Enviar">
-                            </form>
-                        </center>
-                    </section>
-                </section>
-            </center>
-        </section>
-<!-- información básica de la empresa --->
-        <footer class="info_empres">
+
+<div class="contenedor">
+
+    
+    <section class="questions container">
+        <h2 class="subtitle">Preguntas frecuentes</h2>
+    <p class="questions__paragraph">En la siguiente sección se muestran algunas de las preguntas más frecuentes que realizan algunos usuarios.</p>
+    
+    <section class="questions__container">
+        <article class="questions__padding">
+            <div class="questions__answer">
+                <h3 class="questions__title">¿Qué es el sistema de acceso CEET
+                    <span class="questions__arrow">
+                        <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
+                    </span>
+                </h3>
+                
+                <p class="questions__show">Es una plataforma web donde las persona que se encuentren registradas podran visualizar sus registros de ingreso y salida, que efectuen de manera fisica en la institucion Centro de Electricidad, Electronica y Telecomunicaciones CEET, asi como tambien las fecha de asistencia en los cuales se presento</p>
+            </div>
+        </article>
+        
+        <article class="questions__padding">
+            <div class="questions__answer">
+                <h3 class="questions__title">¿Para quien está dirigido?
+                    <span class="questions__arrow">
+                        <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
+                    </span>
+                </h3>
+
+                <p class="questions__show">Este aplicativo se encuentra disponible para cualquier persona que desee tener un registro de sus accesos y salidas de la institucion, por ejemplo: Aprendices, Instructores, Administrativos. </p>
+            </div>
+        </article>
+
+        <article class="questions__padding">
+            <div class="questions__answer">
+                <h3 class="questions__title">¿Cómo puedo ver mis registros?
+                    <span class="questions__arrow">
+                        <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
+                    </span>
+                </h3>
+                
+                <p class="questions__show">Para poder ver los registros, primero debe realizar la inscripción en el aplicativo web presente, una vez realizado el procedimiento, se procede con el logueo en la plataforma, en la esquina superior derecha se podra visualizar un enlace llamado generar codigo, este le permitirá generar un codigo de barras que lo podra usar en momento de entrar a la institucion, cada acceso y salida que se haga con el codigo automanticamente quedara almacenado dentro de la base de datos. Cuando quiera ver sus registros, ingresa a el aplicativo y simplemente da en le boton "ver registros".</p>
+            </div>
+        </article>
+    </section>
+    
+</div>
+    
+    
+    
+    
+    
+
+    <!-- información básica de la empresa --->
+    <footer class="info_empres">
             <ul>
                 <center><h4>Disser Ingieniería S.A.S. Bogotá</h4></center>
                 <center>
@@ -82,4 +192,57 @@
             </section>
         </footer>
     </body>
+    <script>
+
+        /* function faqScript() {
+
+            alert("inicio de funcion");
+
+            i = document.getElementById("num").value;
+
+            alert("Definicion de variable ".i);
+            
+            if ((a==1 || a=="1") && (a!=0 || a!="")) {
+
+                document.getElementById('pF'.a).style.visibility="visible";
+                document.getElementById('pF'.a).style.position="relative";
+                
+                for (x=a-1; x>=0; x--) {
+                    
+                    document.getElementById('pF'.x).style.visibility="hidden";
+                    document.getElementById('pF'.x).style.position="absolute";
+    
+                    for (y=a+1; y<=6; y++) {
+                        document.getElementById('pF'.y).style.visibility="hidden";
+                        document.getElementById('pF'.y).style.position="absolute";
+                    }
+                }
+            }
+            else {}
+        } */
+
+        (function(){
+
+            const titleQuestions = [...document.querySelectorAll('.questions__title')];
+            console.log(titleQuestions)
+
+            titleQuestions.forEach(question =>{
+                question.addEventListener('click', ()=>{
+                    let height = 0;
+                    let answer = question.nextElementSibling;
+                    let addPadding = question.parentElement.parentElement;
+
+                    addPadding.classList.toggle('questions__padding--add');
+                    question.children[0].classList.toggle('questions__arrow--rotate');
+
+                    if(answer.clientHeight === 0){
+                        height = answer.scrollHeight;
+                    }
+
+                    answer.style.height = `${height}px`;
+                });
+            });
+        })();
+
+    </script>
 </html>
