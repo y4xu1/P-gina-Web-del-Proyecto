@@ -129,19 +129,21 @@
         $id = $_POST['docAspirante'];
         $pass = $_POST['password'];
 
+        $pass_cifrado=password_hash($contraseña,PASSWORD_DEFAULT);
+
         $seQuery = "SELECT numIdentificacion, password FROM usuarios WHERE numIdentificacion='$id' AND password='$pass'";
         $query = mysqli_query($conn, $seQuery);
 
         $nr = mysqli_num_rows($query);
 
-        if ($nr == 1) {
+      /*   if ($nr == 1) {
 
             $contBD_query = "SELECT docAspirante FROM contrato WHERE docAspirante = '$id'";
             $query = mysqli_query($conn, $contBD_query);
 
-            $nrContrato_BD = mysqli_fetch_array($query);
+            $nrContrato_BD = mysqli_fetch_array($query); */
 
-            if ($nrContrato_BD != 0) {
+            if (password_verify($pass,$pass_cifrado)) {
                 echo
                 '<script>
                     alert("Contrato encontrato");
@@ -156,14 +158,14 @@
                 </script>';
             }
           
-        }
+      /*   }
         else {
             echo
             '<script>
                 alert("ERROR: Datos inválidos");
                 window.location="./miContrato.php";
             </script>';
-        }
+        } */
     }
 
     function contratoBD($conn) {
