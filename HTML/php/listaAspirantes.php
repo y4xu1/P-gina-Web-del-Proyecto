@@ -31,21 +31,12 @@ function perfilAspirante ($conn) {
     echo "<articulesection class='Perfil_Aspirante'>";
 
       echo "<section class='Foto_Perfil'>";
-
-        //echo "" . $lista['fotoAspirante'] . "";
         echo "<img src='../../../../Imagenes/otros logos/Logo_Usuario.png' alt='Logo_Usuario' class='Logo_Usuario'>";
       echo "</section>";
 
       echo "<section class='Documentos_Aspirante'>";
         
         echo "<p><a href='../aspirantes/Perfil_Aspirante.html' name='aspName'>" . $lista['PnombreAspirante'] . " " . $lista['SnombreAspirante'] . " " . $lista['PapellidoAspirante'] . " " . $lista['SapellidoAspirante'] . "</a></p>";
-
-        /* if ($conn) {
-          echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['docAspirante'] . "'>";
-        }
-        else {
-          echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['docAspirante'] . "' id='Documento_1P'>";
-        } */
 
         echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['docAspirante'] . "'>";
         echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['curriculum'] . "'>";
@@ -62,12 +53,6 @@ function perfilAspirante ($conn) {
 
           echo '<input type="text" name="docAspirante" style="visibility:hidden" value="' . $lista['docAspirante'] . '">';
           echo "<input class='botons' type='submit' name='bloquear' value='Bloquear Aspirante' id='Botón_Bloqueo'>";echo '</form>';
-      echo "</section>";
-
-      echo "<section class='Comentarios'>";
-
-        echo "<textarea class='controls' rows='23' name='comentario' placeholder='Agregar un comentario...' id='Comentario'></textarea>";
-        echo "<input class='botons' type='submit' name='Botón_Envío' value='Enviar' id='Botón_Envío'>";
       echo "</section>";
 
     echo "</articulesection>";
@@ -92,21 +77,12 @@ function busqAspirante($conn) {
     echo "<section class='Perfil_Aspirante'>";
 
       echo "<section class='Foto_Perfil'>";
-
-        //echo "" . $lista['fotoAspirante'] . "";
         echo "<img src='../../../../Imagenes/otros logos/Logo_Usuario.png' alt='Logo_Usuario' class='Logo_Usuario'>";
       echo "</section>";
 
       echo "<section class='Documentos_Aspirante'>";
 
         echo "<p><a href='../aspirantes/Perfil_Aspirante.html' name='aspName'>" . $row['PnombreAspirante'] . " " . $row['SnombreAspirante'] . " " . $row['PapellidoAspirante'] . " " . $row['SapellidoAspirante'] . "</a></p>";
-
-        /* if ($conn) {
-          echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['docAspirante'] . "'>";
-        }
-        else {
-          echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $lista['docAspirante'] . "' id='Documento_1P'>";
-        } */
 
         echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $row['docAspirante'] . "'>";
         echo "<input type='submit' name='Boton_Documento' class='Boton_Documento' value='" . $row['tipoCargo'] . "'>";
@@ -127,12 +103,6 @@ function busqAspirante($conn) {
         echo '</form>';
       echo "</section>";
 
-      echo "<section class='Comentarios'>";
-
-        echo "<textarea class='controls' rows='23' name='comentario' placeholder='Agregar un comentario...' id='Comentario'></textarea>";
-        echo "<input class='botons' type='submit' name='Botón_Envío' value='Enviar' id='Botón_Envío'>";
-      echo "</section>";
-
     echo "</section>";
   }
 }
@@ -144,6 +114,5 @@ function bloqueo($conn) {
 
   mysqli_query($conn, $userQuery); 
   mysqli_close($conn);
-
 }
 ?>

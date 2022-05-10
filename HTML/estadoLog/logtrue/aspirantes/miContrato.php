@@ -28,7 +28,6 @@
         <header>
             <?php
                 if (isset($_POST['miContrato'])) {
-
                 }
                 else {
                     echo'<section class="Barra_Navegacion">
@@ -36,7 +35,7 @@
                                 <ul>
                                     <a href="../../../../index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                                     <h1 class="titulo">Trascendental</h1>
-                                    <li id="Perfil"><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
+                                    <li><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a></li>
                                     <li><a href="Agendar_citas.html" class="menu">Agendar Cita</a></li>
                                     <li><a href="miContrato.php" class="menu">Contrato</a></li>
                                 </ul>
@@ -136,13 +135,6 @@
 
         $nr = mysqli_num_rows($query);
 
-      /*   if ($nr == 1) {
-
-            $contBD_query = "SELECT docAspirante FROM contrato WHERE docAspirante = '$id'";
-            $query = mysqli_query($conn, $contBD_query);
-
-            $nrContrato_BD = mysqli_fetch_array($query); */
-
             if (password_verify($pass,$pass_cifrado)) {
                 echo
                 '<script>
@@ -157,15 +149,6 @@
                     window.location="./Perfil_Aspirante.html";
                 </script>';
             }
-          
-      /*   }
-        else {
-            echo
-            '<script>
-                alert("ERROR: Datos inválidos");
-                window.location="./miContrato.php";
-            </script>';
-        } */
     }
 
     function contratoBD($conn) {

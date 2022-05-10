@@ -13,64 +13,31 @@
         <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
     </head>
     <body>
-        <!-- Función de cerrar sesión -->
+<!-- Función de cerrar sesión -->
         <article class='logOut'>
             <a href="../../../php/cerrarSesion.php" class='btn_logOut'>
                 <img src="../../../../Imagenes/otros logos/quit.png" alt="Log_Out_Symbol" class='logOut_icon'>
             </a>
         </article>
 <!--Menu de herramientas-->
-        <header><!--encabezado de la pagina (inicio)-->
+        <header>
             <section class="Barra_Navegacion">
                 <nav id="menu">
                     <ul>
-                        <a href="../../../../index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
+                        <a href="../../../../index.html" ><img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                         <h1 class="titulo">Trascendental</h1>
-                        <li id="Perfil"><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
+                        <li><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a></li>
                         <li><a href="Agendar_citas.html" class="menu">Agendar Cita</a></li>
                         <li><a href="miContrato.php" class="menu">Contrato</a></li>
                     </ul>
                 </nav>
             </section>
-        </header><!--encabezado de la pagina (fina)-->
-<!--==================================-->
-
-<!-- Barra lateral desplegable con función de las notificaciones -->
-<aside>
-    <img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
-    <section class="caja_notificaciones">
-        <center>
-            <img src="../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
-        </center>
-        <div class="infoNotif">
-            <h2>Recursos Humanos</h2>
-            <p>Se te notifica que continuas con el proceso de contrato</p>
-        </div>
-    </section>
-    <section class="caja_notificaciones">
-        <center>
-            <img src="../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
-        </center>
-        <div class="infoNotif">
-            <h2>Recursos Humanos</h2>
-            <p>Sus documentos fueron aceptados, espere confirmación</p>
-        </div>
-    </section>
-    <section class="caja_notificaciones">
-        <center>
-            <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
-        </center>
-        <div class="infoNotif">
-            <h2>Trascendental</h2>
-            <p>Sus documentos fueron entregados correctamente</p>
-        </div>
-    </section>
-</aside>
-  <!-- Formulario de solicitud y asignacion de citas medicas -->
+        </header>
+<!-- Formulario de solicitud y asignacion de citas medicas -->
         <section class="contenido">
-                <form action="../../../php/citasMedicas.php" method="POST">
-                    <h2>Agende su cita</h2>
-                    <p>Para realizar su proceso de agendación de citas, por favor realice el siguiente formulario.</p>
+            <form action="../../../php/citasMedicas.php" method="POST">
+                <h2>Agende su cita</h2>
+                <p>Para realizar su proceso de agendación de citas, por favor realice el siguiente formulario.</p>
                     <div>
                         <p style="margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid gray;">Información Básica del Aspirante</p>
                         <input class="controls" type="text" name="docAspirante" id="Documento_de_Identidad" placeholder="Documento de Identidad">
@@ -105,9 +72,7 @@
                         <option value="10:30">10:30 a.m. </option>
                     </select>
                     <input class="botons" type="submit" name="enviar" id="enviar" value="Insertar">
-               
                 </form>
-                
             </section>
         </section>
 <!--Información básica de la empresa-->

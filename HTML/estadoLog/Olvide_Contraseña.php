@@ -101,7 +101,7 @@ if (isset ($_POST['cambiar'])){
                         <ul>
                             <a href="../../index.html" > <img src="../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                                 <h1 class="titulo">Trascendental</h1>
-                            <li><a href="../Contactanos.html" class="menu">Contactanos</a></li>
+                            <li><a href="../Contactanos.html" class="menu">Ayuda</a></li>
                             <li><a href="../Nosotros.html">Quienes Somos</a></li>
                             <li><a href="Inicio_Sesión.html" class="menu">Inicia Sesión</a></li>
                             <li><a href="../../index.html" class="menu">Inicio</a></li>

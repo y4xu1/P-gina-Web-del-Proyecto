@@ -18,15 +18,13 @@
         <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
     </head>
     <body>
-        
-        <!-- Función de cerrar sesión -->
+<!-- Función de cerrar sesión -->
         <article class='logOut'>
              <a href="../../../php/cerrarSesion.php" class='btn_logOut'>
                  <img src="../../../../Imagenes/otros logos/quit.png" alt="Log_Out_Symbol" class='logOut_icon'>
              </a>
         </article>
-
-        <!-- Menu de Herramientas -->
+<!-- Menu de Herramientas -->
         <header>
             <section class="Barra_Navegacion">
                 <section class="Inicio">
@@ -35,7 +33,7 @@
                     <ul>
                         <a href="index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                             <h1 class="titulo">Trascendental</h1>
-                        <li id="Perfil"><a href="Mi_Perfil.html" class="menu">Mi Perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
+                        <li><a href="Mi_Perfil.html" class="menu">Mi Perfil</a></li>
                         <li><a href="formularios/induccion.html" class="menu">Formularios</a></li>
                         <li><a href="Contratos.html" class="menu">Contratos</a></li>
                         <li><a href="obras.php" class="menu">Obras</a></li>
@@ -44,40 +42,7 @@
                 </nav>
             </section>
         </header>
-       
-        <!-- Barra lateral desplegable con función de las notificaciones -->
-        <aside>
-            <img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="imagen de Notificación" class="botonNotif">
-            <section class="caja_notificaciones">
-                <center>
-                    <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
-                </center>
-                <div class="infoNotif">
-                    <h2>Trascendental</h2>
-                    <p>El usuario <b>nombre aspirante</b> fue bloqueado correctamente de la plataforma</p>
-                </div>
-            </section>
-            <section class="caja_notificaciones">
-                <center>
-                    <img src="../../../../Imagenes/otros logos/casa.png" class="imgNotif" id="casa_2">
-                </center>
-                <div class="infoNotif">
-                    <h2>Nombre Aspirante</h2>
-                    <p>Favor hacerme confirmación de que posea los documentos requeridos en su debido orden</p>
-                </div>
-            </section>
-            <section class="caja_notificaciones">
-                <center>
-                    <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="imgNotif" id="casa_2">
-                </center>
-                <div class="infoNotif">
-                    <h2>Trascendental</h2>
-                    <p>El aspirante <b>nombre aspirante</b> recibió correctamente su comentario</p>
-                </div>
-            </section>
-        </aside>
-
-        <!-- contenido principal -->
+<!-- contenido principal -->
             <style>
                 * {
                     font-family: sans-serif;

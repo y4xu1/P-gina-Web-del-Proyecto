@@ -13,7 +13,7 @@
         <link rel="icon" href="../../../../Imagenes/logoProyect/Logo_Principal.png">
     </head>
     <body>
-        <!-- Función de cerrar sesión -->
+<!-- Función de cerrar sesión -->
         <article class='logOut'>
             <a href="../../../php/cerrarSesion.php" class='btn_logOut'>
                 <img src="../../../../Imagenes/otros logos/quit.png" alt="Log_Out_Symbol" class='logOut_icon'>
@@ -24,39 +24,19 @@
             <section class="Barra_Navegacion">
                 <nav id="menu">
                     <ul>
-                        <a href="../../../../index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
+                        <a href="../../../../index.html" ><img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                             <h1 class="titulo">Trascendental</h1>
-                        <li id="Perfil"><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a><img src="../../../../Imagenes/otros logos/Log_Notificacion.png" alt="Logo Notificación" class="" id="Logo_Notificacion"></li>
+                        <li><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a></li>
                         <li><a href="Agendar_citas.html" class="menu">Agendar Cita</a></li>
                         <li><a href="miContrato.php" class="menu">Contrato</a></li>
                     </ul>
                 </nav>
             </section>
         </header>
-<!--Notificaciones de la comunicacion directa entre el usuario de recursos humanos y el aspirante -->
-        <section class="contenido">
-            <section>
-                <section class="fondo_notificaciones">
-                    <div class="notificaciones">
-                        <div class="caja_notificaciones">
-                            <img src="../../../../Imagenes/otros logos/casa.png" class="casa" id="casa_2">
-                            <h2>Recursos Humanos</h2>
-                            <p>Se le notifica que continua con el proceso de contratación</p>
-                        </div>
-                        <div class="caja_notificaciones">
-                            <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="casa" id="casa_2">
-                            <h2>Trascendental</h2>
-                            <p>Sus documentos fueron entregados correctamente</p>
-                        </div>
-                        <div class="caja_notificaciones">
-                            <img src="../../../../Imagenes/otros logos/casa.png" class="casa" id="casa_2">
-                            <h2>Recursos Humanos</h2>
-                            <p>Sus documentos fueron aceptados, espere confirmación</p>
-                        </div>
-                    </div>
-                </section>
-            </section>
-<!--Formulario de ingreso y actualizacion de datos del aspirante a la base datos ===-->
+<!--Imagen principal-->
+        <section class="fondo_notificaciones">
+        </section>
+<!--Formulario de ingreso y actualizacion de datos del aspirante a la base datos-->
                 <section class="Perfil">
                     <center>
                         <h2>Nombre de Usuario</h2>
@@ -123,13 +103,9 @@
     
                             <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
                             <input class="botons" type="submit" value="Actualizar Datos" name="btnActualizar" id="enviar">
-                             
-                        
                     </section>
                     <!-- ingreso de los archivos de la documentacion requerida por la empresa -->
                     <section class="Documentos_Aspirante">
-                        <!-- <form action="../../../php/documentosAspirantes.php" method="POST"> -->
-                            <!-- <input type="text" name="docAspiranteS" class="controls" placeholder="Número de Identificación del aspirante"> -->
                             <center>
                                 <h2 id="titleDoc">Documentos</h2>
                             </center>
@@ -154,7 +130,6 @@
                             <img src="../../../../Imagenes/subir-color.png" style="width: 30px; margin: -7px 15px;"><label>Suba su firma para el contrato</label><br><br>
                             <input type="file" name="firma" class="controls" value="Firma para el contrato"><br><br>
                             <center>
-                                
                                 <input class="botons" type="submit" value="Insertar Documentos" name="btndocumentos" id="formulario">
                                 <input class="botons" type="submit" value="Actualizar Documentos" name="Actualizardocumentos" id="enviar">
                             </center>
@@ -180,6 +155,5 @@
                 <center><p>© Copyright. Todos los derechos reservados - 2021</p></center>
             </section>
         </footer>
-<!--===============================================================================================================-->
     </body>
 </html> 

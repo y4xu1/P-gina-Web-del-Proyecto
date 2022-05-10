@@ -9,44 +9,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Preguntas frecuentes</title>
         <link rel="stylesheet" href="../CSS/Formato_Base.css">
-        <link rel="stylesheet" href="../CSS/estadoLog/Estado_Usuario.css">
         <link rel="icon" href="../Imagenes/logoProyect/Logo_Principal.png">
 
         <style>
-            .Contacto {
-                width: 80%;
-                margin: 2% 0%;
-                padding: 1% 3%;
-                border-radius: 5px;
-                background-color: rgba(200, 200, 200, 0.4);
-                box-shadow: 0px 0px 10px black;
-                display: grid;
-                gap: 2em;
+            .subtitle {
+                padding: 10%;
+                padding-bottom: 10px;
+                font-size: 450%;
+                font-family: sans-serif;
+                color: rgb(82, 120, 248);
+                text-shadow: 3px 2px 2px blue;
             }
             .questions__container{
                 width: 50%;
                 display: grid;
                 gap: 2%;
-                /* padding-top: 50px; */
-                padding-bottom: 3%;
+                padding-top: 3%;
+                padding-bottom: 8%;
             }
-
             .questions__padding{
-                padding: ;
                 transition: padding .3s;
                 border: 1px solid #000;
                 border-radius: 6px;
             }
-
             .questions__padding--add{
                 padding-bottom: 40px;
             }
-
             .questions__answer{
                 padding: 0 30px 0;
                 overflow: hidden;
             }
-
             .questions__title{
                 text-align: left;
                 display: flex;
@@ -56,7 +48,6 @@
                 color: var(--color-title);
                 justify-content: space-between;
             }
-
             .questions__arrow{
                 border-radius: 50%;
                 background-color: var(--color-title);
@@ -69,28 +60,23 @@
                 margin-left: 10px;
                 transition:  transform .3s;
             }
-
             .questions__arrow--rotate{
                 transform: rotate(180deg);
             }
-
             .questions__show{
                 text-align: left;
                 height: 0;
                 transition: height .3s;
             }
-
             .questions__img{
                 display: block;
                 width: 30px;
             }
-
             .questions__copy{
                 width: 60%;
                 margin: 0 auto;
                 margin-bottom: 30px;
             }
-
             .contenedor{
                 max-width: 1170px;
                 margin:auto;
@@ -120,59 +106,77 @@
             </section>
         </header>
 <!-- Formulario de dudas, inquietudes, solicitudes, quejas, reclamos o sugerencias por parte de un usuario (FAQ) -->
+<center>
+    <div class="contenedor">
+        <section class="questions container">
+            <h2 class="subtitle">Preguntas frecuentes</h2>
+        <section class="questions__container">
 
-<div class="contenedor">
+            <article class="questions__padding">
+                <div class="questions__answer">
+                    <h3 class="questions__title">¿Cómo hago para registrarme si soy aspirante?
+                        <span class="questions__arrow">
+                            <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
+                        </span>
+                    </h3>
+                    <p class="questions__show">Debes ingresar el código de verificación indicado por la persona encargada de recursos humanos junto con su número de documento de identidad y su contraseña.</p>
+                </div>
+            </article>
 
-    
-    <section class="questions container">
-        <h2 class="subtitle">Preguntas frecuentes</h2>
-    <p class="questions__paragraph">En la siguiente sección se muestran algunas de las preguntas más frecuentes que realizan algunos usuarios.</p>
-    
-    <section class="questions__container">
-        <article class="questions__padding">
-            <div class="questions__answer">
-                <h3 class="questions__title">¿Qué es el sistema de acceso CEET
-                    <span class="questions__arrow">
-                        <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
-                    </span>
-                </h3>
-                
-                <p class="questions__show">Es una plataforma web donde las persona que se encuentren registradas podran visualizar sus registros de ingreso y salida, que efectuen de manera fisica en la institucion Centro de Electricidad, Electronica y Telecomunicaciones CEET, asi como tambien las fecha de asistencia en los cuales se presento</p>
-            </div>
-        </article>
-        
-        <article class="questions__padding">
-            <div class="questions__answer">
-                <h3 class="questions__title">¿Para quien está dirigido?
-                    <span class="questions__arrow">
-                        <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
-                    </span>
-                </h3>
+            <article class="questions__padding">
+                <div class="questions__answer">
+                    <h3 class="questions__title">¿Tengo problemas de inicio de sesión?
+                        <span class="questions__arrow">
+                            <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
+                        </span>
+                    </h3>
+                    <p class="questions__show">Como primera medida, verifique que se ha registrado con éxito en el sistema.
+                        Si usted ya logró realizar su registro, es importante que su número de identificación, su contraseña y su rol de usuario sean los indicados en el registro.
+                        De lo contrario, usted ha sido bloqueado del sistema, si cree que esto fue un error, comunícalo con recursos humanos.</p>
+                </div>
+            </article>
 
-                <p class="questions__show">Este aplicativo se encuentra disponible para cualquier persona que desee tener un registro de sus accesos y salidas de la institucion, por ejemplo: Aprendices, Instructores, Administrativos. </p>
-            </div>
-        </article>
+            <article class="questions__padding">
+                <div class="questions__answer">
+                    <h3 class="questions__title">¿Cómo puedo subir mis datos y documentos?
+                        <span class="questions__arrow">
+                            <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
+                        </span>
+                    </h3>
+                    <p class="questions__show">Al iniciar sesión, deberá dirigirse a la herramienta "Mi Perfil", la cual se encuentra en el menú de herramientas principal. 
+                        Allí podrá diligenciar sus datos y documentos. IMPORTANTE, recuerde tener presente que en todo caso usted debe incluir su número de documento en el 
+                        formulario para lograr con éxito la transferencia de datos al sistema.</p>
+                </div>
+            </article>
 
-        <article class="questions__padding">
-            <div class="questions__answer">
-                <h3 class="questions__title">¿Cómo puedo ver mis registros?
-                    <span class="questions__arrow">
-                        <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
-                    </span>
-                </h3>
-                
-                <p class="questions__show">Para poder ver los registros, primero debe realizar la inscripción en el aplicativo web presente, una vez realizado el procedimiento, se procede con el logueo en la plataforma, en la esquina superior derecha se podra visualizar un enlace llamado generar codigo, este le permitirá generar un codigo de barras que lo podra usar en momento de entrar a la institucion, cada acceso y salida que se haga con el codigo automanticamente quedara almacenado dentro de la base de datos. Cuando quiera ver sus registros, ingresa a el aplicativo y simplemente da en le boton "ver registros".</p>
-            </div>
-        </article>
-    </section>
-    
-</div>
-    
-    
-    
-    
-    
+            <article class="questions__padding">
+                <div class="questions__answer">
+                    <h3 class="questions__title">¿Cómo puedo agendar mi cita?
+                        <span class="questions__arrow">
+                            <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
+                        </span>
+                    </h3>
+                    <p class="questions__show">Una vez usted logré superar el primer filtro de la contratación, asegúrese de que tenga la confirmación de que pueda agendar 
+                        su cita médica y diríjase a la herramienta "Agendar cita" en el menú de herramientas principal, diligencie sus datos requeridos 
+                        y seleccione su cita a su conveniencia.</p>
+                </div>
+            </article>
 
+            <article class="questions__padding">
+                <div class="questions__answer">
+                    <h3 class="questions__title">¿Cómo puedo visualizar mi contrato?
+                        <span class="questions__arrow">
+                            <img src="../Imagenes/flecha-hacia-abajo.png" class="questions__img">
+                        </span>
+                    </h3>
+                    <p class="questions__show">Asegúrese que usted ya logró superar todos los filtros del proceso de contratación y que se le haya notificado. 
+                        Ahora diríjase a la herramienta "Mi contrato" en el menú de herramientas principal y diligencie los datos que son requeridos para lograr visualizar su contrato en un formato PDF.
+                        Tenga en cuenta que: Usted únicamente podrá visualizar su contrato, no podrá descargarlo por políticas de privacidad.</p>
+                </div>
+            </article>
+        </section>
+    </div>
+</center>
     <!-- información básica de la empresa --->
     <footer class="info_empres">
             <ul>
@@ -193,33 +197,6 @@
         </footer>
     </body>
     <script>
-
-        /* function faqScript() {
-
-            alert("inicio de funcion");
-
-            i = document.getElementById("num").value;
-
-            alert("Definicion de variable ".i);
-            
-            if ((a==1 || a=="1") && (a!=0 || a!="")) {
-
-                document.getElementById('pF'.a).style.visibility="visible";
-                document.getElementById('pF'.a).style.position="relative";
-                
-                for (x=a-1; x>=0; x--) {
-                    
-                    document.getElementById('pF'.x).style.visibility="hidden";
-                    document.getElementById('pF'.x).style.position="absolute";
-    
-                    for (y=a+1; y<=6; y++) {
-                        document.getElementById('pF'.y).style.visibility="hidden";
-                        document.getElementById('pF'.y).style.position="absolute";
-                    }
-                }
-            }
-            else {}
-        } */
 
         (function(){
 
