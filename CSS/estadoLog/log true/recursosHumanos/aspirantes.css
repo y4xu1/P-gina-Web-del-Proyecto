@@ -109,43 +109,64 @@ ul, ol {
 .Perfil_Aspirante {
     margin: 1.5% 3%;
     padding: 1.8%;
-    width: 90%;
+    width: 40%;
     display: inline-flex;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgb(49, 48, 48);
 }
-.Logo_Usuario {
-    margin: 0% 50% 0% 0%;
-    width: 180%;
-    position:unset;
-    background-color: #BFC9CA;
-    border-radius: 200px;
+
+/* información del aspirante */
+.infoAsp {
+    width: 100%;
 }
-.Documentos_Aspirante p a {
+.Logo_Usuario {
+    width: 40%;
+    border-radius: 10px;
+}
+.Logo_Usuario:hover {
+    background-color: #bfc9ca59;
+}
+table td, table th {
+    padding: 2px 5px;
+}
+table tr th {
+    text-align: end;
+}
+table tr td {
+    text-align: left;
+}
+.infoAsp a {
     font-family: sans-serif;
     font-size: 100%;
     color: black;
     text-decoration: none;
 }
-.Documentos_Aspirante p a:hover {
+.infoAsp a:hover {
     font-weight: bold;
     text-decoration: underline;
     text-shadow: 0px 0px 1px gray;
 }
+
+/* Botón de bloqueo */
+.botons {
+    padding: 0.8% 2.5%;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 100%;
+}
+
+/* Documentos del aspirante */
 .Documentos_Aspirante {
-    width: 40%;
-    height: auto;
-    /*margin: -16% 16%;*/
+    width: 100%;
     padding: 1%;
-    margin-left: 8%;
 }
 .Boton_Documento {
     width: 100%;
     height: auto;
-    margin: 1% 0%;
-    padding: 1% 3%;
-    border-radius: 10px;
+    margin: 3px 0%;
+    padding: 3px 7px;
+    border-radius: 7px;
     border: 2px groove #184394;
     text-align: left;
     font-family: sans-serif;
@@ -160,71 +181,4 @@ ul, ol {
 #Documento_1P:hover {
     border: 2px groove #F1948A;
     background-color: #FADBD8;
-}
-.Comentarios {
-    width: 40%;
-    padding: 1%;
-    margin-left: 5%;
-}
-#Comentario {
-    width: 100%;
-    margin: 0% -3%;
-    height: auto;
-    padding: 2%;
-    font-family: sans-serif;
-    font-size: 110%;
-    border-radius: 5px;
-}
-#Comentario:hover {
-    background-color: #EAEDED;
-    box-shadow: 0px 0px 3px gray;
-}
-#Comentario:focus {
-    border: 2px groove rgb(0, 0, 128, 0.2);
-}
-.botons {
-    float: inline-end;
-    margin-top: 1.5%;
-    margin-left: 1%;
-    padding: 0.8% 2.5%;
-    z-index: auto;
-    font-weight: bolder;
-    font-family: sans-serif;
-    font-size: 110%;
-    border-radius: 6px;
-}
-input:hover {
-    background-color: #EAEDED;
-    box-shadow: 0px 0px 2px gray;
-}
-
-/* No sirve (borrar?) */
-/* Estilo del contenido del archivo del gráfico estadistico */
-#Fondo {
-    position: relative;
-    float: left;
-    overflow: none;
-    width: 100%;
-    height: auto;
-    filter: blur(4px);
-    z-index: -1;
-}
-.Info_Graficas {
-    position: absolute;
-    width: 60%;
-    margin: 27% 20% 0% 20%;
-    padding: 2%;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 0px 10px gray;
-    font-size: 200%;
-    font-family: sans-serif;
-    color: rgb(75, 75, 75);
-}
-.Contenido_Graficos{
-    padding: 0% 0% 5% 0%;
-}
-.Graficos {
-    margin: 5% 0% 0% 0%;
-    width: 60%;
 }
