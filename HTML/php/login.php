@@ -7,68 +7,52 @@
 ?>
 
 <?php
+session_start();
+#logeo o ingreso al sistema
+$nombre = $_POST['usuario'];
+$_SESSION['doc']=$nombre;
+$pass = $_POST['pass'];
+$rol = $_POST['TipoRol'];
 
-    #logeo o ingreso al sistema
-    $nombre = $_POST['usuario'];
-    $pass = $_POST['pass'];
-    $rol = $_POST['TipoRol'];
+if(isset($_POST['btningresar'])) {
+     $queryusuario =mysqli_query($conn, "SELECT * FROM usuarios where numIdentificacion = '$_SESSION[doc]'");
+     $nr=mysqli_num_rows($queryusuario);
+     $buscarpass=mysqli_fetch_array($queryusuario);
 
-    $pass_cifrado=password_hash($pass,PASSWORD_DEFAULT);
+     if ($nr==1){
 
-    if(isset($_POST['btningresar'])) {
-
-        $consulta = "SELECT * FROM usuarios WHERE numIdentificacion = '$nombre' AND password = '$pass' AND estadoUsuarios = 1 AND TipoRol = $rol";
-        $query = mysqli_query($conn,$consulta); 
-
-        //$nr = mysqli_num_rows($query);
-
-        //if ($nr == 1) {
-
-            #$consulRol = "SELECT tipoRol FROM usuarios WHERE numIdentificacion='$nombre'";
-           // $consulRol = "SELECT * FROM usuarios WHERE numIdentificacion = $nombre AND password = '$pass_cifrado AND TipoRol = $rol";
-            //$queryRol = mysqli_query($conn, $consulRol);
-            //$numConsul = mysqli_num_rows($queryRol);
-
-            if (password_verify($pass,$pass_cifrado)) {
-                #echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
-                switch ($rol){
-                    case 1:
-                        echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
-                        break;
-                    case 2:
-                        echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php'</script>"; 
-                        break;
-                    default:
-                        echo "<script> alert('ERROR: Rol no indicado'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
-                        break;
+        $consulta ="SELECT * FROM usuarios where numIdentificacion='$_SESSION[doc]'";
+        $resultado =mysqli_query($conn, $consulta);
+       
+        while($fila = mysqli_fetch_array($resultado)){
+        
+            if($fila['estadoUsuarios']==1){
+                
+                $consulta ="SELECT * FROM usuarios where numIdentificacion='$_SESSION[doc]'";
+                $resultado =mysqli_query($conn, $consulta);
+               
+                while($fila = mysqli_fetch_array($resultado)){
+    
+                    if($fila['TipoRol']==1){
+                        echo "<script> alert('Bienvenido jojjoj'); window.location='../estadoLog/logtrue/aspirantes/prueba1.php'</script>";
+                    }else{
+                        echo "<script> alert('Bienvenido jajajaj'); window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.html'</script>";
+                    }
+                   
                 }
+            }else{
+                echo "<script> alert('su estado en este momento es inactivo'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
             }
-            else {
-                echo "<script> alert('Usuario incorrecto, bloqueado o la contraseña esta incorrecta.'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
-            }
-            /*
-            switch ($numConsul){
-                case 1:
-                    echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html'</script>";
-                    break;
-                case 2:
-                    echo "<script> alert('Bienvenido $nombre'); window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php'</script>"; 
-                    break;
-                default:
-                    echo "<script> alert('ERROR: Rol no indicado'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
-                    break;
-            }
-            */
-        //}
-        //else {
-            //echo "<script> alert('Usuario incorrecto, bloqueado o la contraseña esta incorrecta.');window.location= '../estadoLog/Inicio_Sesión.html' </script>";
-        //}
 
-    }
-    else {
-        #echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        #echo "<h4>Error: </h4><br><h3>" . mysqli_error($conn) . "</h3>";
-    }
+       
+        }
+     }  
+     else{
+        echo "<script> alert('ERROR:usuario no existe'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
+      
+     }
+
+}
 
 ?>
 

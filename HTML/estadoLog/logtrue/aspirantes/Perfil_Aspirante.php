@@ -39,7 +39,10 @@
 <!--Formulario de ingreso y actualizacion de datos del aspirante a la base datos-->
                 <section class="Perfil">
                     <center>
-                        <h2>Nombre de Usuario</h2>
+                    <article>
+                            <P><?=cargardata($conn);?></P>  
+                            </article>
+    <!--                     <h2>Nombre de Usuario</h2>
                         <p>Foto de Perfil</p>
                         <input type="image" src="../../../../Imagenes/otros logos/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil">
                         <form action="../../../php/Aspirantes.php" method="POST">
@@ -99,7 +102,7 @@
                             </select>
                             <input class="controls" type="text" name="Libretamilitar" id="Libreta_militar" placeholder="Libreta militar">
                             <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS">
-                            <input class="controls" type="text" name="ARL" id="ARL" placeholder="ARL">
+                            <input class="controls" type="text" name="ARL" id="ARL" placeholder="ARL"> -->
     
                             <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
                             <input class="botons" type="submit" value="Actualizar Datos" name="btnActualizar" id="enviar">
