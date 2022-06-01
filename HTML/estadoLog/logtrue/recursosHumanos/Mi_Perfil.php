@@ -1,4 +1,10 @@
 <!-- Perfil del usuario con el rol de recursos humanos -->
+<?php
+    
+    include ('../aspirantes/phpMiperfil.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -47,8 +53,12 @@
                         <h2>Nombre de Usuario</h2>
                         <p>Foto de Perfil</p>
                         <input type="image" src="../../../../Imagenes/otros logos/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil">
+                        <article>
+                            <P><?=cargardata1($conn);?></P>  
+                            </article>
                         <form action="../../../php/RecursosHumanos.php" method="POST">
-                            <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre"> 
+                        
+                            <!-- <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre"> 
                             <input class="controls" type="text" name="sNombre" id="" placeholder="Segundo Nombre">
                             <input class="controls" type="text" name="pApellido" id="" placeholder="Primer Apellido">
                             <input class="controls" type="text" name="sApellido" id="" placeholder="Segundo Apellido"> 
@@ -110,7 +120,7 @@
                                 <option value="Masculino">Masculino</option>
                             </select>
                             <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS"> 
-                            <input class="controls" type="text" name="ARL" id="ARL" placeholder="ARL">
+                            <input class="controls" type="text" name="ARL" id="ARL" placeholder="ARL"> -->
 
                             <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
                             <input class="botons" type="submit" value="Actualizar Datos" name="btnActualizar" id="enviar">

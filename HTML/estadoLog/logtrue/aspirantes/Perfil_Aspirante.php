@@ -1,4 +1,8 @@
 <!-- Pagina principal al ingresar a la seccion de aspirante y pelfil del usuario con rol aspirante  -->
+<?php
+    
+    include ('phpMiperfil.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>

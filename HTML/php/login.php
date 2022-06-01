@@ -34,9 +34,9 @@ if(isset($_POST['btningresar'])) {
                 while($fila = mysqli_fetch_array($resultado)){
     
                     if($fila['TipoRol']==1){
-                        echo "<script> alert('Bienvenido jojjoj'); window.location='../estadoLog/logtrue/aspirantes/prueba1.php'</script>";
+                        echo "<script> alert('Bienvenido jojjoj'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php'</script>";
                     }else{
-                        echo "<script> alert('Bienvenido jajajaj'); window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.html'</script>";
+                        echo "<script> alert('Bienvenido jajajaj'); window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.php'</script>";
                     }
                    
                 }
