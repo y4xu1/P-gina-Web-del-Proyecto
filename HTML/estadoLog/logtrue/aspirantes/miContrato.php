@@ -1,6 +1,8 @@
 <?php
     //Inclusión de la conexión con la BD
     include ('../../../php/conexion.php');
+    session_start();
+    //echo $jun = $_SESSION['doc'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -35,7 +37,7 @@
                                 <ul>
                                     <a href="../../../../index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                                     <h1 class="titulo">Trascendental</h1>
-                                    <li><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a></li>
+                                    <li><a href="Perfil_Aspirante.php" class="menu">Mi perfil</a></li>
                                     <li><a href="Agendar_citas.html" class="menu">Agendar Cita</a></li>
                                     <li><a href="miContrato.php" class="menu">Contrato</a></li>
                                 </ul>
@@ -57,8 +59,10 @@
                                 <fieldset>
                                     <legend>Mi Contrato</legend>
                                     <form action="./miContrato.php" method="post">
-                                        <input class="controls" type="text" name="docAspirante" id="numDoc" placeholder="Digite su número de identificación"><br>
+                                        <input class="controls" type="text" name="docAspirante" id="numDoc" placeholder="Identificacíon"><br>
+
                                         <input class="controls" type="password" name="password" id="txtpassword" placeholder="Digite su contraseña"><br><br>
+                                        
                                         <div class="ub1">
                                             <input type="checkbox" onclick="verpassword()" >
                                             <h4>Mostrar contraseña</h4>
@@ -126,29 +130,35 @@
 
     function seguridad($conn) {
         $id = $_POST['docAspirante'];
-        $pass = $_POST['password'];
+        $pass_cifrado=$_POST['password'];
 
-        $pass_cifrado=password_hash($contraseña,PASSWORD_DEFAULT);
+        $querycontract = "SELECT numIdentificacion FROM usuarios WHERE numIdentificacion='$id'";
+        $query = mysqli_query($conn, $querycontract);
+        $contract = mysqli_fetch_array($query);
+        if ($contract > 0) {
 
-        $seQuery = "SELECT numIdentificacion, password FROM usuarios WHERE numIdentificacion='$id' AND password='$pass'";
-        $query = mysqli_query($conn, $seQuery);
+        $querycontract2 =mysqli_query($conn, "SELECT password FROM usuarios where numIdentificacion = '$id'");
+        $contract = mysqli_fetch_array($querycontract2);
+        $showcontract=$contract['password'];
+    
 
-        $nr = mysqli_num_rows($query);
+    if (password_verify($pass_cifrado, $showcontract)) {
+        echo
+        '<script>
+            alert("Contrato encontrato");
+        </script>';
+        busqContrato($conn);
 
-            if (password_verify($pass,$pass_cifrado)) {
-                echo
-                '<script>
-                    alert("Contrato encontrato");
-                </script>';
-                busqContrato($conn);
-            }
-            else {
-                echo
+    }else{
+        echo
                 '<script>
                     alert("Su contrato no se ha procesado, tenga paciencia");
                     window.location="./Perfil_Aspirante.html";
                 </script>';
-            }
+
+    }
+        }
+
     }
 
     function contratoBD($conn) {

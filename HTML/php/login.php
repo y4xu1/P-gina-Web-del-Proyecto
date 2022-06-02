@@ -16,11 +16,17 @@ $rol = $_POST['TipoRol'];
 
 if(isset($_POST['btningresar'])) {
      $queryusuario =mysqli_query($conn, "SELECT * FROM usuarios where numIdentificacion = '$_SESSION[doc]'");
-     $nr=mysqli_num_rows($queryusuario);
-     $buscarpass=mysqli_fetch_array($queryusuario);
+     $nr=mysqli_fetch_array($queryusuario);
+    // $buscarpass=mysqli_fetch_array($queryusuario);
+    
+     if ($nr > 0){
+    $querypass =mysqli_query($conn, "SELECT password FROM usuarios where numIdentificacion = '$_SESSION[doc]'");
+   $nr2 = mysqli_fetch_array($querypass);
+    $showpass=$nr2['password'];
+    
 
-     if ($nr==1){
-
+    if (password_verify($pass, $showpass)) {
+        
         $consulta ="SELECT * FROM usuarios where numIdentificacion='$_SESSION[doc]'";
         $resultado =mysqli_query($conn, $consulta);
        
@@ -33,6 +39,7 @@ if(isset($_POST['btningresar'])) {
                
                 while($fila = mysqli_fetch_array($resultado)){
     
+
                     if($fila['TipoRol']==1){
                         echo "<script> alert('Bienvenido jojjoj'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php'</script>";
                     }else{
@@ -40,14 +47,19 @@ if(isset($_POST['btningresar'])) {
                     }
                    
                 }
+
             }else{
                 echo "<script> alert('su estado en este momento es inactivo'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
             }
 
        
         }
-     }  
-     else{
+    }else{
+        echo "<script> alert('no funciona'); window.location='../estadoLog/Registro.html'</script>";
+    }
+
+        
+     }  else{
         echo "<script> alert('ERROR:usuario no existe'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
       
      }
@@ -59,10 +71,11 @@ if(isset($_POST['btningresar'])) {
 <?php
 
     $codigoaceptacion = $_POST['aceptacion'];
+    $pass=password_hash($_POST['pass'], PASSWORD_BCRYPT);
 
     #Registrar
     if(isset($_POST["btnregistrar"])){
-        $sqlgrabar = "INSERT INTO usuarios(numIdentificacion, password, TipoRol, codigoAceptacion, estadoUsuarios) VALUES ($nombre, '$pass_cifrado', '$rol', 1, 1)";
+        $sqlgrabar = "INSERT INTO usuarios(numIdentificacion, password, TipoRol, codigoAceptacion, estadoUsuarios) VALUES ($nombre, '$pass', '$rol', 1, 1)";
         #echo $sqlgrabar;
         
         if($codigoaceptacion=='disser123'){
