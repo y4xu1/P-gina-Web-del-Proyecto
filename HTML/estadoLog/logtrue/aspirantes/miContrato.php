@@ -154,6 +154,8 @@
                 '<script>
                     alert("Su contrato no se ha procesado, tenga paciencia");
                     window.location="./Perfil_Aspirante.html";
+                    //window.location="./Perfil_Aspirante2.php";
+                    //window.location="./Perfil_Aspirante.php";
                 </script>';
 
     }

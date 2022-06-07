@@ -50,13 +50,14 @@
             <center>
                 <section class="Perfil">
                     <center>
-                        <h2>Nombre de Usuario</h2>
+                        <!-- <h2>Nombre de Usuario</h2>
                         <p>Foto de Perfil</p>
-                        <input type="image" src="../../../../Imagenes/otros logos/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil">
+                        <input type="image" src="../../../../Imagenes/otros logos/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil"> -->
                         <article>
-                            <P><?=cargardata1($conn);?></P>  
-                            </article>
-                            <a href="Mi_perfil2.php" class="menu">Insertar o Actualizar</a>
+                            <?=cargardata1($conn);?>
+                        </article>
+                        <br>
+                        <a href="Mi_perfil2.php" class="actualizar">Editar información</a>
                     </center>
                 </section>
             </center>

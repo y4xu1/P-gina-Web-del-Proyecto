@@ -12,12 +12,12 @@ session_start();
 $nombre = $_POST['usuario'];
 $_SESSION['doc']=$nombre;
 $pass = $_POST['pass'];
-$rol = $_POST['TipoRol'];
+//$rol = $_POST['TipoRol'];
 
 if(isset($_POST['btningresar'])) {
      $queryusuario =mysqli_query($conn, "SELECT * FROM usuarios where numIdentificacion = '$_SESSION[doc]'");
      $nr=mysqli_fetch_array($queryusuario);
-    // $buscarpass=mysqli_fetch_array($queryusuario);
+    //$buscarpass=mysqli_fetch_array($queryusuario);
     
      if ($nr > 0){
     $querypass =mysqli_query($conn, "SELECT password FROM usuarios where numIdentificacion = '$_SESSION[doc]'");
@@ -41,21 +41,32 @@ if(isset($_POST['btningresar'])) {
     
 
                     if($fila['TipoRol']==1){
-                        echo "<script> alert('Bienvenido jojjoj'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php'</script>";
+                        echo "<script> alert('Bienvenido'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php'</script>";
+                        //echo "<script> alert('Bienvenido'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante2.php'</script>";
+
+                        $qryProfile = "SELECT * FROM aspirante WHERE docAspirante = '$_SESSION[doc]';";
+                        $resul_qryProfile = mysqli_query($conn, $qryProfile);
+
+                        if (mysqli_fetch_array($resul_qryProfile)!=0) {
+                            //echo "<script> alert('Bienvenido'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php'</script>";
+                        }
+                        else {
+                            //echo "<script> alert('Bienvenido'); window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante2.php'</script>";
+                        }
                     }else{
-                        echo "<script> alert('Bienvenido jajajaj'); window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.php'</script>";
+                        echo "<script> alert('Bienvenido'); window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.php'</script>";
                     }
                    
                 }
 
             }else{
-                echo "<script> alert('su estado en este momento es inactivo'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
+                echo "<script> alert('Su estado de usuario en este momento es inactivo'); window.location='../estadoLog/Inicio_Sesión.html'</script>";
             }
 
        
         }
     }else{
-        echo "<script> alert('no funciona'); window.location='../estadoLog/Registro.html'</script>";
+        echo "<script> alert('Datos incorrectos'); window.location='../estadoLog/Registro.html'</script>";
     }
 
         

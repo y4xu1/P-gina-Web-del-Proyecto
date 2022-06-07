@@ -11,25 +11,25 @@ if(isset($_POST['btnregistrar'])) {
   insertar($conn);
   echo "<script>";
     echo "alert('Su perfil fue cargado correctamente');";
-    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
+    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';";
   echo "</script>";
 } else if(isset($_POST['btnActualizar'])) {
   actualizar ($conn);
   echo "<script>";
     echo "alert('Su perfil fue actualizado correctamente');";
-    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
+    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';";
   echo "</script>";
 } else if(isset($_POST['btndocumentos'])) {
   documentos($conn);
   echo "<script>";
     echo "alert('Sus documentos fuerón cargados correctamente');";
-    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
+    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';";
   echo "</script>";
 } else if(isset($_POST['Actualizardocumentos'])) {
   Actualizardocumentos($conn);
   echo "<script>";
     echo "alert('Sus documentos fuerón actualiazados correctamente');";
-    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.html';";
+    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';";
   echo "</script>";
 } else if (ISSET($_POST['bloquear'])) {
   bloqueo($conn);

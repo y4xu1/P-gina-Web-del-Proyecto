@@ -9,14 +9,14 @@ if(isset($_POST ['btnregistrar'])){
   insertar($conn);
   echo "<script>";
     echo "alert('Su perfil fue cargado correctamente');";
-    echo "window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.html';";
+    echo "window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.php';";
   echo "</script>";
 
 } else if(isset($_POST ['btnActualizar'])){
   actualizar ($conn);
   echo "<script>";
     echo "alert('Su perfil fue actualizado correctamente');";
-    echo "window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.html';";
+    echo "window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.php';";
   echo "</script>";
 } else {
   echo "<script>alert('Error')</script>";
