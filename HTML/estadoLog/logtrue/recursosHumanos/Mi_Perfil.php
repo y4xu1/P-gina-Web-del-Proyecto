@@ -56,7 +56,7 @@
                         <article>
                             <?=cargardata1($conn);?>
                         </article>
-                        <br>
+                        <br><br>
                         <a href="Mi_perfil2.php" class="actualizar">Editar información</a>
                     </center>
                 </section>

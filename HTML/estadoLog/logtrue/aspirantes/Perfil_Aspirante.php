@@ -29,7 +29,7 @@
                     <ul>
                         <a href="../../../../index.html" ><img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
                             <h1 class="titulo">Trascendental</h1>
-                        <li><a href="Perfil_Aspirante.html" class="menu">Mi perfil</a></li>
+                        <li><a href="Perfil_Aspirante.php" class="menu">Mi perfil</a></li>
                         <li><a href="Agendar_citas.html" class="menu">Agendar Cita</a></li>
                         <li><a href="miContrato.php" class="menu">Contrato</a></li>
                     </ul>
@@ -45,6 +45,100 @@
                 <center>
                     <article>
                         <?=cargardata($conn);?>
+                        <!-- <table>
+                            <tr>
+                                <th colspan='2'>
+                                    <center>
+                                        <h2>Nombre del aspirante</h2>
+                                    </center>
+                                    <br>
+                                    <br>
+                                    <hr>
+                                    <br>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>
+                                    <center>
+                                        <p>Foto de perfil</p>
+                                        <input type='image' src='../../../../Imagenes/otros logos/Logo_Usuario.png' name='Foto Perfil' id='Foto_Perfil'>
+                                    </center>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Número de documento
+                                </th>
+                                <td>
+                                    " . $fila['docAspirante'] . "
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Fecha de expedición</th>
+                                <td>" . $fila['fechaExpDoc'] . "</td>
+                            </tr>
+                            <tr>
+                                <th>País de expedición <br><br></th>
+                                <td>" . $fila['paisExpDoc'] . " <br><br></td>
+                            </tr>
+                            <tr>
+                                <th>Fecha de nacimiento</th>
+                                <td>" . $fila['fechaNacimiento'] . "</td>
+                            </tr>
+                            <tr>
+                                <th>País de nacimiento</th>
+                                <td>" . $fila['paisNacimiento'] . "</td>
+                            </tr>
+                            <tr>
+                                <th>Genero<br><br></th>
+                                <td>" . $fila['genero'] . "<br><br></td>
+                            </tr>
+                            <tr>
+                                <th>Dirección</th>
+                                <td>" . $fila['direccionResidencia'] . "</td>
+                            </tr>
+                            <tr>
+                                <th>Ciudad</th>
+                                <td>" . $fila['ciudad'] . "</td>
+                            </tr>
+                            <tr>
+                                <th>Estrato<br><br></th>
+                                <td>" . $fila['estrato'] . "<br><br></td>
+                            </tr>
+                            <tr>
+                                <th>Número de contacto</th>
+                                <td>". $fila['telefonoContacto'] . "</td>
+                            </tr>
+                            <tr>
+                                <th>Correo electrónico<br><br></th>
+                                <td>". $fila['correoElectronico'] . "<br><br></td>
+                            </tr>
+                            <tr>
+                                <th>Cargo<br><br></th>
+                                <td>". $fila['tipoCargo'] . "<br><br></td>
+                            </tr>
+                            <tr>
+                                <th>EPS</th>
+                                <td>" . $fila['eps'] . "</td>
+                            </tr>
+                            <tr>
+                                <th>ARL</th>
+                                <td>" . $fila['arl'] . "</td>
+                            </tr>
+                            <tr>
+                                <th>Tipo de RH<br><br></th>
+                                <td>" . $fila['rh'] . "<br><br></td>
+                            </tr>
+                            <tr>
+                                <th>Estado Civil</th>
+                                <td>" . $fila['estadoCivil'] . "</td>
+                            </tr>
+                            <tr>
+                                <th>Libreta militar</th>
+                                <td>" . $fila['libretaMilitar'] . "</td>
+                            </tr>
+                        </table> -->
                     </article>
                     <!--<h2>Nombre de Usuario</h2>
                     <p>Foto de Perfil</p>
@@ -111,7 +205,7 @@
                         <!-- <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
                         <input class="botons" type="submit" value="Actualizar Datos" name="btnActualizar" id="enviar"> -->
                     <!-- </form> -->
-                    <br>
+                    <br><br>
                     <a href="Perfil_Aspirante2.php" class="actualizar">Editar información</a>
                 </center>
             </section>

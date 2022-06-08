@@ -21,6 +21,10 @@ function cargardata($conn) {
                         <center>
                             <h2>" . $fila['PnombreAspirante'] . " " . $fila['SnombreAspirante'] . " " . $fila['PapellidoAspirante'] . " " . $fila['SapellidoAspirante'] . "</h2>
                         </center>
+                        <br>
+                        <br>
+                        <hr>
+                        <br>
                     </th>
                 </tr>
                 <tr>
@@ -29,75 +33,78 @@ function cargardata($conn) {
                             <p>Foto de perfil</p>
                             <input type='image' src='../../../../Imagenes/otros logos/Logo_Usuario.png' name='Foto Perfil' id='Foto_Perfil'>
                         </center>
+                        <br>
                     </td>
                 </tr>
                 <tr>
-                    <th>Número de documento</th>
-                    <td>" . $fila['docAspirante'] . "</td>
+                    <th>Número de documento:</th>
+                    <td>
+                        " . $fila['docAspirante'] . "
+                    </td>
                 </tr>
                 <tr>
-                    <th>Fecha de expedición</th>
+                    <th>Fecha de expedición:</th>
                     <td>" . $fila['fechaExpDoc'] . "</td>
                 </tr>
                 <tr>
-                    <th>País de expedición</th>
-                    <td>" . $fila['paisExpDoc'] . "</td>
+                    <th>País de expedición:<br><br></th>
+                    <td>" . $fila['paisExpDoc'] . " <br><br></td>
                 </tr>
                 <tr>
-                    <th>Fecha de nacimiento</th>
+                    <th>Fecha de nacimiento:</th>
                     <td>" . $fila['fechaNacimiento'] . "</td>
                 </tr>
                 <tr>
-                    <th>País de nacimiento</th>
+                    <th>País de nacimiento:</th>
                     <td>" . $fila['paisNacimiento'] . "</td>
                 </tr>
                 <tr>
-                    <th>Dirección</th>
+                    <th>Genero:<br><br></th>
+                    <td>" . $fila['genero'] . "<br><br></td>
+                </tr>
+                <tr>
+                    <th>Dirección:</th>
                     <td>" . $fila['direccionResidencia'] . "</td>
                 </tr>
                 <tr>
-                    <th>Ciudad</th>
+                    <th>Ciudad:</th>
                     <td>" . $fila['ciudad'] . "</td>
                 </tr>
                 <tr>
-                    <th>Número de contacto</th>
+                    <th>Estrato:<br><br></th>
+                    <td>" . $fila['estrato'] . "<br><br></td>
+                </tr>
+                <tr>
+                    <th>Número de contacto:</th>
                     <td>". $fila['telefonoContacto'] . "</td>
                 </tr>
                 <tr>
-                    <th>Correo electrónico</th>
-                    <td>". $fila['correoElectronico'] . "</td>
+                    <th>Correo electrónico:<br><br></th>
+                    <td>". $fila['correoElectronico'] . "<br><br></td>
                 </tr>
                 <tr>
-                    <th>Cargo</th>
-                    <td>". $fila['tipoCargo'] . "</td>
+                    <th>Cargo:<br><br></th>
+                    <td>". $fila['tipoCargo'] . "<br><br></td>
                 </tr>
                 <tr>
-                    <th>Estado Civil</th>
-                    <td>" . $fila['estadoCivil'] . "</td>
-                </tr>
-                <tr>
-                    <th>Estrato</th>
-                    <td>" . $fila['estrato'] . "</td>
-                </tr>
-                <tr>
-                    <th>Tipo de EH</th>
-                    <td>" . $fila['rh'] . "</td>
-                </tr>
-                <tr>
-                    <th>Genero</th>
-                    <td>" . $fila['genero'] . "</td>
-                </tr>
-                <tr>
-                    <th>Libreta militar</th>
-                    <td>" . $fila['libretaMilitar'] . "</td>
-                </tr>
-                <tr>
-                    <th>EPS</th>
+                    <th>EPS:</th>
                     <td>" . $fila['eps'] . "</td>
                 </tr>
                 <tr>
-                    <th>ARL</th>
+                    <th>ARL:</th>
                     <td>" . $fila['arl'] . "</td>
+                </tr>
+                <tr>
+                    <th>Tipo de RH:<br><br></th>
+                    <td>" . $fila['rh'] . "<br><br></td>
+                </tr>
+                <tr>
+                    <th>Estado Civil:</th>
+                    <td>" . $fila['estadoCivil'] . "</td>
+                </tr>
+                <tr>
+                    <th>Libreta militar:</th>
+                    <td>" . $fila['libretaMilitar'] . "</td>
                 </tr>
             </table>
         ";
@@ -231,6 +238,10 @@ function cargardata1($conn) {
                         <center>
                         <h2>" . $fila['pNombreRh'] . " " . $fila['sNombreRh'] . " " . $fila['pApellidoRh'] . " " . $fila['sApellidoRh'] . "</h2>
                         </center>
+                        <br>
+                        <br>
+                        <hr>
+                        <br>
                     </th>
                 </tr>
                 <tr>
@@ -239,62 +250,63 @@ function cargardata1($conn) {
                             <p>Foto de perfil</p>
                             <input type='image' src='../../../../Imagenes/otros logos/Logo_Usuario.png' name='Foto Perfil' id='Foto_Perfil'>
                         </center>
+                        <br>
                     </td>
                 </tr>
                 <tr>
-                    <th>Número de documento</th>
+                    <th>Número de documento:</th>
                     <td>" . $fila['docRecHum'] . "</td>
                 </tr>
                 <tr>
-                    <th>Fecha de expedición</th>
+                    <th>Fecha de expedición:</th>
                     <td>" . $fila['fechaExpDoc'] . "</td>
                 </tr>
                 <tr>
-                    <th>País de expedición?</th>
-                    <td>" . $fila['paisExpDoc'] . "</td>
+                    <th>País de expedición:<br><br></th>
+                    <td>" . $fila['paisExpDoc'] . "<br><br></td>
                 </tr>
                 <tr>
-                    <th>Fecha de nacimiento</th>
+                    <th>Fecha de nacimiento:</th>
                     <td>" . $fila['fechaNacimiento'] . "</td>
                 </tr>
                 <tr>
-                    <th>País de nacimiento</th>
-                    <td>" . $fila['paisNacimiento'] . "</td>
+                    <th>País de nacimiento:<br><br></th>
+                    <td>" . $fila['paisNacimiento'] . "<br><br></td>
                 </tr>
                 <tr>
-                    <th>Cargo</th>
-                    <td>" . $fila['tipoCargo'] . "</td>
-                </tr>
-                <tr>
-                    <th>Número de contacto</th>
-                    <td>" . $fila['telefonoContacto'] . "</td>
-                </tr>
-                <tr>
-                    <th>Correo electrónico</th>
-                    <td>" . $fila['correoElectronico'] . "</td>
-                </tr>
-                <tr>
-                    <th>Dirección</th>
+                    <th>Dirección:</th>
                     <td>" . $fila['direccionResidencia'] . "</td>
                 </tr>
                 <tr>
-                    <th>Estado civil</th>
+                    <th>Estrato:<br><br></th>
+                    <td>" . $fila['estrato'] . "<br><br></td>
+                </tr>
+                <tr>
+                    <th>Estado civil:</th>
                     <td>" . $fila['estadoCivil'] . "</td>
                 </tr>
                 <tr>
-                    <th>Estrato</th>
-                    <td>" . $fila['estrato'] . "</td>
+                    <th>Número de contacto:</th>
+                    <td>" . $fila['telefonoContacto'] . "</td>
                 </tr>
                 <tr>
-                    <th>Tipo de RH</th>
+                    <th>Correo electrónico:<br><br></th>
+                    <td>" . $fila['correoElectronico'] . "<br><br></td>
+                </tr>
+                <tr>
+                    <th>Cargo:</th>
+                    <td>" . $fila['tipoCargo'] . "</td>
+                </tr>
+                <tr>
+                    <th>Tipo de RH:</th>
                     <td>" . $fila['rh'] . "</td>
                 </tr>
                 <tr>
-                    <th>EPS</th>
+                    <th>EPS:</th>
                     <td>" . $fila['eps'] . "</td>
                 </tr>
                 <tr>
-                    <th>ARL</th>
+                    <th>ARL:</th>
                     <td>" . $fila['arl'] . "</td>
                 </tr>
             </table>
