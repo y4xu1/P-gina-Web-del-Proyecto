@@ -405,13 +405,337 @@ function cargardata1($conn) {
     }
 }
 
-/*
-function chargeDocuments($conn) {
+function perfilRRHH($conn) {
+
     $jun2 = $_SESSION['doc'];
+    
+    $consulta = "SELECT * FROM recursoshumanos  WHERE docRecHum = '$_SESSION[doc]'";
+    $resultado = mysqli_query($conn, $consulta);
+    $row = mysqli_fetch_assoc($resultado);
+
+    if ($row && $row['docRecHum'] == null) {}
+    else {
+        
+        $consul = "SELECT * FROM recursoshumanos  WHERE docRecHum = '$_SESSION[doc]'";
+        $resul = mysqli_query($conn, $consul);
+        while ($fila = mysqli_fetch_array($resul)) {
+
+            if ($fila['docRecHum'] == $_SESSION['doc']) {
+                echo '
+                    <input class="controls" type="text" name="pNombre" id="" value="' . $fila['pNombreRh'] . '">
+                    <input class="controls" type="text" name="sNombre" id="" value="' . $fila['sNombreRh'] . '">
+                    <input class="controls" type="text" name="pApellido" id="" value="' . $fila['pApellidoRh'] . '">
+                    <input class="controls" type="text" name="sApellido" id="" value="' . $fila['sApellidoRh'] . '">
+                    <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
+                        <option selected="selected">Selecione el Tipo de Identificación</option>
+                        <option value="CC">Cédula de Ciudadanía (CC)</option>
+                        <option value="CE">Cédula de Extrangería (CE)</option>
+                        <option value="PA">Pasaporte (PA)</option>
+                    </select>
+                    <input class="controls" type="text" name="docRecHum" id="Documento_de_Identidad" value="' . $fila['docRecHum'] . '">
+                </center>
+                    <p>
+                        Fecha de Expedición del Documento
+                        <input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento" value="' . $fila['fechaExpDoc'] . '">
+                    </p>
+                    <input class="controls" type="text" name="Pais" id="Paisexpedición" value="' . $fila['paisExpDoc'] . '">
+                    <p>
+                        Fecha de Nacimiento
+                        <input class="controls" type="date" name="FechaNacimiento" id="Fecha_Nacimiento" value="' . $fila['fechaNacimiento']. '">
+                    </p>
+                <center>
+                    <input class="controls" type="text" name="PaisNacimiento" id="País_de_Nacimiento" value="' . $fila['paisNacimiento'] . '">
+                    <input class="controls" type="text" name="Direccion" id="Direccion" value="' . $fila['direccionResidencia'] . '">
+                    <input class="controls" type="text" name="Telefono" id="Telefono" value="' . $fila['telefonoContacto'] . '">
+                    <input class="controls" type="text" name="CorreoElectronico" id="Correo_Electrónico" value="' . $fila['correoElectronico'] . '">
+                    <input class="controls" type="text" name="Cargo" id="Cargo" value="' . $fila['tipoCargo'] . '">
+                    <select class="Seleccion" name="EstadoCivil" id="Estado_Civil" required>
+                        <option selected="selected">Selecione su estado cívil</option>
+                        <option value="Indiferente">Indiferente</option>
+                        <option value="Soltero">Soltero / Soltera</option>
+                        <option value="Casado">Casado / Casada</option>
+                        <option value="Unión Libre">Unión Libre</option>
+                        <option value="Separado">Separado</option>
+                        <option value="Viudo">Viudo</option>
+                    </select>
+                    <select class="Seleccion" name="Estrato" id="Estrado" required>
+                        <option selected="selected">Selecione su Estrato</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <select class="Seleccion" name="RH" id="RH" required>
+                        <option selected="selected">Selecione su RH</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                    <select class="Seleccion" name="Genero" id="Género" required>
+                        <option selected="selected">Selecione su Género</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                    </select>
+                    <input class="controls" type="text" name="EPS" id="EPS" value="' . $fila['eps'] . '">
+                    <input class="controls" type="text" name="ARL" id="ARL" value="' . $fila['arl'] . '">
+    
+                    <input class="botons" type="submit" value="Actualizar Datos" name="btnActualizar" id="enviar">
+                ';
+            }
+        }
+    }
+
+    if (is_null($resultado) == false) {
+
+        echo '
+                <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre">
+                <input class="controls" type="text" name="sNombre" id="" placeholder="Segundo Nombre">
+                <input class="controls" type="text" name="pApellido" id="" placeholder="Primer Apellido">
+                <input class="controls" type="text" name="sApellido" id="" placeholder="Segundo Apellido"> 
+                <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
+                    <option selected="selected">Selecione el Tipo de Identificación</option>
+                    <option value="CC">Cédula de Ciudadanía (CC)</option>
+                    <option value="CE">Cédula de Extrangería (CE)</option>
+                    <option value="PA">Pasaporte (PA)</option>
+                </select>
+                <input class="controls" type="text" name="docRecHum" id="Documento_de_Identidad" placeholder="Documento de Identidad">
+            </center>
+                <p>
+                    Fecha de Expedición del Documento
+                    <input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento">
+                </p>
+                <input class="controls" type="text" name="Pais" id="Paisexpedición" placeholder="País de expedición">
+                <p>
+                    Fecha de Nacimiento
+                    <input class="controls" type="date" name="FechaNacimiento" id="Fecha_Nacimiento">
+                </p>
+            <center>
+                <input class="controls" type="text" name="PaisNacimiento" id="País_de_Nacimiento" placeholder="País de Nacimiento">
+                <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Dirección de Residencia">
+                <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Teléfono de Contacto">
+                <input class="controls" type="text" name="CorreoElectronico" id="Correo_Electrónico" placeholder="Correo Electrónico">
+                <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Cargo">
+                <select class="Seleccion" name="EstadoCivil" id="Estado_Civil">
+                    <option selected="selected">Selecione su estado cívil</option>
+                    <option value="Indiferente">Indiferente</option>
+                    <option value="Soltero">Soltero / Soltera</option>
+                    <option value="Casado">Casado / Casada</option>
+                    <option value="Unión Libre">Unión Libre</option>
+                    <option value="Separado">Separado</option>
+                    <option value="Viudo">Viudo</option>
+                </select>
+                <select class="Seleccion" name="Estrato" id="Estrado">
+                    <option selected="selected">Selecione su Estrato</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <select class="Seleccion" name="RH" id="RH">
+                    <option selected="selected">Selecione su tipo de RH</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <select class="Seleccion" name="Genero" id="Género">
+                    <option selected="selected">Selecione su Género</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+                <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS">
+                <input class="controls" type="text" name="ARL" id="ARL" placeholder="ARL">
+
+                <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
+        ';
+    }
+    else {}    
+}
+
+    /* $qry = "SELECT * FROM usuarios WHERE numIdentificacion = '$_SESSION[doc]'";
+    $qry_result = mysqli_query($conn, $qry);
+
+    while ($row = mysqli_fetch_array($qry_result)) {
+
+        if ($row['numIdentificacion'] == $_SESSION['doc']) {
+    
+        }
+    } */
+
+
+    /* while ($fila = mysqli_fetch_array($resultado)) {
+
+        if ($fila['docRecHum'] == $_SESSION['doc']) {
+            echo '
+                <input class="controls" type="text" name="pNombre" id="" value="' . $fila['pNombreRh'] . '">
+                <input class="controls" type="text" name="sNombre" id="" value="' . $fila['sNombreRh'] . '">
+                <input class="controls" type="text" name="pApellido" id="" value="' . $fila['pApellidoRh'] . '">
+                <input class="controls" type="text" name="sApellido" id="" value="' . $fila['sApellidoRh'] . '">
+                <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
+                    <option selected="selected">Selecione el Tipo de Identificación</option>
+                    <option value="CC">Cédula de Ciudadanía (CC)</option>
+                    <option value="CE">Cédula de Extrangería (CE)</option>
+                    <option value="PA">Pasaporte (PA)</option>
+                </select>
+                <input class="controls" type="text" name="docRecHum" id="Documento_de_Identidad" value="' . $fila['docRecHum'] . '">
+            </center>
+                <p>
+                    Fecha de Expedición del Documento
+                    <input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento" value="' . $fila['fechaExpDoc'] . '">
+                </p>
+                <input class="controls" type="text" name="Pais" id="Paisexpedición" value="' . $fila['paisExpDoc'] . '">
+                <p>
+                    Fecha de Nacimiento
+                    <input class="controls" type="date" name="FechaNacimiento" id="Fecha_Nacimiento" value="' . $fila['fechaNacimiento']. '">
+                </p>
+            <center>
+                <input class="controls" type="text" name="PaisNacimiento" id="País_de_Nacimiento" value="' . $fila['paisNacimiento'] . '">
+                <input class="controls" type="text" name="Direccion" id="Direccion" value="' . $fila['direccionResidencia'] . '">
+                <input class="controls" type="text" name="Telefono" id="Telefono" value="' . $fila['telefonoContacto'] . '">
+                <input class="controls" type="text" name="CorreoElectronico" id="Correo_Electrónico" value="' . $fila['correoElectronico'] . '">
+                <input class="controls" type="text" name="Cargo" id="Cargo" value="' . $fila['tipoCargo'] . '">
+                <select class="Seleccion" name="EstadoCivil" id="Estado_Civil" required>
+                    <option selected="selected">Selecione su estado cívil</option>
+                    <option value="Indiferente">Indiferente</option>
+                    <option value="Soltero">Soltero / Soltera</option>
+                    <option value="Casado">Casado / Casada</option>
+                    <option value="Unión Libre">Unión Libre</option>
+                    <option value="Separado">Separado</option>
+                    <option value="Viudo">Viudo</option>
+                </select>
+                <select class="Seleccion" name="Estrato" id="Estrado" required>
+                    <option selected="selected">Selecione su Estrato</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <select class="Seleccion" name="RH" id="RH" required>
+                    <option selected="selected">Selecione su RH</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <select class="Seleccion" name="Genero" id="Género" required>
+                    <option selected="selected">Selecione su Género</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+                <input class="controls" type="text" name="EPS" id="EPS" value="' . $fila['eps'] . '">
+                <input class="controls" type="text" name="ARL" id="ARL" value="' . $fila['arl'] . '">
+
+                <input class="botons" type="submit" value="Actualizar Datos" name="btnActualizar" id="enviar">
+            ';
+        }
+        else {
+            echo '
+            <script>
+                alert("si");
+            </script>
+            ';
+            echo '
+                <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre">
+                <input class="controls" type="text" name="sNombre" id="" placeholder="Segundo Nombre">
+                <input class="controls" type="text" name="pApellido" id="" placeholder="Primer Apellido">
+                <input class="controls" type="text" name="sApellido" id="" placeholder="Segundo Apellido"> 
+                <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
+                    <option selected="selected">Selecione el Tipo de Identificación</option>
+                    <option value="CC">Cédula de Ciudadanía (CC)</option>
+                    <option value="CE">Cédula de Extrangería (CE)</option>
+                    <option value="PA">Pasaporte (PA)</option>
+                </select>
+                <input class="controls" type="text" name="docRecHum" id="Documento_de_Identidad" placeholder="Documento de Identidad">
+            </center>
+                <p>
+                    Fecha de Expedición del Documento
+                    <input class="controls" type="date" name="FechaExpedición" id="Fecha_Expedición_Documento">
+                </p>
+                <input class="controls" type="text" name="Pais" id="Paisexpedición" placeholder="País de expedición">
+                <p>
+                    Fecha de Nacimiento
+                    <input class="controls" type="date" name="FechaNacimiento" id="Fecha_Nacimiento">
+                </p>
+            <center>
+                <input class="controls" type="text" name="PaisNacimiento" id="País_de_Nacimiento" placeholder="País de Nacimiento">
+                <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Dirección de Residencia">
+                <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Teléfono de Contacto">
+                <input class="controls" type="text" name="CorreoElectronico" id="Correo_Electrónico" placeholder="Correo Electrónico">
+                <input class="controls" type="text" name="Cargo" id="Cargo" placeholder="Cargo">
+                <select class="Seleccion" name="EstadoCivil" id="Estado_Civil">
+                    <option selected="selected">Selecione su estado cívil</option>
+                    <option value="Indiferente">Indiferente</option>
+                    <option value="Soltero">Soltero / Soltera</option>
+                    <option value="Casado">Casado / Casada</option>
+                    <option value="Unión Libre">Unión Libre</option>
+                    <option value="Separado">Separado</option>
+                    <option value="Viudo">Viudo</option>
+                </select>
+                <select class="Seleccion" name="Estrato" id="Estrado">
+                    <option selected="selected">Selecione su Estrato</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <select class="Seleccion" name="RH" id="RH">
+                    <option selected="selected">Selecione su tipo de RH</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <select class="Seleccion" name="Genero" id="Género">
+                    <option selected="selected">Selecione su Género</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+                <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS">
+                <input class="controls" type="text" name="ARL" id="ARL" placeholder="ARL">
+
+                <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
+            ';
+        }
+    } */
+
+/* function chargeDocuments($conn) {
+    $jun3 = $_SESSION['doc'];
     $consulta = "SELECT * FROM documentos WHERE docAspirante = '$_SESSION[doc]'";
     $result =  mysqli_query($conn, $consulta);
 
     while ($fila = mysqli_fetch_array($result)) {
+
+        if ($fila['docAspirante'] == $jun2) {
+
+        }
+        else {
+
+        }
         echo '
             <div>
                 <img src="../../../../Imagenes/subir-color.png" style="width: 30px; margin: -7px 15px;">
@@ -455,6 +779,5 @@ function chargeDocuments($conn) {
         ';
     }
 
-}
-*/
+} */
 ?>

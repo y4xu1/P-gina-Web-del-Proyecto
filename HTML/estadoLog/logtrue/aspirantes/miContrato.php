@@ -32,7 +32,8 @@
                 if (isset($_POST['miContrato'])) {
                 }
                 else {
-                    echo'<section class="Barra_Navegacion">
+                    echo'
+                        <section class="Barra_Navegacion">
                             <nav id="menu">
                                 <ul>
                                     <a href="../../../../index.html" > <img src="../../../../Imagenes/logoProyect/Logo_Principal.png" class="Logo_Menú"></a>
@@ -42,7 +43,8 @@
                                     <li><a href="miContrato.php" class="menu">Contrato</a></li>
                                 </ul>
                             </nav>
-                        </section>';
+                        </section>
+                    ';
                 }
             ?>
         </header>

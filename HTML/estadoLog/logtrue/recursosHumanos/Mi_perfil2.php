@@ -1,3 +1,6 @@
+<?php
+    include('../aspirantes/phpMiperfil.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -47,17 +50,19 @@
                         <p>Foto de Perfil</p>
                         <input type="image" src="../../../../Imagenes/otros logos/Logo_Usuario.png" name="Foto Perfil" id="Foto_Perfil">
                         <form action="../../../php/RecursosHumanos.php" method="POST">
+
+                        <!-- < ?=perfilRRHH($conn)?> -->
                         
-                             <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre"> 
+                            <input class="controls" type="text" name="pNombre" id="" placeholder="Primer Nombre">
                             <input class="controls" type="text" name="sNombre" id="" placeholder="Segundo Nombre">
                             <input class="controls" type="text" name="pApellido" id="" placeholder="Primer Apellido">
                             <input class="controls" type="text" name="sApellido" id="" placeholder="Segundo Apellido"> 
-                               <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
+                            <select class="Seleccion" name="TipodeDocumento" id="Tipo_de_Identificación">
                                 <option selected="selected">Selecione el Tipo de Identificación</option>
                                 <option value="CC">Cédula de Ciudadanía (CC)</option>
-                                <option value="CE">Cédula de Extrangería (CE)</option> 
-                                <option value="PA">Pasaporte (PA)</option> 
-                             </select> 
+                                <option value="CE">Cédula de Extrangería (CE)</option>
+                                <option value="PA">Pasaporte (PA)</option>
+                            </select>
                             <input class="controls" type="text" name="docRecHum" id="Documento_de_Identidad" placeholder="Documento de Identidad">
                         </center>
                             <p>
@@ -109,8 +114,8 @@
                                 <option value="Femenino">Femenino</option>
                                 <option value="Masculino">Masculino</option>
                             </select>
-                            <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS"> 
-                            <input class="controls" type="text" name="ARL" id="ARL" placeholder="ARL"> 
+                            <input class="controls" type="text" name="EPS" id="EPS" placeholder="EPS">
+                            <input class="controls" type="text" name="ARL" id="ARL" placeholder="ARL">
 
                             <input class="botons" type="submit" value="Insertar Datos" name="btnregistrar" id="formulario">
                             <input class="botons" type="submit" value="Actualizar Datos" name="btnActualizar" id="enviar">

@@ -4,43 +4,34 @@
 include("conexion.php");
 
 #diferenciar cada boton encontrado en la pagina  
-
 if(isset($_POST ['btnregistrar'])){
+
   insertar($conn);
-  echo "<script>";
-    echo "alert('Su perfil fue cargado correctamente');";
-    echo "window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.php';";
-  echo "</script>";
+  echo "
+    <script>
+      alert('Su perfil fue cargado correctamente');
+      window.location = '../estadoLog/logtrue/recursosHumanos/Mi_Perfil.php';
+    </script>
+  ";
 
-} else if(isset($_POST ['btnActualizar'])){
-  actualizar ($conn);
-  echo "<script>";
-    echo "alert('Su perfil fue actualizado correctamente');";
-    echo "window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.php';";
-  echo "</script>";
-} else {
-  echo "<script>alert('Error')</script>";
 }
+else if (isset($_POST ['btnActualizar'])) {
 
-#diferencia($conn);
-/*function diferencia($conn){
-  if(isset($_POST ['enviar'])){
-    insertar($conn);
-    echo "<script>";
-      echo "alert('Su perfil fue cargado correctamente');";
-      echo "window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.html';";
-    echo "</script>";
-
-  } else if(isset($_POST ['btnActualizar'])){
-    actualizar ($conn);
-    echo "<script>";
-      echo "alert('Su perfil fue cargado correctamente');";
-      echo "window.location='../estadoLog/logtrue/recursosHumanos/Mi_Perfil.html';";
-    echo "</script>";
-  } else {
-    echo "<script>alert('Error')</script>";
-  }
-}*/
+  actualizar ($conn);
+  echo "
+    <script>
+      alert('Su perfil fue actualizado correctamente');
+      window.location = '../estadoLog/logtrue/recursosHumanos/Mi_Perfil.php';
+    </script>
+  ";
+}
+else {
+  echo "
+    <script>
+      alert('ERROR');
+    </script>
+  ";
+}
 
 #Identificar cada variable de vinculacion con la pagina y la base de datos.
 #Insertar a la base de datos los datos ingresados en cada campo del formulario.

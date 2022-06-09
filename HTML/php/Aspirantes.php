@@ -9,67 +9,82 @@ echo $_SESSION["username"];*/
 
 if(isset($_POST['btnregistrar'])) {
   insertar($conn);
-  echo "<script>";
-    echo "alert('Su perfil fue cargado correctamente');";
-    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';";
-  echo "</script>";
+  echo "
+    <script>
+      alert('Su perfil fue cargado correctamente');
+      window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';
+    </script>
+  ";
 } else if(isset($_POST['btnActualizar'])) {
   actualizar ($conn);
-  echo "<script>";
-    echo "alert('Su perfil fue actualizado correctamente');";
-    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';";
-  echo "</script>";
+  echo "
+    <script>
+      alert('Su perfil fue actualizado correctamente');
+      window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';
+    </script>
+  ";
 } else if(isset($_POST['btndocumentos'])) {
   documentos($conn);
-  echo "<script>";
-    echo "alert('Sus documentos fuerón cargados correctamente');";
-    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';";
-  echo "</script>";
+  echo "
+    <script>
+      alert('Sus documentos fuerón cargados correctamente');
+      window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';
+    </script>
+  ";
 } else if(isset($_POST['Actualizardocumentos'])) {
   Actualizardocumentos($conn);
-  echo "<script>";
-    echo "alert('Sus documentos fuerón actualiazados correctamente');";
-    echo "window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';";
-  echo "</script>";
+  echo "
+    <script>
+      alert('Sus documentos fuerón actualiazados correctamente');
+      window.location='../estadoLog/logtrue/aspirantes/Perfil_Aspirante.php';
+    </script>
+  ";
 } else if (ISSET($_POST['bloquear'])) {
   bloqueo($conn);
-  echo "<script>
-          alert('El usuario fue bloqueado correctamente');
-          window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php';
-        </script>";
+  echo "
+    <script>
+      alert('El usuario fue bloqueado correctamente');
+      window.location='../estadoLog/logtrue/recursosHumanos/aspirantes.php';
+    </script>
+  ";
 } else {
-  echo "<script>alert('Error')</script>";
+  echo "
+    <script>
+      alert('ERROR');
+    </script>
+  ";
 }
 
 #Identificar cada variable de vinculacion con la pagina y la base de datos.
 #Insertar a la base de datos los datos ingresados en cada campo del formulario.
 function insertar ($conn){
-    $doca=($_POST["docAspirante"]);
-    $pnombre=($_POST["pNombre"]);
-    $snombre=($_POST["sNombre"]);
-    $papellido=($_POST["pApellido"]);
-    $sapellido=($_POST["sApellido"]);
-    $fechaI=($_POST["FechaExpedición"]);
-    $paisE=($_POST["Pais"]);
-    $fechaN=($_POST["FechaNacimiento"]);
-    $paisN=($_POST["PaísNacimiento"]);
-    $dir=($_POST["Direccion"]);
-    $cuidad=($_POST["ciudad"]);
-    $telefono=($_POST["Telefono"]);
-    $correo=($_POST["CorreoElectrónico"]);
-    $cargo=($_POST["Cargo"]);
-    $estadoC=($_POST["EstadoCívil"]);
-    $estrato=($_POST["Estrato"]);
-    $rh=($_POST["RH"]);
-    $genero=($_POST["Género"]);
-    $libretamilitar=($_POST["Libretamilitar"]);
-    $eps=($_POST["EPS"]);
-    $arl=($_POST["ARL"]);
 
-    $consulta = "INSERT INTO aspirante (docAspirante,numIdentificacion,PnombreAspirante,SnombreAspirante,PapellidoAspirante,SapellidoAspirante,fechaExpDoc,paisExpDoc,fechaNacimiento,paisNacimiento,direccionResidencia,ciudad,telefonoContacto,correoElectronico,tipoCargo,estadoCivil,estrato,rh,genero,libretaMilitar,eps,arl,estadoAspirante	) VALUES ('$doca',$doca,'$pnombre','$snombre','$papellido','$sapellido','$fechaI','$paisE','$fechaN','$paisN','$dir','$cuidad','$telefono','$correo','$cargo','$estadoC','$estrato','$rh','$genero','$libretamilitar','$eps','$arl',1)";
-    mysqli_query($conn,$consulta);
+  $doca=($_POST["docAspirante"]);
+  $pnombre=($_POST["pNombre"]);
+  $snombre=($_POST["sNombre"]);
+  $papellido=($_POST["pApellido"]);
+  $sapellido=($_POST["sApellido"]);
+  $fechaI=($_POST["FechaExpedición"]);
+  $paisE=($_POST["Pais"]);
+  $fechaN=($_POST["FechaNacimiento"]);
+  $paisN=($_POST["PaísNacimiento"]);
+  $dir=($_POST["Direccion"]);
+  $cuidad=($_POST["ciudad"]);
+  $telefono=($_POST["Telefono"]);
+  $correo=($_POST["CorreoElectrónico"]);
+  $cargo=($_POST["Cargo"]);
+  $estadoC=($_POST["EstadoCívil"]);
+  $estrato=($_POST["Estrato"]);
+  $rh=($_POST["RH"]);
+  $genero=($_POST["Género"]);
+  $libretamilitar=($_POST["Libretamilitar"]);
+  $eps=($_POST["EPS"]);
+  $arl=($_POST["ARL"]);
 
-    mysqli_close($conn);
+  $consulta = "INSERT INTO aspirante (docAspirante,numIdentificacion,PnombreAspirante,SnombreAspirante,PapellidoAspirante,SapellidoAspirante,fechaExpDoc,paisExpDoc,fechaNacimiento,paisNacimiento,direccionResidencia,ciudad,telefonoContacto,correoElectronico,tipoCargo,estadoCivil,estrato,rh,genero,libretaMilitar,eps,arl,estadoAspirante	) VALUES ('$doca',$doca,'$pnombre','$snombre','$papellido','$sapellido','$fechaI','$paisE','$fechaN','$paisN','$dir','$cuidad','$telefono','$correo','$cargo','$estadoC','$estrato','$rh','$genero','$libretamilitar','$eps','$arl',1)";
+  mysqli_query($conn,$consulta);
+
+  mysqli_close($conn);
 }
 
 #Insertar a la base de datos los archivos ingresados en cada campo del formulario.
@@ -98,32 +113,32 @@ function documentos($conn){
 
 #Actualizar los datos encontrados en la base de datos por los datos obtenidos en el formulario. 
 function actualizar($conn){
-    $doca=($_POST["docAspirante"]);
-    $pnombre=($_POST["pNombre"]);
-    $snombre=($_POST["sNombre"]);
-    $papellido=($_POST["pApellido"]);
-    $sapellido=($_POST["sApellido"]);
-    $fechaI=($_POST["FechaExpedición"]);
-    $paisE=($_POST["Pais"]);
-    $fechaN=($_POST["FechaNacimiento"]);
-    $paisN=($_POST["PaísNacimiento"]);
-    $dir=($_POST["Direccion"]);
-    $cuidad=($_POST["ciudad"]);
-    $telefono=($_POST["Telefono"]);
-    $correo=($_POST["CorreoElectrónico"]);
-    $cargo=($_POST["Cargo"]);
-    $estadoC=($_POST["EstadoCívil"]);
-    $estrato=($_POST["Estrato"]);
-    $rh=($_POST["RH"]);
-    $genero=($_POST["Género"]);
-    $libretamilitar=($_POST["Libretamilitar"]);
-    $eps=($_POST["EPS"]);
-    $arl=($_POST["ARL"]);
+  $doca=($_POST["docAspirante"]);
+  $pnombre=($_POST["pNombre"]);
+  $snombre=($_POST["sNombre"]);
+  $papellido=($_POST["pApellido"]);
+  $sapellido=($_POST["sApellido"]);
+  $fechaI=($_POST["FechaExpedición"]);
+  $paisE=($_POST["Pais"]);
+  $fechaN=($_POST["FechaNacimiento"]);
+  $paisN=($_POST["PaísNacimiento"]);
+  $dir=($_POST["Direccion"]);
+  $cuidad=($_POST["ciudad"]);
+  $telefono=($_POST["Telefono"]);
+  $correo=($_POST["CorreoElectrónico"]);
+  $cargo=($_POST["Cargo"]);
+  $estadoC=($_POST["EstadoCívil"]);
+  $estrato=($_POST["Estrato"]);
+  $rh=($_POST["RH"]);
+  $genero=($_POST["Género"]);
+  $libretamilitar=($_POST["Libretamilitar"]);
+  $eps=($_POST["EPS"]);
+  $arl=($_POST["ARL"]);
 
-    #$consulta = "UPDATE aspirante SET docAspirante='$doca', numIdentificacion='$doca', PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps',arl='$arl' WHERE docAspirante = '$doca'";
-    $consulta = "UPDATE aspirante SET PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps',arl='$arl' WHERE docAspirante = '$doca'";
-    mysqli_query($conn, $consulta);
-    mysqli_close($conn);
+  #$consulta = "UPDATE aspirante SET docAspirante='$doca', numIdentificacion='$doca', PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps',arl='$arl' WHERE docAspirante = '$doca'";
+  $consulta = "UPDATE aspirante SET PnombreAspirante='$pnombre', SnombreAspirante='$snombre', PapellidoAspirante='$papellido', SapellidoAspirante=' $sapellido',fechaExpDoc='$fechaI', paisExpDoc='$paisE', fechaNacimiento='$fechaN',paisNacimiento=' $paisN',direccionResidencia='$dir', ciudad='$cuidad', telefonoContacto='$telefono', correoElectronico='$correo',tipoCargo='$cargo',estadoCivil='$estadoC',estrato='$estrato',rh='$rh',genero='$genero',libretaMilitar='$libretamilitar',eps='$eps',arl='$arl' WHERE docAspirante = '$doca'";
+  mysqli_query($conn, $consulta);
+  mysqli_close($conn);
 }
 
 #Actualizar los archivos encontrados en la base de datos por los datos obtenidos en el formulario. 
