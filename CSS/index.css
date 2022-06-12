@@ -1,7 +1,7 @@
 /*Vinculacion con la pagina index*/
 /*Encabezado de la pagina */
 main {
-    padding-top: 3.8%;
+    padding-top: 53px;
 }
 .imagen_central{
     background-image:url(../Imagenes/fondoIndex.jpeg);

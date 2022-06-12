@@ -12,7 +12,6 @@ session_start();
 $nombre = $_POST['usuario'];
 $_SESSION['doc'] = $nombre;
 $pass = $_POST['pass'];
-$rol = $_POST['TipoRol'];
 
 if(isset($_POST['btningresar'])) {
 
@@ -103,6 +102,7 @@ if(isset($_POST['btningresar'])) {
 
     $codigoaceptacion = $_POST['aceptacion'];
     $passw = password_hash($_POST['pass'], PASSWORD_BCRYPT);
+    $rol = $_POST['TipoRol'];
 
     #Registrar
     if(isset($_POST["btnregistrar"])){

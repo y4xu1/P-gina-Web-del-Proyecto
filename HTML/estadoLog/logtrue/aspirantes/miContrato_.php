@@ -131,51 +131,49 @@
 <?php
 
     function seguridad($conn) {
-
         $id = $_POST['docAspirante'];
-        $pass_cifrado = $_POST['password'];
+        $pass_cifrado=$_POST['password'];
 
-        $querycontract = "SELECT numIdentificacion FROM usuarios WHERE numIdentificacion = '$id'";
+        $querycontract = "SELECT numIdentificacion FROM usuarios WHERE numIdentificacion='$id'";
         $query = mysqli_query($conn, $querycontract);
         $contract = mysqli_fetch_array($query);
-
         if ($contract > 0) {
 
-            $querycontract2 = mysqli_query($conn, "SELECT password FROM usuarios where numIdentificacion = '$id'");
-            $contract = mysqli_fetch_array($querycontract2);
-            $showcontract = $contract['password'];
+        $querycontract2 =mysqli_query($conn, "SELECT password FROM usuarios where numIdentificacion = '$id'");
+        $contract = mysqli_fetch_array($querycontract2);
+        $showcontract=$contract['password'];
+    
 
-            if (password_verify($pass_cifrado, $showcontract)) {
-                echo
+    if (password_verify($pass_cifrado, $showcontract)) {
+        echo
+        '<script>
+            alert("Contrato encontrato");
+        </script>';
+        busqContrato($conn);
+
+    }else{
+        echo
                 '<script>
-                    //alert("Contrato encontrato");
+                    alert("Su contrato no se ha procesado, tenga paciencia");
+                    window.location="./Perfil_Aspirante.html";
+                    //window.location="./Perfil_Aspirante2.php";
+                    //window.location="./Perfil_Aspirante.php";
                 </script>';
-                contratoBD($conn);
-            }
-            else{
-                echo '
-                    <script>
-                        //alert("Su contrato no se ha procesado, tenga paciencia");
-                        //window.location="./Perfil_Aspirante.php";
-                        alert("Datos incorrectos");
-                        window.location="./miContrato.php";
-                    </script>
-                ';
-            }
-        } else {}
+
+    }
+        }
+
     }
 
     function contratoBD($conn) {
-    
         $id = $_POST['docAspirante'];
 
-        $contBD_query = "SELECT * FROM contrato WHERE docAspirante = '$id'";
+        $contBD_query = "SELECT docAspirante FROM contrato WHERE docAspirante = '$id'";
         $query = mysqli_query($conn, $contBD_query);
 
         $nrC = mysqli_fetch_array($query);
-        //$nrC = mysqli_fetch_assoc($query);
 
-        if ($nrC != 0) {
+        if ($nrC == 1) {
             echo
             '<script>
                 alert("Contrato encontrato");
@@ -186,7 +184,7 @@
             echo
             '<script>
                 alert("Su contrato no se ha procesado, tenga paciencia");
-                window.location="./Perfil_Aspirante.php";
+                window.location="./Perfil_Aspirante.html";
             </script>';
         }
     }
@@ -197,13 +195,13 @@
             
         $consulta = "SELECT aspirante.docAspirante, aspirante.ciudad, tipoContrato, PnombreAspirante, SnombreAspirante, PapellidoAspirante, SapellidoAspirante, direccionResidencia, telefonoContacto, 
             tipoCargoDesp, salario, valorPrestaciones, fechaInicio, nombreObra, ciudadObra, firma, telefonoContacto FROM aspirante INNER JOIN contrato ON 
-            aspirante.docAspirante = contrato.docAspirante WHERE contrato.docAspirante = '$id'";
+            aspirante.docAspirante=contrato.docAspirante WHERE contrato.docAspirante = '$id'";
 
         $resul = mysqli_query($conn, $consulta);
         
         while ($row = mysqli_fetch_assoc($resul)) {
             
-            echo '  <form action="./Perfil_Aspirante.php" method="POST">
+            echo '  <form action="./Perfil_Aspirante.html" method="POST">
                         <input class="goBack" id="btnGB" type="submit" value="&#9756">
                     </form>
                     <article class="content">
