@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-03-2022 a las 23:48:25
+-- Tiempo de generación: 13-06-2022 a las 20:05:12
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -337,26 +337,26 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`numIdentificacion`, `password`, `codigoVerificacion`, `TipoRol`, `codigoAceptacion`, `estadoUsuarios`) VALUES
-(15133916, '123', 0, '2', 1, 1),
-(34532270, '123', 0, '1', 1, 1),
-(34564978, '123', 0, '1', 1, 1),
-(41733718, '123', 0, '1', 1, 1),
-(52729563, '123', 0, '1', 1, 1),
-(67609436, '123', 0, '1', 1, 1),
-(76308613, '123', 0, '2', 1, 1),
-(76415948, '123', 0, '2', 1, 1),
-(97414524, '123', 0, '2', 1, 1),
-(98176120, '123', 0, '2', 1, 1),
-(1000098763, '123', 0, '2', 1, 1),
-(1000620101, '123', 0, '1', 1, 1),
-(1017896301, '123', 0, '2', 1, 1),
-(1053963400, '123', 0, '1', 1, 1),
-(1054780841, '123', 0, '1', 1, 1),
-(1869300472, '123', 0, '1', 1, 1),
-(1942371104, '123', 0, '2', 1, 1),
-(1986300145, '123', 0, '1', 1, 1),
-(2745086420, '123', 0, '2', 1, 1),
-(3452918100, '123', 0, '2', 1, 1);
+(15133916, '$2y$10$jnoD4G8GKNNHvrUbyfb.3u014ZoGgjwX1dzBY1MB7187GfoT.ZG72', 0, '2', 1, 1),
+(34532270, '$2y$10$Q5gVI5iKeJbAi/EnHmrzQ.n5HbMSDQITB/Gi3YQjtqnLQOJkbpaoC', 0, '1', 1, 1),
+(34564978, '$2y$10$fQwmm3fYVlIGy6qAG18Dluxz/Q0bN/21kpW5i7zZoSrcPgeYZP1x2', 0, '1', 1, 1),
+(41733718, '$2y$10$GXQZa4Bz4tUILbMbVA6yZeS7S04aNaKkId5Qle6ZpKQnVXSjnSFe6', 0, '1', 1, 1),
+(52729563, '$2y$10$biYv..79gj8LLs30kdXBqOv9fk7bqnhB9IDWLKOAgpzZqUNHrYEXS', 0, '1', 1, 1),
+(67609436, '$2y$10$Pdv2JqOFCCPRJlLrLdYSBuI3VPENhWm6dfEbrGUF5zjGE8Bkj2i06', 0, '1', 1, 1),
+(76308613, '$2y$10$gzeRO4fgxvx7MMbC7ikjWu04gBH0cMIJ9wFbGpwxRPsitlo2hvbrm', 0, '2', 1, 1),
+(76415948, '$2y$10$qHl.7RO5DzM3qZz.1bXKZOn1ccD8K5z1.gThLu3PWdnDBoq4wgI2W', 0, '2', 1, 1),
+(97414524, '$2y$10$UkbgovtgiFgh8VbEGV79v.uIHluuvBoEuBYzWkhjK46Cpt3jU0VcO', 0, '2', 1, 1),
+(98176120, '$2y$10$tECCYEfOCRd5mMGKPAyf5.T.ZX6jMNP423t8Hu8OPKOYbnNlNFCne', 0, '2', 1, 1),
+(1000098763, '$2y$10$26AkP/KiCdfnWsoSk2nIAu0ohmG.d9ge1uEVUsIO68eoNmZrV6AaO', 0, '2', 1, 1),
+(1000620101, '$2y$10$5AGjFgblKOzT67lc8DOJQOjbSgFtANbnBvGxgb2ROCHl864oQzm0y', 0, '1', 1, 1),
+(1017896301, '$2y$10$ksgT7rFeX/vxo/DRvUCFEOmcLBzwrPsvnzOWmLNG83GjkNOO1Na8u', 0, '2', 1, 1),
+(1053963400, '$2y$10$Ol1X.tvgpOzLvM.HjfhRiOR9pGy5OTGc1CaT8psXPaks6ZOJF6EoC', 0, '1', 1, 1),
+(1054780841, '$2y$10$FNZSfMxK1kCI4mwplbSoiOrTVO2lsKIkCnmNVvZRbh4niLEUu9yn6', 0, '1', 1, 1),
+(1869300472, '$2y$10$96qtmY093cGwouf8f5JPyeHu7os6MGC20m.pEygjpk/nBt0VVQEe2', 0, '1', 1, 1),
+(1942371104, '$2y$10$RFWs7YeMrtm.9CVNf4ypj.E6RxyPfToyQYE7VmeXTNUbmOv6ekvE6', 0, '2', 1, 1),
+(1986300145, '$2y$10$g3PgY9vG5dUr5PRmvC0pJuL1HC5ArK1LiVEjdb8754s6Nv4YBVyPC', 0, '1', 1, 1),
+(2745086420, '$2y$10$/4fFonqLy2ihTqKD7WuLzeQx0J5gdIc4D00zDUW.lYiHzflal9Uzi', 0, '2', 1, 1),
+(3452918100, '$2y$10$2qPi/saQiDUHU3sdwWFyQ.Yv8wJu4Pd.gjaI2FxTpPGbrc5o2NnIG', 0, '2', 1, 1);
 
 --
 -- Índices para tablas volcadas
