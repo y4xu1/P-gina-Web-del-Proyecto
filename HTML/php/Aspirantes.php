@@ -2,7 +2,9 @@
 <?php
 
 include("conexion.php");
-    
+
+session_start();
+
 /*require_once("login.php");
 echo $_SESSION["username"];*/
 //diferenciar cada boton encontrado en la pagina.
@@ -89,23 +91,27 @@ function insertar ($conn){
 
 #Insertar a la base de datos los archivos ingresados en cada campo del formulario.
 function documentos($conn){
-  $docAspiranteS=$_POST["docAspirante"];
-  $curriculum=$_POST["Curriculum"];
-  $certificadoAlturas=$_POST["CertificadoAlturas"];
-  $certificadoJudicial=$_POST["CertificadoJudicial"];
-  $certificadoPenal=$_POST["CertificadoPenal"];
-  $certificadoDisciplinario=$_POST["CertificadoDisciplinario"];
-  $resultadosMedicos=$_POST["ResultadosMédicos"];
-  $carnetVacCovid=$_POST["CarnetVacunaciónCovid-19"];
-  $referenciasPersonales=$_POST["ReferenciasPersonales"];
-  $referenciasLaborales=$_POST["ReferenciasLaborales"];
-  $firma=$_POST["firma"];
+
+  $user = $_SESSION['doc'];
+
+  //$docAspiranteS = $_POST["docAspirante"];
+  $curriculum = $_POST["Curriculum"];
+  $certificadoAlturas = $_POST["CertificadoAlturas"];
+  $certificadoJudicial = $_POST["CertificadoJudicial"];
+  $certificadoPenal = $_POST["CertificadoPenal"];
+  $certificadoDisciplinario = $_POST["CertificadoDisciplinario"];
+  $resultadosMedicos = $_POST["ResultadosMédicos"];
+  $carnetVacCovid = $_POST["CarnetVacunaciónCovid-19"];
+  $referenciasPersonales = $_POST["ReferenciasPersonales"];
+  $referenciasLaborales = $_POST["ReferenciasLaborales"];
+  $firma = $_POST["firma"];
 
   $consulta= "INSERT INTO documentos(docAspirante, curriculum, certificadoAlturas, certificadoJudicial,
   certificadoPenal, certificadoDisciplinario, resultadosMedicos, carnetVacCovid, referenciasPersonales,
-  referenciasLaborales, firma) VALUES ('$docAspiranteS', '$curriculum', '$certificadoAlturas', '$certificadoJudicial',
-  '$certificadoPenal', '$certificadoDisciplinario', '$resultadosMedicos', '$carnetVacCovid', '$referenciasPersonales',
-  '$referenciasLaborales', '$firma')";
+  referenciasLaborales, firma)
+  VALUES ('$_SESSION[doc]', '$curriculum', '$certificadoAlturas', '$certificadoJudicial',
+  '$certificadoPenal', '$certificadoDisciplinario', '$resultadosMedicos', '$carnetVacCovid',
+  '$referenciasPersonales', '$referenciasLaborales', '$firma')";
   
   mysqli_query($conn,$consulta);
   mysqli_close($conn);
@@ -113,6 +119,7 @@ function documentos($conn){
 
 #Actualizar los datos encontrados en la base de datos por los datos obtenidos en el formulario. 
 function actualizar($conn){
+
   $doca=($_POST["docAspirante"]);
   $pnombre=($_POST["pNombre"]);
   $snombre=($_POST["sNombre"]);
@@ -143,7 +150,10 @@ function actualizar($conn){
 
 #Actualizar los archivos encontrados en la base de datos por los datos obtenidos en el formulario. 
 function Actualizardocumentos ($conn){
-  $docAspirante=($_POST["docAspirante"]);
+
+  $user = $_SESSION['doc'];
+
+  //$docAspirante=($_POST["docAspirante"]);
   $curriculum=($_POST["Curriculum"]);
   $certificadoAlturas=($_POST["CertificadoAlturas"]);
   $certificadoJudicial=($_POST["CertificadoJudicial"]);
@@ -155,7 +165,11 @@ function Actualizardocumentos ($conn){
   $referenciasLaborales=($_POST["ReferenciasLaborales"]);
   $firma=($_POST["firma"]);
   
-  $consulta = "UPDATE documentos SET curriculum='$curriculum', certificadoAlturas='$certificadoAlturas', certificadoJudicial='$certificadoJudicial', certificadoPenal='$certificadoPenal', certificadoDisciplinario='$certificadoDisciplinario', resultadosMedicos='$resultadosMedicos', carnetVacCovid='$carnetVacCovid', referenciasPersonales='$referenciasPersonales', referenciasLaborales='$referenciasLaborales', firma='$firma' WHERE docAspirante='$docAspirante'";
+  $consulta = "
+    UPDATE documentos SET curriculum = '$curriculum', certificadoAlturas = '$certificadoAlturas', certificadoJudicial = '$certificadoJudicial',
+    certificadoPenal = '$certificadoPenal', certificadoDisciplinario = '$certificadoDisciplinario', resultadosMedicos = '$resultadosMedicos',
+    carnetVacCovid = '$carnetVacCovid', referenciasPersonales = '$referenciasPersonales', referenciasLaborales = '$referenciasLaborales',
+    firma = '$firma' WHERE docAspirante = '$_SESSION[doc]'";
   mysqli_query($conn, $consulta);
   mysqli_close($conn);
 }
